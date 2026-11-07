@@ -57,13 +57,16 @@ describe("VisitJeju draft normalization", () => {
     expect(place.summary.ko).toBe("바다 & 산책");
     expect(place.name.ja).toBe(place.name.ko);
   });
-  it("rejects out-of-Jeju and missing coordinates", () => {
+  it("rejects out-of-Jeju coordinates but keeps unobserved coordinates null", () => {
     expect(() =>
       normalizeVisitJejuRecord({ ...source, latitude: 37.5 }, options),
     ).toThrow("VISITJEJU_INVALID_RECORD");
-    expect(() =>
-      normalizeVisitJejuRecord({ ...source, longitude: undefined }, options),
-    ).toThrow("VISITJEJU_INVALID_RECORD");
+    const { place } = normalizeVisitJejuRecord({ ...source, longitude: undefined }, options);
+    expect(place.lat).toBeNull();
+    expect(place.lng).toBeNull();
+    expect(place.durationMinutes).toBeNull();
+    expect(place.imageKind).toBe("placeholder");
+    expect(place.sourceTags).toContain("반려동물");
   });
   it("rejects source IDs that can form unsafe document paths", () => {
     expect(() =>

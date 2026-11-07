@@ -45,18 +45,26 @@ export interface Place {
   district: LocalizedText;
   region: Region;
   type: PlaceType;
-  lat: number;
-  lng: number;
+  lat: number | null;
+  lng: number | null;
   image: string;
+  imageKind?: "placeholder" | "photo" | "illustration";
+  tags?: string[];
+  /** Labels observed on the source, not verified companion conditions. */
+  sourceTags?: string[];
+  sourceObservations?: { field: string; value: string; sourceUrl: string }[];
   price: {
     amount: number | null;
     unit: "person" | "drink" | "night";
     petExtra: number | null;
   };
-  durationMinutes: number;
+  durationMinutes: number | null;
   facts: PlaceFacts;
   sourceUrl?: string;
   sourceId?: string;
+  sourceName?: string;
+  /** Date the basic listing was observed; never a companion-policy verification. */
+  basicSourceCheckedAt?: string;
   sourceUpdatedAt?: string | null;
   retrievedAt?: string | null;
   /** Summary verification date. Individual facts remain authoritative. */

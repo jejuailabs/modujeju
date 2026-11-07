@@ -1,0 +1,912 @@
+[
+  {
+    "name": "봄날",
+    "address": "제주특별자치도 제주시 애월읍 애월로1길 25",
+    "region": "west",
+    "type": "cafe",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018337&menuId=DOM_000001719008000000#p1",
+    "sourceId": "CNTS_000000000018337",
+    "sourceTags": [
+      "봄날",
+      "카페",
+      "커피",
+      "음료",
+      "차",
+      "해변 전망",
+      "visitjeju",
+      "비짓제주"
+    ],
+    "summary": "한담 해안 풍경과 돌담을 함께 볼 수 있는 촬영지 카페.",
+    "observations": [
+      {
+        "field": "district",
+        "value": "제주시 > 애월",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018337&menuId=DOM_000001719008000000#p1"
+      },
+      {
+        "field": "amenities",
+        "value": "현금결제,카드결제,화장실,무료 WIFI,음료대",
+        "quote": "현금결제,카드결제,화장실,무료 WIFI,음료대",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018337&menuId=DOM_000001719008000000#p1"
+      },
+      {
+        "field": "accessAssistance",
+        "value": "아주 어려움",
+        "quote": "장애인 활동 보조 필요성 아주 어려움",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018337&menuId=DOM_000001719008000000#p1"
+      }
+    ],
+    "retrievedAt": "2026-11-08",
+    "district": "애월"
+  },
+  {
+    "name": "리치망고 애월본점",
+    "address": "제주특별자치도 제주시 애월읍 애월해안로 272",
+    "region": "west",
+    "type": "cafe",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000501154&menuId=DOM_000001719008000000#p1",
+    "sourceId": "CONT_000000000501154",
+    "sourceTags": [
+      "리치망고 애월본점",
+      "스페셜망고쉐이크",
+      "카페",
+      "망고",
+      "음식",
+      "망고스무디",
+      "망고에이드",
+      "망고주스",
+      "반려동물",
+      "반려동물동반입장",
+      "혼저옵서개",
+      "반려동물동반_식당카페",
+      "애월카페",
+      "망고쉐이크전문점",
+      "애월해안도로",
+      "제주디저트",
+      "연예인이름대기표",
+      "visitjeju",
+      "비짓제주",
+      "2026혼저옵서개"
+    ],
+    "summary": "애월 해안도로에서 망고 음료를 판매하는 카페.",
+    "observations": [
+      {
+        "field": "district",
+        "value": "제주시 > 애월",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000501154&menuId=DOM_000001719008000000#p1"
+      },
+      {
+        "field": "amenities",
+        "value": "공용주차장,현금결제,카드결제,화장실,무료 WIFI,흡연구역,음료대,유도 및 안내시설,경보 및 피난시설",
+        "quote": "공용주차장,현금결제,카드결제,화장실,무료 WIFI,흡연구역,음료대,유도 및 안내시설,경보 및 피난시설",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000501154&menuId=DOM_000001719008000000#p1"
+      },
+      {
+        "field": "accessAssistance",
+        "value": "어려움",
+        "quote": "장애인 활동 보조 필요성 어려움",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000501154&menuId=DOM_000001719008000000#p1"
+      },
+      {
+        "field": "petPolicy",
+        "value": "반려동물 동반 가능. 실내에서는 펫티켓을 지켜야 하며 알레르기 이용객이 있으면 이용이 제한될 수 있다. 체급별 입장 조건은 별도 확인이 필요하다.",
+        "quote": "반려동물 동반 가능",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000501154&menuId=DOM_000001719008000000#p1"
+      }
+    ],
+    "retrievedAt": "2026-11-08",
+    "district": "애월"
+  },
+  {
+    "name": "우유부단 제주성이시돌목장본점",
+    "address": "제주특별자치도 제주시 한림읍 금악동길 38",
+    "region": "west",
+    "type": "cafe",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018301&menuId=DOM_000001719008000000#p1",
+    "sourceId": "CNTS_000000000018301",
+    "sourceTags": [
+      "우유부단 제주성이시돌목장본점",
+      "제주카페",
+      "제주서쪽가볼만한곳",
+      "이시돌목장",
+      "우도땅콩",
+      "제주우유",
+      "유기농카페",
+      "목장카페",
+      "우유부단아이스크림",
+      "유기농아쌈밀크티",
+      "성이시돌유기농우유",
+      "테쉬폰인근카페",
+      "금악리카페",
+      "visitjeju",
+      "비짓제주"
+    ],
+    "summary": "성이시돌목장 우유로 만든 아이스크림과 밀크티를 맛보는 목장 카페.",
+    "observations": [
+      {
+        "field": "district",
+        "value": "제주시 > 한림",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018301&menuId=DOM_000001719008000000#p1"
+      },
+      {
+        "field": "amenities",
+        "value": "공용주차장,현금결제,카드결제,화장실,무료 WIFI,음료대,유도 및 안내시설,경보 및 피난시설",
+        "quote": "공용주차장,현금결제,카드결제,화장실,무료 WIFI,음료대,유도 및 안내시설,경보 및 피난시설",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018301&menuId=DOM_000001719008000000#p1"
+      },
+      {
+        "field": "childrenAccess",
+        "value": "어린이 출입가능",
+        "quote": "어린이 출입가능",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018301&menuId=DOM_000001719008000000#p1"
+      },
+      {
+        "field": "accessAssistance",
+        "value": "아주 어려움",
+        "quote": "장애인 활동 보조 필요성 아주 어려움",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018301&menuId=DOM_000001719008000000#p1"
+      }
+    ],
+    "retrievedAt": "2026-11-08",
+    "district": "한림"
+  },
+  {
+    "name": "애월더선셋",
+    "address": "제주특별자치도 제주시 애월읍 일주서로 6111",
+    "region": "west",
+    "type": "cafe",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018299&menuId=DOM_000001719008000000#p1",
+    "sourceId": "CNTS_000000000018299",
+    "sourceTags": [
+      "애월더선셋",
+      "카페",
+      "커피",
+      "브런치",
+      "음식",
+      "토스트",
+      "아메리카노",
+      "에이드",
+      "카페라떼",
+      "토피넛라떼",
+      "말차라떼",
+      "생과일주스",
+      "스무디",
+      "애월오션뷰카페",
+      "애월브런치",
+      "곽지리카페",
+      "야외테라스",
+      "visitjeju",
+      "비짓제주"
+    ],
+    "summary": "곽지리 해안 전망을 두고 브런치와 음료를 즐기는 카페.",
+    "observations": [
+      {
+        "field": "district",
+        "value": "제주시 > 애월",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018299&menuId=DOM_000001719008000000#p1"
+      },
+      {
+        "field": "amenities",
+        "value": "공용주차장,현금결제,카드결제,화장실,무료 WIFI",
+        "quote": "공용주차장,현금결제,카드결제,화장실,무료 WIFI",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018299&menuId=DOM_000001719008000000#p1"
+      }
+    ],
+    "retrievedAt": "2026-11-08",
+    "district": "애월"
+  },
+  {
+    "name": "카페콜라",
+    "address": "제주특별자치도 제주시 한림읍 일주서로 5857",
+    "region": "west",
+    "type": "cafe",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020027&menuId=DOM_000001719008000000#p1",
+    "sourceId": "CNTS_000000000020027",
+    "sourceTags": [
+      "콜라",
+      "체리콕",
+      "고르곤졸라피자",
+      "커피콕",
+      "음식",
+      "커피",
+      "아메리카노",
+      "카푸치노",
+      "카페라떼",
+      "카페모카",
+      "에스프레소",
+      "카라멜마끼아또",
+      "초코라떼",
+      "녹차라떼",
+      "고구마라떼",
+      "프라페",
+      "에이드",
+      "레몬에이드",
+      "블루베리레몬에이드",
+      "딸기스무디",
+      "스무디",
+      "망고스무디",
+      "블루베리스무디",
+      "주스",
+      "토마토주스",
+      "딸기주스",
+      "키위주스",
+      "팥빙수",
+      "케이크",
+      "티라미수",
+      "허니브레드",
+      "브라우니"
+    ],
+    "summary": "코카콜라 수집품을 전시하고 커피와 콜라 음료를 파는 테마 카페.",
+    "observations": [
+      {
+        "field": "district",
+        "value": "제주시 > 한림",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020027&menuId=DOM_000001719008000000#p1"
+      },
+      {
+        "field": "amenities",
+        "value": "공용주차장,현금결제,카드결제,화장실,무료 WIFI,유도 및 안내시설,경보 및 피난시설",
+        "quote": "공용주차장,현금결제,카드결제,화장실,무료 WIFI,유도 및 안내시설,경보 및 피난시설",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020027&menuId=DOM_000001719008000000#p1"
+      },
+      {
+        "field": "accessAssistance",
+        "value": "아주 어려움",
+        "quote": "장애인 활동 보조 필요성 아주 어려움",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020027&menuId=DOM_000001719008000000#p1"
+      }
+    ],
+    "retrievedAt": "2026-11-08",
+    "district": "한림"
+  },
+  {
+    "name": "델문도",
+    "address": "제주특별자치도 제주시 조천읍 조함해안로 519-10",
+    "region": "east",
+    "type": "cafe",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000001501&menuId=DOM_000001719008000000#p1",
+    "sourceId": "CNTS_000000000001501",
+    "sourceTags": [
+      "델문도",
+      "제주도",
+      "제주여행",
+      "제주카페",
+      "제주동쪽가볼만한곳",
+      "제주오션뷰",
+      "제주커피",
+      "함덕해수욕장",
+      "베이커리카페",
+      "스페셜티커피",
+      "델문도비치웨이브",
+      "visitjeju",
+      "비짓제주"
+    ],
+    "summary": "함덕해변 가까이에서 커피와 베이커리를 즐길 수 있는 카페.",
+    "observations": [
+      {
+        "field": "district",
+        "value": "제주시 > 조천",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000001501&menuId=DOM_000001719008000000#p1"
+      },
+      {
+        "field": "amenities",
+        "value": "공용주차장,현금결제,카드결제,화장실,무료 WIFI,음료대",
+        "quote": "공용주차장,현금결제,카드결제,화장실,무료 WIFI,음료대",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000001501&menuId=DOM_000001719008000000#p1"
+      }
+    ],
+    "retrievedAt": "2026-11-08",
+    "district": "조천"
+  },
+  {
+    "name": "리듬",
+    "address": "제주특별자치도 제주시 무근성7길 11",
+    "region": "north",
+    "type": "cafe",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020710&menuId=DOM_000001719008000000#p1",
+    "sourceId": "CNTS_000000000020710",
+    "sourceTags": [
+      "리듬",
+      "제주카페",
+      "삼도이동카페",
+      "제주구도심카페",
+      "제주디저트카페",
+      "visitjeju",
+      "비짓제주"
+    ],
+    "summary": "옛 쌀집의 간판과 가구를 살린 제주 원도심 카페.",
+    "observations": [
+      {
+        "field": "district",
+        "value": "제주시 > 제주시내",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020710&menuId=DOM_000001719008000000#p1"
+      },
+      {
+        "field": "amenities",
+        "value": "공용주차장,현금결제,카드결제,화장실,무료 WIFI",
+        "quote": "공용주차장,현금결제,카드결제,화장실,무료 WIFI",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020710&menuId=DOM_000001719008000000#p1"
+      }
+    ],
+    "retrievedAt": "2026-11-08",
+    "district": "제주시내"
+  },
+  {
+    "name": "스테이위드커피",
+    "address": "제주특별자치도 제주시 해안마을5길 29",
+    "region": "north",
+    "type": "cafe",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020979&menuId=DOM_000001719008000000#p1",
+    "sourceId": "CNTS_000000000020979",
+    "sourceTags": [
+      "스테이위드커피",
+      "핸드드립커피",
+      "잠봉뵈르",
+      "샌드위치",
+      "제주카페",
+      "visitjeju",
+      "비짓제주",
+      "2022고메페스타",
+      "우수관광사업체",
+      "우수관광사업체인증"
+    ],
+    "summary": "핸드드립 커피와 샌드위치를 함께 판매하는 카페.",
+    "observations": [
+      {
+        "field": "district",
+        "value": "제주시 > 제주시내",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020979&menuId=DOM_000001719008000000#p1"
+      },
+      {
+        "field": "amenities",
+        "value": "공용주차장",
+        "quote": "공용주차장",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020979&menuId=DOM_000001719008000000#p1"
+      },
+      {
+        "field": "accessAssistance",
+        "value": "아주 어려움",
+        "quote": "장애인 활동 보조 필요성 아주 어려움",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020979&menuId=DOM_000001719008000000#p1"
+      }
+    ],
+    "retrievedAt": "2026-11-08",
+    "district": "제주시내"
+  },
+  {
+    "name": "카페901",
+    "address": "제주특별자치도 제주시 1100로 2977-10",
+    "region": "north",
+    "type": "cafe",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000009010&menuId=DOM_000001719008000000#p1",
+    "sourceId": "CNTS_200000000009010",
+    "sourceTags": [
+      "카페901",
+      "비건카페",
+      "샐러드",
+      "샌드위치",
+      "스무디",
+      "visitjeju",
+      "비짓제주"
+    ],
+    "summary": "비건 식사와 음료를 선보이며 정원과 루프탑을 갖춘 카페.",
+    "observations": [
+      {
+        "field": "district",
+        "value": "제주시 > 제주시내",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000009010&menuId=DOM_000001719008000000#p1"
+      }
+    ],
+    "retrievedAt": "2026-11-08",
+    "district": "제주시내"
+  },
+  {
+    "name": "커피템플",
+    "address": "제주특별자치도 제주시 영평길 269",
+    "region": "north",
+    "type": "cafe",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000012547&menuId=DOM_000001719008000000#p1",
+    "sourceId": "CNTS_200000000012547",
+    "sourceTags": [
+      "커피템플",
+      "텐저린라떼",
+      "오렌지쉬폰커피",
+      "에스프레소",
+      "감귤커피",
+      "visitjeju",
+      "비짓제주"
+    ],
+    "summary": "에스프레소와 감귤을 조합한 커피 메뉴를 선보이는 카페.",
+    "observations": [
+      {
+        "field": "district",
+        "value": "제주시 > 제주시내",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000012547&menuId=DOM_000001719008000000#p1"
+      },
+      {
+        "field": "amenities",
+        "value": "공용주차장,화장실,무료 WIFI",
+        "quote": "공용주차장,화장실,무료 WIFI",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000012547&menuId=DOM_000001719008000000#p1"
+      },
+      {
+        "field": "childrenAccess",
+        "value": "어린이 출입가능",
+        "quote": "어린이 출입가능",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000012547&menuId=DOM_000001719008000000#p1"
+      },
+      {
+        "field": "accessAssistance",
+        "value": "어려움",
+        "quote": "장애인 활동 보조 필요성 어려움",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000012547&menuId=DOM_000001719008000000#p1"
+      }
+    ],
+    "retrievedAt": "2026-11-08",
+    "district": "제주시내"
+  },
+  {
+    "name": "카페공작소",
+    "address": "제주특별자치도 제주시 구좌읍 해맞이해안로 1446",
+    "region": "east",
+    "type": "cafe",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018312&menuId=DOM_000001719008000000#p1",
+    "sourceId": "CNTS_000000000018312",
+    "sourceTags": [
+      "카페",
+      "수제케이크",
+      "에이드",
+      "제주음료",
+      "음식",
+      "아메리카노",
+      "카페라떼",
+      "감귤",
+      "주스",
+      "청귤차",
+      "에스프레소",
+      "케이크",
+      "바닐라라떼",
+      "차",
+      "캐모마일",
+      "레몬그라스",
+      "허브티",
+      "얼그레이",
+      "라떼",
+      "루이보스"
+    ],
+    "summary": "세화 해안에서 음료와 수제 케이크, 제주 소품을 만날 수 있는 카페.",
+    "observations": [
+      {
+        "field": "district",
+        "value": "제주시 > 구좌",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018312&menuId=DOM_000001719008000000#p1"
+      },
+      {
+        "field": "amenities",
+        "value": "공용주차장,현금결제,카드결제,화장실,편의점,음료대,유도 및 안내시설,경보 및 피난시설",
+        "quote": "공용주차장,현금결제,카드결제,화장실,편의점,음료대,유도 및 안내시설,경보 및 피난시설",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018312&menuId=DOM_000001719008000000#p1"
+      }
+    ],
+    "retrievedAt": "2026-11-08",
+    "district": "구좌"
+  },
+  {
+    "name": "풍림다방 커피로스터즈 송당",
+    "address": "제주특별자치도 제주시 구좌읍 중산간동로 2267-4",
+    "region": "east",
+    "type": "cafe",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019945&menuId=DOM_000001719008000000#p1",
+    "sourceId": "CNTS_000000000019945",
+    "sourceTags": [
+      "풍림다방 송당점",
+      "제주카페",
+      "송당카페",
+      "제주커피",
+      "제주디저트카페",
+      "visitjeju",
+      "비짓제주"
+    ],
+    "summary": "송당의 옛 주택과 정원을 활용한 로스팅 커피 카페.",
+    "observations": [
+      {
+        "field": "district",
+        "value": "제주시 > 구좌",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019945&menuId=DOM_000001719008000000#p1"
+      },
+      {
+        "field": "amenities",
+        "value": "화장실,무료 WIFI,음료대",
+        "quote": "화장실,무료 WIFI,음료대",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019945&menuId=DOM_000001719008000000#p1"
+      },
+      {
+        "field": "childrenAccess",
+        "value": "어린이 출입불가",
+        "quote": "어린이 출입불가",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019945&menuId=DOM_000001719008000000#p1"
+      },
+      {
+        "field": "accessAssistance",
+        "value": "아주 어려움",
+        "quote": "장애인 활동 보조 필요성 아주 어려움",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019945&menuId=DOM_000001719008000000#p1"
+      }
+    ],
+    "retrievedAt": "2026-11-08",
+    "district": "구좌"
+  },
+  {
+    "name": "바람벽에 흰당나귀",
+    "address": "제주특별자치도 제주시 구좌읍 동복로 11",
+    "region": "east",
+    "type": "cafe",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020649&menuId=DOM_000001719008000000#p1",
+    "sourceId": "CNTS_000000000020649",
+    "sourceTags": [
+      "카페",
+      "음료",
+      "주스",
+      "말차빙수",
+      "음식",
+      "아메리카노",
+      "카페라떼",
+      "카페모카",
+      "바닐라라떼",
+      "카푸치노",
+      "눈꽃빙수",
+      "에스프레소",
+      "카라멜마끼아또",
+      "비엔나커피",
+      "바닐라빈라떼",
+      "아포가토",
+      "샤케라또",
+      "녹차라떼",
+      "홍차라떼",
+      "고구마라떼",
+      "핫초코",
+      "아이스초코",
+      "라떼",
+      "팥빙수",
+      "녹차팥빙수",
+      "차",
+      "매실차",
+      "유자차",
+      "레몬차",
+      "자몽차",
+      "에이드",
+      "레몬에이드",
+      "자몽에이드",
+      "스무디",
+      "허브티",
+      "카모마일",
+      "페퍼민트",
+      "루이보스",
+      "키위주스",
+      "딸기주스",
+      "케이크",
+      "치즈케이크",
+      "브라우니",
+      "와플",
+      "리에주와플",
+      "에스프레소콘파냐",
+      "에스프레소마키아또"
+    ],
+    "summary": "동복리 바다를 바라보며 말차빙수와 음료를 즐길 수 있는 카페.",
+    "observations": [
+      {
+        "field": "district",
+        "value": "제주시 > 구좌",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020649&menuId=DOM_000001719008000000#p1"
+      },
+      {
+        "field": "amenities",
+        "value": "공용주차장,화장실,무료 WIFI",
+        "quote": "공용주차장,화장실,무료 WIFI",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020649&menuId=DOM_000001719008000000#p1"
+      },
+      {
+        "field": "childrenAccess",
+        "value": "어린이 출입가능",
+        "quote": "어린이 출입가능",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020649&menuId=DOM_000001719008000000#p1"
+      }
+    ],
+    "retrievedAt": "2026-11-08",
+    "district": "구좌"
+  },
+  {
+    "name": "모래비 커피로스터스 & 베이커리",
+    "address": "제주특별자치도 제주시 구좌읍 해맞이해안로 462",
+    "region": "east",
+    "type": "cafe",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020442&menuId=DOM_000001719008000000#p1",
+    "sourceId": "CNTS_000000000020442",
+    "sourceTags": [
+      "모래비카페",
+      "월정리카페",
+      "한라봉음료",
+      "제주오션뷰카페",
+      "월정리해변",
+      "visitjeju",
+      "비짓제주"
+    ],
+    "summary": "월정리해변 앞에서 해안 전망과 감귤 음료를 즐기는 카페.",
+    "observations": [
+      {
+        "field": "district",
+        "value": "제주시 > 구좌",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020442&menuId=DOM_000001719008000000#p1"
+      },
+      {
+        "field": "amenities",
+        "value": "공용주차장",
+        "quote": "공용주차장",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020442&menuId=DOM_000001719008000000#p1"
+      }
+    ],
+    "retrievedAt": "2026-11-08",
+    "district": "구좌"
+  },
+  {
+    "name": "송당나무",
+    "address": "제주특별자치도 제주시 구좌읍 송당5길 68-140",
+    "region": "east",
+    "type": "cafe",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000007203&menuId=DOM_000001719008000000#p1",
+    "sourceId": "CNTS_200000000007203",
+    "sourceTags": [
+      "송당나무",
+      "구좌당근주스",
+      "착즙주스",
+      "제주카페",
+      "커피",
+      "visitjeju",
+      "비짓제주",
+      "2022고메페스타"
+    ],
+    "summary": "구좌 당근주스와 커피를 판매하는 정원 카페.",
+    "observations": [
+      {
+        "field": "district",
+        "value": "제주시 > 구좌",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000007203&menuId=DOM_000001719008000000#p1"
+      },
+      {
+        "field": "amenities",
+        "value": "무료 WIFI,공용주차장",
+        "quote": "무료 WIFI,공용주차장",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000007203&menuId=DOM_000001719008000000#p1"
+      },
+      {
+        "field": "childrenAccess",
+        "value": "어린이 출입가능",
+        "quote": "어린이 출입가능",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000007203&menuId=DOM_000001719008000000#p1"
+      }
+    ],
+    "retrievedAt": "2026-11-08",
+    "district": "구좌"
+  },
+  {
+    "name": "카페서연의집 건축학개론촬영지",
+    "address": "제주특별자치도 서귀포시 남원읍 위미해안로 86",
+    "region": "south",
+    "type": "cafe",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018357&menuId=DOM_000001719008000000#p1",
+    "sourceId": "CNTS_000000000018357",
+    "sourceTags": [
+      "카페서연의집 건축학개론촬영지",
+      "카페",
+      "커피",
+      "음식",
+      "디저트",
+      "한류",
+      "k-movie",
+      "드라마영화촬영지",
+      "건축학개론",
+      "제주영화촬영지",
+      "위미해안",
+      "제주올레5코스",
+      "오션뷰카페",
+      "visitjeju",
+      "비짓제주"
+    ],
+    "summary": "영화 건축학개론 관련 전시와 위미 해안 전망을 함께 볼 수 있는 카페.",
+    "observations": [
+      {
+        "field": "district",
+        "value": "서귀포시 > 남원",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018357&menuId=DOM_000001719008000000#p1"
+      },
+      {
+        "field": "amenities",
+        "value": "공용주차장,현금결제,카드결제,화장실,무료 WIFI,음료대,유도 및 안내시설,경보 및 피난시설",
+        "quote": "공용주차장,현금결제,카드결제,화장실,무료 WIFI,음료대,유도 및 안내시설,경보 및 피난시설",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018357&menuId=DOM_000001719008000000#p1"
+      }
+    ],
+    "retrievedAt": "2026-11-08",
+    "district": "남원"
+  },
+  {
+    "name": "테라로사 서귀포점",
+    "address": "제주특별자치도 서귀포시 칠십리로658번길 27-16, 1층",
+    "region": "south",
+    "type": "cafe",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018390&menuId=DOM_000001719008000000#p1",
+    "sourceId": "CNTS_000000000018390",
+    "sourceTags": [
+      "라로사 서귀포점",
+      "커피",
+      "테라로사",
+      "제주카페",
+      "드립커피",
+      "서귀포카페",
+      "제주커피",
+      "제주카페투어",
+      "카페투어",
+      "스페셜티커피",
+      "쇠소깍인근카페",
+      "야외테라스",
+      "전용주차장",
+      "드립백",
+      "visitjeju",
+      "비짓제주"
+    ],
+    "summary": "쇠소깍 인근 하효동의 스페셜티 커피 전문점.",
+    "observations": [
+      {
+        "field": "district",
+        "value": "서귀포시 > 서귀포시내",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018390&menuId=DOM_000001719008000000#p1"
+      },
+      {
+        "field": "amenities",
+        "value": "공용주차장,현금결제,카드결제,화장실,무료 WIFI,음료대,유도 및 안내시설,경보 및 피난시설",
+        "quote": "공용주차장,현금결제,카드결제,화장실,무료 WIFI,음료대,유도 및 안내시설,경보 및 피난시설",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018390&menuId=DOM_000001719008000000#p1"
+      }
+    ],
+    "retrievedAt": "2026-11-08",
+    "district": "서귀포시내"
+  },
+  {
+    "name": "바다다",
+    "address": "제주특별자치도 서귀포시 대포로 148-15",
+    "region": "south",
+    "type": "cafe",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019250&menuId=DOM_000001719008000000#p1",
+    "sourceId": "CNTS_000000000019250",
+    "sourceTags": [
+      "바다다",
+      "제주도",
+      "제주여행",
+      "제주카페",
+      "제주오션뷰",
+      "오션뷰",
+      "제주",
+      "제주커피",
+      "대포동카페",
+      "중문오션뷰카페",
+      "야외테라스",
+      "수영장카페",
+      "visitjeju",
+      "비짓제주"
+    ],
+    "summary": "대포 바다와 야외 테라스를 갖춘 해안 카페.",
+    "observations": [
+      {
+        "field": "district",
+        "value": "서귀포시 > 서귀포시내",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019250&menuId=DOM_000001719008000000#p1"
+      },
+      {
+        "field": "amenities",
+        "value": "공용주차장,현금결제,카드결제,화장실,무료 WIFI,흡연구역,편의점,음료대",
+        "quote": "공용주차장,현금결제,카드결제,화장실,무료 WIFI,흡연구역,편의점,음료대",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019250&menuId=DOM_000001719008000000#p1"
+      },
+      {
+        "field": "accessAssistance",
+        "value": "어려움",
+        "quote": "장애인 활동 보조 필요성 어려움",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019250&menuId=DOM_000001719008000000#p1"
+      },
+      {
+        "field": "childAreaRestriction",
+        "value": "풀사이드존은 성인 전용으로 안내되어 있다. 카페 전체의 어린이 입장 정책으로 확대 해석하지 않는다.",
+        "quote": "성인전용 풀사이드존",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019250&menuId=DOM_000001719008000000#p1"
+      }
+    ],
+    "retrievedAt": "2026-11-08",
+    "district": "서귀포시내"
+  },
+  {
+    "name": "유동커피",
+    "address": "제주특별자치도 서귀포시 태평로 406-1 1층",
+    "region": "south",
+    "type": "cafe",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019242&menuId=DOM_000001719008000000#p1",
+    "sourceId": "CNTS_000000000019242",
+    "sourceTags": [
+      "제주커피",
+      "제주카페",
+      "제주도카페",
+      "유동커피",
+      "제주맛집",
+      "제주라떼",
+      "라떼",
+      "제주유동커피",
+      "커피"
+    ],
+    "summary": "서귀포 원도심에서 다양한 원두와 커피 메뉴를 고를 수 있는 카페.",
+    "observations": [
+      {
+        "field": "district",
+        "value": "서귀포시 > 서귀포시내",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019242&menuId=DOM_000001719008000000#p1"
+      },
+      {
+        "field": "amenities",
+        "value": "현금결제,카드결제,화장실,무료 WIFI,편의점,음료대,유도 및 안내시설,경보 및 피난시설",
+        "quote": "현금결제,카드결제,화장실,무료 WIFI,편의점,음료대,유도 및 안내시설,경보 및 피난시설",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019242&menuId=DOM_000001719008000000#p1"
+      },
+      {
+        "field": "petPolicy",
+        "value": "반려동물 동반 가능으로 안내되어 있다. 체급과 실내 이용 범위는 표시되지 않았다.",
+        "quote": "반려동물 동반 가능!",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019242&menuId=DOM_000001719008000000#p1"
+      }
+    ],
+    "retrievedAt": "2026-11-08",
+    "district": "서귀포시내"
+  },
+  {
+    "name": "허니문하우스",
+    "address": "제주특별자치도 서귀포시 칠십리로 228-13",
+    "region": "south",
+    "type": "cafe",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000009011&menuId=DOM_000001719008000000#p1",
+    "sourceId": "CNTS_200000000009011",
+    "sourceTags": [
+      "허니문하우스",
+      "서귀포카페",
+      "토평동카페",
+      "제주카페",
+      "서귀포여행",
+      "visitjeju",
+      "비짓제주"
+    ],
+    "summary": "칠십리로에서 바다 경관과 베이커리 메뉴를 즐기는 카페.",
+    "observations": [
+      {
+        "field": "district",
+        "value": "서귀포시 > 서귀포시내",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000009011&menuId=DOM_000001719008000000#p1"
+      },
+      {
+        "field": "amenities",
+        "value": "공용주차장,현금결제,카드결제,화장실,무료 WIFI",
+        "quote": "공용주차장,현금결제,카드결제,화장실,무료 WIFI",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000009011&menuId=DOM_000001719008000000#p1"
+      },
+      {
+        "field": "childrenAccess",
+        "value": "어린이 출입가능",
+        "quote": "어린이 출입가능",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000009011&menuId=DOM_000001719008000000#p1"
+      },
+      {
+        "field": "infantFacilities",
+        "value": "유아의자",
+        "quote": "유아의자",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000009011&menuId=DOM_000001719008000000#p1"
+      }
+    ],
+    "retrievedAt": "2026-11-08",
+    "district": "서귀포시내"
+  }
+]

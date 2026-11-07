@@ -155,4 +155,10 @@ describe("server security boundaries", () => {
     expect(input.place.retrievedAt).toBe("2026-11-07T14:00:00.000Z");
     expect(input.place.facts.kidsEntry.verifiedAt).toBeNull();
   });
+  it("preserves unknown measurements and separately observed source metadata", () => {
+    const result = toPublicPlace({ ...place, lat: null, lng: null, durationMinutes: null, sourceTags: ["반려동물"], sourceName: "VisitJeju", basicSourceCheckedAt: "2026-11-08", imageKind: "placeholder" });
+    expect(result).toMatchObject({ lat: null, lng: null, durationMinutes: null, sourceTags: ["반려동물"], basicSourceCheckedAt: "2026-11-08", imageKind: "placeholder" });
+    expect(result?.facts.petEntry.value).toBe("unknown");
+    expect(result?.verifiedAt).toBeNull();
+  });
 });

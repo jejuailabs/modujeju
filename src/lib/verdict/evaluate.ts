@@ -41,7 +41,12 @@ function ageInDays(date: string | null, now: Date): number | null {
     new Date(time).toISOString().slice(0, 10) !== date
   )
     return null;
-  const days = Math.floor((now.getTime() - time) / 86_400_000);
+  const nowTime = now.getTime();
+  if (!Number.isFinite(nowTime)) return null;
+  // Evidence uses Jeju calendar dates. UTC midnight would reject today's
+  // Korean verification between 00:00 and 08:59 and shift expiry boundaries.
+  const jejuDate = new Date(nowTime + 9 * 60 * 60 * 1000).toISOString().slice(0, 10);
+  const days = Math.floor((Date.parse(`${jejuDate}T00:00:00Z`) - time) / 86_400_000);
   return Number.isFinite(days) && days >= 0 ? days : null;
 }
 

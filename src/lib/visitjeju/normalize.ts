@@ -65,23 +65,15 @@ export function normalizeVisitJejuRecord(
   const source = object(raw);
   const sourceId = plainText(source.contentsid, 100);
   const title = plainText(source.title, 120);
-  const lat =
-    typeof source.latitude === "number"
-      ? source.latitude
-      : Number(source.latitude);
-  const lng =
-    typeof source.longitude === "number"
-      ? source.longitude
-      : Number(source.longitude);
+  const numericCoordinate = (value: unknown): number | null =>
+    value === null || value === undefined || value === "" ? null : Number(value);
+  const latitude = numericCoordinate(source.latitude);
+  const longitude = numericCoordinate(source.longitude);
   if (
     !/^[a-zA-Z0-9_-]{1,100}$/.test(sourceId) ||
     !title ||
-    !Number.isFinite(lat) ||
-    !Number.isFinite(lng) ||
-    lat < 32 ||
-    lat > 35 ||
-    lng < 125 ||
-    lng > 128
+    (latitude !== null && (!Number.isFinite(latitude) || latitude < 32 || latitude > 35)) ||
+    (longitude !== null && (!Number.isFinite(longitude) || longitude < 125 || longitude > 128))
   ) {
     throw new Error("VISITJEJU_INVALID_RECORD");
   }
@@ -103,9 +95,10 @@ export function normalizeVisitJejuRecord(
       ),
       region: options.region,
       type: options.type,
-      lat,
-      lng,
+      lat: latitude !== null && longitude !== null ? latitude : null,
+      lng: latitude !== null && longitude !== null ? longitude : null,
       image: "/assets/icons/map-pin.svg",
+      imageKind: "placeholder",
       price: {
         amount: null,
         unit:
@@ -116,10 +109,13 @@ export function normalizeVisitJejuRecord(
               : "person",
         petExtra: null,
       },
-      durationMinutes: 0,
+      durationMinutes: null,
       facts: createUnknownFacts(),
       sourceId,
       sourceUrl,
+      sourceName: "VisitJeju",
+      sourceTags: plainText(source.alltag, 3200).split(/[,#]/).map((tag) => tag.trim()).filter(Boolean).slice(0, 40).map((tag) => tag.slice(0, 80)),
+      basicSourceCheckedAt: options.retrievedAt.slice(0, 10),
       sourceUpdatedAt: null,
       retrievedAt: options.retrievedAt,
       verifiedAt: null,

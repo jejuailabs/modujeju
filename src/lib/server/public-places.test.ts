@@ -25,6 +25,7 @@ vi.mock("next/cache", () => ({
 }));
 
 import { demoPlaces } from "@/data/places";
+import { realPlaces } from "@/data/catalog";
 import {
   getPublicPlaces,
   invalidatePublicPlaces,
@@ -33,6 +34,7 @@ import {
 import { GET } from "@/app/api/places/route";
 
 beforeEach(() => {
+  vi.stubEnv("DEMO_MODE", "false");
   mocks.admin.mockClear();
   mocks.get.mockReset();
   mocks.where.mockReset();
@@ -54,13 +56,27 @@ describe("public catalog caching", () => {
       tags: [PUBLIC_PLACES_CACHE_TAG],
     });
   });
-  it("never enters the cache or SDK when services are disabled", async () => {
+  it("serves official observed data without entering the cache or SDK when services are disabled", async () => {
     vi.stubEnv("CLOUD_SERVICES_ENABLED", "false");
-    expect(await getPublicPlaces()).toBe(demoPlaces);
+    expect(await getPublicPlaces()).toBe(realPlaces);
+    expect(await getPublicPlaces()).not.toBe(demoPlaces);
     expect(mocks.cachedRead).not.toHaveBeenCalled();
     expect(mocks.admin).not.toHaveBeenCalled();
     invalidatePublicPlaces();
     expect(mocks.invalidate).not.toHaveBeenCalled();
+  });
+  it("defaults to official observed data when feature flags are missing", async () => {
+    vi.stubEnv("DEMO_MODE", undefined);
+    vi.stubEnv("CLOUD_SERVICES_ENABLED", undefined);
+    expect(await getPublicPlaces()).toBe(realPlaces);
+    expect(mocks.admin).not.toHaveBeenCalled();
+  });
+  it("only selects fictional demo data through an explicit demo flag", async () => {
+    vi.stubEnv("DEMO_MODE", "true");
+    vi.stubEnv("CLOUD_SERVICES_ENABLED", "true");
+    expect(await getPublicPlaces()).toBe(demoPlaces);
+    expect(mocks.cachedRead).not.toHaveBeenCalled();
+    expect(mocks.admin).not.toHaveBeenCalled();
   });
   it("returns only validated live published data without internal fields", async () => {
     vi.stubEnv("CLOUD_SERVICES_ENABLED", "true");

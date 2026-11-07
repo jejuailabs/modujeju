@@ -265,6 +265,24 @@ describe("evidence freshness", () => {
     expect(getFactFreshness(official(null), now)).toBe("missing");
   });
 
+  it("accepts today's Korean verification from KST midnight, before UTC changes date", () => {
+    expect(getFactFreshness(official("2026-11-08"), new Date("2026-11-07T15:00:00Z"))).toBe("fresh");
+    expect(getFactFreshness(official("2026-11-08"), new Date("2026-11-07T23:59:59Z"))).toBe("fresh");
+  });
+
+  it("still rejects the next Korean date before KST midnight", () => {
+    expect(getFactFreshness(official("2026-11-08"), new Date("2026-11-07T14:59:59Z"))).toBe("missing");
+  });
+
+  it("advances expiry boundaries at KST midnight rather than UTC midnight", () => {
+    expect(getFactFreshness(official("2026-10-08"), new Date("2026-11-07T14:59:59Z"), 30)).toBe("dueSoon");
+    expect(getFactFreshness(official("2026-10-08"), new Date("2026-11-07T15:00:00Z"), 30)).toBe("stale");
+  });
+
+  it("treats an invalid current clock as missing evidence rather than throwing", () => {
+    expect(getFactFreshness(official("2026-11-08"), new Date("invalid"))).toBe("missing");
+  });
+
   it("distinguishes fresh, due-soon, stale and demo evidence", () => {
     expect(getFactFreshness(official("2026-11-01"), now)).toBe("fresh");
     expect(getFactFreshness(official("2026-08-20"), now)).toBe("dueSoon");

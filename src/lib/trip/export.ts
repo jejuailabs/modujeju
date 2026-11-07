@@ -26,8 +26,8 @@ export function itineraryJsonExport(
                 address: place.address[locale],
                 region: place.region,
                 type: place.type,
-                latitude: place.lat,
-                longitude: place.lng,
+                latitude: place.lat ?? null,
+                longitude: place.lng ?? null,
                 dataMode: place.dataMode,
               },
             ]

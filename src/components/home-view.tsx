@@ -13,6 +13,7 @@ import {
   DemoNotice,
 } from "./common";
 import { PlaceCard } from "./place-card";
+import { CatalogNotice } from "./catalog-notice";
 export function HomeView({
   locale,
   places,
@@ -91,6 +92,7 @@ export function HomeView({
         {places.some((p) => p.dataMode === "demo") && (
           <DemoNotice locale={locale} />
         )}
+        <CatalogNotice locale={locale} places={places} />
         <section className="home-section">
           <div className="section-heading">
             <div>
@@ -132,9 +134,9 @@ export function HomeView({
             </div>
           </div>
           <div className="place-grid">
-            {places
-              .filter((p) => p.price.amount !== null)
-              .slice(0, 3)
+            {(["restaurant", "cafe", "stay"] as const)
+              .map((type) => places.find((p) => p.type === type))
+              .filter((p): p is Place => Boolean(p))
               .map((place) => (
                 <PlaceCard key={place.id} place={place} locale={locale} />
               ))}

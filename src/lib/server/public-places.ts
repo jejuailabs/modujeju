@@ -2,6 +2,7 @@ import "server-only";
 import { revalidateTag, unstable_cache } from "next/cache";
 import type { Place } from "@/lib/types";
 import { demoPlaces } from "@/data/places";
+import { realPlaces } from "@/data/catalog";
 import { getAdminServices } from "@/lib/firebase/admin";
 import { ServiceError } from "./errors";
 import { toPublicPlace } from "./place-schema";
@@ -52,9 +53,10 @@ const readCachedPublishedPlaces = unstable_cache(
 );
 
 export async function getPublicPlaces(): Promise<Place[]> {
-  // Keep this outside the cache so disabled services can never serve old live
-  // data or initialize an SDK. Missing flags always select the local demo.
-  if (process.env.CLOUD_SERVICES_ENABLED !== "true") return demoPlaces;
+  // Demonstration is an explicit product mode, separate from cloud access.
+  // Official observed listings remain usable without paid/cloud services.
+  if (process.env.DEMO_MODE === "true") return demoPlaces;
+  if (process.env.CLOUD_SERVICES_ENABLED !== "true") return realPlaces;
   return readCachedPublishedPlaces();
 }
 

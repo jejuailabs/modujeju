@@ -8,7 +8,7 @@ const ko = {
     "동행 조건, 저장한 장소와 일정은 이 브라우저에 보관돼요. 다른 기기와 자동으로 공유되지 않아요.",
   cloudOff: "계정 연결은 아직 준비 중이에요",
   cloudOffBody:
-    "현재는 시연 모드예요. 실서비스 연결과 이용 조건을 확인한 뒤 Google 로그인과 기기 간 저장을 제공할 예정이에요.",
+    "실제 제주 장소는 로그인 없이 둘러볼 수 있어요. 계정 연결과 기기 간 저장은 아직 활성화되지 않았어요.",
   browse: "여행지 둘러보기",
   saved: "저장한 장소 보기",
   google: "Google로 계속하기",
@@ -86,7 +86,7 @@ const en: Messages = {
     "Your companion preferences, saved places and itinerary stay in this browser. They are not shared automatically with other devices.",
   cloudOff: "Account connection is coming",
   cloudOffBody:
-    "This is a demonstration. Google sign-in and cross-device saves will be available after the live service and its usage terms are confirmed.",
+    "Explore real Jeju places without signing in. Account connection and cross-device saves are not enabled yet.",
   browse: "Explore places",
   saved: "View saved places",
   google: "Continue with Google",
@@ -165,7 +165,7 @@ const zh: Messages = {
     "同行条件、收藏地点和行程保存在此浏览器中，不会自动同步到其他设备。",
   cloudOff: "账号连接功能准备中",
   cloudOffBody:
-    "当前为演示模式。确认正式服务及使用条件后，将提供 Google 登录和跨设备收藏。",
+    "无需登录即可浏览济州的真实地点。账号连接和跨设备收藏尚未启用。",
   browse: "浏览地点",
   saved: "查看收藏",
   google: "使用 Google 继续",
@@ -239,7 +239,7 @@ const ja: Messages = {
     "同行条件、保存したスポット、旅程はこのブラウザに保管されます。他の端末には自動で共有されません。",
   cloudOff: "アカウント連携を準備中です",
   cloudOffBody:
-    "現在はデモモードです。本番サービスと利用条件の確認後、Google ログインと端末間の保存を提供する予定です。",
+    "済州の実在するスポットはログインせずに探せます。アカウント連携と端末間の保存は、まだ有効になっていません。",
   browse: "スポットを探す",
   saved: "保存したスポット",
   google: "Google で続ける",

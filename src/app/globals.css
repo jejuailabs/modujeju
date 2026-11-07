@@ -1,5 +1,23 @@
 @import "tailwindcss";
 
+.catalog-notice {
+  padding: 20px 24px;
+  margin: 0 0 28px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--surface2);
+}
+.catalog-notice strong { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.catalog-notice strong span { color: var(--accent-dark); }
+.catalog-notice p { margin: 6px 0 0; color: var(--muted); }
+.source-tags, .catalog-tag-filters { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0; }
+.source-tags span { padding: 3px 9px; background: var(--surface2); border-radius: 7px; color: var(--green); font-size: 13px; overflow-wrap: anywhere; }
+.catalog-tag-filters button { min-height: 48px; border: 1px solid var(--line); border-radius: 24px; background: var(--surface); padding: 8px 15px; }
+.catalog-tag-filters button.active { background: var(--accent-pale); color: var(--accent-dark); border-color: var(--accent); }
+.map-addresses { padding: 20px; }
+.map-address { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.map-address p { margin: 4px 0 0; color: var(--muted); }
+
 :root {
   --bg: #fffaf5;
   --surface: #fff;

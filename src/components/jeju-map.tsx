@@ -4,6 +4,7 @@ import { MapPin, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import type { Locale, Place } from "@/lib/types";
 import { copy, priceLabel } from "@/messages/ui";
+import { catalogCopy } from "@/messages/catalog";
 export function JejuMap({
   locale,
   places,
@@ -14,11 +15,14 @@ export function JejuMap({
   const c = copy(locale),
     [selected, setSelected] = useState<string | null>(null),
     place = places.find((p) => p.id === selected);
+  const t = catalogCopy(locale);
+  const mappedPlaces = places.filter((p): p is Place & { lat: number; lng: number } => typeof p.lat === "number" && typeof p.lng === "number");
+  const unmappedPlaces = places.filter((p) => p.lat === null || p.lng === null);
   return (
     <div className="map-panel">
       <p className="map-note">
         <MapPin size={16} />
-        {c.mapNote}
+        {places.some((p) => p.dataMode === "demo") ? c.mapNote : t.mapOverview}
       </p>
       <div className="map-canvas">
         <svg viewBox="0 0 720 430" role="img" aria-label={c.map}>
@@ -79,7 +83,7 @@ export function JejuMap({
             {c.south}
           </text>
         </svg>
-        {places.map((p, i) => {
+        {mappedPlaces.map((p, i) => {
           const x = Math.max(12, Math.min(88, ((p.lng - 126.12) / 0.85) * 100));
           const y = Math.max(20, Math.min(77, ((33.6 - p.lat) / 0.42) * 100));
           return (
@@ -115,7 +119,7 @@ export function JejuMap({
         </div>
       ) : (
         <div className="map-key">
-          {places.map((p, i) => (
+          {mappedPlaces.map((p, i) => (
             <button key={p.id} onClick={() => setSelected(p.id)}>
               <span>{i + 1}</span>
               {p.name[locale]}
@@ -123,6 +127,13 @@ export function JejuMap({
           ))}
         </div>
       )}
+      {unmappedPlaces.length > 0 && <div className="map-addresses">
+        <p className="notice">{t.noCoordinates}</p>
+        {unmappedPlaces.map((p) => <div className="map-address" key={p.id}>
+          <div><Link href={`/${locale}/places/${p.slug}`}><strong>{p.name[locale]}</strong></Link><p>{p.address[locale]}</p></div>
+          <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${p.name.ko} ${p.address.ko}`)}`} target="_blank" rel="noopener noreferrer" className="text-link">{t.addressMap}<ArrowUpRight size={16} /></a>
+        </div>)}
+      </div>}
     </div>
   );
 }

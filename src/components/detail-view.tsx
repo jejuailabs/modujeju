@@ -19,6 +19,7 @@ import { evaluatePlace, getFactFreshness } from "@/lib/verdict/evaluate";
 import { MAX_SAVED_PLACES } from "@/lib/trip/state";
 import { useTravelStore } from "@/hooks/use-travel-store";
 import { copy, priceLabel } from "@/messages/ui";
+import { catalogCopy, observationLabel } from "@/messages/catalog";
 import {
   detailCopy,
   detailFactLabels,
@@ -83,6 +84,7 @@ export function DetailView({
 }) {
   const c = copy(locale);
   const t = detailCopy(locale);
+  const catalog = catalogCopy(locale);
   const store = useTravelStore();
   const [actionMessage, setActionMessage] = useState("");
   const [manualShareUrl, setManualShareUrl] = useState("");
@@ -101,6 +103,7 @@ export function DetailView({
   const sourceUrl = safeExternalUrl(place.sourceUrl);
   const verifiedDate = displayDate(place.verifiedAt, locale);
   const retrievedDate = displayDate(place.retrievedAt, locale);
+  const sourceReadDate = displayDate(place.basicSourceCheckedAt, locale);
   const money = (value: number) =>
     new Intl.NumberFormat(locale, {
       style: "currency",
@@ -118,6 +121,7 @@ export function DetailView({
     !isDemo && Number.isFinite(place.lat) && Number.isFinite(place.lng)
       ? `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(`${place.lat},${place.lng}`)}`
       : null;
+  const addressMapUrl = !isDemo ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${place.name.ko} ${place.address.ko}`)}` : null;
 
   function savePlace() {
     if (!isSaved && store.savedIds.length >= MAX_SAVED_PLACES) {
@@ -198,13 +202,13 @@ export function DetailView({
           <div className="detail-hero">
             <Image
               src={place.image}
-              alt={`${place.name[locale]} · ${isDemo ? t.demoImage : t.verifiedImage}`}
+              alt={`${place.name[locale]} · ${place.imageKind === "placeholder" ? catalog.placeholder : isDemo ? t.demoImage : t.verifiedImage}`}
               width={1536}
               height={1024}
               sizes="(max-width: 900px) 92vw, 760px"
               priority
             />
-            {isDemo && <span className="image-label">{c.illustration}</span>}
+            {(isDemo || place.imageKind === "placeholder") && <span className="image-label">{place.imageKind === "placeholder" ? catalog.placeholder : c.illustration}</span>}
           </div>
           <section className="panel" aria-labelledby="place-overview">
             <div className="place-meta">
@@ -217,6 +221,9 @@ export function DetailView({
             <h2 id="place-overview">{c.aboutPlace}</h2>
             <p>{place.summary[locale]}</p>
             <p className="muted">{place.address[locale]}</p>
+            {!!place.sourceTags?.length && <div className="source-tags" aria-label={catalog.sourceTags}>
+              {place.sourceTags.filter((tag) => ![place.name.ko, "visitjeju", "비짓제주"].includes(tag)).map((tag) => <span key={tag}>#{tag}</span>)}
+            </div>}
             <div className="detail-summary-grid">
               <div>
                 <span className="eyebrow">{t.basePrice}</span>
@@ -238,13 +245,30 @@ export function DetailView({
                 <span className="eyebrow">{c.duration}</span>
                 <p>
                   <Clock3 size={16} aria-hidden="true" />{" "}
-                  {place.durationMinutes} {c.minutes}
+                  {place.durationMinutes === null ? t.unknown : `${place.durationMinutes} ${c.minutes}`}
                 </p>
               </div>
             </div>
             <p className="muted">{t.priceNote}</p>
             <p className="muted">{t.timeNote}</p>
           </section>
+
+          {!!place.sourceObservations?.length && (
+            <section className="panel" aria-labelledby="official-observations">
+              <h2 id="official-observations">{catalog.observations}</h2>
+              <p className="muted">{catalog.observationNote}</p>
+              <dl className="fact-list">
+                {place.sourceObservations.map((observation, index) => (
+                  <div className="fact-row" key={`${observation.field}-${index}`}>
+                    <dt>{observationLabel(observation.field, locale)}</dt>
+                    <dd><p>{observation.value}</p></dd>
+                  </div>
+                ))}
+              </dl>
+              {sourceReadDate && <p className="muted">{catalog.sourceRead} {sourceReadDate}</p>}
+              {sourceUrl && <a href={sourceUrl} className="text-link" target="_blank" rel="noopener noreferrer">{place.sourceName ?? c.sourceLink} <ExternalLink size={15} /></a>}
+            </section>
+          )}
 
           <section className="panel" aria-labelledby="match-heading">
             <p className="eyebrow">{t.placeDetail}</p>
@@ -353,9 +377,9 @@ export function DetailView({
                 {verifiedDate ? `${c.verified} ${verifiedDate}` : c.unverified}
               </p>
             )}
-            {retrievedDate && (
+            {(sourceReadDate || retrievedDate) && (
               <p className="muted">
-                {t.retrievedOn} {retrievedDate}
+                {catalog.sourceRead} {sourceReadDate ?? retrievedDate}
               </p>
             )}
             {sourceUrl && (
@@ -448,6 +472,10 @@ export function DetailView({
               >
                 <MapPin size={18} aria-hidden="true" />
                 {c.directions}
+              </a>
+            ) : addressMapUrl ? (
+              <a href={addressMapUrl} target="_blank" rel="noopener noreferrer" className="btn secondary">
+                <MapPin size={18} aria-hidden="true" />{catalog.addressMap}
               </a>
             ) : (
               <button className="btn secondary" disabled>

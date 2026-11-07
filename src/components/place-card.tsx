@@ -13,6 +13,7 @@ import {
 import type { Locale, Place } from "@/lib/types";
 import { copy, priceLabel } from "@/messages/ui";
 import { detailCopy } from "@/messages/detail";
+import { catalogCopy } from "@/messages/catalog";
 import { useTravelStore } from "@/hooks/use-travel-store";
 import { MAX_SAVED_PLACES } from "@/lib/trip/state";
 import { evaluatePlace } from "@/lib/verdict/evaluate";
@@ -21,6 +22,7 @@ export function PlaceCard({ place, locale }: { place: Place; locale: Locale }) {
   const { profile, savedIds, toggleSaved, hydrated } = useTravelStore();
   const [saveLimitReached, setSaveLimitReached] = useState(false);
   const c = copy(locale);
+  const t = catalogCopy(locale);
   const ev = evaluatePlace(place, profile);
   const saved = savedIds.includes(place.id);
 
@@ -49,7 +51,7 @@ export function PlaceCard({ place, locale }: { place: Place; locale: Locale }) {
           />
         </Link>
         <span className="image-label">
-          {place.dataMode === "demo" ? c.demoPlace : c[place.type]}
+          {place.imageKind === "placeholder" ? t.placeholder : place.dataMode === "demo" ? c.demoPlace : c[place.type]}
         </span>
         <button
           type="button"
@@ -79,6 +81,9 @@ export function PlaceCard({ place, locale }: { place: Place; locale: Locale }) {
           <ArrowUpRight size={20} aria-hidden="true" />
         </Link>
         <p className="place-summary">{place.summary[locale]}</p>
+        {!!place.sourceTags?.length && <div className="source-tags" aria-label={t.sourceTags}>
+          {place.sourceTags.slice(0, 4).map((tag) => <span key={tag}>#{tag}</span>)}
+        </div>}
         <div className={`status-badge ${ev.verdict}`}>
           <CheckCircle2 size={14} aria-hidden="true" />
           {c[ev.verdict]}

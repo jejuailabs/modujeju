@@ -74,9 +74,13 @@ export const placeSchema = z
       "experience",
       "walk",
     ]),
-    lat: z.number().min(32).max(35),
-    lng: z.number().min(125).max(128),
+    lat: z.number().min(32).max(35).nullable(),
+    lng: z.number().min(125).max(128).nullable(),
     image: imagePath,
+    imageKind: z.enum(["placeholder", "photo", "illustration"]).optional(),
+    tags: z.array(text(80)).max(40).optional(),
+    sourceTags: z.array(text(80)).max(40).optional(),
+    sourceObservations: z.array(z.object({ field: text(80), value: text(1000), sourceUrl: httpsUrl }).strict()).max(60).optional(),
     price: z
       .object({
         amount: z.number().min(0).max(10_000_000).nullable(),
@@ -84,7 +88,7 @@ export const placeSchema = z
         petExtra: z.number().min(0).max(1_000_000).nullable(),
       })
       .strict(),
-    durationMinutes: z.number().int().min(0).max(1440),
+    durationMinutes: z.number().int().min(0).max(1440).nullable(),
     facts: z
       .object({
         operating: fact(z.enum(["open", "suspended", "closed"])),
@@ -105,6 +109,8 @@ export const placeSchema = z
       .strict(),
     sourceUrl: httpsUrl.optional(),
     sourceId: text(100).optional(),
+    sourceName: text(120).optional(),
+    basicSourceCheckedAt: factDate.optional(),
     sourceUpdatedAt: date.nullable().optional(),
     retrievedAt: date.nullable().optional(),
     verifiedAt: date.nullable(),

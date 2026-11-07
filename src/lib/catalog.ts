@@ -34,6 +34,8 @@ export function filterAndSortPlaces(
           ...Object.values(place.name),
           ...Object.values(place.district),
           ...Object.values(place.summary),
+          ...(place.tags ?? []),
+          ...(place.sourceTags ?? []),
         ].some((value) => value.toLocaleLowerCase(locale).includes(query))
       )
         return false;
@@ -70,7 +72,7 @@ export function filterAndSortPlaces(
       options.sort === "duration" &&
       a.place.durationMinutes !== b.place.durationMinutes
     )
-      return a.place.durationMinutes - b.place.durationMinutes;
+      return (a.place.durationMinutes ?? Infinity) - (b.place.durationMinutes ?? Infinity);
     if (options.sort !== "name") {
       const verification = (b.place.verifiedAt ?? "").localeCompare(
         a.place.verifiedAt ?? "",

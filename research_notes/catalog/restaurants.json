@@ -1,0 +1,724 @@
+[
+  {
+    "name": "제주김만복김밥 본점",
+    "address": "제주특별자치도 제주시 오라로 41",
+    "district": "제주시내",
+    "region": "north",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020072",
+    "sourceId": "CNTS_000000000020072",
+    "sourceTags": [
+      "전복김밥",
+      "왕전복주먹밥",
+      "라면",
+      "김밥",
+      "주먹밥",
+      "진미오징어무침",
+      "비빔면"
+    ],
+    "summary": "전복내장을 넣은 김밥과 주먹밥을 판매하는 분식점.",
+    "observations": [
+      {
+        "field": "이용 시간·휴무",
+        "value": "수요일 휴무 / 브레이크 타임 04:00~07:30",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020072"
+      },
+      {
+        "field": "편의시설",
+        "value": "공용주차장,화장실",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020072"
+      }
+    ],
+    "retrievedAt": "2026-11-08"
+  },
+  {
+    "name": "올래국수 본점",
+    "address": "제주특별자치도 제주시 귀아랑길 24 (연동)",
+    "district": "제주시내",
+    "region": "north",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020099",
+    "sourceId": "CNTS_000000000020099",
+    "sourceTags": [
+      "고기국수",
+      "한식",
+      "향토음식",
+      "국수"
+    ],
+    "summary": "제주시 연동의 고기국수 전문점.",
+    "observations": [
+      {
+        "field": "이용 시간·휴무",
+        "value": "08:00~15:00 / 매주 일요일 휴무",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020099"
+      },
+      {
+        "field": "편의시설",
+        "value": "화장실",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020099"
+      },
+      {
+        "field": "장애인 활동 보조 필요성",
+        "value": "아주 어려움",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020099"
+      }
+    ],
+    "retrievedAt": "2026-11-08"
+  },
+  {
+    "name": "명진전복",
+    "address": "제주특별자치도 제주시 구좌읍 해맞이해안로 1282",
+    "district": "구좌",
+    "region": "east",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020047",
+    "sourceId": "CNTS_000000000020047",
+    "sourceTags": [
+      "전복",
+      "돌솥밥",
+      "전복죽",
+      "전복돌솥밥",
+      "전복구이",
+      "전복회",
+      "고등어구이"
+    ],
+    "summary": "구좌읍에서 전복돌솥밥·전복구이·전복죽을 선보이는 식당.",
+    "observations": [],
+    "retrievedAt": "2026-11-08"
+  },
+  {
+    "name": "돈사돈 본점",
+    "address": "제주특별자치도 제주시 우평로 19",
+    "district": "제주시내",
+    "region": "north",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020104",
+    "sourceId": "CNTS_000000000020104",
+    "sourceTags": [
+      "근고기",
+      "연탄구이",
+      "목살",
+      "오겹살",
+      "흑돼지",
+      "김치찌개",
+      "직원구이",
+      "멜젓"
+    ],
+    "summary": "제주시의 흑돼지 근고기 연탄구이 전문점.",
+    "observations": [
+      {
+        "field": "이용 시간·휴무",
+        "value": "12:00~22:00 / 매주 화요일 휴무",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020104"
+      },
+      {
+        "field": "편의시설",
+        "value": "매장 주차장,화장실",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020104"
+      },
+      {
+        "field": "장애인 활동 보조 필요성",
+        "value": "아주 어려움",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020104"
+      }
+    ],
+    "retrievedAt": "2026-11-08"
+  },
+  {
+    "name": "가시아방국수",
+    "address": "제주특별자치도 서귀포시 성산읍 섭지코지로 10",
+    "district": "성산",
+    "region": "east",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018307",
+    "sourceId": "CNTS_000000000018307",
+    "sourceTags": [
+      "고기국수",
+      "비빔국수",
+      "향토음식",
+      "국수",
+      "멸치국수",
+      "돔베고기",
+      "물만두"
+    ],
+    "summary": "성산읍에서 고기국수와 돔베고기를 판매하는 식당.",
+    "observations": [
+      {
+        "field": "이용 시간·휴무",
+        "value": "10:00~20:30 / 주문 마감 19:50 / 매주 수요일 휴무",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018307"
+      },
+      {
+        "field": "편의시설",
+        "value": "공용주차장,화장실,무료 WIFI",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018307"
+      }
+    ],
+    "retrievedAt": "2026-11-08"
+  },
+  {
+    "name": "우진해장국",
+    "address": "제주특별자치도 제주시 서사로 11",
+    "district": "제주시내",
+    "region": "north",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018375",
+    "sourceId": "CNTS_000000000018375",
+    "sourceTags": [
+      "해장국",
+      "고사리육개장",
+      "사골해장국",
+      "녹두빈대떡",
+      "몸국",
+      "향토음식"
+    ],
+    "summary": "제주시 서사로의 고사리육개장 전문점.",
+    "observations": [
+      {
+        "field": "이용 시간·휴무",
+        "value": "본관 06:00~22:00 / 설날·추석 연휴 휴무",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018375"
+      },
+      {
+        "field": "편의시설",
+        "value": "병문천 공영주차장",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018375"
+      }
+    ],
+    "retrievedAt": "2026-11-08"
+  },
+  {
+    "name": "순옥이네 명가",
+    "address": "제주특별자치도 제주시 도공로 8",
+    "district": "제주시내",
+    "region": "north",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020103",
+    "sourceId": "CNTS_000000000020103",
+    "sourceTags": [
+      "전복물회",
+      "성게미역국",
+      "해물뚝배기",
+      "전복",
+      "성게",
+      "해산물",
+      "전복죽",
+      "고등어구이"
+    ],
+    "summary": "도두동에서 전복물회와 해산물 요리를 판매하는 식당.",
+    "observations": [
+      {
+        "field": "이용 시간·휴무",
+        "value": "09:00~21:00 / 휴게 15:30~17:00 / 주문 마감 20:30",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020103"
+      },
+      {
+        "field": "편의시설",
+        "value": "공용주차장,화장실",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020103"
+      },
+      {
+        "field": "장애인 활동 보조 필요성",
+        "value": "아주 어려움",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020103"
+      }
+    ],
+    "retrievedAt": "2026-11-08"
+  },
+  {
+    "name": "산방식당",
+    "address": "제주특별자치도 서귀포시 대정읍 하모이삼로 62",
+    "district": "대정",
+    "region": "west",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000501267",
+    "sourceId": "CONT_000000000501267",
+    "sourceTags": [
+      "밀냉면",
+      "비빔밀냉면",
+      "수육",
+      "한식",
+      "향토음식",
+      "냉면",
+      "모슬포음식점"
+    ],
+    "summary": "모슬포의 제주식 밀냉면·수육 전문점.",
+    "observations": [
+      {
+        "field": "이용 시간·휴무",
+        "value": "11:00~18:00 / 매주 수요일 휴무",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000501267"
+      },
+      {
+        "field": "편의시설",
+        "value": "공용주차장,화장실,무료 WIFI",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000501267"
+      },
+      {
+        "field": "장애인 활동 보조 필요성",
+        "value": "아주 어려움",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000501267"
+      }
+    ],
+    "retrievedAt": "2026-11-08"
+  },
+  {
+    "name": "고집돌우럭 중문점",
+    "address": "제주특별자치도 서귀포시 일주서로 879",
+    "district": "중문",
+    "region": "south",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000021950",
+    "sourceId": "CNTS_000000000021950",
+    "sourceTags": [
+      "우럭",
+      "우럭조림",
+      "우럭매운탕",
+      "갈치구이",
+      "생선구이정식",
+      "옥돔구이",
+      "전복조림"
+    ],
+    "summary": "중문에서 우럭조림과 생선 요리 한상을 판매하는 식당.",
+    "observations": [
+      {
+        "field": "이용 시간·휴무",
+        "value": "10:00~21:30 / 휴게 15:00~17:00 / 주문 마감 14:50·20:20",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000021950"
+      },
+      {
+        "field": "편의시설",
+        "value": "공용주차장,화장실",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000021950"
+      }
+    ],
+    "retrievedAt": "2026-11-08"
+  },
+  {
+    "name": "협재수우동 협재점",
+    "address": "제주특별자치도 제주시 한림읍 협재1길 11",
+    "district": "한림",
+    "region": "west",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020019",
+    "sourceId": "CNTS_000000000020019",
+    "sourceTags": [
+      "우동",
+      "돈가스",
+      "일식",
+      "냉우동",
+      "유부우동",
+      "돈가스정식",
+      "어묵우동",
+      "고로케"
+    ],
+    "summary": "협재 바다 인근의 우동·돈가스 전문점.",
+    "observations": [
+      {
+        "field": "이용 시간·휴무",
+        "value": "10:20~16:00 / 매주 화·수요일 휴무",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020019"
+      },
+      {
+        "field": "편의시설",
+        "value": "화장실",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020019"
+      },
+      {
+        "field": "장애인 활동 보조 필요성",
+        "value": "아주 어려움",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020019"
+      }
+    ],
+    "retrievedAt": "2026-11-08"
+  },
+  {
+    "name": "한림칼국수",
+    "address": "제주특별자치도 제주시 한림읍 한림해안로 141",
+    "district": "한림",
+    "region": "west",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018374",
+    "sourceId": "CNTS_000000000018374",
+    "sourceTags": [
+      "칼국수",
+      "보말",
+      "보말칼국수",
+      "고기칼국수",
+      "영양보말죽",
+      "매생이바당전"
+    ],
+    "summary": "한림읍에서 보말칼국수와 보말죽을 판매하는 식당.",
+    "observations": [
+      {
+        "field": "이용 시간·휴무",
+        "value": "08:00~19:00 / 매주 수요일 휴무",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018374"
+      },
+      {
+        "field": "편의시설",
+        "value": "공용주차장,화장실",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018374"
+      },
+      {
+        "field": "장애인 활동 보조 필요성",
+        "value": "아주 어려움",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018374"
+      }
+    ],
+    "retrievedAt": "2026-11-08"
+  },
+  {
+    "name": "어진이네 횟집",
+    "address": "제주특별자치도 서귀포시 보목포로 93",
+    "district": "서귀포시내",
+    "region": "south",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019940",
+    "sourceId": "CNTS_000000000019940",
+    "sourceTags": [
+      "회",
+      "횟집",
+      "자리물회",
+      "물회",
+      "한치물회",
+      "전복물회",
+      "갈치조림",
+      "성게미역국"
+    ],
+    "summary": "서귀포 보목동의 물회·생선 요리 전문점.",
+    "observations": [
+      {
+        "field": "이용 시간·휴무",
+        "value": "10:00~21:00 / 주문 마감 19:30",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019940"
+      },
+      {
+        "field": "편의시설",
+        "value": "공용주차장,화장실,무료 WIFI",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019940"
+      },
+      {
+        "field": "장애인 활동 보조 필요성",
+        "value": "아주 어려움",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019940"
+      },
+      {
+        "field": "노키즈존",
+        "value": "어린이 출입가능",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019940"
+      }
+    ],
+    "retrievedAt": "2026-11-08"
+  },
+  {
+    "name": "명랑스낵",
+    "address": "제주특별자치도 제주시 한림읍 한림로 585",
+    "district": "한림",
+    "region": "west",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018400",
+    "sourceId": "CNTS_000000000018400",
+    "sourceTags": [
+      "떡볶이",
+      "새우튀김",
+      "흑돼지튀김",
+      "짜장떡볶이",
+      "한치튀김",
+      "비양도전망",
+      "옥상좌석",
+      "오션뷰분식"
+    ],
+    "summary": "한림의 떡볶이·튀김 분식점으로 옥상 좌석이 있다.",
+    "observations": [
+      {
+        "field": "이용 시간·휴무",
+        "value": "11:30~18:00 / 홀 주문 마감 17:30",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018400"
+      },
+      {
+        "field": "편의시설",
+        "value": "화장실,무료 WIFI",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018400"
+      },
+      {
+        "field": "장애인 활동 보조 필요성",
+        "value": "아주 어려움",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018400"
+      },
+      {
+        "field": "노키즈존",
+        "value": "어린이 출입가능",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018400"
+      }
+    ],
+    "retrievedAt": "2026-11-08"
+  },
+  {
+    "name": "고래라면 성산점",
+    "address": "제주특별자치도 서귀포시 성산읍 삼달로 104",
+    "district": "성산",
+    "region": "east",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020026",
+    "sourceId": "CNTS_000000000020026",
+    "sourceTags": [
+      "라면",
+      "해물라면",
+      "문어라면",
+      "만두",
+      "새우만두",
+      "성게라면",
+      "삼달리음식점"
+    ],
+    "summary": "성산읍 삼달리의 해물라면 전문점.",
+    "observations": [
+      {
+        "field": "이용 시간·휴무",
+        "value": "09:00~18:00 / 매주 화요일 휴무",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020026"
+      },
+      {
+        "field": "편의시설",
+        "value": "공용주차장,화장실",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020026"
+      }
+    ],
+    "retrievedAt": "2026-11-08"
+  },
+  {
+    "name": "맛나식당",
+    "address": "제주특별자치도 서귀포시 성산읍 동류암로 41",
+    "district": "성산",
+    "region": "east",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020853",
+    "sourceId": "CNTS_000000000020853",
+    "sourceTags": [
+      "한식",
+      "갈치조림",
+      "고등어조림",
+      "갈치",
+      "고등어",
+      "생선조림",
+      "성산아침식사"
+    ],
+    "summary": "성산에서 갈치조림과 고등어조림을 판매하는 식당.",
+    "observations": [
+      {
+        "field": "이용 시간·휴무",
+        "value": "08:30~14:30 / 매주 수·일요일 휴무 / 재료 소진 시 조기 마감",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020853"
+      },
+      {
+        "field": "편의시설",
+        "value": "공용주차장,화장실",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020853"
+      }
+    ],
+    "retrievedAt": "2026-11-08"
+  },
+  {
+    "name": "중문수두리보말칼국수",
+    "address": "제주특별자치도 서귀포시 천제연로 192, 1층",
+    "district": "중문",
+    "region": "south",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020621",
+    "sourceId": "CNTS_000000000020621",
+    "sourceTags": [
+      "톳보말칼국수",
+      "칼국수",
+      "보말",
+      "보말칼국수",
+      "물만두",
+      "보말죽",
+      "중문아침식사",
+      "제주향토음식"
+    ],
+    "summary": "중문의 보말칼국수·죽 전문점.",
+    "observations": [
+      {
+        "field": "이용 시간·휴무",
+        "value": "08:00~16:00 / 주문 마감 15:30 / 매주 화요일 휴무",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020621"
+      },
+      {
+        "field": "편의시설",
+        "value": "화장실",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020621"
+      },
+      {
+        "field": "장애인 활동 보조 필요성",
+        "value": "아주 어려움",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020621"
+      },
+      {
+        "field": "노키즈존",
+        "value": "어린이 출입가능",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020621"
+      }
+    ],
+    "retrievedAt": "2026-11-08"
+  },
+  {
+    "name": "하영 흑돼지구이집",
+    "address": "제주특별자치도 서귀포시 천제연로 101",
+    "district": "중문",
+    "region": "south",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000501439",
+    "sourceId": "CONT_000000000501439",
+    "sourceTags": [
+      "흑돼지",
+      "한식",
+      "향토음식",
+      "흑돼지모둠한판",
+      "흑돼지오겹살",
+      "흑돼지꽃항정",
+      "야외테라스"
+    ],
+    "summary": "중문 인근에서 흑돼지 구이를 판매하며 야외 테라스가 있다.",
+    "observations": [
+      {
+        "field": "이용 시간·휴무",
+        "value": "10:00~22:00 / 주문 마감 21:00 / 연중무휴",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000501439"
+      },
+      {
+        "field": "편의시설",
+        "value": "공용주차장,화장실,무료 WIFI",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000501439"
+      },
+      {
+        "field": "장애인 활동 보조 필요성",
+        "value": "어려움",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000501439"
+      }
+    ],
+    "retrievedAt": "2026-11-08"
+  },
+  {
+    "name": "제주신화월드 제주선",
+    "address": "제주특별자치도 서귀포시 안덕면 신화역사로304번길 38, 메리어트관 G층",
+    "district": "안덕",
+    "region": "west",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000007431",
+    "sourceId": "CNTS_200000000007431",
+    "sourceTags": [
+      "한식",
+      "흑돼지",
+      "한우",
+      "갈치",
+      "제주신화월드",
+      "전복죽",
+      "해물파전",
+      "갈비찜",
+      "낭푼밥상",
+      "제주전통주"
+    ],
+    "summary": "제주신화월드 메리어트관의 향토 한식 레스토랑.",
+    "observations": [
+      {
+        "field": "이용 시간·휴무",
+        "value": "점심 11:30~14:30 / 저녁 17:30~21:00 / 주문 마감 20:30",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000007431"
+      },
+      {
+        "field": "편의시설",
+        "value": "공용주차장,화장실,무료 WIFI",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000007431"
+      },
+      {
+        "field": "장애인 활동 보조 필요성",
+        "value": "쉬움",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000007431"
+      },
+      {
+        "field": "대표 메뉴 가격",
+        "value": "선 코스 1인 100,000원. 통 갈치 구이 98,000원/118,000원, 전복 쇠고기 갈비찜 58,000원. 현재 요금은 방문 전 확인.",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000007431"
+      }
+    ],
+    "retrievedAt": "2026-11-08"
+  },
+  {
+    "name": "오는정김밥",
+    "address": "제주특별자치도 서귀포시 동문동로 2",
+    "district": "서귀포시내",
+    "region": "south",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020123",
+    "sourceId": "CNTS_000000000020123",
+    "sourceTags": [
+      "김밥",
+      "분식",
+      "참치김밥",
+      "멸치김밥",
+      "치즈김밥",
+      "떡갈비김밥",
+      "깻잎김밥",
+      "포장전문",
+      "예약제김밥"
+    ],
+    "summary": "서귀포의 포장 전문 김밥집.",
+    "observations": [
+      {
+        "field": "이용 시간·휴무",
+        "value": "월~토 09:00~19:00 / 휴게 13:00~14:30 / 매주 일요일 휴무",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020123"
+      },
+      {
+        "field": "편의시설",
+        "value": "화장실",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020123"
+      },
+      {
+        "field": "장애인 활동 보조 필요성",
+        "value": "아주 어려움",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020123"
+      }
+    ],
+    "retrievedAt": "2026-11-08"
+  },
+  {
+    "name": "섭지코지 해녀밥상",
+    "address": "제주특별자치도 서귀포시 성산읍 신양로122번길 60-6",
+    "district": "성산",
+    "region": "east",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020344",
+    "sourceId": "CNTS_000000000020344",
+    "sourceTags": [
+      "정식",
+      "해산물",
+      "전복구이",
+      "소라",
+      "성게",
+      "해삼",
+      "성게미역국",
+      "옥돔구이",
+      "해녀밥상"
+    ],
+    "summary": "성산에서 전복·소라·성게 등 해산물 한상을 판매하는 식당.",
+    "observations": [
+      {
+        "field": "이용 시간·휴무",
+        "value": "10:00~19:30 / 주문 마감 18:00",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020344"
+      },
+      {
+        "field": "편의시설",
+        "value": "공용주차장,화장실",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020344"
+      },
+      {
+        "field": "장애인 활동 보조 필요성",
+        "value": "아주 어려움",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020344"
+      }
+    ],
+    "retrievedAt": "2026-11-08"
+  }
+]
