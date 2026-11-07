@@ -7,6 +7,7 @@ export const visitJejuClassificationEvidence = {
   foodUrl: "https://www.visitjeju.net/kr/detail/list?menuId=DOM_000001719000000000&cate1cd=cate0000000005",
   cafeUrl: "https://www.visitjeju.net/kr/detail/list?menuId=DOM_000001719000000000&cate1cd=cate0000000005#p1&tag=%EC%B9%B4%ED%8E%98",
   stayUrl: "https://www.visitjeju.net/kr/detail/list?menuId=DOM_000001707000000000&cate1cd=cate0000000004",
+  attractionUrl: "https://www.visitjeju.net/kr/detail/list?menuId=DOM_000001718000000000&cate1cd=cate0000000002",
 } as const;
 
 export type VisitJejuClassificationCode =
@@ -54,7 +55,7 @@ const regions: Readonly<Record<string, ReviewedRegion>> = {
 };
 
 export type VisitJejuClassification =
-  | { ok: true; region: Region; type: "restaurant" | "cafe" | "stay"; categoryBasis: "official-label" | "official-label-and-cafe-tag"; regionCode: string }
+  | { ok: true; region: Region; type: "restaurant" | "cafe" | "stay" | "attraction"; categoryBasis: "official-label" | "official-label-and-cafe-tag"; regionCode: string }
   | { ok: false; reason: VisitJejuClassificationCode };
 
 function object(value: unknown): Record<string, unknown> | null {
@@ -84,7 +85,8 @@ export function classifyVisitJejuRecord(raw: unknown): VisitJejuClassification {
   if (category.refId !== `contentscd>${category.value}`) return { ok: false, reason: "VISITJEJU_CLASSIFICATION_CONFLICT" };
   // V1.1 documents c1 = 관광지 only. Do not invent c4/c5 from web cate1cd values.
   if (category.value === "c1" && category.label !== "관광지") return { ok: false, reason: "VISITJEJU_CLASSIFICATION_CONFLICT" };
-  if (category.label !== "음식점" && category.label !== "숙박") return { ok: false, reason: "VISITJEJU_CATEGORY_UNMAPPED" };
+  const attraction = category.value === "c1" && category.label === "관광지";
+  if (!attraction && category.label !== "음식점" && category.label !== "숙박") return { ok: false, reason: "VISITJEJU_CATEGORY_UNMAPPED" };
 
   const parent = codeLabel(source.region1cd);
   const district = codeLabel(source.region2cd);
@@ -96,5 +98,5 @@ export function classifyVisitJejuRecord(raw: unknown): VisitJejuClassification {
     return { ok: false, reason: "VISITJEJU_CLASSIFICATION_CONFLICT" };
   }
   const cafe = category.label === "음식점" && hasCafeTag(source);
-  return { ok: true, region: reviewed.region, type: category.label === "숙박" ? "stay" : cafe ? "cafe" : "restaurant", categoryBasis: cafe ? "official-label-and-cafe-tag" : "official-label", regionCode: district.value };
+  return { ok: true, region: reviewed.region, type: attraction ? "attraction" : category.label === "숙박" ? "stay" : cafe ? "cafe" : "restaurant", categoryBasis: cafe ? "official-label-and-cafe-tag" : "official-label", regionCode: district.value };
 }

@@ -5,12 +5,19 @@ import {
   regions,
   type PlaceType,
   type Profile,
+  type Region,
 } from "../types";
 
 export const TRAVEL_STORAGE_KEY = "modujeju.travel.v1";
 export const TRAVEL_STATE_VERSION = 1 as const;
 export const MAX_TRIP_DAYS = 5;
 export const MAX_SAVED_PLACES = 200;
+
+export interface OvernightStay {
+  region: Region;
+  /** A saved accommodation candidate; null means only a suggested overnight region. */
+  placeId: string | null;
+}
 
 export interface TravelData {
   version: typeof TRAVEL_STATE_VERSION;
@@ -20,6 +27,18 @@ export interface TravelData {
   /** One-based day numbers, e.g. { "1": ["place-id"] }. */
   itinerary: Record<string, string[]>;
   tripStartDate: string;
+  /** One-based nights, strictly before the final travel day. Optional for version-1 compatibility. */
+  overnightByDay?: Record<string, OvernightStay>;
+}
+
+export interface RecommendedTripDraft {
+  tripDays: number;
+  itinerary: Record<string, string[]>;
+  days: readonly {
+    day: number;
+    stayRegion: Region | null;
+    stayPlaceId: string | null;
+  }[];
 }
 
 export interface ParsedTravelData {
@@ -135,6 +154,14 @@ export function normalizeTravelData(value: unknown): TravelData {
     });
     if (ids.length) itinerary[String(day)] = ids;
   }
+  const overnightByDay: Record<string, OvernightStay> = {};
+  const inputOvernights = object(input.overnightByDay);
+  for (let day = 1; day < tripDays; day++) {
+    const overnight = object(inputOvernights[String(day)]);
+    if (!regions.includes(overnight.region as Region)) continue;
+    if (overnight.placeId !== null && (!isPlaceId(overnight.placeId) || !savedSet.has(overnight.placeId))) continue;
+    overnightByDay[String(day)] = { region: overnight.region as Region, placeId: overnight.placeId as string | null };
+  }
   return {
     version: TRAVEL_STATE_VERSION,
     profile: normalizeProfile(input.profile),
@@ -142,6 +169,7 @@ export function normalizeTravelData(value: unknown): TravelData {
     tripDays,
     itinerary,
     tripStartDate: isIsoDate(input.tripStartDate) ? input.tripStartDate : "",
+    ...(input.overnightByDay !== undefined ? { overnightByDay } : {}),
   };
 }
 
@@ -166,6 +194,7 @@ export function parseTravelData(raw: string | null): ParsedTravelData {
       tripDays: input.tripDays,
       itinerary: input.itinerary,
       tripStartDate: input.tripStartDate,
+      ...(input.overnightByDay !== undefined ? { overnightByDay: input.overnightByDay } : {}),
     };
     return {
       data,
@@ -174,6 +203,57 @@ export function parseTravelData(raw: string | null): ParsedTravelData {
   } catch {
     return { data: createInitialTravelData(), recovered: true };
   }
+}
+
+/** Strict boundary for a draft: reject foreign IDs and cross-day duplicates instead of repairing them. */
+export function validateSavedItinerarySnapshot(value: unknown, allowedSavedIds: readonly string[], tripDays: number): Record<string, string[]> | null {
+  if (!value || typeof value !== "object" || Array.isArray(value)
+    || !Number.isInteger(tripDays) || tripDays < 1 || tripDays > MAX_TRIP_DAYS) return null;
+  const allowed = new Set(allowedSavedIds.filter(isPlaceId));
+  const used = new Set<string>();
+  const result: Record<string, string[]> = {};
+  for (const [day, ids] of Object.entries(value)) {
+    if (!/^[1-5]$/.test(day) || Number(day) > tripDays || !Array.isArray(ids)) return null;
+    const next: string[] = [];
+    for (const id of ids) {
+      if (!isPlaceId(id) || !allowed.has(id) || used.has(id)) return null;
+      used.add(id);
+      next.push(id);
+    }
+    if (next.length) result[day] = next;
+  }
+  return result;
+}
+
+/** Replaces all days and overnight suggestions atomically after validating against the current saved list. */
+export function applyRecommendedTrip(data: TravelData, draft: RecommendedTripDraft): TravelData {
+  if (!draft || draft.tripDays < 2 || !Array.isArray(draft.days) || draft.days.length !== draft.tripDays) return data;
+  const itinerary = validateSavedItinerarySnapshot(draft.itinerary, data.savedIds, draft.tripDays);
+  if (!itinerary) return data;
+  const saved = new Set(data.savedIds);
+  const seenDays = new Set<number>();
+  const overnightByDay: Record<string, OvernightStay> = {};
+  for (const day of draft.days) {
+    if (!day || !Number.isInteger(day.day) || day.day < 1 || day.day > draft.tripDays || seenDays.has(day.day)) return data;
+    seenDays.add(day.day);
+    if (day.stayRegion !== null && !regions.includes(day.stayRegion)) return data;
+    if (day.stayPlaceId !== null && (!isPlaceId(day.stayPlaceId) || !saved.has(day.stayPlaceId))) return data;
+    if (day.day === draft.tripDays) {
+      if (day.stayRegion !== null || day.stayPlaceId !== null) return data;
+      continue;
+    }
+    if (day.stayPlaceId !== null) {
+      if (day.stayRegion === null || !Object.entries(itinerary).some(([key, ids]) => Number(key) <= day.day && ids.includes(day.stayPlaceId!))) return data;
+    }
+    if (day.stayRegion !== null) overnightByDay[String(day.day)] = { region: day.stayRegion, placeId: day.stayPlaceId };
+  }
+  return { ...data, tripDays: draft.tripDays, itinerary, overnightByDay };
+}
+
+function withoutOvernightSuggestions(data: TravelData, affectedDays: Set<number>, removedPlaceId?: string): Pick<TravelData, "overnightByDay"> {
+  if (!data.overnightByDay) return {};
+  return { overnightByDay: Object.fromEntries(Object.entries(data.overnightByDay).filter(([day, stay]) =>
+    !affectedDays.has(Number(day)) && (!removedPlaceId || stay.placeId !== removedPlaceId))) };
 }
 
 export function toggleSavedPlace(data: TravelData, id: string): TravelData {
@@ -192,11 +272,12 @@ export function toggleSavedPlace(data: TravelData, id: string): TravelData {
     ...data,
     savedIds: data.savedIds.filter((savedId) => savedId !== id),
     itinerary,
+    ...withoutOvernightSuggestions(data, new Set(Object.entries(data.itinerary).filter(([, ids]) => ids.includes(id)).map(([day]) => Number(day))), id),
   };
 }
 
 export function clearSavedPlaces(data: TravelData): TravelData {
-  return { ...data, savedIds: [], itinerary: {} };
+  return { ...data, savedIds: [], itinerary: {}, ...(data.overnightByDay ? { overnightByDay: {} } : {}) };
 }
 
 export function resizeTrip(data: TravelData, days: number): TravelData {
@@ -208,6 +289,7 @@ export function resizeTrip(data: TravelData, days: number): TravelData {
     itinerary: Object.fromEntries(
       Object.entries(data.itinerary).filter(([day]) => Number(day) <= tripDays),
     ),
+    ...(data.overnightByDay ? { overnightByDay: Object.fromEntries(Object.entries(data.overnightByDay).filter(([day]) => Number(day) < tripDays)) } : {}),
   };
 }
 
@@ -239,6 +321,7 @@ export function assignPlaceToDay(
       ? data.savedIds
       : [...data.savedIds, id],
     itinerary,
+    ...withoutOvernightSuggestions(data, new Set([day, ...Object.entries(data.itinerary).filter(([, ids]) => ids.includes(id)).map(([key]) => Number(key))]), id),
   };
 }
 
@@ -256,6 +339,7 @@ export function removePlaceFromDay(
         (savedId) => savedId !== id,
       ),
     },
+    ...withoutOvernightSuggestions(data, new Set([day]), id),
   };
 }
 

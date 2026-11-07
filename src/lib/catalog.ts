@@ -1,6 +1,7 @@
 import type { CatalogOptions, Place, PlaceMatch, Profile } from "./types";
 import { evaluatePlace, verdictSeverity } from "./verdict/evaluate";
 import { getFeatureSearchKeys, matchesFeatureSearch, matchesPlaceFeatures } from "./place-features";
+import { browseCategory } from "./place-categories";
 
 /** Budgets compare the stated base-price unit, not a guessed party total. */
 export function filterAndSortPlaces(
@@ -22,9 +23,9 @@ export function filterAndSortPlaces(
         return false;
       if (profile.regions.length && !profile.regions.includes(place.region))
         return false;
-      if (profile.types.length && !profile.types.includes(place.type))
+      if (profile.types.length && !profile.types.includes(place.type) && !profile.types.includes(browseCategory(place.type)))
         return false;
-      const budget = profile.budgets[place.type];
+      const budget = profile.budgets[place.type] ?? profile.budgets[browseCategory(place.type)];
       if (
         budget !== undefined &&
         Number.isFinite(budget) &&

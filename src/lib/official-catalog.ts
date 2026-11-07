@@ -73,7 +73,13 @@ function sourceObservations(values: unknown[], fallbackUrl: string): NonNullable
     const field = plainText(observation.field, 80);
     const observedValue = plainText(observation.value, 1000);
     const url = sourceUrl.safeParse(observation.sourceUrl ?? fallbackUrl);
-    return field && observedValue && url.success ? [{ field, value: observedValue, sourceUrl: url.data }] : [];
+    // Preserve explicit missing/invalid evidence dates rather than borrowing the
+    // basic listing's download date. Legacy reviewed observations are unchanged.
+    const evidenceDay = day.nullable().safeParse(observation.verifiedAt);
+    const verification = Object.hasOwn(observation, "verifiedAt")
+      ? { verifiedAt: evidenceDay.success ? evidenceDay.data : null }
+      : {};
+    return field && observedValue && url.success ? [{ field, value: observedValue, sourceUrl: url.data, ...verification }] : [];
   }).slice(0, 60);
 }
 

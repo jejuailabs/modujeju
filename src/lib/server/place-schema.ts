@@ -76,11 +76,17 @@ export const placeSchema = z
     ]),
     lat: z.number().min(32).max(35).nullable(),
     lng: z.number().min(125).max(128).nullable(),
+    coordinateSource: z.object({
+      sourceName: text(120),
+      sourceUrl: httpsUrl,
+      checkedAt: factDate,
+      kind: z.literal("place-center"),
+    }).strict().optional(),
     image: imagePath,
     imageKind: z.enum(["placeholder", "photo", "illustration"]).optional(),
     tags: z.array(text(80)).max(40).optional(),
     sourceTags: z.array(text(80)).max(40).optional(),
-    sourceObservations: z.array(z.object({ field: text(80), value: text(1000), sourceUrl: httpsUrl }).strict()).max(60).optional(),
+    sourceObservations: z.array(z.object({ field: text(80), value: text(1000), sourceUrl: httpsUrl, verifiedAt: factDate.nullable().optional() }).strict()).max(60).optional(),
     price: z
       .object({
         amount: z.number().min(0).max(10_000_000).nullable(),

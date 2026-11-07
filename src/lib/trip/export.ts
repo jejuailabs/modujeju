@@ -13,9 +13,17 @@ export function itineraryJsonExport(
   const days = Array.from({ length: clean.tripDays }, (_, index) => {
     const day = index + 1;
     const ids = clean.itinerary[String(day)] ?? [];
+    const overnight = clean.overnightByDay?.[String(day)];
     return {
       day,
       date: tripDayDate(clean.tripStartDate, day),
+      ...(overnight ? {
+        overnight: {
+          ...overnight,
+          placeName: overnight.placeId ? byId.get(overnight.placeId)?.name[locale] ?? null : null,
+          status: "suggested",
+        },
+      } : {}),
       places: ids.flatMap((id) => {
         const place = byId.get(id);
         return place

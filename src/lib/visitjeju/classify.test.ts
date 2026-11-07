@@ -38,13 +38,15 @@ describe("evidence-limited VisitJeju classification", () => {
     expect(classifyVisitJejuRecord({ ...record, contentscd: category("unknown") })).toEqual({ ok: false, reason: "VISITJEJU_CATEGORY_UNMAPPED" });
   });
 
-  it("recognizes the guide's c1 attraction as outside this three-category pipeline", () => {
+  it("classifies the documented c1 attraction without interpreting companion tags as conditions", () => {
     // Actual code/label/refId relationships from V1.1 pages 5-7.
     expect(classifyVisitJejuRecord({ ...record,
       contentscd: { value: "c1", label: "관광지", refId: "contentscd>c1" },
       region1cd: { value: "region2", label: "서귀포시", refId: "region>region2" },
       region2cd: { value: "17", label: "성산", refId: "region2>17" },
-    })).toEqual({ ok: false, reason: "VISITJEJU_CATEGORY_UNMAPPED" });
+      tag: "카페,반려동물동반_관광지,무장애관광",
+    })).toEqual({ ok: true, type: "attraction", region: "east", categoryBasis: "official-label", regionCode: "17" });
+    expect(classifyVisitJejuRecord({ ...record, contentscd: category("관광지") })).toEqual({ ok: false, reason: "VISITJEJU_CATEGORY_UNMAPPED" });
   });
 
   it("quarantines a contradiction of the documented c1 category", () => {
@@ -113,5 +115,17 @@ describe("evidence-limited VisitJeju classification", () => {
     expect(isVisitJejuNormalizationError(new Error("VISITJEJU_INVALID_RECORD"))).toBe(true);
     expect(isVisitJejuNormalizationError(new Error("INVALID_RETRIEVAL_DATE"))).toBe(true);
     expect(isVisitJejuNormalizationError(new TypeError("bug"))).toBe(false);
+  });
+
+  it("normalizes attractions as unpublished drafts with unverified companion facilities", () => {
+    const draft = normalizeClassifiedVisitJejuRecord({ ...record,
+      contentscd: { value: "c1", label: "관광지", refId: "contentscd>c1" },
+      tag: "무장애관광,반려동물동반가능,아이",
+    }, { retrievedAt: "2026-11-08T00:00:00Z" });
+    expect(draft.place.type).toBe("attraction");
+    expect(draft.status).toBe("draft");
+    expect(draft.place.price.unit).toBe("person");
+    expect(draft.place.price.amount).toBeNull();
+    expect(Object.values(draft.place.facts).every((fact) => fact.value === "unknown" && fact.verifiedAt === null)).toBe(true);
   });
 });

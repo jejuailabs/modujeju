@@ -3,6 +3,7 @@ import { createUnknownFacts, type Place } from "../types";
 import { itineraryJsonExport } from "./export";
 import {
   MAX_SAVED_PLACES,
+  applyRecommendedTrip,
   assignPlaceToDay,
   clearSavedPlaces,
   createInitialTravelData,
@@ -15,6 +16,8 @@ import {
   resizeTrip,
   toggleSavedPlace,
   tripDayDate,
+  type RecommendedTripDraft,
+  type TravelData,
 } from "./state";
 
 describe("saved travel data", () => {
@@ -114,6 +117,109 @@ describe("saved travel data", () => {
     });
     expect(toggleSavedPlace(data, "one-more")).toBe(data);
     expect(assignPlaceToDay(data, 1, "one-more")).toBe(data);
+  });
+});
+
+describe("recommended itinerary persistence", () => {
+  const draft: RecommendedTripDraft = {
+    tripDays: 3,
+    itinerary: { 1: ["meal", "hotel"], 2: ["coffee"], 3: ["sight"] },
+    days: [
+      { day: 1, stayRegion: "east", stayPlaceId: "hotel" },
+      { day: 2, stayRegion: "east", stayPlaceId: "hotel" },
+      { day: 3, stayRegion: null, stayPlaceId: null },
+    ],
+  };
+  function dataWithDraft(): TravelData {
+    const data = { ...createInitialTravelData(), savedIds: ["meal", "hotel", "coffee", "sight"], tripStartDate: "2026-12-01" };
+    return applyRecommendedTrip(data, draft);
+  }
+
+  it("atomically replaces itinerary and overnight areas, preserving preferences and start date", () => {
+    const before = { ...createInitialTravelData(), savedIds: ["meal", "hotel", "coffee", "sight"], tripDays: 2, itinerary: { 1: ["sight"] }, tripStartDate: "2026-12-01" };
+    const after = applyRecommendedTrip(before, draft);
+    expect(after.tripDays).toBe(3);
+    expect(after.itinerary).toEqual(draft.itinerary);
+    expect(after.overnightByDay).toEqual({ 1: { region: "east", placeId: "hotel" }, 2: { region: "east", placeId: "hotel" } });
+    expect(after.tripStartDate).toBe(before.tripStartDate);
+    expect(after.profile).toEqual(before.profile);
+    expect(before.itinerary).toEqual({ 1: ["sight"] });
+    expect(before).not.toHaveProperty("overnightByDay");
+  });
+
+  it("round trips repeated-night lodging through normalization and JSON without recovery", () => {
+    const data = dataWithDraft();
+    expect(parseTravelData(JSON.stringify(data))).toEqual({ data, recovered: false });
+    expect(normalizeTravelData(data).overnightByDay).toEqual(data.overnightByDay);
+  });
+
+  it("keeps overnight suggestions in a shared JSON itinerary without inventing a business name", () => {
+    const exported = JSON.parse(itineraryJsonExport(dataWithDraft(), [], "ko", new Date("2026-11-08T00:00:00Z")));
+    expect(exported.days[0].overnight).toEqual({ region: "east", placeId: "hotel", placeName: null, status: "suggested" });
+    expect(exported.days[1].overnight).toEqual(exported.days[0].overnight);
+    expect(exported.days[2]).not.toHaveProperty("overnight");
+  });
+
+  it("keeps old version-one documents valid without adding a lodging field", () => {
+    const data = createInitialTravelData();
+    expect(parseTravelData(JSON.stringify(data))).toEqual({ data, recovered: false });
+    expect(normalizeTravelData(data)).not.toHaveProperty("overnightByDay");
+  });
+
+  it("drops invalid nights, regions and unsaved lodging IDs while retaining region-only plans", () => {
+    const data = normalizeTravelData({
+      ...createInitialTravelData(), savedIds: ["hotel"], tripDays: 4,
+      overnightByDay: {
+        0: { region: "north", placeId: "hotel" },
+        1: { region: "east", placeId: "hotel" },
+        2: { region: "south", placeId: null },
+        3: { region: "west", placeId: "unknown" },
+        4: { region: "north", placeId: "hotel" },
+        5: { region: "mars", placeId: "hotel" },
+      },
+    });
+    expect(data.overnightByDay).toEqual({ 1: { region: "east", placeId: "hotel" }, 2: { region: "south", placeId: null } });
+    expect(normalizeTravelData({ ...data, overnightByDay: { 1: { region: "mars", placeId: "hotel" }, 2: { region: "east" } } }).overnightByDay).toEqual({});
+  });
+
+  it("rejects an outdated draft after a recommended place was unsaved, with no partial writes", () => {
+    const data = toggleSavedPlace(dataWithDraft(), "coffee");
+    expect(applyRecommendedTrip(data, draft)).toBe(data);
+  });
+
+  it("rejects unknown lodging, incomplete day metadata and lodging after the final night", () => {
+    const data = dataWithDraft();
+    expect(applyRecommendedTrip(data, { ...draft, days: [{ day: 1, stayRegion: "east", stayPlaceId: "invented" }, ...draft.days.slice(1)] })).toBe(data);
+    expect(applyRecommendedTrip(data, { ...draft, days: draft.days.slice(1) })).toBe(data);
+    expect(applyRecommendedTrip(data, { ...draft, days: [...draft.days.slice(0, 2), { day: 3, stayRegion: "east", stayPlaceId: "hotel" }] })).toBe(data);
+    expect(applyRecommendedTrip(data, { ...draft, itinerary: { 1: ["meal"], 2: ["coffee"], 3: ["hotel", "sight"] } })).toBe(data);
+  });
+
+  it("supports a lodging-region suggestion even when no saved accommodation exists there", () => {
+    const data = dataWithDraft();
+    const result = applyRecommendedTrip(data, { ...draft, days: [{ day: 1, stayRegion: "north", stayPlaceId: null }, ...draft.days.slice(1)] });
+    expect(result.overnightByDay?.[1]).toEqual({ region: "north", placeId: null });
+  });
+
+  it("removes all references to an unsaved hotel and clears its day from the itinerary", () => {
+    const result = toggleSavedPlace(dataWithDraft(), "hotel");
+    expect(result.overnightByDay).toEqual({});
+    expect(Object.values(result.itinerary).flat()).not.toContain("hotel");
+  });
+
+  it("clears nights affected by manual day changes and all nights referencing a moved hotel", () => {
+    expect(assignPlaceToDay(dataWithDraft(), 2, "meal").overnightByDay).toEqual({});
+    expect(assignPlaceToDay(dataWithDraft(), 3, "hotel").overnightByDay).toEqual({});
+    expect(removePlaceFromDay(dataWithDraft(), 1, "meal").overnightByDay).toEqual({ 2: { region: "east", placeId: "hotel" } });
+    expect(removePlaceFromDay(dataWithDraft(), 1, "hotel").overnightByDay).toEqual({});
+  });
+
+  it("preserves lodging for reorder-only edits and prunes nights when shortening or clearing", () => {
+    const data = dataWithDraft();
+    expect(movePlaceInDay(data, 1, "hotel", -1).overnightByDay).toEqual(data.overnightByDay);
+    expect(resizeTrip(data, 2).overnightByDay).toEqual({ 1: { region: "east", placeId: "hotel" } });
+    expect(resizeTrip(data, 1).overnightByDay).toEqual({});
+    expect(clearSavedPlaces(data).overnightByDay).toEqual({});
   });
 });
 

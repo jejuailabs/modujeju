@@ -1,0 +1,38 @@
+[
+  {
+    "sourceId": "CONT_000000000500270",
+    "name": "비자림",
+    "address": "제주특별자치도 제주시 구좌읍 비자숲길 55",
+    "lat": 33.485,
+    "lng": 126.81027777777778,
+    "coordinateSource": { "sourceName": "Wikidata (CC0)", "sourceUrl": "https://www.wikidata.org/wiki/Q16094611", "checkedAt": "2026-11-08", "kind": "place-center" },
+    "matchEvidence": "위키백과 비자림 문서가 제주 평대리 비자나무 숲으로 연결되며 제주시 구좌읍 평대리 소재임을 확인. Wikidata의 같은 항목 P625. 숲의 대표 위치로 입구 좌표가 아님."
+  },
+  {
+    "sourceId": "CONT_000000000500618",
+    "name": "천지연폭포",
+    "address": "제주특별자치도 서귀포시 남성중로 2-15",
+    "lat": 33.246927777778,
+    "lng": 126.55440555556,
+    "coordinateSource": { "sourceName": "Wikidata (CC0)", "sourceUrl": "https://www.wikidata.org/wiki/Q626162", "checkedAt": "2026-11-08", "kind": "place-center" },
+    "matchEvidence": "한국어명 천지연폭포, Wikidata 설명의 제주 서귀포 소재 폭포와 위키백과 문서 일치. 천제연폭포와 구분. 폭포 대표 위치이며 입구나 주차장 좌표가 아님."
+  },
+  {
+    "sourceId": "CONT_000000000500697",
+    "name": "협재해수욕장",
+    "address": "제주특별자치도 제주시 한림읍 협재리 2497-1",
+    "lat": 33.394166666667,
+    "lng": 126.23944444444,
+    "coordinateSource": { "sourceName": "Wikidata (CC0)", "sourceUrl": "https://www.wikidata.org/wiki/Q12625130", "checkedAt": "2026-11-08", "kind": "place-center" },
+    "matchEvidence": "위키백과 협재해수욕장 문서에서 제주시 한림읍 협재리 소재와 비짓제주 연결 확인. 같은 Wikidata 항목 P625. 해변 대표 위치이며 주차장 좌표가 아님."
+  },
+  {
+    "sourceId": "CONT_000000000500349",
+    "name": "성산일출봉",
+    "address": "제주특별자치도 서귀포시 성산읍 일출로 284-12",
+    "lat": 33.45805556,
+    "lng": 126.9425,
+    "coordinateSource": { "sourceName": "Wikidata (CC0)", "sourceUrl": "https://www.wikidata.org/wiki/Q122225", "checkedAt": "2026-11-08", "kind": "place-center" },
+    "matchEvidence": "위키백과 성산일출봉 문서의 서귀포 성산리 소재 및 한국어명 확인. 연결된 성산일출봉 천연보호구역 Wikidata 항목 P625. 산의 대표 위치이며 매표소나 주차장 좌표가 아님."
+  }
+]

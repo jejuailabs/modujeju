@@ -49,12 +49,26 @@ export interface Place {
   type: PlaceType;
   lat: number | null;
   lng: number | null;
+  /** Map position evidence, independent of companion-policy verification. */
+  coordinateSource?: {
+    sourceName: string;
+    sourceUrl: string;
+    checkedAt: string;
+    /** Place-level reference point, not a verified entrance or parking location. */
+    kind: "place-center";
+  };
   image: string;
   imageKind?: "placeholder" | "photo" | "illustration";
   tags?: string[];
   /** Labels observed on the source, not verified companion conditions. */
   sourceTags?: string[];
-  sourceObservations?: { field: string; value: string; sourceUrl: string }[];
+  sourceObservations?: {
+    field: string;
+    value: string;
+    sourceUrl: string;
+    /** Evidence review date. Explicit null means undated, not the listing observation date. */
+    verifiedAt?: string | null;
+  }[];
   price: {
     amount: number | null;
     unit: "person" | "drink" | "night";

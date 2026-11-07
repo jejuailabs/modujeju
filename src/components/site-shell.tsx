@@ -67,7 +67,7 @@ export function SiteShell({
   }
   const links = [
     { href: "results", label: c.navExplore, Icon: Compass },
-    { href: "saved", label: c.navSaved, Icon: Bookmark },
+    { href: "my", label: { ko: "마이페이지", en: "My places", zh: "我的主页", ja: "マイページ" }[locale], Icon: Bookmark },
     { href: "itinerary", label: c.navTrip, Icon: CalendarDays },
   ];
   return (
@@ -94,7 +94,7 @@ export function SiteShell({
                 className={path.includes("/" + href) ? "active" : ""}
               >
                 {label}
-                {href === "saved" && store.savedIds.length > 0 ? (
+                {href === "my" && store.savedIds.length > 0 ? (
                   <span className="count-dot">{store.savedIds.length}</span>
                 ) : null}
               </Link>
@@ -168,7 +168,7 @@ export function SiteShell({
           >
             <Icon size={21} />
             <span>{label}</span>
-            {href === "saved" && store.savedIds.length > 0 ? (
+            {href === "my" && store.savedIds.length > 0 ? (
               <i>{store.savedIds.length}</i>
             ) : null}
           </Link>

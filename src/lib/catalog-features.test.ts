@@ -2,11 +2,36 @@ import { describe, expect, it } from "vitest";
 import { realPlaces } from "@/data/catalog";
 import { filterAndSortPlaces } from "./catalog";
 import { createDefaultProfile, createUnknownFacts } from "./types";
+import { getPlaceFeatures } from "./place-features";
+import { mapOfficialRecord } from "./official-catalog";
+import { placeSchema } from "./server/place-schema";
+import attractions from "../../research_notes/catalog/attractions.json";
 
 const now = new Date("2026-11-08T03:00:00Z");
 const profile = createDefaultProfile();
 
 describe("catalog facility search integration", () => {
+  it("never promotes undated attraction observations using the basic listing date", () => {
+    const tourism = realPlaces.filter((place) => place.type === "attraction");
+    expect(tourism).toHaveLength(6);
+    for (const place of tourism) {
+      const publicPlace = placeSchema.parse(place);
+      expect(publicPlace.basicSourceCheckedAt).toBe("2026-11-08");
+      expect(publicPlace.sourceObservations?.every((observation) => observation.verifiedAt === null)).toBe(true);
+      expect(getPlaceFeatures(publicPlace, { now }).every((feature) => feature.status === "unknown")).toBe(true);
+    }
+    expect(filterAndSortPlaces(tourism, profile, { features: ["toilet"], now })).toHaveLength(0);
+    const source = attractions.find((place) => place.name === "천지연폭포")!;
+    for (const verifiedAt of [null, "2024-12-31", "invalid"]) {
+      const place = mapOfficialRecord({ ...source, observations: [{ field: "amenities", value: "화장실", verifiedAt }] });
+      expect(getPlaceFeatures(place, { now }).find((feature) => feature.key === "toilet")?.status).toBe("unknown");
+    }
+    const reviewed = mapOfficialRecord({ ...source, observations: [{ field: "amenities", value: "화장실", verifiedAt: "2026-11-01" }] });
+    expect(getPlaceFeatures(reviewed, { now }).find((feature) => feature.key === "toilet")).toMatchObject({
+      status: "yes", evidence: [{ checkedAt: "2026-11-01", source: "observation" }],
+    });
+  });
+
   it("finds the confirmed high chair and does not let unverified tags or names bypass the feature query", () => {
     const fake = { ...structuredClone(realPlaces[0]), id: "unverified-chair", facts: createUnknownFacts(), name: { ko: "유아의자", en: "High chair", zh: "儿童餐椅", ja: "ベビーチェア" }, sourceTags: ["유아의자"], sourceObservations: [] };
     const result = filterAndSortPlaces([...realPlaces, fake], profile, { query: "유아의자", now });

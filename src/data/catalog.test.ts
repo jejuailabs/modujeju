@@ -4,10 +4,15 @@ import { describe, expect, it } from "vitest";
 import cafes from "../../research_notes/catalog/cafes.json";
 import restaurants from "../../research_notes/catalog/restaurants.json";
 import stays from "../../research_notes/catalog/stays.json";
+import attractions from "../../research_notes/catalog/attractions.json";
+import coordinates from "../../research_notes/catalog/coordinates.json";
+import { applyCatalogCoordinates } from "@/lib/catalog-coordinates";
+import { toPublicPlace } from "@/lib/server/place-schema";
+import { categoryPlaceholder } from "@/lib/official-catalog";
 import { locales, regions } from "@/lib/types";
 import { realPlaces } from "./catalog";
 
-const researched = [...restaurants, ...cafes, ...stays];
+const researched = [...restaurants, ...cafes, ...stays, ...attractions];
 
 function trustedSource(value: string | undefined): URL {
   expect(value).toBeTruthy();
@@ -20,9 +25,9 @@ function trustedSource(value: string | undefined): URL {
 }
 
 describe("researched Jeju catalog integration", () => {
-  it("publishes all 60 researched records with 20 per category", () => {
-    expect(researched).toHaveLength(60);
-    expect(realPlaces).toHaveLength(60);
+  it("publishes the researched dining, lodging and attraction records", () => {
+    expect(researched).toHaveLength(66);
+    expect(realPlaces).toHaveLength(66);
     for (const type of ["restaurant", "cafe", "stay"]) {
       expect(researched.filter((place) => place.type === type)).toHaveLength(
         20,
@@ -31,6 +36,7 @@ describe("researched Jeju catalog integration", () => {
         20,
       );
     }
+    expect(realPlaces.filter((place) => place.type === "attraction")).toHaveLength(6);
     expect(new Set(realPlaces.map((place) => place.sourceId))).toEqual(
       new Set(researched.map((place) => place.sourceId)),
     );
@@ -49,9 +55,9 @@ describe("researched Jeju catalog integration", () => {
 
   it("keeps distinct identities without collapsing businesses at a shared address", () => {
     for (const key of ["id", "slug", "sourceId"] as const) {
-      expect(new Set(realPlaces.map((place) => place[key])).size).toBe(60);
+      expect(new Set(realPlaces.map((place) => place[key])).size).toBe(researched.length);
     }
-    expect(new Set(realPlaces.map((place) => place.name.ko)).size).toBe(60);
+    expect(new Set(realPlaces.map((place) => place.name.ko)).size).toBe(researched.length);
     const sharedAddress = realPlaces.filter((place) =>
       place.address.ko.includes("안덕면 신화역사로304번길 38"),
     );
@@ -87,20 +93,49 @@ describe("researched Jeju catalog integration", () => {
     for (const place of realPlaces) {
       expect(place.price.amount).toBeNull();
       expect(place.price.petExtra).toBeNull();
-      expect(place.lat).toBeNull();
-      expect(place.lng).toBeNull();
+      if (!place.coordinateSource) {
+        expect(place.lat).toBeNull();
+        expect(place.lng).toBeNull();
+      }
       expect(place.durationMinutes).toBeNull();
     }
+  });
+
+  it("publishes four reviewed coordinates with provenance and rejects mismatched identities", () => {
+    const located = realPlaces.filter((place) => place.coordinateSource);
+    expect(located).toHaveLength(4);
+    expect(realPlaces.filter((place) => place.lat === null && place.lng === null)).toHaveLength(62);
+    for (const place of located) {
+      const reviewed = coordinates.find((record) => record.sourceId === place.sourceId)!;
+      expect([place.lat, place.lng]).toEqual([reviewed.lat, reviewed.lng]);
+      expect(toPublicPlace(place)?.coordinateSource).toEqual(reviewed.coordinateSource);
+      expect(place.coordinateSource?.kind).toBe("place-center");
+      expect(place.verifiedAt).toBeNull();
+    }
+    expect(() => applyCatalogCoordinates([{ ...located[0], name: { ...located[0].name, ko: "다른 장소" } }], coordinates)).toThrow("COORDINATE_IDENTITY_MISMATCH");
+    expect(() => applyCatalogCoordinates([{ ...located[0], address: { ...located[0].address, ko: "다른 주소" } }], coordinates)).toThrow("COORDINATE_IDENTITY_MISMATCH");
   });
 
   it("uses existing category placeholders without presenting sample photos as real places", () => {
     for (const place of realPlaces) {
       expect(place.imageKind).toBe("placeholder");
-      expect(place.image).toBe(`/assets/icons/catalog-${place.type}.svg`);
+      expect(place.image).toBe(categoryPlaceholder[place.type]);
       expect(
         existsSync(resolve(process.cwd(), "public", place.image.slice(1))),
       ).toBe(true);
     }
+  });
+
+  it("keeps undated attraction policies unknown while retaining their source conditions", () => {
+    const tourismPlaces = realPlaces.filter((place) => place.type === "attraction");
+    for (const place of tourismPlaces) {
+      expect(place.verifiedAt).toBeNull();
+      expect(place.sourceUpdatedAt).toBeNull();
+      expect(Object.values(place.facts).every((fact) => fact.value === "unknown" && fact.verifiedAt === null)).toBe(true);
+      expect(place.sourceObservations?.some((note) => note.field === "근거 확인 범위")).toBe(true);
+    }
+    expect(tourismPlaces.find((place) => place.name.ko === "협재해수욕장")?.sourceObservations?.find((note) => note.field === "petPolicy")?.value).toContain("입욕을 제한");
+    expect(tourismPlaces.find((place) => place.name.ko === "성산일출봉")?.sourceObservations?.find((note) => note.field === "accessAssistance")?.value).toContain("계단과 오르막");
   });
 
   it("exposes source notes as readable text and keeps joined tags out of the catalog", () => {

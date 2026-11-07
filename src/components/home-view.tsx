@@ -15,7 +15,8 @@ import { regions } from "@/lib/types";
 import { copy, regionImages } from "@/messages/ui";
 import { designCopy } from "@/messages/design";
 import { useTravelStore } from "@/hooks/use-travel-store";
-import { CompanionPicker, DemoNotice } from "./common";
+import { CompanionPicker, DemoNotice, typeIcons } from "./common";
+import { browseCategory, browsePlaceTypes } from "@/lib/place-categories";
 import { PlaceCard } from "./place-card";
 import { CatalogNotice } from "./catalog-notice";
 import { getPlaceFeatures } from "@/lib/place-features";
@@ -32,11 +33,11 @@ export function HomeView({
     d = designCopy(locale),
     router = useRouter();
   const { profile, setProfile } = useTravelStore();
-  const featured = (["restaurant", "cafe", "stay"] as const)
+  const featured = browsePlaceTypes
     .map(
       (type) =>
         places
-          .filter((place) => place.type === type)
+          .filter((place) => browseCategory(place.type) === type)
           .map((place) => ({
             place,
             score: getPlaceFeatures(place).reduce(
@@ -60,7 +61,7 @@ export function HomeView({
           src="/assets/images/region-west.webp"
           alt={c.heroCaption}
           fill
-          priority
+          loading="eager"
           sizes="100vw"
           className="escape-image"
         />
@@ -140,7 +141,7 @@ export function HomeView({
                 }
               >
                 <option value="">{c.allTypes}</option>
-                {(["restaurant", "cafe", "stay"] as const).map((type) => (
+                {browsePlaceTypes.map((type) => (
                   <option key={type} value={type}>
                     {c[type]}
                   </option>
@@ -169,6 +170,22 @@ export function HomeView({
             <FeatureIcon feature="senior" size={44} />
             {d.seniorNote}
           </span>
+        </section>
+        <section className="home-categories" aria-label={c.what}>
+          {browsePlaceTypes.map((type) => {
+            const Icon = typeIcons[type];
+            const count = places.filter((place) => browseCategory(place.type) === type).length;
+            return (
+              <button key={type} type="button" onClick={() => {
+                setProfile({ types: [type] });
+                router.push(`/${locale}/results`);
+              }}>
+                <Icon size={30} aria-hidden="true" />
+                <span><strong>{c[type]}</strong><small>{count} {c.countSuffix}</small></span>
+                <ArrowUpRight size={20} aria-hidden="true" />
+              </button>
+            );
+          })}
         </section>
         {places.some((p) => p.dataMode === "demo") && (
           <DemoNotice locale={locale} />

@@ -2,8 +2,10 @@
 
 import { useEffect, useSyncExternalStore } from "react";
 import type { Profile } from "../lib/types";
+import type { SavedTripRecommendation } from "../lib/trip/recommend";
 import {
   TRAVEL_STORAGE_KEY,
+  applyRecommendedTrip as applyTripDraft,
   assignPlaceToDay,
   clearSavedPlaces,
   createInitialTravelData,
@@ -47,6 +49,7 @@ function dataOnly(value: TravelSnapshot): TravelData {
     tripDays: value.tripDays,
     itinerary: value.itinerary,
     tripStartDate: value.tripStartDate,
+    ...(value.overnightByDay !== undefined ? { overnightByDay: value.overnightByDay } : {}),
   };
 }
 
@@ -130,6 +133,15 @@ const actions = {
   },
   setTripDays(days: number) {
     update((data) => resizeTrip(data, days));
+  },
+  applyRecommendedTrip(recommendation: SavedTripRecommendation): boolean {
+    let applied = false;
+    update((data) => {
+      const next = applyTripDraft(data, recommendation);
+      applied = next !== data;
+      return next;
+    });
+    return applied;
   },
   assignPlace(day: number, id: string) {
     update((data) => assignPlaceToDay(data, day, id));

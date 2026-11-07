@@ -8,6 +8,7 @@ import {
   ArrowRight,
   ArrowUp,
   CalendarDays,
+  BedDouble,
   Download,
   MapPin,
   Plus,
@@ -20,6 +21,8 @@ import { useTravelStore } from "@/hooks/use-travel-store";
 import { copy, priceLabel } from "@/messages/ui";
 import { tripMessages } from "@/messages/trip";
 import { DemoNotice, PageIntro } from "./common";
+import { TripRecommendation } from "./trip-recommendation";
+import { recommendationCopy, tripLengthLabel } from "@/messages/recommendation";
 
 const dateLocales: Record<Locale, string> = {
   ko: "ko-KR",
@@ -125,7 +128,7 @@ export function TripBoard({
           >
             {[1, 2, 3, 4, 5].map((day) => (
               <option key={day} value={day}>
-                {day}
+                {tripLengthLabel(locale, day)}
               </option>
             ))}
           </select>
@@ -142,6 +145,7 @@ export function TripBoard({
         </button>
         <p className="muted trip-controls-hint">{tripCopy.daysReduced}</p>
       </section>
+      {store.hydrated && <TripRecommendation places={places} locale={locale} />}
       {exportError && (
         <div role="alert" className="notice">
           <span>{c.exportTrip}</span>
@@ -170,6 +174,8 @@ export function TripBoard({
               });
               const unavailableDayCount = dayIds.length - dayPlaces.length;
               const date = tripDayDate(store.tripStartDate, day);
+              const overnight = store.overnightByDay?.[String(day)];
+              const overnightPlace = overnight?.placeId ? byId.get(overnight.placeId) : null;
               return (
                 <section
                   key={day}
@@ -194,6 +200,7 @@ export function TripBoard({
                       {dayPlaces.length} {c.countSuffix}
                     </span>
                   </header>
+                  {overnight && <div className="trip-overnight"><BedDouble size={20} /><div><strong>{day}{recommendationCopy(locale).nights} · {c[overnight.region]}</strong><span>{overnightPlace?.name[locale] ?? recommendationCopy(locale).noStay}</span></div></div>}
                   {unavailableDayCount > 0 && (
                     <p className="notice" role="status">
                       {tripCopy.unavailableDay.replace(

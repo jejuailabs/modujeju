@@ -1,6 +1,7 @@
 "use client";
 import type { Locale, Companion, Region, PlaceType } from "@/lib/types";
-import { companions, regions, placeTypes } from "@/lib/types";
+import { companions, regions } from "@/lib/types";
+import { browsePlaceTypes } from "@/lib/place-categories";
 import { copy, regionImages } from "@/messages/ui";
 import { designCopy } from "@/messages/design";
 import { useTravelStore } from "@/hooks/use-travel-store";
@@ -126,7 +127,7 @@ export function TypePicker({
     c = copy(locale);
   return (
     <div className="type-picker">
-      {placeTypes.map((id) => {
+      {browsePlaceTypes.map((id) => {
         const Icon = typeIcons[id];
         return (
           <button

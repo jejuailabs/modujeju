@@ -11,7 +11,7 @@ import {
   Compass,
 } from "lucide-react";
 import type { Locale, Profile } from "@/lib/types";
-import { placeTypes } from "@/lib/types";
+import { browsePlaceTypes } from "@/lib/place-categories";
 import { copy } from "@/messages/ui";
 import { useTravelStore } from "@/hooks/use-travel-store";
 import { CompanionPicker, RegionPicker, TypePicker } from "./common";
@@ -103,7 +103,7 @@ export function BudgetFields({ locale }: { locale: Locale }) {
     c = copy(locale);
   return (
     <div className="budget-grid">
-      {placeTypes
+      {browsePlaceTypes
         .filter((t) => profile.types.length === 0 || profile.types.includes(t))
         .map((t) => (
           <label className="form-field" key={t}>
@@ -151,7 +151,7 @@ export function PlanView({ locale }: { locale: Locale }) {
           src="/assets/images/region-east.webp"
           alt={c.heroCaption}
           fill
-          priority
+          loading="eager"
           sizes="(max-width:800px) 100vw, 42vw"
         />
         <div className="planner-story-shade" />

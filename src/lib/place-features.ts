@@ -43,9 +43,10 @@ function readFact(place: Place, key: keyof PlaceFacts, now: Date, days = physica
   return { value: fact.value, evidence: { source: "fact", factKey: key, checkedAt: fact.verifiedAt, ...(fact.sourceUrl ? { sourceUrl: fact.sourceUrl } : {}) }, note: fact.note };
 }
 
-function sourceEvidence(place: Place, sourceUrl: string | undefined, now: Date): boolean {
+function sourceEvidence(place: Place, sourceUrl: string | undefined, now: Date, verifiedAt: string | null = place.basicSourceCheckedAt ?? null): boolean {
   if (place.dataMode !== "live" || !place.sourceUrl || !sourceUrl) return false;
-  const freshness = getFactFreshness({ value: true, source: "official", verifiedAt: place.basicSourceCheckedAt ?? null }, now, physicalCycle);
+  if (!verifiedAt || verifiedAt < "2025-01-01") return false;
+  const freshness = getFactFreshness({ value: true, source: "official", verifiedAt }, now, physicalCycle);
   if (freshness !== "fresh" && freshness !== "dueSoon") return false;
   try {
     const listing = new URL(place.sourceUrl), evidence = new URL(sourceUrl);
@@ -57,9 +58,10 @@ function sourceEvidence(place: Place, sourceUrl: string | undefined, now: Date):
 
 function observations(place: Place, fields: readonly string[], match: (value: string) => FeatureStatus | null, now: Date): ObservationResult | undefined {
   const matches = (place.sourceObservations ?? []).flatMap(observation => {
-    if (!fields.includes(observation.field) || !sourceEvidence(place, observation.sourceUrl, now)) return [];
+    const checkedAt = observation.verifiedAt === undefined ? place.basicSourceCheckedAt ?? null : observation.verifiedAt;
+    if (!fields.includes(observation.field) || !sourceEvidence(place, observation.sourceUrl, now, checkedAt)) return [];
     const status = match(observation.value.trim());
-    return status ? [{ status, evidence: { source: "observation" as const, field: observation.field, sourceUrl: observation.sourceUrl, checkedAt: place.basicSourceCheckedAt ?? null } }] : [];
+    return status ? [{ status, evidence: { source: "observation" as const, field: observation.field, sourceUrl: observation.sourceUrl, checkedAt } }] : [];
   });
   if (!matches.length) return undefined;
   return { status: new Set(matches.map(match => match.status)).size === 1 ? matches[0].status : "unknown", evidence: matches.map(match => match.evidence) };
@@ -143,14 +145,15 @@ export function getPlaceFeatures(place: Place, options: FeatureOptions = {}): Pl
         // A reviewed designated-room offer can be described conditionally. It
         // does not change petEntry, indoor access or the whole-party verdict.
         const roomPolicy = (place.sourceObservations ?? []).find(observation => {
-          if (observation.field !== "petPolicyDisplayed" || !sourceEvidence(place, observation.sourceUrl, now)) return false;
+          const checkedAt = observation.verifiedAt === undefined ? place.basicSourceCheckedAt ?? null : observation.verifiedAt;
+          if (observation.field !== "petPolicyDisplayed" || !sourceEvidence(place, observation.sourceUrl, now, checkedAt)) return false;
           const policy = observation.value.match(/^반려동물 동반가능으로 안내됩니다\. 대상: (?:펫프렌들리룸|펫 동반 스위트·패밀리 객실)\. 반려견 (\d+(?:\.\d+)?)kg (미만|이하)\./);
           return policy && typeof weight?.value === "number" && weight.value === Number(policy[1]) && boundary?.value === (policy[2] === "이하");
         });
         if (roomPolicy && weight && boundary) {
           status = "conditional";
           details.push(weightLimitMessage(weight.value as number, boundary.value as boolean));
-          additionalEvidence.push(weight.evidence, boundary.evidence, { source: "observation", field: roomPolicy.field, sourceUrl: roomPolicy.sourceUrl, checkedAt: place.basicSourceCheckedAt ?? null });
+          additionalEvidence.push(weight.evidence, boundary.evidence, { source: "observation", field: roomPolicy.field, sourceUrl: roomPolicy.sourceUrl, checkedAt: roomPolicy.verifiedAt === undefined ? place.basicSourceCheckedAt ?? null : roomPolicy.verifiedAt });
         }
       }
       if (reading?.value === "indoor" || reading?.value === "outdoor") {
