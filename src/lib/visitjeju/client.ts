@@ -10,6 +10,12 @@ export interface VisitJejuPage {
   totalCount: number;
 }
 
+function responseCount(value: unknown, maximum: number): number {
+  const number = typeof value === "number" ? value : typeof value === "string" && /^\d{1,9}$/.test(value) ? Number(value) : NaN;
+  if (!Number.isSafeInteger(number) || number < 0 || number > maximum) throw new ServiceError("VISITJEJU_INVALID_RESPONSE", 502);
+  return number;
+}
+
 export function assertVisitJejuEnabled(): void {
   assertCloudEnabled();
   if (
@@ -88,7 +94,9 @@ export async function fetchVisitJejuPage(input: {
     } finally {
       reader.releaseLock();
     }
-    const payload = JSON.parse(body) as Record<string, unknown>;
+    const decoded: unknown = JSON.parse(body);
+    if (!decoded || typeof decoded !== "object" || Array.isArray(decoded)) throw new ServiceError("VISITJEJU_INVALID_RESPONSE", 502);
+    const payload = decoded as Record<string, unknown>;
     if (
       !["00", "200"].includes(String(payload.result)) ||
       String(payload.resultMessage).toLowerCase() !== "success" ||
@@ -96,15 +104,20 @@ export async function fetchVisitJejuPage(input: {
       payload.items.length > 1000
     )
       throw new ServiceError("VISITJEJU_INVALID_RESPONSE", 502);
-    const currentPage = Number(payload.currentPage),
-      pageCount = Number(payload.pageCount),
-      totalCount = Number(payload.totalCount);
+    const currentPage = responseCount(payload.currentPage, 10_000),
+      pageCount = responseCount(payload.pageCount, 10_000),
+      totalCount = responseCount(payload.totalCount, 10_000_000),
+      resultCount = responseCount(payload.resultCount, 1000),
+      pageSize = responseCount(payload.pageSize, 1000);
     if (
-      ![currentPage, pageCount, totalCount].every(
-        (value) => Number.isInteger(value) && value >= 0,
-      )
+      currentPage !== page || pageSize < 1 || resultCount !== payload.items.length || resultCount > pageSize || totalCount < resultCount ||
+      (totalCount === 0 && (resultCount !== 0 || pageCount > 1)) ||
+      (totalCount > 0 && (pageCount < 1 || pageCount !== Math.ceil(totalCount / pageSize))) ||
+      (!input.contentId && totalCount > 0 && ((currentPage <= pageCount && resultCount !== Math.min(pageSize, totalCount - (currentPage - 1) * pageSize)) || (currentPage > pageCount && resultCount > 0)))
     )
       throw new ServiceError("VISITJEJU_INVALID_RESPONSE", 502);
+    // The official cid example can retain the requested currentPage even when
+    // its filtered pageCount is 1. The full-catalog path has stricter bounds.
     return { items: payload.items, currentPage, pageCount, totalCount };
   } catch (error) {
     if (error instanceof ServiceError) throw error;

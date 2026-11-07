@@ -58,7 +58,9 @@ describe("official observed catalog", () => {
     const known = { ...unknown, id: "known", durationMinutes: 45 };
     const sorted = filterAndSortPlaces([unknown, known], createDefaultProfile(), { sort: "duration" });
     expect(sorted.map(({ place }) => place.id)).toEqual(["known", unknown.id]);
-    expect(filterAndSortPlaces([unknown], createDefaultProfile(), { query: "반려동물" })).toHaveLength(1);
+    expect(filterAndSortPlaces([unknown], createDefaultProfile(), { query: "무료" })).toHaveLength(1);
+    // Companion aliases now search established conditions, not unverified tags.
+    expect(filterAndSortPlaces([unknown], createDefaultProfile(), { query: "반려동물" })).toHaveLength(0);
   });
   it("exports unknown coordinates as null without invented map locations", () => {
     const place = mapOfficialRecord(observed);

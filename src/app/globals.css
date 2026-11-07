@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@import "./travel-design.css";
+@layer legacy {
+
 
 .catalog-notice {
   padding: 20px 24px;
@@ -2904,3 +2907,5 @@ textarea {
 .trip-page > .notice > svg { flex-shrink: 0; }
 .trip-page > .local-notice { padding: 0; border: 0; background: transparent; margin: 0 0 14px; }
 @media (max-width: 600px) { .trip-controls label:first-of-type { flex-basis: 100%; } }
+
+}

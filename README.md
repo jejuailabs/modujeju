@@ -94,14 +94,22 @@ npm run start
 | `VISITJEJU_API_ENABLED` | 비짓제주 호출 게이트, `false` |
 | `VISITJEJU_USAGE_APPROVED` | 이용·비용 조건 확인 후의 별도 게이트, `false` |
 | `VISITJEJU_API_KEY` | 서버 전용 API 키 |
-| `VISITJEJU_API_URL` | 승인된 API endpoint |
-| `VISITJEJU_API_KEY_PARAM` | 발급 계약에서 확인한 `apiKey` 또는 `apikey` |
+| `VISITJEJU_API_URL` | 공식 가이드로 확인한 `https://api.visitjeju.net/vsjApi/contents/searchList`, 설정 완료 |
+| `VISITJEJU_API_KEY_PARAM` | 공식 가이드의 소문자 `apikey`, 설정 완료 |
+| `VISITJEJU_SYNC_ENABLED` | 지속 수집 게이트, `false` |
+| `VISITJEJU_SYNC_COST_APPROVED` | 지속 수집의 API·서버·DB·저장 비용 범위 승인, `false` |
+| `VISITJEJU_STORAGE_APPROVED` | 정규화·저장·재공개 조건 확인, `false` |
+| `VISITJEJU_SYNC_APPROVAL_EXPIRES_AT` | 승인 종료 UTC ISO 시각; 비어 있거나 만료되면 차단 |
+| `VISITJEJU_SYNC_MAX_PAGES`, `VISITJEJU_SYNC_MAX_ITEMS` | 실행당 최대 2페이지·100건, 더 작은 값만 허용 |
+| `CRON_SECRET` | 서버 전용 예약 호출 인증키; 로컬에 생성, 예시는 빈 값 |
 
-데모 모드가 꺼진 상태에서 클라우드 모드를 켜면 공개 장소는 Firestore의 `published` 자료에서 읽습니다. 이때 로컬 관측 카탈로그와 자동으로 합치지 않습니다. 데이터 이전·게시 검수 없이 게이트만 켜면 로컬 목록이 보이지 않을 수 있습니다. DB 오류 시 로컬 자료나 가상 자료로 조용히 대체하지 않고 오류를 반환합니다. 운영 관리자 권한은 검증된 Firebase 세션의 `admin: true` custom claim으로 판단하며 화면이나 입력 JSON에서 역할을 지정할 수 없습니다.
+데모 모드가 꺼진 상태에서 클라우드 모드를 켜면 공개 장소는 Firestore의 `sourcePlaces` 기본 정보와 `places`의 운영자 검수 자료를 합쳐 읽습니다. 기본 수집 자료는 동행 조건 `unknown`, 요금 `null`, placeholder 아이콘으로 표시하며 검수가 끝났다고 주장하지 않습니다. 같은 출처의 `published` 문서가 우선하고 숨김·휴폐업 상태는 기본 수집 자료도 가립니다. 로컬 관측 카탈로그와 자동 합산하지 않으므로 데이터 이전 없이 게이트만 켜면 로컬 목록이 보이지 않을 수 있습니다. DB 오류 시 로컬 자료나 가상 자료로 조용히 대체하지 않고 오류를 반환합니다. 운영 관리자 권한은 검증된 Firebase 세션의 `admin: true` custom claim으로 판단하며 화면이나 입력 JSON에서 역할을 지정할 수 없습니다.
 
 클라우드 공개 장소는 서버 Data Cache를 60초 주기로 공유합니다. 관리자가 게시·숨김·휴폐업 상태를 바꾸면 캐시 태그를 만료시키고, JSON 응답에는 별도의 브라우저/CDN 캐시를 추가하지 않습니다. 로컬 정적 카탈로그는 JSON을 다시 검수·통합하고 빌드해야 갱신됩니다. 저장한 장소가 현재 공개 목록에서 사라지면 저장·일정 기록은 유지하고 화면에서 누락 개수를 안내합니다.
 
-비짓제주 클라이언트는 HTTPS의 `api.visitjeju.net/vsjApi/contents/searchList`만 허용하고 redirect를 거부합니다. API 키·키 파라미터·계약은 공급자가 승인한 값을 확인해 설정해야 합니다. 현재 저장소의 코드는 실제 발급·수집·요금 확인을 대신하지 않습니다. 측정 ID 설정이 존재해도 Analytics는 초기화하지 않습니다.
+비짓제주 클라이언트는 HTTPS의 `api.visitjeju.net/vsjApi/contents/searchList`만 허용하고 redirect를 거부합니다. 이 endpoint와 소문자 `apikey` 파라미터는 공식 가이드로 확인해 `.env.example`과 `.env.local`에 채웠습니다. 실제 API 키는 아직 발급되지 않아 빈 값이며, 키 발급·이용 및 저장 조건·비용 확인과 승인은 별도로 필요합니다. 알려진 주소를 설정한 것이 호출 허가는 아니므로 모든 실행 게이트는 `false`입니다. 현재 저장소의 코드는 실제 발급·수집·요금 확인을 대신하지 않습니다. 측정 ID 설정이 존재해도 Analytics는 초기화하지 않습니다.
+
+**현재 VisitJeju API 키가 없고 무료 여부·정량 호출 한도·초과 요금·장기 저장 조건이 확인되지 않아 지속 수집은 실행하지 않았습니다.** `/api/cron/visitjeju`는 비밀 헤더와 모든 승인·설정·만료 조건을 통과해야 실행하며, 하루 최대 한 번의 run ID와 2페이지·100건 제한을 사용합니다. 실패·중단은 다음 날짜에 커서부터 재개합니다. `vercel.cron.example.json`은 예시만 있고 활성 `vercel.json`에는 예약이 없습니다. 실제 API·Firestore·배포 없이 모의 테스트로 검증했습니다. 실행·비용·중단·데이터 보존 조건은 [지속 수집 운영](docs/14_recurring_ingestion.md)에 기록했습니다.
 
 ### 비밀값 취급
 
@@ -145,6 +153,7 @@ src/lib/trip/           저장·일정 정규화와 JSON 내보내기
 src/lib/firebase/       게이트가 있는 클라이언트·서버 연결
 src/lib/server/         검증·권한·공개 데이터 변환
 src/lib/visitjeju/      공식 API 어댑터와 초안 정규화
+src/lib/sync/           승인 게이트·페이지 수집·커서/lease·저장·공개 병합
 src/messages/           한국어·영어·중국어·일본어 문구
 public/assets/          생성 이미지와 SVG 아이콘
 docs/                   기획·디자인·데이터·운영 문서

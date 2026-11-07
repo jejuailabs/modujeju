@@ -86,4 +86,56 @@ describe("VisitJeju draft normalization", () => {
   it("limits imported source strings", () => {
     expect(plainText("a".repeat(5000), 120)).toHaveLength(120);
   });
+
+  it("keeps stable identities across title, tag and region changes", () => {
+    const before = normalizeVisitJejuRecord(source, options).place;
+    const after = normalizeVisitJejuRecord({ ...source, title: "변경 상호", alltag: "새 태그" }, { ...options, region: "east" }).place;
+    expect(after.id).toBe(before.id);
+    expect(after.slug).toBe(before.slug);
+    expect(after.sourceTags).toEqual(["새 태그"]);
+    expect(after.sourceTags).not.toContain("반려동물");
+  });
+
+  it("rejects truncatable or transformed IDs instead of aliasing a different source", () => {
+    for (const contentsid of ["A".repeat(96), "<b>CNTS_123</b>", "CNTS-123", "cnts_123", " CNTS_123"]) {
+      expect(() => normalizeVisitJejuRecord({ ...source, contentsid }, options)).toThrow("VISITJEJU_INVALID_RECORD");
+    }
+    expect(normalizeVisitJejuRecord({ ...source, contentsid: "A".repeat(95) }, options).place.id).toHaveLength(98);
+  });
+
+  it("does not coerce arrays, objects or non-decimal coordinate strings into locations", () => {
+    for (const latitude of [[33.4], { valueOf: () => 33.4 }, "0x21", true]) {
+      expect(() => normalizeVisitJejuRecord({ ...source, latitude }, options)).toThrow("VISITJEJU_INVALID_RECORD");
+    }
+    expect(normalizeVisitJejuRecord({ ...source, latitude: "33.4" }, options).place.lat).toBe(33.4);
+    expect(normalizeVisitJejuRecord({ ...source, latitude: " " }, options).place.lat).toBeNull();
+  });
+
+  it("keeps source summaries brief and does not infer update dates from undocumented properties", () => {
+    const { place, reviewWarnings } = normalizeVisitJejuRecord({ ...source, introduction: "안내 ".repeat(300), updatedAt: "2026-11-06", modifiedtime: "20261106" }, options);
+    expect(place.summary.ko.length).toBeLessThanOrEqual(240);
+    expect(place.sourceUpdatedAt).toBeNull();
+    expect(reviewWarnings).toContain("SOURCE_UPDATE_DATE_UNAVAILABLE");
+  });
+
+  it("deduplicates official tag tokens and retains both documented tag fields", () => {
+    const { place } = normalizeVisitJejuRecord({ ...source, alltag: "카페，주차장,카페", tag: "풍경#카페" }, options);
+    expect(place.sourceTags).toEqual(["카페", "주차장", "풍경"]);
+    expect(place.facts.parking.value).toBe("unknown");
+  });
+
+  it("uses the Korean retrieval calendar date without declaring policy verification", () => {
+    const { place } = normalizeVisitJejuRecord(source, { ...options, retrievedAt: "2026-11-07T15:00:00Z" });
+    expect(place.basicSourceCheckedAt).toBe("2026-11-08");
+    expect(place.verifiedAt).toBeNull();
+    expect(place.facts.operating.verifiedAt).toBeNull();
+  });
+
+  it("does not trust upstream claims of image rights or publish a newly supplied image", () => {
+    const { place, candidatePhotoUrl, reviewWarnings } = normalizeVisitJejuRecord({ ...source, imageRights: { status: "approved" }, license: "CC0" }, options);
+    expect(place.imageKind).toBe("placeholder");
+    expect(place.image).not.toBe(candidatePhotoUrl);
+    expect(reviewWarnings).toContain("IMAGE_RIGHTS_UNVERIFIED");
+    expect(safePhotoUrl("https://api.cdn.visitjeju.net:8443/photo.png")).toBeNull();
+  });
 });

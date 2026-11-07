@@ -16,6 +16,7 @@ import { copy } from "@/messages/ui";
 import type { Locale } from "@/lib/types";
 import { useTravelStore } from "@/hooks/use-travel-store";
 import { tripMessages } from "@/messages/trip";
+import { designCopy } from "@/messages/design";
 let memoryTheme: string | null = null;
 function readTheme() {
   let saved = memoryTheme;
@@ -50,6 +51,8 @@ export function SiteShell({
     path = usePathname(),
     router = useRouter();
   const store = useTravelStore();
+  const d = designCopy(locale);
+  const isHome = path === `/${locale}` || path === `/${locale}/`;
   const dark = useSyncExternalStore(subscribeTheme, readTheme, serverTheme);
   useEffect(() => {
     document.documentElement.lang = locale;
@@ -69,7 +72,7 @@ export function SiteShell({
   ];
   return (
     <>
-      <header className="site-header">
+      <header className={`site-header ${isHome ? "home-header" : ""}`}>
         <div className="header-inner">
           <Link href={`/${locale}`} className="brand">
             <Image
@@ -80,7 +83,7 @@ export function SiteShell({
             />
             <span>
               {c.brand}
-              <small>{c.brandNote}</small>
+              <small>GACHI JEJU</small>
             </span>
           </Link>
           <nav className="desktop-nav" aria-label={c.menu}>
@@ -125,6 +128,10 @@ export function SiteShell({
             >
               {dark ? <Sun size={19} /> : <Moon size={19} />}
             </button>
+            <Link className="header-start" href={`/${locale}/plan`}>
+              {d.start}
+              <ArrowUpRight size={16} />
+            </Link>
           </div>
         </div>
       </header>
@@ -135,9 +142,12 @@ export function SiteShell({
       ) : null}
       {children}
       <footer className="site-footer">
+        <div className="footer-landscape" aria-hidden="true" />
         <div>
-          <span className="footer-brand">{c.brand}</span>
-          <p>{c.footer}</p>
+          <span className="footer-brand">
+            GACHI JEJU<span>{c.brand}</span>
+          </span>
+          <p>{d.footer}</p>
         </div>
         <div className="footer-links">
           <Link href={`/${locale}/about`}>

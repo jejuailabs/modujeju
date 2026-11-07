@@ -2,18 +2,27 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { ArrowRight, Sparkles, Heart, Check } from "lucide-react";
-import type { Locale, Place } from "@/lib/types";
-import { copy } from "@/messages/ui";
-import { useTravelStore } from "@/hooks/use-travel-store";
 import {
-  CompanionPicker,
-  RegionPicker,
-  TypePicker,
-  DemoNotice,
-} from "./common";
+  ArrowRight,
+  ArrowUpRight,
+  MapPin,
+  Search,
+  Baby,
+  Dog,
+  Accessibility,
+  Compass,
+  Leaf,
+} from "lucide-react";
+import type { Locale, Place, Region, PlaceType } from "@/lib/types";
+import { regions } from "@/lib/types";
+import { copy, regionImages } from "@/messages/ui";
+import { designCopy } from "@/messages/design";
+import { useTravelStore } from "@/hooks/use-travel-store";
+import { CompanionPicker, DemoNotice } from "./common";
 import { PlaceCard } from "./place-card";
 import { CatalogNotice } from "./catalog-notice";
+import { getPlaceFeatures } from "@/lib/place-features";
+
 export function HomeView({
   locale,
   places,
@@ -22,144 +31,227 @@ export function HomeView({
   places: Place[];
 }) {
   const c = copy(locale),
-    router = useRouter(),
-    { profile, setProfile } = useTravelStore();
+    d = designCopy(locale),
+    router = useRouter();
+  const { profile, setProfile } = useTravelStore();
+  const featured = (["restaurant", "cafe", "stay"] as const)
+    .map(
+      (type) =>
+        places
+          .filter((place) => place.type === type)
+          .map((place) => ({
+            place,
+            score: getPlaceFeatures(place).reduce(
+              (score, feature) =>
+                score +
+                (feature.status === "yes"
+                  ? 2
+                  : feature.status === "conditional"
+                    ? 1
+                    : 0),
+              0,
+            ),
+          }))
+          .sort((a, b) => b.score - a.score)[0]?.place,
+    )
+    .filter((place): place is Place => Boolean(place));
   return (
     <main className="home-page">
-      <section className="hero-section">
-        <div className="hero-copy">
-          <div className="eyebrow">
-            <span />
-            {c.eyebrow}
-          </div>
+      <section className="escape-hero">
+        <Image
+          src="/assets/images/region-west.webp"
+          alt={c.heroCaption}
+          fill
+          priority
+          sizes="100vw"
+          className="escape-image"
+        />
+        <div className="escape-shade" />
+        <div className="escape-copy">
+          <span className="eyebrow light">
+            <span /> JEJU, AT OUR OWN PACE
+          </span>
           <h1>
             {c.heroFirst}
             <br />
-            <em>{c.heroSecond}</em>
+            {c.heroSecond}
           </h1>
-          <p className="hero-description">{c.heroCopy}</p>
-          <div className="hero-selection">
-            <div className="section-mini">
-              <strong>{c.withWho}</strong>
-              <span>{c.multiple}</span>
-            </div>
-            <CompanionPicker locale={locale} />
-            <button
-              disabled={profile.companions.length === 0}
-              className="btn primary hero-cta"
-              onClick={() => router.push(`/${locale}/plan`)}
-            >
-              {c.findFit}
-              <ArrowRight size={20} />
-            </button>
-          </div>
+          <p>{c.heroCopy}</p>
+          <Link className="btn coral" href={`/${locale}/plan`}>
+            {d.start}
+            <ArrowUpRight size={20} />
+          </Link>
         </div>
-        <div className="hero-visual">
-          <Image
-            src="/assets/images/hero-family.webp"
-            alt={c.heroCaption}
-            fill
-            priority
-            sizes="(max-width:700px) 95vw, 560px"
-          />
-          <div className="hero-visual-heading">
-            <span>JEJU, TOGETHER</span>
-            <p>{c.heroCaption}</p>
-          </div>
-          <span className="ai-caption">{c.illustration}</span>
-          <div className="hero-floating">
-            <span className="floating-icon">
-              <Heart size={23} />
+        <div className="hero-coordinate">
+          <Compass size={20} />
+          <span>
+            33° N · 126° E<br />
+            <strong>JEJU ISLAND</strong>
+          </span>
+        </div>
+        <span className="hero-art-note">{c.illustration}</span>
+        <form
+          className="journey-search"
+          onSubmit={(event) => {
+            event.preventDefault();
+            router.push(`/${locale}/results`);
+          }}
+        >
+          <label className="journey-field">
+            <MapPin size={21} />
+            <span>
+              <small>{d.destination}</small>
+              <select
+                aria-label={d.destination}
+                value={profile.regions.length === 1 ? profile.regions[0] : ""}
+                onChange={(e) =>
+                  setProfile({
+                    regions: e.target.value ? [e.target.value as Region] : [],
+                  })
+                }
+              >
+                <option value="">{c.allRegions}</option>
+                {regions.map((r) => (
+                  <option key={r} value={r}>
+                    {c[r]}
+                  </option>
+                ))}
+              </select>
             </span>
-            <div>
-              <strong>{c.heroBadge}</strong>
-              <p>
-                <Check size={13} />
-                {c.kids} · {c.pet} · {c.senior}
-              </p>
-            </div>
+          </label>
+          <div className="journey-companions">
+            <small>{d.companions}</small>
+            <CompanionPicker locale={locale} />
           </div>
-        </div>
-        <Image
-          className="hero-tangerine"
-          src="/assets/images/decor-tangerine.webp"
-          width={170}
-          height={114}
-          alt=""
-        />
+          <label className="journey-field category-field">
+            <Compass size={21} />
+            <span>
+              <small>{d.category}</small>
+              <select
+                aria-label={d.category}
+                value={profile.types.length === 1 ? profile.types[0] : ""}
+                onChange={(e) =>
+                  setProfile({
+                    types: e.target.value ? [e.target.value as PlaceType] : [],
+                  })
+                }
+              >
+                <option value="">{c.allTypes}</option>
+                {(["restaurant", "cafe", "stay"] as const).map((type) => (
+                  <option key={type} value={type}>
+                    {c[type]}
+                  </option>
+                ))}
+              </select>
+            </span>
+          </label>
+          <button className="btn primary search-submit" type="submit">
+            <Search size={19} />
+            {c.navExplore}
+          </button>
+        </form>
       </section>
       <div className="home-content">
+        <section className="travel-values" aria-label={d.together}>
+          <p>{d.together}</p>
+          <span>
+            <Baby size={23} />
+            {d.kidsNote}
+          </span>
+          <span>
+            <Dog size={23} />
+            {d.petNote}
+          </span>
+          <span>
+            <Accessibility size={23} />
+            {d.seniorNote}
+          </span>
+        </section>
         {places.some((p) => p.dataMode === "demo") && (
           <DemoNotice locale={locale} />
         )}
-        <CatalogNotice locale={locale} places={places} />
-        <section className="home-section">
+        <section className="destination-section">
+          <div className="destination-intro">
+            <span className="eyebrow">FIND YOUR JEJU</span>
+            <h2>{d.regionTitle}</h2>
+            <p>{d.regionNote}</p>
+            <Link
+              href={`/${locale}/results`}
+              className="round-link"
+              aria-label={c.viewAll}
+            >
+              <ArrowRight size={23} />
+            </Link>
+          </div>
+          <div className="destination-cards">
+            {regions.map((region, index) => (
+              <button
+                type="button"
+                key={region}
+                className="destination-card"
+                onClick={() => {
+                  setProfile({ regions: [region] });
+                  router.push(`/${locale}/results`);
+                }}
+              >
+                <Image
+                  src={`/assets/images/${regionImages[region]}.webp`}
+                  alt=""
+                  fill
+                  sizes="(max-width:700px) 65vw, 260px"
+                />
+                <span className="destination-shade" />
+                <span className="destination-number">0{index + 1}</span>
+                <span className="destination-arrow">
+                  <ArrowUpRight size={20} />
+                </span>
+                <span className="destination-caption">
+                  <strong>{c[region]}</strong>
+                  <small>{c[`${region}Sub`]}</small>
+                </span>
+              </button>
+            ))}
+          </div>
+        </section>
+        <section className="editorial-section">
           <div className="section-heading">
             <div>
-              <span className="eyebrow">EXPLORE JEJU</span>
-              <h2>{c.where}</h2>
-              <p>{c.regionCopy}</p>
+              <span className="eyebrow">THE LITTLE STOPS THAT MATTER</span>
+              <h2>{d.collection}</h2>
+              <p>{d.collectionNote}</p>
             </div>
             <Link className="text-link" href={`/${locale}/results`}>
               {c.viewAll}
-              <ArrowRight size={17} />
+              <ArrowUpRight size={18} />
             </Link>
           </div>
-          <RegionPicker
-            locale={locale}
-            onChoose={(region) => {
-              setProfile({ regions: [region] });
-              router.push(`/${locale}/results`);
-            }}
-          />
-        </section>
-        <section className="home-section type-section">
-          <h2>{c.what}</h2>
-          <TypePicker
-            locale={locale}
-            onChoose={(type) => {
-              setProfile({ types: [type] });
-              router.push(`/${locale}/results`);
-            }}
-          />
-        </section>
-        <section className="home-section">
-          <div className="section-heading">
-            <div>
-              <span className="eyebrow">
-                <Sparkles size={14} /> SLOW DAYS, GOOD MEMORIES
-              </span>
-              <h2>{c.curated}</h2>
-              <p>{c.curatedCopy}</p>
-            </div>
-          </div>
           <div className="place-grid">
-            {(["restaurant", "cafe", "stay"] as const)
-              .map((type) => places.find((p) => p.type === type))
-              .filter((p): p is Place => Boolean(p))
-              .map((place) => (
-                <PlaceCard key={place.id} place={place} locale={locale} />
-              ))}
+            {featured.map((place) => (
+              <PlaceCard key={place.id} place={place} locale={locale} />
+            ))}
           </div>
+          <CatalogNotice locale={locale} places={places} />
         </section>
-        <section className="trust-banner">
-          <Image
-            src="/assets/images/decor-hareubang.webp"
-            width={95}
-            height={143}
-            alt=""
-          />
+        <section className="together-banner">
           <div>
-            <h2>{c.trustTitle}</h2>
-            <p>{c.trustCopy}</p>
+            <Leaf size={27} />
+            <span className="eyebrow">A LITTLE SLOWER, A LITTLE CLOSER</span>
+            <h2>{d.together}</h2>
+            <p>{d.togetherCopy}</p>
+            <Link className="btn primary" href={`/${locale}/plan`}>
+              {d.start}
+              <ArrowUpRight size={19} />
+            </Link>
           </div>
-          <Link
-            href={`/${locale}/about`}
-            className="icon-button"
-            aria-label={c.about}
-          >
-            <ArrowRight size={22} />
-          </Link>
+          <div className="together-image">
+            <Image
+              src="/assets/images/hero-family.webp"
+              alt={c.heroCaption}
+              fill
+              sizes="(max-width:700px) 90vw, 520px"
+            />
+            <span className="hero-art-note">{c.illustration}</span>
+          </div>
         </section>
       </div>
     </main>

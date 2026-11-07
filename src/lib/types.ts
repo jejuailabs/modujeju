@@ -1,3 +1,5 @@
+import type { FeatureKey } from "./place-features";
+
 export const locales = ["ko", "en", "zh", "ja"] as const;
 export type Locale = (typeof locales)[number];
 export type LocalizedText = Record<Locale, string>;
@@ -106,6 +108,9 @@ export interface PlaceMatch {
 }
 
 export interface CatalogOptions {
+  features?: FeatureKey[];
+  /** Explicitly includes conditional facilities, never unknown ones. */
+  includeConditionalFeatures?: boolean;
   query?: string;
   sort?: "recommended" | "price" | "duration" | "name";
   includeNotFit?: boolean;

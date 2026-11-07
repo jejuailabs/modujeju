@@ -20,6 +20,14 @@ import { BudgetFields, NeedFields } from "./plan-view";
 import { JejuMap } from "./jeju-map";
 import { CatalogNotice } from "./catalog-notice";
 import { catalogCopy } from "@/messages/catalog";
+import {
+  featureKeys,
+  getPlaceFeatures,
+  type FeatureKey,
+} from "@/lib/place-features";
+import { featureLabels } from "@/messages/features";
+import { featureUi } from "@/messages/feature-ui";
+import { FeatureIcon } from "./feature-icon";
 export function ResultsView({
   locale,
   places,
@@ -29,6 +37,9 @@ export function ResultsView({
 }) {
   const c = copy(locale),
     { profile, setProfile } = useTravelStore();
+  const f = featureUi(locale);
+  const [features, setFeatures] = useState<FeatureKey[]>([]);
+  const [includeConditionalFeatures, setConditionalFeatures] = useState(true);
   const [query, setQuery] = useState(""),
     [sort, setSort] = useState<CatalogOptions["sort"]>("recommended"),
     [view, setView] = useState<"list" | "map">("list"),
@@ -43,9 +54,36 @@ export function ResultsView({
         locale,
         includeUnknown,
         includeNotFit,
+        features,
+        includeConditionalFeatures,
       }),
-    [places, profile, query, sort, locale, includeUnknown, includeNotFit],
+    [
+      places,
+      profile,
+      query,
+      sort,
+      locale,
+      includeUnknown,
+      includeNotFit,
+      features,
+      includeConditionalFeatures,
+    ],
   );
+  const featureCounts = useMemo(() => {
+    const counts = Object.fromEntries(
+      featureKeys.map((key) => [key, 0]),
+    ) as Record<FeatureKey, number>;
+    for (const { place } of matches) {
+      for (const feature of getPlaceFeatures(place)) {
+        if (
+          feature.status === "yes" ||
+          (includeConditionalFeatures && feature.status === "conditional")
+        )
+          counts[feature.key] += 1;
+      }
+    }
+    return counts;
+  }, [matches, includeConditionalFeatures]);
   return (
     <main className="page results-page">
       <PageIntro
@@ -74,6 +112,44 @@ export function ResultsView({
           {c.filter}
         </button>
       </div>
+      <section className="feature-filter-panel" aria-label={f.filter}>
+        <div className="feature-filter-heading">
+          <div>
+            <h2>{f.filter}</h2>
+            <p>{f.filterNote}</p>
+          </div>
+          {features.length > 0 && (
+            <button className="feature-clear" onClick={() => setFeatures([])}>
+              {f.all}
+            </button>
+          )}
+        </div>
+        <label className="check-option feature-conditional-toggle">
+          <input
+            type="checkbox"
+            checked={includeConditionalFeatures}
+            onChange={(event) => setConditionalFeatures(event.target.checked)}
+          />
+          {f.includeConditional}
+        </label>
+        <div className="feature-filters">
+          {featureKeys.map((key) => (
+            <button
+              key={key}
+              type="button"
+              className="feature-filter"
+              aria-pressed={features.includes(key)}
+              onClick={() => setFeatures((current) => toggle(current, key))}
+            >
+              <FeatureIcon feature={key} size={27} />
+              <span>{featureLabels[key][locale]}</span>
+              <small>
+                {featureCounts[key]} {c.countSuffix}
+              </small>
+            </button>
+          ))}
+        </div>
+      </section>
       <div className="region-tabs">
         <button
           className={!profile.regions.length ? "active" : ""}
@@ -93,10 +169,34 @@ export function ResultsView({
         ))}
       </div>
       <TypePicker locale={locale} />
-      <div className="catalog-tag-filters" aria-label={catalogCopy(locale).sourceTags}>
+      <div
+        className="catalog-tag-filters"
+        aria-label={catalogCopy(locale).sourceTags}
+      >
         {[...new Set(places.flatMap((p) => p.sourceTags ?? []))]
-          .filter((tag) => ["고기국수", "흑돼지", "해산물", "오션뷰", "커피", "리조트", "호텔", "반려동물", "가족"].includes(tag))
-          .map((tag) => <button key={tag} className={query === tag ? "active" : ""} aria-pressed={query === tag} onClick={() => setQuery(query === tag ? "" : tag)}>#{tag}</button>)}
+          .filter((tag) =>
+            [
+              "고기국수",
+              "흑돼지",
+              "해산물",
+              "오션뷰",
+              "커피",
+              "리조트",
+              "호텔",
+              "반려동물",
+              "가족",
+            ].includes(tag),
+          )
+          .map((tag) => (
+            <button
+              key={tag}
+              className={query === tag ? "active" : ""}
+              aria-pressed={query === tag}
+              onClick={() => setQuery(query === tag ? "" : tag)}
+            >
+              #{tag}
+            </button>
+          ))}
       </div>
       {filters && (
         <section className="panel filter-panel">
@@ -178,17 +278,18 @@ export function ResultsView({
       {!matches.length ? (
         <div className="empty-state">
           <Search size={38} />
-          <h2>{c.noResults}</h2>
-          <p>{c.noResultsCopy}</p>
+          <h2>{features.length ? f.empty : c.noResults}</h2>
+          <p>{features.length ? f.emptyNote : c.noResultsCopy}</p>
           <button
             className="btn secondary"
             onClick={() => {
-              setProfile({ regions: [], budgets: {} });
+              if (features.length) setFeatures([]);
+              else setProfile({ regions: [], budgets: {}, types: [] });
               setQuery("");
             }}
           >
             <RotateCcw size={17} />
-            {c.resetArea}
+            {features.length ? f.all : c.resetArea}
           </button>
         </div>
       ) : view === "map" ? (

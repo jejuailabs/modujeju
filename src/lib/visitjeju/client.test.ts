@@ -94,6 +94,8 @@ describe("VisitJeju paid/network boundary", () => {
           currentPage: 1,
           pageCount: 1,
           totalCount: 0,
+          resultCount: 0,
+          pageSize: 100,
           items: [],
         }),
       ),
@@ -107,5 +109,29 @@ describe("VisitJeju paid/network boundary", () => {
     const url = request.mock.calls[0][0] as URL;
     expect(url.searchParams.get("locale")).toBe("jp");
     expect(request.mock.calls[0][1].redirect).toBe("error");
+  });
+  it("accepts documented numeric-string pagination without coercing null or booleans", async () => {
+    approvedConfiguration();
+    request.mockResolvedValue(new Response(JSON.stringify({ result: "200", resultMessage: "SUCCESS", currentPage: "1", pageCount: "1", totalCount: "1", resultCount: "1", pageSize: "100", items: [{ contentsid: "A" }] })));
+    expect(await fetchVisitJejuPage({})).toMatchObject({ currentPage: 1, pageCount: 1, totalCount: 1 });
+  });
+  it.each([
+    { currentPage: null }, { currentPage: true }, { currentPage: "0x1" }, { currentPage: 0 },
+    { pageCount: 0 }, { pageCount: 2 }, { totalCount: "" }, { totalCount: -1 },
+    { resultCount: 0 }, { pageSize: 0 }, { pageSize: 1001 }, { resultCount: undefined }, { totalCount: 101, pageCount: 2 },
+  ])("rejects inconsistent or coercible pagination metadata %o", async (override) => {
+    approvedConfiguration();
+    request.mockResolvedValue(new Response(JSON.stringify({ result: "200", resultMessage: "SUCCESS", currentPage: 1, pageCount: 1, totalCount: 1, resultCount: 1, pageSize: 100, items: [{ contentsid: "A" }], ...override })));
+    await expect(fetchVisitJejuPage({})).rejects.toMatchObject({ code: "VISITJEJU_INVALID_RESPONSE" });
+  });
+  it("rejects a nonempty full-catalog page beyond its declared final page", async () => {
+    approvedConfiguration();
+    request.mockResolvedValue(new Response(JSON.stringify({ result: "200", resultMessage: "SUCCESS", currentPage: 2, pageCount: 1, totalCount: 1, resultCount: 1, pageSize: 100, items: [{ contentsid: "A" }] })));
+    await expect(fetchVisitJejuPage({ page: 2 })).rejects.toMatchObject({ code: "VISITJEJU_INVALID_RESPONSE" });
+  });
+  it("retains the documented cid-filter pagination exception", async () => {
+    approvedConfiguration();
+    request.mockResolvedValue(new Response(JSON.stringify({ result: "200", resultMessage: "SUCCESS", currentPage: 2, pageCount: 1, totalCount: 1, resultCount: 1, pageSize: 100, items: [{ contentsid: "A" }] })));
+    expect(await fetchVisitJejuPage({ page: 2, contentId: "A" })).toMatchObject({ currentPage: 2, pageCount: 1, totalCount: 1 });
   });
 });

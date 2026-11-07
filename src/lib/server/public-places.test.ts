@@ -4,7 +4,8 @@ vi.mock("server-only", () => ({}));
 const mocks = vi.hoisted(() => ({
   admin: vi.fn(),
   get: vi.fn(),
-  where: vi.fn(),
+  sourceGet: vi.fn(),
+  orderBy: vi.fn(),
   limit: vi.fn(),
   collection: vi.fn(),
   cache: vi.fn(),
@@ -37,15 +38,24 @@ beforeEach(() => {
   vi.stubEnv("DEMO_MODE", "false");
   mocks.admin.mockClear();
   mocks.get.mockReset();
-  mocks.where.mockReset();
+  mocks.sourceGet.mockReset().mockResolvedValue({ docs: [], size: 0 });
+  mocks.orderBy.mockReset();
   mocks.limit.mockReset();
   mocks.collection.mockReset();
   mocks.cachedRead.mockClear();
   mocks.invalidate.mockClear();
   mocks.admin.mockReturnValue({ db: { collection: mocks.collection } });
-  mocks.collection.mockReturnValue({ where: mocks.where });
-  mocks.where.mockReturnValue({ limit: mocks.limit });
-  mocks.limit.mockReturnValue({ get: mocks.get });
+  mocks.collection.mockImplementation((name: string) => ({
+    orderBy(field: string) {
+      mocks.orderBy(field);
+      return {
+        limit(size: number) {
+          mocks.limit(size);
+          return { get: name === "sourcePlaces" ? mocks.sourceGet : mocks.get };
+        },
+      };
+    },
+  }));
 });
 afterEach(() => vi.unstubAllEnvs());
 
@@ -83,13 +93,17 @@ describe("public catalog caching", () => {
     const live = {
       ...demoPlaces[0],
       dataMode: "live",
+      status: "published",
       internalNotes: "never public",
       updatedBy: "private-user",
     };
-    mocks.get.mockResolvedValue({ docs: [{ data: () => live }] });
+    mocks.get.mockResolvedValue({ docs: [{ data: () => live }], size: 1 });
     const places = await getPublicPlaces();
     expect(places).toHaveLength(1);
-    expect(mocks.where).toHaveBeenCalledWith("status", "==", "published");
+    expect(mocks.collection).toHaveBeenCalledWith("sourcePlaces");
+    expect(mocks.collection).toHaveBeenCalledWith("places");
+    expect(mocks.orderBy).toHaveBeenCalledWith("__name__");
+    expect(mocks.limit).toHaveBeenCalledWith(500);
     expect(JSON.stringify(places)).not.toMatch(
       /private-user|never public|internalNotes/,
     );
@@ -100,6 +114,51 @@ describe("public catalog caching", () => {
     await expect(getPublicPlaces()).rejects.toMatchObject({
       code: "CATALOG_UNAVAILABLE",
     });
+  });
+  it("reads newly sourced basic records with unknown policies before editorial publication", async () => {
+    vi.stubEnv("CLOUD_SERVICES_ENABLED", "true");
+    const place = { ...demoPlaces[0], dataMode: "live", sourceId: "CONT_TEST" };
+    mocks.sourceGet.mockResolvedValue({
+      docs: [
+        {
+          data: () => ({
+            eligible: true,
+            place,
+            candidatePhotoUrl: "private-candidate",
+          }),
+        },
+      ],
+      size: 1,
+    });
+    mocks.get.mockResolvedValue({ docs: [], size: 0 });
+    const places = await getPublicPlaces();
+    expect(places).toHaveLength(1);
+    expect(places[0].sourceId).toBe("CONT_TEST");
+    expect(places[0].facts.kidsEntry.value).toBe("unknown");
+    expect(places[0].price.amount).toBeNull();
+    expect(places[0].imageKind).toBe("placeholder");
+    expect(JSON.stringify(places)).not.toContain("private-candidate");
+  });
+  it("honors a hidden editorial overlay even if its basic source record remains eligible", async () => {
+    vi.stubEnv("CLOUD_SERVICES_ENABLED", "true");
+    const place = { ...demoPlaces[0], dataMode: "live", sourceId: "CONT_TEST" };
+    mocks.sourceGet.mockResolvedValue({
+      docs: [{ data: () => ({ eligible: true, place }) }],
+      size: 1,
+    });
+    mocks.get.mockResolvedValue({
+      docs: [
+        {
+          data: () => ({
+            id: place.id,
+            sourceId: "CONT_TEST",
+            status: "hidden",
+          }),
+        },
+      ],
+      size: 1,
+    });
+    expect(await getPublicPlaces()).toEqual([]);
   });
   it("expires publication changes immediately instead of serving old hidden data", () => {
     vi.stubEnv("CLOUD_SERVICES_ENABLED", "true");

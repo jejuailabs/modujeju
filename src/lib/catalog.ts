@@ -1,5 +1,6 @@
 import type { CatalogOptions, Place, PlaceMatch, Profile } from "./types";
 import { evaluatePlace, verdictSeverity } from "./verdict/evaluate";
+import { getFeatureSearchKeys, matchesFeatureSearch, matchesPlaceFeatures } from "./place-features";
 
 /** Budgets compare the stated base-price unit, not a guessed party total. */
 export function filterAndSortPlaces(
@@ -9,6 +10,8 @@ export function filterAndSortPlaces(
 ): PlaceMatch[] {
   const locale = options.locale ?? "ko";
   const query = options.query?.trim().toLocaleLowerCase(locale) ?? "";
+  const featureQuery = getFeatureSearchKeys(query, locale);
+  const featureOptions = { now: options.now, includeConditional: options.includeConditionalFeatures };
   const collator = new Intl.Collator(locale);
   const result = places
     .filter((place) => {
@@ -28,17 +31,19 @@ export function filterAndSortPlaces(
         (place.price.amount === null || place.price.amount > budget)
       )
         return false;
-      if (
-        query &&
-        ![
+      if (!matchesPlaceFeatures(place, options.features ?? [], featureOptions)) return false;
+      if (query) {
+        // Exact facility queries must never pass via an unverified raw tag.
+        if (featureQuery.length) return matchesPlaceFeatures(place, featureQuery, featureOptions);
+        const textMatch = [
           ...Object.values(place.name),
           ...Object.values(place.district),
           ...Object.values(place.summary),
           ...(place.tags ?? []),
           ...(place.sourceTags ?? []),
-        ].some((value) => value.toLocaleLowerCase(locale).includes(query))
-      )
-        return false;
+        ].some((value) => value.toLocaleLowerCase(locale).includes(query));
+        if (!textMatch && !matchesFeatureSearch(place, query, locale, featureOptions)) return false;
+      }
       return true;
     })
     .map((place) => ({

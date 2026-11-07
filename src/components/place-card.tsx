@@ -3,28 +3,25 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  Bookmark,
-  MapPin,
-  ArrowUpRight,
-  CheckCircle2,
-  Clock3,
-} from "lucide-react";
+import { Bookmark, MapPin, ArrowUpRight, Clock3 } from "lucide-react";
 import type { Locale, Place } from "@/lib/types";
 import { copy, priceLabel } from "@/messages/ui";
 import { detailCopy } from "@/messages/detail";
 import { catalogCopy } from "@/messages/catalog";
 import { useTravelStore } from "@/hooks/use-travel-store";
 import { MAX_SAVED_PLACES } from "@/lib/trip/state";
-import { evaluatePlace } from "@/lib/verdict/evaluate";
+import { PlaceFeatures } from "./place-features";
+import { designCopy } from "@/messages/design";
+import { typeIcons } from "./common";
 
 export function PlaceCard({ place, locale }: { place: Place; locale: Locale }) {
-  const { profile, savedIds, toggleSaved, hydrated } = useTravelStore();
+  const { savedIds, toggleSaved, hydrated } = useTravelStore();
   const [saveLimitReached, setSaveLimitReached] = useState(false);
   const c = copy(locale);
   const t = catalogCopy(locale);
-  const ev = evaluatePlace(place, profile);
   const saved = savedIds.includes(place.id);
+  const d = designCopy(locale);
+  const TypeIcon = typeIcons[place.type];
 
   function savePlace() {
     if (!saved && savedIds.length >= MAX_SAVED_PLACES) {
@@ -36,22 +33,36 @@ export function PlaceCard({ place, locale }: { place: Place; locale: Locale }) {
   }
 
   return (
-    <article className="place-card">
-      <div className="place-image">
+    <article className={`place-card place-type-${place.type}`}>
+      <div
+        className={`place-image ${place.imageKind === "placeholder" ? "place-placeholder" : ""}`}
+      >
         <Link
           href={`/${locale}/places/${place.slug}`}
           tabIndex={-1}
           aria-hidden="true"
         >
-          <Image
-            src={place.image}
-            alt=""
-            fill
-            sizes="(max-width:640px) 92vw,(max-width:1000px) 45vw,380px"
-          />
+          {place.imageKind === "placeholder" ? (
+            <span className="place-type-art">
+              <span className="place-art-word">{place.type.toUpperCase()}</span>
+              <TypeIcon size={50} strokeWidth={1} />
+              <span className="place-art-region">JEJU · {c[place.region]}</span>
+            </span>
+          ) : (
+            <Image
+              src={place.image}
+              alt=""
+              fill
+              sizes="(max-width:640px) 92vw,(max-width:1000px) 45vw,380px"
+            />
+          )}
         </Link>
         <span className="image-label">
-          {place.imageKind === "placeholder" ? t.placeholder : place.dataMode === "demo" ? c.demoPlace : c[place.type]}
+          {place.imageKind === "placeholder"
+            ? d.noPhoto
+            : place.dataMode === "demo"
+              ? c.demoPlace
+              : c[place.type]}
         </span>
         <button
           type="button"
@@ -80,19 +91,15 @@ export function PlaceCard({ place, locale }: { place: Place; locale: Locale }) {
           <h3>{place.name[locale]}</h3>
           <ArrowUpRight size={20} aria-hidden="true" />
         </Link>
+        <PlaceFeatures place={place} locale={locale} compact />
         <p className="place-summary">{place.summary[locale]}</p>
-        {!!place.sourceTags?.length && <div className="source-tags" aria-label={t.sourceTags}>
-          {place.sourceTags.slice(0, 4).map((tag) => <span key={tag}>#{tag}</span>)}
-        </div>}
-        <div className={`status-badge ${ev.verdict}`}>
-          <CheckCircle2 size={14} aria-hidden="true" />
-          {c[ev.verdict]}
-        </div>
-        <div className="place-facts">
-          {ev.reasons.slice(0, 2).map((reason, index) => (
-            <span key={reason.code + index}>{reason.message[locale]}</span>
-          ))}
-        </div>
+        {!!place.sourceTags?.length && (
+          <div className="source-tags" aria-label={t.sourceTags}>
+            {place.sourceTags.slice(0, 4).map((tag) => (
+              <span key={tag}>#{tag}</span>
+            ))}
+          </div>
+        )}
         <div className="place-bottom">
           <strong>{priceLabel(place, locale)}</strong>
           <span>

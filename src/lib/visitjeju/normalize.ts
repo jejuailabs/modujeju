@@ -6,6 +6,7 @@ import {
   type PlaceType,
   type Region,
 } from "@/lib/types";
+import { classifyVisitJejuRecord, VisitJejuClassificationError } from "./classify";
 
 export interface VisitJejuDraft {
   place: Place;
@@ -38,6 +39,8 @@ export function safePhotoUrl(value: unknown): string | null {
       url.protocol !== "https:" ||
       url.username ||
       url.password ||
+      url.port ||
+      value.length > 2048 ||
       !["api.cdn.visitjeju.net", "api.visitjeju.net"].includes(url.hostname)
     )
       return null;
@@ -57,20 +60,46 @@ function localizedOriginal(value: string): LocalizedText {
   return { ko: value, en: value, zh: value, ja: value };
 }
 
+/** Source tags are search metadata, never verified companion facts. */
+export function normalizeVisitJejuTags(source: Record<string, unknown>): string[] {
+  return [...new Set([source.alltag, source.tag].flatMap(value =>
+    plainText(value, 6400).split(/[,，#]/u).map(tag => tag.trim().slice(0, 80)).filter(Boolean)
+  ))].slice(0, 40);
+}
+
+export function isVisitJejuNormalizationError(error: unknown): error is Error {
+  return error instanceof VisitJejuClassificationError
+    || (error instanceof Error && ["VISITJEJU_INVALID_RECORD", "INVALID_RETRIEVAL_DATE"].includes(error.message));
+}
+
+/** Automatic sync entry point; manual imports may retain their reviewed mapping. */
+export function normalizeClassifiedVisitJejuRecord(
+  raw: unknown,
+  options: { retrievedAt: string },
+): VisitJejuDraft {
+  const classification = classifyVisitJejuRecord(raw);
+  if (!classification.ok) throw new VisitJejuClassificationError(classification.reason);
+  return normalizeVisitJejuRecord(raw, { ...options, region: classification.region, type: classification.type });
+}
+
 /** Region/type must be supplied by a reviewed mapping, never guessed from a tag. */
 export function normalizeVisitJejuRecord(
   raw: unknown,
   options: { region: Region; type: PlaceType; retrievedAt: string },
 ): VisitJejuDraft {
   const source = object(raw);
-  const sourceId = plainText(source.contentsid, 100);
+  // Never strip HTML or truncate identity; either could alias another place.
+  const sourceId = typeof source.contentsid === "string" ? source.contentsid : "";
   const title = plainText(source.title, 120);
-  const numericCoordinate = (value: unknown): number | null =>
-    value === null || value === undefined || value === "" ? null : Number(value);
+  const numericCoordinate = (value: unknown): number | null => {
+    if (value === null || value === undefined || (typeof value === "string" && value.trim() === "")) return null;
+    if (typeof value === "number") return value;
+    return typeof value === "string" && /^-?\d+(?:\.\d+)?$/.test(value.trim()) ? Number(value) : Number.NaN;
+  };
   const latitude = numericCoordinate(source.latitude);
   const longitude = numericCoordinate(source.longitude);
   if (
-    !/^[a-zA-Z0-9_-]{1,100}$/.test(sourceId) ||
+    !/^[A-Z0-9_]{1,95}$/.test(sourceId) ||
     !title ||
     (latitude !== null && (!Number.isFinite(latitude) || latitude < 32 || latitude > 35)) ||
     (longitude !== null && (!Number.isFinite(longitude) || longitude < 125 || longitude > 128))
@@ -79,14 +108,15 @@ export function normalizeVisitJejuRecord(
   }
   if (!Number.isFinite(Date.parse(options.retrievedAt)))
     throw new Error("INVALID_RETRIEVAL_DATE");
+  const basicSourceCheckedAt = new Date(Date.parse(options.retrievedAt) + 9 * 60 * 60 * 1000).toISOString().slice(0, 10);
   const photo = object(object(source.repPhoto).photoid);
   const sourceUrl = `https://www.visitjeju.net/kr/detail/view?contentsid=${encodeURIComponent(sourceId)}`;
   return {
     place: {
-      id: `vj-${sourceId}`.slice(0, 100),
-      slug: `vj-${sourceId.toLowerCase().replace(/_/g, "-")}`.slice(0, 120),
+      id: `vj-${sourceId}`,
+      slug: `vj-${sourceId.toLowerCase().replace(/_/g, "-")}`,
       name: localizedOriginal(title),
-      summary: localizedOriginal(plainText(source.introduction)),
+      summary: localizedOriginal(plainText(source.introduction, 240)),
       address: localizedOriginal(
         plainText(source.roadaddress || source.address, 300),
       ),
@@ -114,8 +144,9 @@ export function normalizeVisitJejuRecord(
       sourceId,
       sourceUrl,
       sourceName: "VisitJeju",
-      sourceTags: plainText(source.alltag, 3200).split(/[,#]/).map((tag) => tag.trim()).filter(Boolean).slice(0, 40).map((tag) => tag.slice(0, 80)),
-      basicSourceCheckedAt: options.retrievedAt.slice(0, 10),
+      sourceTags: normalizeVisitJejuTags(source),
+      basicSourceCheckedAt,
+      // V1.1 has no source-modification date. Retrieval must not fabricate one.
       sourceUpdatedAt: null,
       retrievedAt: options.retrievedAt,
       verifiedAt: null,
@@ -129,6 +160,7 @@ export function normalizeVisitJejuRecord(
       "IMAGE_RIGHTS_UNVERIFIED",
       "TRANSLATIONS_UNREVIEWED",
       "DURATION_UNVERIFIED",
+      "SOURCE_UPDATE_DATE_UNAVAILABLE",
     ],
   };
 }

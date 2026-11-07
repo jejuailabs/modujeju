@@ -1,11 +1,20 @@
 "use client";
 import { useRouter } from "next/navigation";
-import { ArrowRight, Check, SlidersHorizontal } from "lucide-react";
+import { useRef, useState } from "react";
+import Image from "next/image";
+import { designCopy } from "@/messages/design";
+import {
+  ArrowRight,
+  ArrowLeft,
+  Check,
+  SlidersHorizontal,
+  Compass,
+} from "lucide-react";
 import type { Locale, Profile } from "@/lib/types";
 import { placeTypes } from "@/lib/types";
 import { copy } from "@/messages/ui";
 import { useTravelStore } from "@/hooks/use-travel-store";
-import { CompanionPicker, RegionPicker, TypePicker, PageIntro } from "./common";
+import { CompanionPicker, RegionPicker, TypePicker } from "./common";
 
 export function NeedFields({ locale }: { locale: Locale }) {
   const { profile, setProfile } = useTravelStore(),
@@ -125,76 +134,139 @@ export function BudgetFields({ locale }: { locale: Locale }) {
 }
 export function PlanView({ locale }: { locale: Locale }) {
   const c = copy(locale),
-    router = useRouter(),
-    { profile } = useTravelStore();
+    d = designCopy(locale),
+    router = useRouter();
+  const { profile } = useTravelStore();
+  const [step, setStep] = useState(0);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const steps = [c.withWho, c.where, c.what];
+  function moveStep(next: number) {
+    setStep(next);
+    requestAnimationFrame(() => titleRef.current?.focus());
+  }
   return (
     <main className="page plan-page">
-      <PageIntro
-        locale={locale}
-        title={c.planTitle}
-        description={c.planCopy}
-        back=""
-      />
-      <ol className="progress-steps">
-        {[c.step1, c.step2, c.step3].map((s, i) => (
-          <li key={s} className={i === 1 ? "active" : ""}>
-            <span>{i === 0 ? <Check size={16} /> : i + 1}</span>
-            {s}
-          </li>
-        ))}
-      </ol>
-      <section className="panel plan-panel">
-        <div className="number-title">
-          <span>01</span>
+      <aside className="planner-story">
+        <Image
+          src="/assets/images/region-east.webp"
+          alt={c.heroCaption}
+          fill
+          priority
+          sizes="(max-width:800px) 100vw, 42vw"
+        />
+        <div className="planner-story-shade" />
+        <div className="planner-story-copy">
+          <span className="eyebrow light">MADE FOR YOUR PEOPLE</span>
+          <h1>{d.planTitle}</h1>
+          <p>{d.planNote}</p>
+        </div>
+        <div className="planner-preview">
+          <Compass size={25} />
           <div>
-            <h2>{c.withWho}</h2>
-            <p>{c.multiple}</p>
+            <small>{d.yourTrip}</small>
+            <strong>
+              {profile.companions.length
+                ? profile.companions.map((id) => c[id]).join(" · ")
+                : d.allWelcome}
+            </strong>
+            <span>
+              {profile.regions.length
+                ? profile.regions.map((id) => c[id]).join(" · ")
+                : d.freeDirection}
+            </span>
           </div>
         </div>
-        <CompanionPicker locale={locale} />
-        <details className="need-details" open>
-          <summary>
-            <SlidersHorizontal size={17} />
-            {c.details}
-          </summary>
-          <NeedFields locale={locale} />
-        </details>
-      </section>
-      <section className="panel plan-panel">
-        <div className="number-title">
-          <span>02</span>
-          <div>
-            <h2>{c.where}</h2>
-            <p>{c.allRegions}</p>
-          </div>
+        <span className="hero-art-note">{c.illustration}</span>
+      </aside>
+      <div className="planner-workspace">
+        <div className="planner-topline">
+          <span>{d.journey}</span>
+          <span>0{step + 1} / 03</span>
         </div>
-        <RegionPicker locale={locale} />
-      </section>
-      <section className="panel plan-panel">
-        <div className="number-title">
-          <span>03</span>
-          <div>
-            <h2>{c.what}</h2>
-            <p>{c.allTypes}</p>
+        <ol className="planner-steps" aria-label={c.planTitle}>
+          {[c.step1, d.regionStep, d.typeStep].map((label, i) => (
+            <li
+              key={label}
+              className={i === step ? "active" : i < step ? "complete" : ""}
+            >
+              <button
+                type="button"
+                disabled={i > 0 && !profile.companions.length}
+                aria-current={i === step ? "step" : undefined}
+                onClick={() => moveStep(i)}
+              >
+                <span>{i < step ? <Check size={15} /> : `0${i + 1}`}</span>
+                {label}
+              </button>
+            </li>
+          ))}
+        </ol>
+        <section className="plan-panel" aria-labelledby="plan-step-title">
+          <div className="number-title">
+            <span>0{step + 1}</span>
+            <div>
+              <h2 id="plan-step-title" tabIndex={-1} ref={titleRef}>
+                {steps[step]}
+              </h2>
+              <p>{[c.multiple, c.regionCopy, c.allTypes][step]}</p>
+            </div>
           </div>
+          {step === 0 && (
+            <>
+              <CompanionPicker locale={locale} />
+              <details className="need-details" open>
+                <summary>
+                  <SlidersHorizontal size={17} />
+                  {c.details}
+                </summary>
+                <NeedFields locale={locale} />
+              </details>
+            </>
+          )}
+          {step === 1 && (
+            <>
+              <RegionPicker locale={locale} />
+              <p className="planner-help">
+                {c.allRegions} · {c.multiple}
+              </p>
+            </>
+          )}
+          {step === 2 && (
+            <>
+              <TypePicker locale={locale} />
+              <details className="need-details" open>
+                <summary>{c.budget}</summary>
+                <p className="muted">{c.budgetCopy}</p>
+                <BudgetFields locale={locale} />
+              </details>
+            </>
+          )}
+        </section>
+        <div className="plan-action">
+          {step > 0 ? (
+            <button
+              className="btn secondary"
+              onClick={() => moveStep(step - 1)}
+            >
+              <ArrowLeft size={18} />
+              {d.previous}
+            </button>
+          ) : (
+            <span className="planner-help">
+              {profile.companions.length === 0 ? c.chooseOne : c.heroBadge}
+            </span>
+          )}
+          <button
+            className="btn primary"
+            disabled={!profile.companions.length}
+            onClick={() =>
+              step < 2 ? moveStep(step + 1) : router.push(`/${locale}/results`)
+            }
+          >
+            {step < 2 ? d.next : c.findFit}
+            <ArrowRight size={19} />
+          </button>
         </div>
-        <TypePicker locale={locale} />
-        <details className="need-details">
-          <summary>{c.budget}</summary>
-          <p className="muted">{c.budgetCopy}</p>
-          <BudgetFields locale={locale} />
-        </details>
-      </section>
-      <div className="plan-action">
-        {profile.companions.length === 0 && <p>{c.chooseOne}</p>}
-        <button
-          className="btn primary"
-          disabled={!profile.companions.length}
-          onClick={() => router.push(`/${locale}/results`)}
-        >
-          {c.findFit}
-          <ArrowRight size={20} />
-        </button>
       </div>
     </main>
   );

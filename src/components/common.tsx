@@ -1,7 +1,8 @@
 "use client";
 import type { Locale, Companion, Region, PlaceType } from "@/lib/types";
 import { companions, regions, placeTypes } from "@/lib/types";
-import { copy, companionImages, regionImages } from "@/messages/ui";
+import { copy, regionImages } from "@/messages/ui";
+import { designCopy } from "@/messages/design";
 import { useTravelStore } from "@/hooks/use-travel-store";
 import Image from "next/image";
 import {
@@ -13,6 +14,9 @@ import {
   Flower2,
   Footprints,
   ArrowLeft,
+  Baby,
+  Dog,
+  Accessibility,
 } from "lucide-react";
 import Link from "next/link";
 export const typeIcons = {
@@ -41,29 +45,34 @@ export function DemoNotice({ locale }: { locale: Locale }) {
 export function CompanionPicker({ locale }: { locale: Locale }) {
   const { profile, setProfile } = useTravelStore();
   const c = copy(locale);
+  const d = designCopy(locale);
+  const icons = { kids: Baby, pet: Dog, senior: Accessibility };
+  const notes = { kids: d.kidsNote, pet: d.petNote, senior: d.seniorNote };
   return (
     <div className="companion-grid">
-      {companions.map((id: Companion) => (
-        <button
-          key={id}
-          className={`companion-card ${profile.companions.includes(id) ? "selected" : ""}`}
-          aria-pressed={profile.companions.includes(id)}
-          onClick={() =>
-            setProfile({ companions: toggle(profile.companions, id) })
-          }
-        >
-          <Image
-            src={`/assets/images/${companionImages[id]}.webp`}
-            width={80}
-            height={80}
-            alt=""
-          />
-          <span>{c[id]}</span>
-          <span className="selection-check">
-            <Check size={13} />
-          </span>
-        </button>
-      ))}
+      {companions.map((id: Companion) => {
+        const Icon = icons[id];
+        return (
+          <button
+            type="button"
+            key={id}
+            className={`companion-card ${profile.companions.includes(id) ? "selected" : ""}`}
+            aria-pressed={profile.companions.includes(id)}
+            onClick={() =>
+              setProfile({ companions: toggle(profile.companions, id) })
+            }
+          >
+            <span className="companion-symbol">
+              <Icon size={28} strokeWidth={1.5} />
+            </span>
+            <span>{c[id]}</span>
+            <small className="companion-note">{notes[id]}</small>
+            <span className="selection-check">
+              <Check size={13} />
+            </span>
+          </button>
+        );
+      })}
     </div>
   );
 }
