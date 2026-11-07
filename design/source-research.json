@@ -1,0 +1,154 @@
+{
+  "checkedOn": "2026-11-07",
+  "method": "Computer Use: official pages read in browser; official API guide downloaded through its visible download link and read locally.",
+  "status": "research_complete_no_api_application_no_data_sync",
+  "sources": [
+    {
+      "id": "visitjeju-api",
+      "url": "https://www.visitjeju.net/kr/visitjejuapi",
+      "facts": [
+        "API key requires application and staff approval, delivered by email.",
+        "Application fields: organization name, email, email verification code, use purpose.",
+        "Excessive traffic can cause restrictions."
+      ],
+      "unresolved": [
+        "Public application page did not establish pricing or billing/overage terms.",
+        "No API key issued or data endpoint called."
+      ]
+    },
+    {
+      "id": "visitjeju-guide",
+      "localFile": "research_notes/sources/visitjeju-open-api-guide.pdf",
+      "version": "1.1 / June 2026",
+      "documentedFields": [
+        "contentsid",
+        "contentscd",
+        "title",
+        "region1cd",
+        "region2cd",
+        "address",
+        "roadaddress",
+        "tag",
+        "alltag",
+        "introduction",
+        "latitude",
+        "longitude",
+        "postcode",
+        "phoneno",
+        "repPhoto.photoid.imgpath",
+        "repPhoto.photoid.thumbnailpath"
+      ],
+      "notDocumentedAsDedicatedFields": [
+        "structured price amount and unit",
+        "pet weight limit",
+        "step-free entrance",
+        "children age limits",
+        "per-fact verifiedAt"
+      ],
+      "implementationCautions": [
+        "Table uses apikey; example uses apiKey. Verify against approved API contract before implementation.",
+        "Result table and example differ in success code. Do not hardcode from examples before validating a real authorized response.",
+        "Guide prints HTTP endpoint; confirm an approved HTTPS endpoint before transmitting any key.",
+        "Sample totalCount and throughput are documentation examples/specifications, not measured current coverage or an approved account quota."
+      ],
+      "localeMap": {
+        "ko": "kr",
+        "en": "en",
+        "ja": "jp",
+        "zh_Hans": "cn",
+        "zh_Hant": "zh"
+      }
+    },
+    {
+      "id": "visitjeju-pets",
+      "url": "https://www.visitjeju.net/kr/trend/jejupets?menuId=DOM_200000000010960&cate1cd=cate0000000002",
+      "facts": [
+        "Pet-travel curated listing with links to place detail and a guidebook.",
+        "Listing itself is not enough to establish every companion constraint."
+      ]
+    },
+    {
+      "id": "visitjeju-accessibility",
+      "url": "https://www.visitjeju.net/kr/tourInfo/able?tap=two&menuId=DOM_000002000000000081",
+      "facts": [
+        "Separate accessible-facility place listing, recommended courses, and accessibility-type information.",
+        "Presence in the listing does not imply every route and entrance is accessible."
+      ]
+    },
+    {
+      "id": "visitjeju-detail-sample",
+      "url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000001195",
+      "placeName": "카멜리아힐",
+      "inspectionPurpose": "Schema discovery only; not a newly verified recommendation.",
+      "observedInformationKinds": [
+        "address and contact",
+        "seasonal opening/last-admission text",
+        "age/category admission price text",
+        "pet weight limit with request for latest official confirmation",
+        "outdoor environment",
+        "slope difficulty",
+        "estimated visit duration",
+        "parking/toilets/accessibility facilities"
+      ],
+      "consistencyIssues": [
+        "General opening-hours line differs from seasonal detail for winter.",
+        "Narrative visit duration and summary duration differ.",
+        "Pet policy explicitly calls for latest official confirmation."
+      ],
+      "notCollected": [
+        "visitor reviews",
+        "third-party blog content",
+        "place photographs"
+      ]
+    },
+    {
+      "id": "jeju-bigdata",
+      "url": "https://data.ijto.or.kr/bigdata/sub05_01.do",
+      "facts": [
+        "Platform provides consumption, movement and visitation data, charts and reports."
+      ],
+      "proposedUse": "Regional and seasonal demand signals; supplement ranking only after place-specific hard requirements pass.",
+      "limitations": [
+        "Not equivalent to a live per-place admissions or price database.",
+        "Separate reuse, download and freshness terms need checking for each selected dataset."
+      ]
+    },
+    {
+      "id": "photojeju-licenses",
+      "url": "https://www.visitjeju.net/photojeju/ccl",
+      "facts": [
+        "Photos use differing Creative Commons conditions; attribution is required under the listed licenses.",
+        "NC restricts commercial use; ND restricts adaptations; SA imposes share-alike conditions."
+      ],
+      "proposedPolicy": "Record each image's author, source URL, exact license and permitted use before production use. Do not infer that all VisitJeju/API images share the PhotoJeju license."
+    }
+  ],
+  "proposedDataFlow": [
+    "Authorized source ingestion",
+    "Normalize source IDs/region/category and preserve provenance",
+    "Supplement and verify companion and pricing facts",
+    "Apply mandatory constraints across all selected companions",
+    "Rank remaining candidates by preference, geography and freshness",
+    "Show explanation, restrictions and dates",
+    "Save places; optionally arrange a feasible itinerary"
+  ],
+  "priceRules": {
+    "restaurant": "KRW per person per meal",
+    "cafe": "KRW per person/order",
+    "lodging": "KRW per room per night with dates and occupancy",
+    "activity": "KRW per person with adult/child distinctions",
+    "extras": [
+      "pet surcharge",
+      "parking",
+      "reservation or seasonal variation"
+    ],
+    "unknown": "Price unknown is distinct from free."
+  },
+  "matchingRules": [
+    "No hard failure may be averaged away by preference scores.",
+    "Keep possible, conditional, unknown and unsuitable separate.",
+    "Use user-selected mobility needs rather than age stereotypes.",
+    "Do not silently relax dog entry, age restrictions or requested mobility constraints when results are empty.",
+    "Store source retrieval time separately from facility verification time."
+  ]
+}

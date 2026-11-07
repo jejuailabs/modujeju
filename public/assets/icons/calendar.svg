@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" color="#E8674E" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="여행 일정">
+  <title>여행 일정</title>
+  <rect x="3" y="5" width="18" height="16" rx="3"/>
+  <path d="M7 2v6m10-6v6M3 10h18M7 14h2m6 0h2M7 18h2m6 0h2"/>
+</svg>

@@ -1,0 +1,317 @@
+{
+  "version": 1,
+  "project": "같이제주",
+  "preparedOn": "2026-11-07",
+  "status": "complete",
+  "reference": "reg/design_ref.png",
+  "generationMethod": "built-in image_gen, included plan allowance only",
+  "costPolicy": {
+    "additionalSpendApproved": false,
+    "additionalSpendCapKRW": 0,
+    "paidFallback": false,
+    "creditPurchase": false,
+    "automaticRenewalChanges": false,
+    "stopIfIncludedUsageUnavailable": true
+  },
+  "commonConstraints": "Use the supplied design as visual inspiration only. Warm welcoming Jeju travel editorial style, natural coral-peach, cream, sea turquoise and canola yellow, clean restrained composition, no text, no lettering, no logos, no watermarks, no interface or smartphone frame. Assets are brand/editorial or explicitly fictional demo scenes; never pass generated scenes off as photographs of a named real business. Export every requested item separately.",
+  "assets": [
+    {
+      "id": "hero-family",
+      "file": "hero-family.png",
+      "group": "hero",
+      "aspect": "2:3",
+      "transparent": false,
+      "prompt": "Use case: photorealistic-natural. Create a premium mobile travel-app hero, portrait 2:3. A Korean family with a parent, a young child in a straw hat, a healthy older grandmother and a friendly golden retriever on a leash enjoying a peaceful Jeju coast, viewed from behind. They sit together on a low basalt stone bench, surrounded by sparse yellow canola flowers. A recognizable broad Jeju volcanic coastal silhouette beyond the calm sea in warm golden-hour light. Keep all people and dog in the lower 40 percent. The upper half is open peach and apricot sky with subtle soft clouds, providing excellent uncluttered space for dark app headings to be added later. Respectful, joyful, inclusive, realistic proportions and hands, natural photographic texture, sophisticated editorial travel photography, not a commercial for an actual location. No text, UI, logo, watermark or phone.",
+      "status": "generated_and_verified",
+      "outputPath": "public/assets/images/hero-family.png",
+      "actualSize": {
+        "width": 1024,
+        "height": 1536
+      },
+      "actualAlphaRange": [
+        255,
+        255
+      ]
+    },
+    {
+      "id": "region-east",
+      "file": "region-east.png",
+      "group": "region",
+      "aspect": "3:2",
+      "transparent": false,
+      "prompt": "Use case: illustration-story. Jeju east region editorial landscape card, wide 3:2. Broad green volcanic tuff cone silhouette reminiscent of Seongsan Ilchulbong, calm turquoise sea, dark basalt shoreline and a small white coastal lighthouse. Clear soft morning light. Warm photorealistic-painterly travel postcard treatment, believable Jeju landscape, no invented resort or business. No people, text, icons, labels, frames, logos or watermark. Keep detail legible at small card size, bottom 20 percent slightly darker for a later text label. Scenic illustration, not a verified viewpoint photograph.",
+      "status": "generated_and_verified",
+      "outputPath": "public/assets/images/region-east.png",
+      "actualSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "actualAlphaRange": [
+        255,
+        255
+      ]
+    },
+    {
+      "id": "region-west",
+      "file": "region-west.png",
+      "group": "region",
+      "aspect": "3:2",
+      "transparent": false,
+      "prompt": "Use case: illustration-story. Jeju west region editorial landscape card, wide 3:2. Pale sandy beach with clear shallow turquoise sea, a low dark island silhouette offshore reminiscent of western Jeju, small black basalt rocks and a few yellow canola flowers in the foreground. Bright gentle afternoon light. Warm photorealistic-painterly travel postcard treatment matching an inviting cream and coral app. No mountains made excessively tall, no resorts, people, text, icons, frames, logos or watermark. Bottom 20 percent slightly darker for a later label. Scenic illustration, not a verified viewpoint photograph.",
+      "status": "generated_and_verified",
+      "outputPath": "public/assets/images/region-west.png",
+      "actualSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "actualAlphaRange": [
+        255,
+        255
+      ]
+    },
+    {
+      "id": "region-south",
+      "file": "region-south.png",
+      "group": "region",
+      "aspect": "3:2",
+      "transparent": false,
+      "prompt": "Use case: illustration-story. Jeju south region editorial landscape card, wide 3:2. Seogwipo-inspired dramatic dark volcanic coastal cliffs with layered stone columns, blue sea and lush subtropical green plants. A soft low island silhouette on the horizon, tranquil and accessible-looking overview rather than a steep hiking trail. Gentle midday sun. Warm photorealistic-painterly travel postcard treatment matching cream and coral branding. No buildings, people, text, icons, frames, logos or watermark. Lower 20 percent has room for later label. Scenic illustration, not a verified viewpoint photograph.",
+      "status": "generated_and_verified",
+      "outputPath": "public/assets/images/region-south.png",
+      "actualSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "actualAlphaRange": [
+        255,
+        255
+      ]
+    },
+    {
+      "id": "region-north",
+      "file": "region-north.png",
+      "group": "region",
+      "aspect": "3:2",
+      "transparent": false,
+      "prompt": "Use case: illustration-story. Jeju north region editorial landscape card, wide 3:2. Jeju City northern coast inspired basalt shoreline and a calm turquoise bay with a restrained small white-and-red lighthouse in the distance, a gently curving coastal promenade and distant low city roofs. Spacious clear sky, welcoming bright daylight. Warm photorealistic-painterly travel postcard matching cream and coral app branding. No aircraft, crowded skyline, people, text, icons, labels, frames, logos or watermark. Lower 20 percent darker to accept later label. Scenic illustration, not a verified viewpoint photograph.",
+      "status": "generated_and_verified",
+      "outputPath": "public/assets/images/region-north.png",
+      "actualSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "actualAlphaRange": [
+        255,
+        255
+      ]
+    },
+    {
+      "id": "companion-child",
+      "file": "companion-child.png",
+      "group": "companion",
+      "aspect": "1:1",
+      "transparent": true,
+      "prompt": "Use case: illustration-story. One isolated friendly child avatar, head and shoulders, centered square composition on a truly transparent background. Soft hand-painted sticker illustration, warm cream skin tones, dark chestnut hair with a small coral hair clip, cheerful calm smile, a pale apricot top. Rounded shapes, subtle warm brown outline, gentle dimensional shading, simple enough to read as a 64px app icon. Match a warm Jeju family travel app. No circular background badge, no words, no logo, no watermark, no extra figures. Leave 12 percent transparent margin.",
+      "status": "generated_and_verified",
+      "outputPath": "public/assets/images/companion-child.png",
+      "actualSize": {
+        "width": 1254,
+        "height": 1254
+      },
+      "actualAlphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "companion-dog",
+      "file": "companion-dog.png",
+      "group": "companion",
+      "aspect": "1:1",
+      "transparent": true,
+      "prompt": "Use case: illustration-story. One isolated friendly golden-and-cream floppy-eared dog avatar, head and upper chest, centered square composition on a truly transparent background. Soft hand-painted sticker illustration, round warm brown eyes, little dark nose, cheerful gentle smile, small coral collar. Rounded shapes, subtle warm brown outline, gentle dimensional shading, simple enough to read as a 64px app icon. Match a warm Jeju family travel app. No background badge, no words, no logo, no watermark, no extra figures. Leave 12 percent transparent margin.",
+      "status": "generated_and_verified",
+      "outputPath": "public/assets/images/companion-dog.png",
+      "actualSize": {
+        "width": 1254,
+        "height": 1254
+      },
+      "actualAlphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "companion-senior",
+      "file": "companion-senior.png",
+      "group": "companion",
+      "aspect": "1:1",
+      "transparent": true,
+      "prompt": "Use case: illustration-story. One isolated friendly older Korean woman avatar, head and shoulders, centered square composition on a truly transparent background. Soft hand-painted sticker illustration, short silver hair, warm brown round glasses, cheerful dignified smile, pale peach cardigan. Depict an active warm person, no frailty stereotype. Rounded shapes, subtle warm brown outline, gentle dimensional shading, simple enough to read as a 64px app icon. Match a warm Jeju family travel app. No background badge, text, logo, watermark, or extra figures. Leave 12 percent transparent margin.",
+      "status": "generated_and_verified",
+      "outputPath": "public/assets/images/companion-senior.png",
+      "actualSize": {
+        "width": 1254,
+        "height": 1254
+      },
+      "actualAlphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "demo-aquarium",
+      "file": "demo-aquarium.png",
+      "group": "demo-place",
+      "aspect": "3:2",
+      "transparent": false,
+      "prompt": "Use case: photorealistic-natural. Wide 3:2 editorial photograph-style concept of an entirely fictional modern coastal aquarium attraction on Jeju. A welcoming low-rise pale stone and blue-glass building with an elegant broad glass facade and fish silhouettes visible inside, planted forecourt with yellow flowers and a wide level pedestrian entrance. Sunny clear day, vibrant but tasteful turquoise and cream palette. It must not reproduce Aquaplanet Jeju or any actual named business. No people, pets, written signs, logos, letters, watermarks or labels. This is a fictional UI demonstration image, not evidence of any facility or admission policy.",
+      "status": "generated_and_verified",
+      "outputPath": "public/assets/images/demo-aquarium.png",
+      "actualSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "actualAlphaRange": [
+        255,
+        255
+      ]
+    },
+    {
+      "id": "demo-orchard",
+      "file": "demo-orchard.png",
+      "group": "demo-place",
+      "aspect": "3:2",
+      "transparent": false,
+      "prompt": "Use case: photorealistic-natural. Wide 3:2 premium editorial close-up of ripe orange Jeju tangerines on a living branch with glossy deep green leaves, warm natural sunlight, softly blurred orchard rows behind, clear believable rind texture and natural fruit sizes. Bright welcoming coral-orange and green palette. Generic fictional orchard concept for a travel app demonstration, no association with an actual farm. No people, signs, text, logo, border or watermark.",
+      "status": "generated_and_verified",
+      "outputPath": "public/assets/images/demo-orchard.png",
+      "actualSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "actualAlphaRange": [
+        255,
+        255
+      ]
+    },
+    {
+      "id": "demo-seaside-cafe",
+      "file": "demo-seaside-cafe.png",
+      "group": "demo-place",
+      "aspect": "3:2",
+      "transparent": false,
+      "prompt": "Use case: photorealistic-natural. Wide 3:2 premium editorial photograph-style concept of an entirely fictional Jeju seaside cafe. Warm stone and timber low-rise cafe with dark traditional-style roof tiles, a welcoming wooden terrace with simple tables and chairs facing turquoise sea, restrained potted hydrangeas, dark basalt edging, tranquil afternoon light. Coastal volcanic island silhouette distant, believable architecture, no specific real business. No people, pets, signs, words, logos, borders or watermark. This is a fictional UI demonstration image, not evidence of a named cafe's facilities or pet policy.",
+      "status": "generated_and_verified",
+      "outputPath": "public/assets/images/demo-seaside-cafe.png",
+      "actualSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "actualAlphaRange": [
+        255,
+        255
+      ]
+    },
+    {
+      "id": "decor-tangerine",
+      "file": "decor-tangerine.png",
+      "group": "decoration",
+      "aspect": "1:1",
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Premium realistic botanical cutout illustration of a Jeju tangerine branch with three ripe orange tangerines, small green stems and glossy leaves, entering diagonally from the upper-left corner toward the center. Truly transparent background, natural warm sunlight, fine fruit texture, clean detailed alpha edges. Designed as a small top-left decorative flourish for a cream travel-app presentation. No container, rectangle, backdrop, words, letters, logo or watermark.",
+      "status": "generated_and_verified",
+      "outputPath": "public/assets/images/decor-tangerine.png",
+      "actualSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "actualAlphaRange": [
+        0,
+        254
+      ]
+    },
+    {
+      "id": "decor-hareubang",
+      "file": "decor-hareubang.png",
+      "group": "decoration",
+      "aspect": "2:3",
+      "transparent": true,
+      "prompt": "Use case: illustration-story. One authentic Jeju dol hareubang volcanic stone guardian statue, full body including base, warm friendly expression, rounded brimmed stone hat, large nose, hands placed on torso. Detailed porous grey basalt texture, soft warm side light, tasteful realistic storybook cutout illustration. Slight three-quarter view facing right, isolated on a truly transparent background, ample margin and no cutoff. No flowers or other objects, no text, logo, pedestal plaque, backdrop or watermark.",
+      "status": "generated_and_verified",
+      "outputPath": "public/assets/images/decor-hareubang.png",
+      "actualSize": {
+        "width": 1024,
+        "height": 1536
+      },
+      "actualAlphaRange": [
+        0,
+        254
+      ]
+    },
+    {
+      "id": "decor-canola",
+      "file": "decor-canola.png",
+      "group": "decoration",
+      "aspect": "3:2",
+      "transparent": true,
+      "prompt": "Use case: illustration-story. A graceful cluster of fresh yellow Jeju canola blossoms with fine green stems and leaves growing from a small grouping of porous dark basalt stones at the base. Cluster occupies lower half with a few flowers reaching upward, gently asymmetric suitable for a lower-right corner flourish. Refined realistic botanical storybook cutout, warm sun, clean alpha edges and truly transparent background. No soil rectangle, vase, background landscape, words, text, logos or watermark.",
+      "status": "generated_and_verified",
+      "outputPath": "public/assets/images/decor-canola.png",
+      "actualSize": {
+        "width": 1370,
+        "height": 1148
+      },
+      "actualAlphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "header-coast",
+      "file": "header-coast.png",
+      "group": "header",
+      "aspect": "3:1",
+      "transparent": false,
+      "prompt": "Use case: illustration-story. Very wide 3:1 Jeju coastal panorama for a travel app presentation header. A recognizable broad low volcanic coastal cone silhouette on the far right, tranquil blue sea below, warm apricot sky with a gentle sunrise glow near the horizon, a few yellow canola blossoms at the lower-right edge and dark basalt coast. Keep the left two-thirds almost entirely airy pale peach sky and a very low sea horizon for readable headline placement later. Premium photorealistic-painterly travel editorial style, restrained colors, no people, buildings, text, UI, logos, frames or watermark.",
+      "status": "generated_and_verified",
+      "outputPath": "public/assets/images/header-coast.png",
+      "actualSize": {
+        "width": 2172,
+        "height": 724
+      },
+      "actualAlphaRange": [
+        255,
+        255
+      ]
+    }
+  ],
+  "realPlacePhotography": {
+    "generationAllowedForProduction": false,
+    "reason": "Named place photography must come from a verified permitted source; generated demo scenes must never be connected to a real place as photographic evidence."
+  },
+  "vectorAssetsPlanned": [
+    "logo-mark",
+    "bed",
+    "utensils",
+    "coffee",
+    "calendar",
+    "bookmark",
+    "map-pin",
+    "share",
+    "bell",
+    "chevron-right",
+    "arrow-left",
+    "check"
+  ],
+  "sources": [
+    "https://learn.chatgpt.com/docs/pricing",
+    "https://www.visitjeju.net/kr/visitjejuapi"
+  ],
+  "validation": {
+    "rasterCount": 15,
+    "vectorCount": 12,
+    "allFilesReadable": true,
+    "requiredTransparencyPassed": true
+  }
+}

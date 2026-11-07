@@ -1,0 +1,7 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Asset publication is server-managed. No public upload endpoint is enabled.
+    match /{allPaths=**} { allow read, write: if false; }
+  }
+}

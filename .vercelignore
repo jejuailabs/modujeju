@@ -1,0 +1,12 @@
+research_notes/
+reports/
+reg/
+design/
+docs/
+.env*
+!.env.example
+*.log
+coverage/
+.git/
+public/assets/images/*.png
+*.tsbuildinfo

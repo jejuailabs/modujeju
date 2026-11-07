@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" color="#E8674E" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="장소 위치">
+  <title>장소 위치</title>
+  <path d="M12 22s8-7.4 8-12a8 8 0 0 0-16 0c0 4.6 8 12 8 12Z"/>
+  <circle cx="12" cy="10" r="3"/>
+</svg>

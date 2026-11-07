@@ -1,0 +1,206 @@
+[
+  {
+    "id": "region-east",
+    "outputPath": "C:\\Users\\na\\Desktop\\vibe2\\jejuinfo\\public\\assets\\images\\region-east.png",
+    "sourcePath": "C:\\Users\\na\\.codex\\generated_images\\01a1b632-56f2-7f80-a6c7-3173b50a0d2a\\exec-2fcb9d32-04aa-4f9e-9665-8888afb2eb06.png",
+    "dimensions": {
+      "width": 1536,
+      "height": 1024
+    },
+    "transparency": {
+      "required": false,
+      "mode": "RGB",
+      "alphaMin": 255,
+      "alphaMax": 255,
+      "fullyTransparentPixels": 0,
+      "passed": true
+    }
+  },
+  {
+    "id": "region-west",
+    "outputPath": "C:\\Users\\na\\Desktop\\vibe2\\jejuinfo\\public\\assets\\images\\region-west.png",
+    "sourcePath": "C:\\Users\\na\\.codex\\generated_images\\01a1b632-56f2-7f80-a6c7-3173b50a0d2a\\exec-4dd11e9c-f00e-4f04-b8bd-f953311d7813.png",
+    "dimensions": {
+      "width": 1536,
+      "height": 1024
+    },
+    "transparency": {
+      "required": false,
+      "mode": "RGB",
+      "alphaMin": 255,
+      "alphaMax": 255,
+      "fullyTransparentPixels": 0,
+      "passed": true
+    }
+  },
+  {
+    "id": "region-south",
+    "outputPath": "C:\\Users\\na\\Desktop\\vibe2\\jejuinfo\\public\\assets\\images\\region-south.png",
+    "sourcePath": "C:\\Users\\na\\.codex\\generated_images\\01a1b632-56f2-7f80-a6c7-3173b50a0d2a\\exec-e4a2018f-172b-4de9-8215-42ccfbee5570.png",
+    "dimensions": {
+      "width": 1536,
+      "height": 1024
+    },
+    "transparency": {
+      "required": false,
+      "mode": "RGB",
+      "alphaMin": 255,
+      "alphaMax": 255,
+      "fullyTransparentPixels": 0,
+      "passed": true
+    }
+  },
+  {
+    "id": "region-north",
+    "outputPath": "C:\\Users\\na\\Desktop\\vibe2\\jejuinfo\\public\\assets\\images\\region-north.png",
+    "sourcePath": "C:\\Users\\na\\.codex\\generated_images\\01a1b632-56f2-7f80-a6c7-3173b50a0d2a\\exec-b2daffc0-fcac-4430-822d-e10b900529dc.png",
+    "dimensions": {
+      "width": 1536,
+      "height": 1024
+    },
+    "transparency": {
+      "required": false,
+      "mode": "RGB",
+      "alphaMin": 255,
+      "alphaMax": 255,
+      "fullyTransparentPixels": 0,
+      "passed": true
+    }
+  },
+  {
+    "id": "companion-senior",
+    "outputPath": "C:\\Users\\na\\Desktop\\vibe2\\jejuinfo\\public\\assets\\images\\companion-senior.png",
+    "sourcePath": "C:\\Users\\na\\.codex\\generated_images\\01a1b632-56f2-7f80-a6c7-3173b50a0d2a\\exec-15aff941-427a-4757-88f2-5542cee968a0.png",
+    "dimensions": {
+      "width": 1254,
+      "height": 1254
+    },
+    "transparency": {
+      "required": true,
+      "mode": "RGBA",
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "fullyTransparentPixels": 844214,
+      "passed": true
+    }
+  },
+  {
+    "id": "demo-aquarium",
+    "outputPath": "C:\\Users\\na\\Desktop\\vibe2\\jejuinfo\\public\\assets\\images\\demo-aquarium.png",
+    "sourcePath": "C:\\Users\\na\\.codex\\generated_images\\01a1b632-56f2-7f80-a6c7-3173b50a0d2a\\exec-8822f0a6-3600-41d8-9976-7afc033c979e.png",
+    "dimensions": {
+      "width": 1536,
+      "height": 1024
+    },
+    "transparency": {
+      "required": false,
+      "mode": "RGB",
+      "alphaMin": 255,
+      "alphaMax": 255,
+      "fullyTransparentPixels": 0,
+      "passed": true
+    }
+  },
+  {
+    "id": "demo-orchard",
+    "outputPath": "C:\\Users\\na\\Desktop\\vibe2\\jejuinfo\\public\\assets\\images\\demo-orchard.png",
+    "sourcePath": "C:\\Users\\na\\.codex\\generated_images\\01a1b632-56f2-7f80-a6c7-3173b50a0d2a\\exec-9339b6e4-25c4-4bff-a2c0-db895d6958a3.png",
+    "dimensions": {
+      "width": 1536,
+      "height": 1024
+    },
+    "transparency": {
+      "required": false,
+      "mode": "RGB",
+      "alphaMin": 255,
+      "alphaMax": 255,
+      "fullyTransparentPixels": 0,
+      "passed": true
+    }
+  },
+  {
+    "id": "demo-seaside-cafe",
+    "outputPath": "C:\\Users\\na\\Desktop\\vibe2\\jejuinfo\\public\\assets\\images\\demo-seaside-cafe.png",
+    "sourcePath": "C:\\Users\\na\\.codex\\generated_images\\01a1b632-56f2-7f80-a6c7-3173b50a0d2a\\exec-1772a724-f8dc-4b42-bede-ae5a80988f3e.png",
+    "dimensions": {
+      "width": 1536,
+      "height": 1024
+    },
+    "transparency": {
+      "required": false,
+      "mode": "RGB",
+      "alphaMin": 255,
+      "alphaMax": 255,
+      "fullyTransparentPixels": 0,
+      "passed": true
+    }
+  },
+  {
+    "id": "decor-canola",
+    "outputPath": "C:\\Users\\na\\Desktop\\vibe2\\jejuinfo\\public\\assets\\images\\decor-canola.png",
+    "sourcePath": "C:\\Users\\na\\.codex\\generated_images\\01a1b632-56f2-7f80-a6c7-3173b50a0d2a\\exec-666bf84d-7f0b-49d7-b4ef-167e18adf0c3.png",
+    "dimensions": {
+      "width": 1370,
+      "height": 1148
+    },
+    "transparency": {
+      "required": true,
+      "mode": "RGBA",
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "fullyTransparentPixels": 892934,
+      "passed": true
+    }
+  },
+  {
+    "id": "header-coast",
+    "outputPath": "C:\\Users\\na\\Desktop\\vibe2\\jejuinfo\\public\\assets\\images\\header-coast.png",
+    "sourcePath": "C:\\Users\\na\\.codex\\generated_images\\01a1b632-56f2-7f80-a6c7-3173b50a0d2a\\exec-8b97f51a-ac1d-498c-a150-e4ec6331acee.png",
+    "dimensions": {
+      "width": 2172,
+      "height": 724
+    },
+    "transparency": {
+      "required": false,
+      "mode": "RGB",
+      "alphaMin": 255,
+      "alphaMax": 255,
+      "fullyTransparentPixels": 0,
+      "passed": true
+    }
+  },
+  {
+    "id": "decor-tangerine",
+    "outputPath": "C:\\Users\\na\\Desktop\\vibe2\\jejuinfo\\public\\assets\\images\\decor-tangerine.png",
+    "sourcePath": "C:\\Users\\na\\.codex\\generated_images\\01a1b632-56f2-7f80-a6c7-3173b50a0d2a\\exec-6522fbef-1249-457d-9ecd-984eb0acd433.png",
+    "dimensions": {
+      "width": 1536,
+      "height": 1024
+    },
+    "transparency": {
+      "required": true,
+      "mode": "RGBA",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "fullyTransparentPixels": 1191850,
+      "passed": true
+    }
+  },
+  {
+    "id": "decor-hareubang",
+    "outputPath": "C:\\Users\\na\\Desktop\\vibe2\\jejuinfo\\public\\assets\\images\\decor-hareubang.png",
+    "sourcePath": "C:\\Users\\na\\.codex\\generated_images\\01a1b632-56f2-7f80-a6c7-3173b50a0d2a\\exec-af050647-3351-4be1-ae85-afc600d21b4c.png",
+    "dimensions": {
+      "width": 1024,
+      "height": 1536
+    },
+    "transparency": {
+      "required": true,
+      "mode": "RGBA",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "fullyTransparentPixels": 714936,
+      "passed": true
+    }
+  }
+]
