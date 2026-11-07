@@ -7,9 +7,6 @@ import {
   ArrowUpRight,
   MapPin,
   Search,
-  Baby,
-  Dog,
-  Accessibility,
   Compass,
   Leaf,
 } from "lucide-react";
@@ -22,6 +19,7 @@ import { CompanionPicker, DemoNotice } from "./common";
 import { PlaceCard } from "./place-card";
 import { CatalogNotice } from "./catalog-notice";
 import { getPlaceFeatures } from "@/lib/place-features";
+import { FeatureIcon } from "./feature-icon";
 
 export function HomeView({
   locale,
@@ -90,6 +88,15 @@ export function HomeView({
           </span>
         </div>
         <span className="hero-art-note">{c.illustration}</span>
+        <section
+          className="hero-companion-panel"
+          aria-labelledby="hero-companion-title"
+        >
+          <span className="eyebrow">OUR PEOPLE, OUR JEJU</span>
+          <h2 id="hero-companion-title">{c.withWho}</h2>
+          <CompanionPicker locale={locale} />
+          <p>{d.collectionNote}</p>
+        </section>
         <form
           className="journey-search"
           onSubmit={(event) => {
@@ -119,10 +126,6 @@ export function HomeView({
               </select>
             </span>
           </label>
-          <div className="journey-companions">
-            <small>{d.companions}</small>
-            <CompanionPicker locale={locale} />
-          </div>
           <label className="journey-field category-field">
             <Compass size={21} />
             <span>
@@ -155,15 +158,15 @@ export function HomeView({
         <section className="travel-values" aria-label={d.together}>
           <p>{d.together}</p>
           <span>
-            <Baby size={23} />
+            <FeatureIcon feature="kids" size={44} />
             {d.kidsNote}
           </span>
           <span>
-            <Dog size={23} />
+            <FeatureIcon feature="pet" size={44} />
             {d.petNote}
           </span>
           <span>
-            <Accessibility size={23} />
+            <FeatureIcon feature="senior" size={44} />
             {d.seniorNote}
           </span>
         </section>

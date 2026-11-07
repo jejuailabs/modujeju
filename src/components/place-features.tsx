@@ -7,10 +7,11 @@ import {
   CircleAlert,
   ChevronDown,
 } from "lucide-react";
-import type { Locale, Place } from "@/lib/types";
+import type { Companion, Locale, Place } from "@/lib/types";
 import { getPlaceFeatures, type FeatureStatus } from "@/lib/place-features";
 import { featureUi } from "@/messages/feature-ui";
 import { FeatureIcon } from "./feature-icon";
+import { copy } from "@/messages/ui";
 
 function FeatureState({ status }: { status: FeatureStatus }) {
   const Icon = {
@@ -33,6 +34,7 @@ export function PlaceFeatures({
 }) {
   const all = getPlaceFeatures(place),
     ui = featureUi(locale);
+  const c = copy(locale);
   const companionFeatures = all.filter((feature) =>
     ["kids", "pet", "senior"].includes(feature.key),
   );
@@ -50,17 +52,17 @@ export function PlaceFeatures({
           {companionFeatures.map((feature) => (
             <div
               key={feature.key}
-              className={`companion-signal feature-${feature.status}`}
+              className={`companion-signal companion-${feature.key} feature-${feature.status}`}
               title={feature.description[locale]}
             >
               <span className="signal-icon">
-                <FeatureIcon feature={feature.key} size={26} />
+                <FeatureIcon feature={feature.key} size={64} />
                 <i>
                   <FeatureState status={feature.status} />
                 </i>
               </span>
-              <span>{feature.label[locale]}</span>
-              <small>{ui[feature.status]}</small>
+              <span>{c[feature.key as Companion]}</span>
+              <small className="companion-status">{ui[feature.status]}</small>
             </div>
           ))}
         </div>
@@ -100,65 +102,86 @@ export function PlaceFeatures({
         <span className="legend-dot unknown" />
         {ui.unknown}
       </p>
-      <div className="feature-detail-grid">
-        {all.map((feature) => (
-          <details
-            className={`feature-tile feature-${feature.status} ${["kids", "pet", "senior"].includes(feature.key) ? "companion-tile" : ""}`}
-            key={feature.key}
-          >
-            <summary>
-              <ChevronDown
-                className="feature-expand"
-                size={13}
-                aria-hidden="true"
-              />
-              <span className="feature-tile-icon">
-                <FeatureIcon feature={feature.key} size={32} />
-              </span>
-              <span className="feature-tile-label">
-                {feature.label[locale]}
-                <small>
-                  <FeatureState status={feature.status} />
-                  {ui[feature.status]}
-                </small>
-              </span>
-            </summary>
-            <div className="feature-evidence">
-              <p>{feature.description[locale]}</p>
-              {feature.evidence
-                .filter(
-                  (evidence, index, items) =>
-                    items.findIndex(
-                      (item) =>
-                        item.sourceUrl === evidence.sourceUrl &&
-                        item.checkedAt === evidence.checkedAt,
-                    ) === index,
-                )
-                .map((evidence, index) => (
-                  <div key={index}>
-                    <small>
-                      {evidence.checkedAt
-                        ? `${ui.date} ${evidence.checkedAt}`
-                        : ui.noDate}
-                    </small>
-                    {evidence.sourceUrl &&
-                      /^https:\/\//.test(evidence.sourceUrl) && (
-                        <a
-                          className="text-link"
-                          href={evidence.sourceUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          {ui.evidence}
-                          <ExternalLink size={12} />
-                        </a>
-                      )}
-                  </div>
-                ))}
-            </div>
-          </details>
-        ))}
-      </div>
+      {[companionFeatures, amenities].map((group, groupIndex) => (
+        <div
+          key={groupIndex}
+          className={
+            groupIndex === 0 ? "companion-detail-grid" : "feature-detail-grid"
+          }
+        >
+          {group.map((feature) => (
+            <details
+              className={`feature-tile feature-${feature.status} ${groupIndex === 0 ? `companion-tile companion-${feature.key}` : ""}`}
+              key={feature.key}
+            >
+              <summary>
+                <ChevronDown
+                  className="feature-expand"
+                  size={13}
+                  aria-hidden="true"
+                />
+                <span className="feature-tile-icon">
+                  <FeatureIcon
+                    feature={feature.key}
+                    size={groupIndex === 0 ? 96 : 36}
+                  />
+                </span>
+                <span className="feature-tile-label">
+                  {groupIndex === 0
+                    ? c[feature.key as Companion]
+                    : feature.label[locale]}
+                  {groupIndex === 0 && (
+                    <span className="companion-context">
+                      {feature.label[locale]}
+                    </span>
+                  )}
+                  <small
+                    className={
+                      groupIndex === 0 ? "companion-status" : undefined
+                    }
+                  >
+                    <FeatureState status={feature.status} />
+                    {ui[feature.status]}
+                  </small>
+                </span>
+              </summary>
+              <div className="feature-evidence">
+                <p>{feature.description[locale]}</p>
+                {feature.evidence
+                  .filter(
+                    (evidence, index, items) =>
+                      items.findIndex(
+                        (item) =>
+                          item.sourceUrl === evidence.sourceUrl &&
+                          item.checkedAt === evidence.checkedAt,
+                      ) === index,
+                  )
+                  .map((evidence, index) => (
+                    <div key={index}>
+                      <small>
+                        {evidence.checkedAt
+                          ? `${ui.date} ${evidence.checkedAt}`
+                          : ui.noDate}
+                      </small>
+                      {evidence.sourceUrl &&
+                        /^https:\/\//.test(evidence.sourceUrl) && (
+                          <a
+                            className="text-link"
+                            href={evidence.sourceUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {ui.evidence}
+                            <ExternalLink size={12} />
+                          </a>
+                        )}
+                    </div>
+                  ))}
+              </div>
+            </details>
+          ))}
+        </div>
+      ))}
       <p className="feature-footnote">{ui.note}</p>
     </section>
   );

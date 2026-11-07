@@ -1,0 +1,560 @@
+/* The three companions are the product's first visual choice. */
+.hero-companion-panel {
+  position: absolute;
+  top: 190px;
+  right: max(48px, calc((100% - 1180px) / 2));
+  width: 470px;
+  padding: 28px;
+  border: 1px solid #ffffffc0;
+  border-radius: 26px;
+  background: var(--surface);
+  box-shadow: 0 20px 60px #102b2626;
+}
+.hero-companion-panel .eyebrow {
+  margin-bottom: 12px;
+}
+.hero-companion-panel h2 {
+  font-size: 26px;
+  margin: 0 0 22px;
+}
+.hero-companion-panel > p {
+  margin: 18px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.hero-companion-panel .companion-grid {
+  gap: 10px;
+}
+.companion-card,
+.plan-panel .companion-card {
+  padding: 20px 8px 18px;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  background: var(--bg);
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 700;
+  box-shadow: none;
+}
+.companion-card.companion-kids {
+  background: #fff0e9;
+  color: #713c2d;
+}
+.companion-card.companion-pet {
+  background: #fff4d9;
+  color: #705027;
+}
+.companion-card.companion-senior {
+  background: #eaf1e8;
+  color: #335341;
+}
+.companion-card:hover {
+  transform: translateY(-3px);
+  border-color: #cad4c9;
+}
+.companion-card.selected {
+  border-color: #244f43;
+  box-shadow: 0 0 0 3px #244f4312;
+}
+.companion-symbol,
+.plan-panel .companion-symbol {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 12px;
+  background: transparent;
+}
+.companion-symbol > svg {
+  width: 96px;
+  height: 96px;
+}
+.companion-note {
+  font-size: 12px;
+  margin-top: 5px;
+  color: inherit;
+  opacity: 0.8;
+}
+.hero-companion-panel .companion-note {
+  display: none;
+}
+.selection-check {
+  top: 9px;
+  right: 9px;
+  width: 22px;
+  height: 22px;
+}
+.journey-search {
+  grid-template-columns: 1fr 1fr auto;
+}
+.journey-field.category-field {
+  display: flex;
+  border-left: 1px solid var(--line);
+}
+.hero-coordinate {
+  display: none;
+}
+.escape-copy {
+  padding-left: 64px;
+}
+.escape-copy h1 {
+  font-size: clamp(50px, 5.1vw, 72px);
+}
+.travel-values svg {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+}
+
+/* Large companion portraits remain visible on every place card. */
+.companion-signals {
+  gap: 8px;
+  padding: 0;
+  border: 0;
+  align-items: stretch;
+}
+.companion-signal {
+  padding: 14px 4px 12px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--bg);
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.5;
+  gap: 7px;
+}
+.signal-icon,
+.feature-yes .signal-icon,
+.feature-conditional .signal-icon,
+.feature-no .signal-icon {
+  width: 68px;
+  height: 68px;
+  margin: 0;
+  background: transparent;
+}
+.signal-icon > svg {
+  width: 64px;
+  height: 64px;
+}
+.signal-icon i {
+  width: 20px;
+  height: 20px;
+  right: 0;
+  bottom: 0;
+}
+.companion-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 4px 9px;
+  border-radius: 20px;
+  background: var(--surface2);
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.feature-yes .companion-status {
+  background: #dfeddf;
+  color: #28543a;
+}
+.feature-conditional .companion-status {
+  background: #fff0cf;
+  color: #845716;
+}
+.feature-no .companion-status {
+  background: #f6e1de;
+  color: #944936;
+}
+.amenity-signals {
+  gap: 10px;
+  padding-top: 4px;
+}
+.amenity-signal {
+  font-size: 12px;
+}
+.amenity-signal > svg {
+  width: 24px;
+  height: 24px;
+}
+.amenity-signal small {
+  font-size: 11px;
+  margin-top: 3px;
+}
+
+/* Companion information gets a dedicated first row, separate from amenities. */
+.companion-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.companion-tile {
+  border-width: 2px;
+  border-radius: 20px;
+}
+.companion-tile summary {
+  padding: 24px 12px 20px;
+  min-height: 250px;
+}
+.companion-tile .feature-tile-icon {
+  width: 104px;
+  height: 104px;
+  margin-bottom: 12px;
+  background: transparent;
+}
+.companion-tile .feature-tile-icon > svg {
+  width: 96px;
+  height: 96px;
+}
+.companion-tile .feature-tile-label {
+  font-size: 22px;
+  font-weight: 750;
+}
+.companion-context {
+  display: block;
+  margin: 3px 0 8px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 400;
+}
+.companion-tile .feature-tile-label .companion-status {
+  width: max-content;
+  margin: 8px auto 0;
+  padding: 5px 12px;
+  font-size: 13px;
+}
+.companion-tile[open] {
+  grid-template-columns: 220px minmax(0, 1fr);
+}
+.companion-tile[open] .feature-evidence {
+  align-content: center;
+  font-size: 15px;
+}
+.feature-detail-grid .feature-tile summary {
+  min-height: 138px;
+}
+.feature-detail-grid .feature-tile-icon {
+  width: 52px;
+  height: 52px;
+}
+.feature-overview .feature-legend {
+  font-size: 12px;
+}
+.feature-overview .feature-footnote {
+  font-size: 13px;
+}
+
+/* The same visual identity leads search, above the smaller facility controls. */
+.companion-filters {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 16px 0 20px;
+}
+.companion-filter {
+  min-height: 158px;
+  padding: 18px;
+  font-size: 17px;
+  font-weight: 650;
+  color: var(--ink);
+  border-radius: 20px;
+  border-width: 2px;
+}
+.companion-filter > svg {
+  width: 80px;
+  height: 80px;
+}
+.companion-filter > small {
+  font-size: 13px;
+}
+.companion-filter[aria-pressed="true"] {
+  box-shadow: 0 0 0 3px #244f4310;
+}
+.feature-filters {
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+}
+.feature-filters .feature-filter {
+  padding: 12px 6px;
+  font-size: 12px;
+}
+
+@media (max-width: 1100px) and (min-width: 801px) {
+  .hero-companion-panel {
+    width: 410px;
+    right: 30px;
+    top: 190px;
+    padding: 22px;
+  }
+  .hero-companion-panel h2 {
+    font-size: 23px;
+  }
+  .hero-companion-panel .companion-symbol,
+  .hero-companion-panel .companion-symbol > svg {
+    width: 80px;
+    height: 80px;
+  }
+  .hero-companion-panel .companion-card {
+    font-size: 14px;
+  }
+  .escape-copy {
+    padding-left: 36px;
+  }
+  .escape-copy h1 {
+    font-size: 49px;
+  }
+  .escape-copy > p {
+    max-width: 330px;
+  }
+}
+@media (max-width: 800px) {
+  .escape-hero {
+    height: auto;
+    min-height: 0;
+    margin: 0 8px;
+    padding: 118px 22px 24px;
+  }
+  .escape-copy {
+    padding: 0;
+    margin: 0;
+  }
+  .escape-copy h1 {
+    font-size: 46px;
+    margin-bottom: 16px;
+    line-height: 1.18;
+  }
+  .escape-copy .eyebrow {
+    margin-bottom: 16px;
+    font-size: 10px;
+  }
+  .escape-copy > p {
+    margin-bottom: 0;
+    font-size: 15px;
+    max-width: 380px;
+  }
+  .escape-copy > .btn {
+    display: none;
+  }
+  .hero-companion-panel {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 100%;
+    margin: 26px 0 18px;
+    padding: 22px 16px;
+  }
+  .hero-companion-panel h2 {
+    font-size: 22px;
+    margin-bottom: 17px;
+  }
+  .hero-companion-panel .eyebrow {
+    display: none;
+  }
+  .hero-companion-panel .companion-card {
+    padding: 14px 2px 12px;
+    font-size: 13px;
+    border-radius: 16px;
+  }
+  .hero-companion-panel .companion-grid {
+    gap: 6px;
+  }
+  .hero-companion-panel .companion-symbol,
+  .hero-companion-panel .companion-symbol > svg {
+    width: 76px;
+    height: 76px;
+    margin-bottom: 8px;
+  }
+  .hero-companion-panel > p {
+    font-size: 12px;
+    margin-top: 15px;
+  }
+  .hero-companion-panel .selection-check {
+    width: 18px;
+    height: 18px;
+    right: 4px;
+    top: 4px;
+  }
+  .hero-coordinate {
+    display: none;
+  }
+  .escape-hero > .hero-art-note {
+    bottom: auto;
+    top: 92px;
+    right: 22px;
+    font-size: 9px;
+  }
+  .journey-search {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    transform: none;
+    width: 100%;
+    padding: 14px;
+    border-radius: 22px;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 0;
+  }
+  .journey-field,
+  .journey-field.category-field {
+    display: flex;
+    padding: 0 8px;
+    gap: 8px;
+    border-bottom: 0;
+  }
+  .journey-field > span {
+    display: block;
+  }
+  .journey-field select {
+    font-size: 14px;
+    width: 100%;
+    text-align: left;
+  }
+  .journey-field small {
+    font-size: 11px;
+  }
+  .journey-search .search-submit {
+    grid-column: 1 / -1;
+    width: 100%;
+    min-height: 46px;
+    font-size: 15px;
+  }
+  .home-content {
+    padding-top: 26px;
+  }
+  .travel-values svg {
+    width: 36px;
+    height: 36px;
+  }
+  .feature-filters {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .escape-hero {
+    padding: 105px 14px 20px;
+  }
+  .escape-copy h1 {
+    font-size: 42px;
+  }
+  .escape-hero > .hero-art-note {
+    top: 80px;
+    right: 15px;
+  }
+  .hero-companion-panel {
+    padding: 20px 12px 16px;
+  }
+  .hero-companion-panel h2 {
+    font-size: 21px;
+  }
+  .hero-companion-panel .companion-symbol,
+  .hero-companion-panel .companion-symbol > svg {
+    width: 72px;
+    height: 72px;
+  }
+  .plan-panel .companion-card {
+    font-size: 14px;
+    padding: 20px 4px 16px;
+  }
+  .plan-panel .companion-symbol,
+  .plan-panel .companion-symbol > svg {
+    width: 80px;
+    height: 80px;
+  }
+  .companion-note {
+    font-size: 11px;
+  }
+  .companion-signals {
+    gap: 6px;
+  }
+  .companion-signal {
+    font-size: 13px;
+    padding: 12px 3px;
+  }
+  .signal-icon,
+  .signal-icon > svg {
+    width: 64px;
+    height: 64px;
+  }
+  .companion-signal small {
+    font-size: 11px;
+  }
+  .feature-overview {
+    padding: 20px 14px;
+  }
+  .feature-section-title h2 {
+    font-size: 23px;
+  }
+  .feature-section-title .eyebrow {
+    font-size: 9px;
+  }
+  .companion-detail-grid {
+    gap: 6px;
+    margin-bottom: 18px;
+  }
+  .companion-tile {
+    border-radius: 16px;
+  }
+  .companion-tile summary {
+    padding: 15px 3px;
+    min-height: 196px;
+  }
+  .companion-tile .feature-tile-icon,
+  .companion-tile .feature-tile-icon > svg {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 8px;
+  }
+  .companion-tile .feature-tile-label {
+    font-size: 14px;
+  }
+  .companion-context {
+    font-size: 11px;
+    min-height: 30px;
+    margin: 5px 0 0;
+  }
+  .companion-tile .feature-tile-label .companion-status {
+    padding: 4px 7px;
+    font-size: 11px;
+  }
+  .companion-tile[open] {
+    grid-template-columns: 104px minmax(0, 1fr);
+  }
+  .companion-tile[open] .feature-evidence {
+    padding: 16px 12px;
+    font-size: 13px;
+  }
+  .feature-detail-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .feature-detail-grid .feature-tile summary {
+    min-height: 132px;
+    padding: 16px 4px;
+  }
+  .companion-filters {
+    gap: 7px;
+  }
+  .companion-filter {
+    min-width: 0;
+    min-height: 155px;
+    padding: 12px 4px;
+    font-size: 14px;
+    border-radius: 16px;
+  }
+  .companion-filter > svg {
+    width: 72px;
+    height: 72px;
+  }
+  .companion-filter > small {
+    font-size: 12px;
+  }
+  .feature-filters {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    overflow: visible;
+    gap: 8px;
+  }
+  .feature-filters .feature-filter {
+    min-width: 0;
+  }
+}

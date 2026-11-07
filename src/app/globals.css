@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "./travel-design.css";
+@import "./companion-design.css";
 @layer legacy {
 
 
@@ -60,7 +61,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
-  font-family: Arial, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  font-family: var(--font-pretendard), sans-serif;
   font-size: 16px;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
@@ -651,7 +652,7 @@ textarea {
   color: #654b3e;
 }
 .hero-visual-heading > span {
-  font-family: Georgia, serif;
+  font-family: var(--font-pretendard), sans-serif;
   letter-spacing: 0.16em;
   font-size: 18px;
 }
@@ -2795,7 +2796,7 @@ textarea {
   font-size: 16px;
 }
 .admin-page textarea {
-  font-family: monospace;
+  font-family: var(--font-pretendard), sans-serif;
   font-size: 13px;
   min-height: 300px;
 }

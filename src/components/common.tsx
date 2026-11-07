@@ -14,11 +14,9 @@ import {
   Flower2,
   Footprints,
   ArrowLeft,
-  Baby,
-  Dog,
-  Accessibility,
 } from "lucide-react";
 import Link from "next/link";
+import { FeatureIcon } from "./feature-icon";
 export const typeIcons = {
   restaurant: Utensils,
   cafe: Coffee,
@@ -46,24 +44,22 @@ export function CompanionPicker({ locale }: { locale: Locale }) {
   const { profile, setProfile } = useTravelStore();
   const c = copy(locale);
   const d = designCopy(locale);
-  const icons = { kids: Baby, pet: Dog, senior: Accessibility };
   const notes = { kids: d.kidsNote, pet: d.petNote, senior: d.seniorNote };
   return (
     <div className="companion-grid">
       {companions.map((id: Companion) => {
-        const Icon = icons[id];
         return (
           <button
             type="button"
             key={id}
-            className={`companion-card ${profile.companions.includes(id) ? "selected" : ""}`}
+            className={`companion-card companion-${id} ${profile.companions.includes(id) ? "selected" : ""}`}
             aria-pressed={profile.companions.includes(id)}
             onClick={() =>
               setProfile({ companions: toggle(profile.companions, id) })
             }
           >
             <span className="companion-symbol">
-              <Icon size={28} strokeWidth={1.5} />
+              <FeatureIcon feature={id} size={88} />
             </span>
             <span>{c[id]}</span>
             <small className="companion-note">{notes[id]}</small>

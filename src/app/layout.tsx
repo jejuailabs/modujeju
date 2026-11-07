@@ -1,5 +1,16 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import "./globals.css";
+
+const pretendard = localFont({
+  src: "../../public/fonts/PretendardVariable.woff2",
+  variable: "--font-pretendard",
+  weight: "45 920",
+  style: "normal",
+  display: "swap",
+  fallback: ["sans-serif"],
+});
+
 export const metadata: Metadata = {
   title: {
     default: "같이제주 | 모두에게 편안한 제주 여행",
@@ -15,8 +26,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko" data-scroll-behavior="smooth" suppressHydrationWarning>
-      <body>{children}</body>
+    <html
+      lang="ko"
+      className={pretendard.variable}
+      data-scroll-behavior="smooth"
+      suppressHydrationWarning
+    >
+      <body className={pretendard.className}>{children}</body>
     </html>
   );
 }

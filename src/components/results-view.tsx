@@ -132,23 +132,35 @@ export function ResultsView({
           />
           {f.includeConditional}
         </label>
-        <div className="feature-filters">
-          {featureKeys.map((key) => (
-            <button
-              key={key}
-              type="button"
-              className="feature-filter"
-              aria-pressed={features.includes(key)}
-              onClick={() => setFeatures((current) => toggle(current, key))}
+        {[featureKeys.slice(0, 3), featureKeys.slice(3)].map(
+          (group, groupIndex) => (
+            <div
+              key={groupIndex}
+              className={
+                groupIndex === 0 ? "companion-filters" : "feature-filters"
+              }
             >
-              <FeatureIcon feature={key} size={27} />
-              <span>{featureLabels[key][locale]}</span>
-              <small>
-                {featureCounts[key]} {c.countSuffix}
-              </small>
-            </button>
-          ))}
-        </div>
+              {group.map((key) => (
+                <button
+                  key={key}
+                  type="button"
+                  className={`feature-filter ${groupIndex === 0 ? `companion-filter companion-${key}` : ""}`}
+                  aria-pressed={features.includes(key)}
+                  onClick={() => setFeatures((current) => toggle(current, key))}
+                >
+                  <FeatureIcon
+                    feature={key}
+                    size={groupIndex === 0 ? 80 : 32}
+                  />
+                  <span>{featureLabels[key][locale]}</span>
+                  <small>
+                    {featureCounts[key]} {c.countSuffix}
+                  </small>
+                </button>
+              ))}
+            </div>
+          ),
+        )}
       </section>
       <div className="region-tabs">
         <button

@@ -340,7 +340,7 @@ export function AdminView({ locale }: { locale: Locale }) {
                   spellCheck={false}
                   dir="ltr"
                   disabled={busy}
-                  style={{ width: "100%", fontFamily: "monospace" }}
+                  style={{ width: "100%", fontFamily: "inherit" }}
                 />
               </label>
               {invalidJson ? (

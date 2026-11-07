@@ -29,7 +29,7 @@
   color-scheme: dark;
 }
 body {
-  font-family: "Apple SD Gothic Neo", "Malgun Gothic", Arial, sans-serif;
+  font-family: var(--font-pretendard), sans-serif;
 }
 h1,
 h2,
