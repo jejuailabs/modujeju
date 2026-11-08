@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import {
   AlertCircle,
@@ -28,6 +27,7 @@ import {
 import { DemoNotice, PageIntro } from "./common";
 import { PlaceCard } from "./place-card";
 import { PlaceFeatures } from "./place-features";
+import { PlaceImage, PhotoAttribution } from "./place-image";
 
 function safeExternalUrl(value: string | undefined): string | null {
   if (!value) return null;
@@ -205,17 +205,11 @@ export function DetailView({
         <div className="detail-content">
           {place.imageKind !== "placeholder" && (
             <div className="detail-hero">
-              <Image
-                src={place.image}
-                alt={`${place.name[locale]} · ${isDemo ? t.demoImage : t.verifiedImage}`}
-                width={1536}
-                height={1024}
-                sizes="(max-width: 900px) 92vw, 760px"
-                priority
-              />
+              <PlaceImage place={place} locale={locale} variant="detail" />
               {isDemo && <span className="image-label">{c.illustration}</span>}
             </div>
           )}
+          <PhotoAttribution place={place} locale={locale} />
           <section className="panel" aria-labelledby="place-overview">
             <div className="place-meta">
               <span>

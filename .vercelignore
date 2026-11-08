@@ -6,6 +6,7 @@ research_notes/catalog/*
 !research_notes/catalog/stays.json
 !research_notes/catalog/attractions.json
 !research_notes/catalog/coordinates.json
+!research_notes/catalog/photos.json
 reports/
 reg/
 design/

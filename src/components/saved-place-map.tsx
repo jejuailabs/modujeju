@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowUpRight, MapPin } from "lucide-react";
 import { type Locale, type Place, type Region } from "@/lib/types";
 import { browseCategory } from "@/lib/place-categories";
@@ -10,6 +9,7 @@ import { copy } from "@/messages/ui";
 import { savedMessages } from "@/messages/saved";
 import { catalogCopy } from "@/messages/catalog";
 import { PlaceFeatures } from "./place-features";
+import { PlaceImage, PhotoAttribution } from "./place-image";
 import { OsmMap, hasPlaceCoordinates } from "./osm-map";
 import styles from "./saved-view.module.css";
 
@@ -37,9 +37,10 @@ export function SavedPlaceMap({ locale, places }: { locale: Locale; places: Plac
         {activeRegion && <ul className={styles.groupList}>{options.map((place) => <li key={place.id}><button type="button" aria-pressed={selected?.id === place.id} onClick={() => setSelectedId(place.id)}><span>{place.name[locale]}</span><small>{c[browseCategory(place.type)]}</small></button></li>)}</ul>}
         {selected && <article key={selected.id} className={styles.selectedPlace}>
           <div className={styles.selectedHeading}>
-            {selected.image && selected.imageKind !== "placeholder" && <Image src={selected.image} width={72} height={72} alt="" className={styles.selectedPhoto} />}
+            <PlaceImage place={selected} locale={locale} variant="thumbnail" className={styles.selectedPhoto} />
             <div><div className={styles.selectedMeta}>{c[browseCategory(selected.type)]}<span>·</span>{c[selected.region]}</div><h3><Link href={`/${locale}/places/${selected.slug}`}>{selected.name[locale]}<ArrowUpRight size={21} aria-hidden="true" /></Link></h3></div>
           </div>
+          <PhotoAttribution place={selected} locale={locale} />
           <p className={styles.selectedAddress}><MapPin size={15} aria-hidden="true" />{selected.address[locale]}</p>
           {selected.coordinateSource && <a className={styles.externalMap} href={selected.coordinateSource.sourceUrl} target="_blank" rel="noopener noreferrer">{catalogCopy(locale).coordinateSource} · {selected.coordinateSource.sourceName}<ArrowUpRight size={13} aria-hidden="true" /></a>}
           <PlaceFeatures place={selected} locale={locale} compact />

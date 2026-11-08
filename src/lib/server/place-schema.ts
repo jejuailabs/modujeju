@@ -1,5 +1,6 @@
 import { z } from "zod";
 import type { Place } from "@/lib/types";
+import { catalogPhotoSchema, photoMatchesPlace } from "@/lib/catalog-photos";
 import { ServiceError } from "./errors";
 
 const text = (max = 500) => z.string().trim().max(max);
@@ -84,6 +85,7 @@ export const placeSchema = z
     }).strict().optional(),
     image: imagePath,
     imageKind: z.enum(["placeholder", "photo", "illustration"]).optional(),
+    photoSource: catalogPhotoSchema.optional(),
     tags: z.array(text(80)).max(40).optional(),
     sourceTags: z.array(text(80)).max(40).optional(),
     sourceObservations: z.array(z.object({ field: text(80), value: text(1000), sourceUrl: httpsUrl, verifiedAt: factDate.nullable().optional() }).strict()).max(60).optional(),
@@ -224,5 +226,10 @@ export function toPublicPlace(value: unknown): Place | null {
     );
   }
   const result = placeSchema.safeParse(input);
-  return result.success ? result.data : null;
+  if (!result.success) return null;
+  const place = result.data;
+  if (place.photoSource && (place.imageKind !== "photo"
+    || place.image !== place.photoSource.photoUrl
+    || !photoMatchesPlace(place, place.photoSource))) return null;
+  return place;
 }

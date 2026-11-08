@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { Bookmark, MapPin, ArrowUpRight, Clock3 } from "lucide-react";
 import type { Locale, Place } from "@/lib/types";
@@ -11,8 +10,7 @@ import { catalogCopy } from "@/messages/catalog";
 import { useTravelStore } from "@/hooks/use-travel-store";
 import { MAX_SAVED_PLACES } from "@/lib/trip/state";
 import { PlaceFeatures } from "./place-features";
-import { designCopy } from "@/messages/design";
-import { typeIcons } from "./common";
+import { PlaceImage, PhotoAttribution } from "./place-image";
 
 export function PlaceCard({ place, locale }: { place: Place; locale: Locale }) {
   const { savedIds, toggleSaved, hydrated } = useTravelStore();
@@ -20,8 +18,6 @@ export function PlaceCard({ place, locale }: { place: Place; locale: Locale }) {
   const c = copy(locale);
   const t = catalogCopy(locale);
   const saved = savedIds.includes(place.id);
-  const d = designCopy(locale);
-  const TypeIcon = typeIcons[place.type];
 
   function savePlace() {
     if (!saved && savedIds.length >= MAX_SAVED_PLACES) {
@@ -42,28 +38,8 @@ export function PlaceCard({ place, locale }: { place: Place; locale: Locale }) {
           tabIndex={-1}
           aria-hidden="true"
         >
-          {place.imageKind === "placeholder" ? (
-            <span className="place-type-art">
-              <span className="place-art-word">{place.type.toUpperCase()}</span>
-              <TypeIcon size={50} strokeWidth={1} />
-              <span className="place-art-region">JEJU · {c[place.region]}</span>
-            </span>
-          ) : (
-            <Image
-              src={place.image}
-              alt=""
-              fill
-              sizes="(max-width:640px) 92vw,(max-width:1000px) 45vw,380px"
-            />
-          )}
+          <PlaceImage place={place} locale={locale} />
         </Link>
-        <span className="image-label">
-          {place.imageKind === "placeholder"
-            ? d.noPhoto
-            : place.dataMode === "demo"
-              ? c.demoPlace
-              : c[place.type]}
-        </span>
         <button
           type="button"
           className={`bookmark-button ${saved ? "is-saved" : ""}`}
@@ -79,6 +55,7 @@ export function PlaceCard({ place, locale }: { place: Place; locale: Locale }) {
           />
         </button>
       </div>
+      <PhotoAttribution place={place} locale={locale} />
       <div className="place-card-body">
         <div className="place-meta">
           <span>

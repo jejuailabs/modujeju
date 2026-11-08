@@ -6,6 +6,8 @@ import restaurants from "../../research_notes/catalog/restaurants.json";
 import stays from "../../research_notes/catalog/stays.json";
 import attractions from "../../research_notes/catalog/attractions.json";
 import coordinates from "../../research_notes/catalog/coordinates.json";
+import photos from "../../research_notes/catalog/photos.json";
+import { catalogPhotoSchema } from "@/lib/catalog-photos";
 import { applyCatalogCoordinates } from "@/lib/catalog-coordinates";
 import { toPublicPlace } from "@/lib/server/place-schema";
 import { categoryPlaceholder } from "@/lib/official-catalog";
@@ -116,8 +118,19 @@ describe("researched Jeju catalog integration", () => {
     expect(() => applyCatalogCoordinates([{ ...located[0], address: { ...located[0].address, ko: "다른 주소" } }], coordinates)).toThrow("COORDINATE_IDENTITY_MISMATCH");
   });
 
-  it("uses existing category placeholders without presenting sample photos as real places", () => {
+  it("uses the observed official photo for its exact source, otherwise a category placeholder", () => {
+    const observedPhotos = photos.map((photo) => catalogPhotoSchema.parse(photo));
+    expect(observedPhotos).toHaveLength(realPlaces.length);
+    expect(realPlaces.filter((place) => place.photoSource)).toHaveLength(observedPhotos.length);
     for (const place of realPlaces) {
+      const photo = observedPhotos.find((record) => record.sourceId === place.sourceId);
+      if (photo) {
+        expect(place.imageKind).toBe("photo");
+        expect(place.image).toBe(photo.photoUrl);
+        expect(place.photoSource).toEqual(photo);
+        expect(toPublicPlace(place)?.photoSource).toEqual(photo);
+        continue;
+      }
       expect(place.imageKind).toBe("placeholder");
       expect(place.image).toBe(categoryPlaceholder[place.type]);
       expect(

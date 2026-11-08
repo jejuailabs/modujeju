@@ -59,6 +59,15 @@ export interface Place {
   };
   image: string;
   imageKind?: "placeholder" | "photo" | "illustration";
+  /** Observed official-page photo reference; does not assert a usage license. */
+  photoSource?: {
+    sourceId: string;
+    sourceUrl: string;
+    photoUrl: string;
+    alt: string;
+    observedAt: string;
+    sourceName: "비짓제주";
+  };
   tags?: string[];
   /** Labels observed on the source, not verified companion conditions. */
   sourceTags?: string[];

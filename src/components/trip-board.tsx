@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowDown,
@@ -22,6 +21,7 @@ import { copy, priceLabel } from "@/messages/ui";
 import { tripMessages } from "@/messages/trip";
 import { DemoNotice, PageIntro } from "./common";
 import { TripRecommendation } from "./trip-recommendation";
+import { PlaceImage } from "./place-image";
 import { recommendationCopy, tripLengthLabel } from "@/messages/recommendation";
 
 const dateLocales: Record<Locale, string> = {
@@ -225,12 +225,13 @@ export function TripBoard({
                             tabIndex={-1}
                             aria-hidden="true"
                           >
-                            <Image
-                              src={place.image}
-                              fill
-                              sizes="72px"
-                              style={{ objectFit: "cover" }}
-                              alt=""
+                            <PlaceImage
+                              place={place}
+                              locale={locale}
+                              variant="thumbnail"
+                              thumbnailWidth={72}
+                              thumbnailHeight={65}
+                              className="stop-photo"
                             />
                           </Link>
                           <div className="stop-copy">
@@ -304,12 +305,13 @@ export function TripBoard({
                   );
                   return (
                     <article className="pool-item" key={place.id}>
-                      <Image
-                        src={place.image}
-                        width={68}
-                        height={62}
-                        style={{ height: "auto" }}
-                        alt=""
+                      <PlaceImage
+                        place={place}
+                        locale={locale}
+                        variant="thumbnail"
+                        thumbnailWidth={68}
+                        thumbnailHeight={62}
+                        className="pool-photo"
                       />
                       <div className="pool-copy">
                         <Link href={`/${locale}/places/${place.slug}`}>
