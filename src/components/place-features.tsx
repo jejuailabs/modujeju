@@ -1,5 +1,6 @@
 "use client";
 import {
+  Ban,
   Check,
   HelpCircle,
   Minus,
@@ -7,20 +8,133 @@ import {
   CircleAlert,
   ChevronDown,
 } from "lucide-react";
-import type { Companion, Locale, Place } from "@/lib/types";
-import { getPlaceFeatures, type FeatureStatus } from "@/lib/place-features";
+import type { Locale, Place } from "@/lib/types";
+import {
+  getCompanionFeatureRows,
+  type CompanionFeatureRow,
+  type FeatureStatus,
+  type PlaceFeature,
+} from "@/lib/place-features";
 import { featureUi } from "@/messages/feature-ui";
+import { quantityShort } from "@/messages/features";
 import { FeatureIcon } from "./feature-icon";
 import { copy } from "@/messages/ui";
 
-function FeatureState({ status }: { status: FeatureStatus }) {
+function FeatureState({ status, size = 11 }: { status: FeatureStatus; size?: number }) {
   const Icon = {
     yes: Check,
     no: Minus,
     conditional: CircleAlert,
     unknown: HelpCircle,
   }[status];
-  return <Icon size={11} strokeWidth={2} aria-hidden="true" />;
+  return <Icon size={size} strokeWidth={2} aria-hidden="true" />;
+}
+
+function chipLabel(feature: PlaceFeature, locale: Locale) {
+  return feature.quantity
+    ? `${feature.label[locale]} ${quantityShort(feature.quantity)[locale]}`
+    : feature.label[locale];
+}
+
+/** Latest operator check date among the facilities shown on the card. */
+function latestCheck(features: PlaceFeature[]): string | null {
+  const dates = features
+    .flatMap((feature) => feature.evidence.map((evidence) => evidence.checkedAt))
+    .filter((value): value is string => !!value)
+    .sort();
+  return dates.at(-1) ?? null;
+}
+
+function FacilityChip({ feature, locale }: { feature: PlaceFeature; locale: Locale }) {
+  const ui = featureUi(locale);
+  return (
+    <li className={`facility-chip feature-${feature.status}`} title={feature.description[locale]}>
+      <FeatureIcon feature={feature.key} size={20} />
+      <span>{chipLabel(feature, locale)}</span>
+      {feature.status === "conditional" && <small>{ui.conditional}</small>}
+    </li>
+  );
+}
+
+function RowHead({ row, locale, size }: { row: CompanionFeatureRow; locale: Locale; size: number }) {
+  const ui = featureUi(locale);
+  const c = copy(locale);
+  return (
+    <div className="companion-row-head">
+      <FeatureIcon feature={row.companion} size={size} />
+      <strong>{c[row.companion]}</strong>
+      <small className={`companion-status feature-${row.status}`}>
+        <FeatureState status={row.status} />
+        {ui.admission[row.status]}
+      </small>
+    </div>
+  );
+}
+
+function Restrictions({ locale, restricted }: { locale: Locale; restricted: ReturnType<typeof getCompanionFeatureRows>["restricted"] }) {
+  const ui = featureUi(locale);
+  if (!restricted.length) return null;
+  return (
+    <ul className="restriction-chips">
+      {restricted.map((companion) => (
+        <li key={companion} className="restriction-chip">
+          <Ban size={18} aria-hidden="true" />
+          {ui.restricted[companion]}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function Evidence({ feature, locale }: { feature: PlaceFeature; locale: Locale }) {
+  const ui = featureUi(locale);
+  const unique = feature.evidence.filter(
+    (evidence, index, items) =>
+      items.findIndex(
+        (item) => item.sourceUrl === evidence.sourceUrl && item.checkedAt === evidence.checkedAt,
+      ) === index,
+  );
+  return (
+    <div className="feature-evidence">
+      <p>{feature.description[locale]}</p>
+      {unique.map((evidence, index) => (
+        <div key={index}>
+          {evidence.kind && <span className={`evidence-kind evidence-${evidence.kind}`}>{ui.sourceKind[evidence.kind]}</span>}
+          <small>{evidence.checkedAt ? `${ui.date} ${evidence.checkedAt}` : ui.noDate}</small>
+          {evidence.publishedAt && <small>{`${ui.published} ${evidence.publishedAt}`}</small>}
+          {evidence.quote && <q className="evidence-quote">{evidence.quote}</q>}
+          {evidence.sourceUrl && /^https:\/\//.test(evidence.sourceUrl) && (
+            <a className="text-link" href={evidence.sourceUrl} target="_blank" rel="noopener noreferrer">
+              {ui.evidence}
+              <ExternalLink size={12} />
+            </a>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function FeatureTile({ feature, locale }: { feature: PlaceFeature; locale: Locale }) {
+  const ui = featureUi(locale);
+  return (
+    <details className={`feature-tile feature-${feature.status}`}>
+      <summary>
+        <ChevronDown className="feature-expand" size={13} aria-hidden="true" />
+        <span className="feature-tile-icon">
+          <FeatureIcon feature={feature.key} size={36} />
+        </span>
+        <span className="feature-tile-label">
+          {chipLabel(feature, locale)}
+          <small>
+            <FeatureState status={feature.status} />
+            {ui[feature.status]}
+          </small>
+        </span>
+      </summary>
+      <Evidence feature={feature} locale={locale} />
+    </details>
+  );
 }
 
 export function PlaceFeatures({
@@ -32,165 +146,98 @@ export function PlaceFeatures({
   locale: Locale;
   compact?: boolean;
 }) {
-  const all = getPlaceFeatures(place).filter(
-    (feature) => feature.status === "yes" || feature.status === "conditional",
-  );
+  const { rows, restricted, common } = getCompanionFeatureRows(place);
   const ui = featureUi(locale);
-  const c = copy(locale);
-  if (!all.length)
-    return compact ? null : <p className="feature-empty">{ui.noConfirmed}</p>;
-  const companionFeatures = all.filter((feature) =>
-    ["kids", "pet", "senior"].includes(feature.key),
-  );
-  const amenities = all.filter(
-    (feature) => !["kids", "pet", "senior"].includes(feature.key),
-  );
-  const rankedAmenities = [...amenities].sort((a, b) => {
-    const order = { yes: 0, conditional: 1, unknown: 2, no: 3 };
-    return order[a.status] - order[b.status];
-  });
-  if (compact)
+  const shown =[...rows.flatMap((row) => row.features), ...common];
+
+  if (compact) {
+    if (!rows.length && !restricted.length && !common.length) return null;
+    const checked = latestCheck(shown);
     return (
       <div className="place-feature-summary" aria-label={ui.subtitle}>
-        {companionFeatures.length > 0 && (
-          <div className="companion-signals">
-            {companionFeatures.map((feature) => (
-              <div
-                key={feature.key}
-                className={`companion-signal companion-${feature.key} feature-${feature.status}`}
-                title={feature.description[locale]}
-              >
-                <span className="signal-icon">
-                  <FeatureIcon feature={feature.key} size={64} />
-                  <i>
-                    <FeatureState status={feature.status} />
-                  </i>
-                </span>
-                <span>{c[feature.key as Companion]}</span>
-                <small className="companion-status">{ui[feature.status]}</small>
-              </div>
-            ))}
+        {rows.map((row) => (
+          <div key={row.companion} className={`companion-row companion-${row.companion}`} title={row.description[locale]}>
+            <RowHead row={row} locale={locale} size={40} />
+            {(row.highlight || row.features.length > 0) && (
+              <ul className="facility-chips">
+                {row.highlight && (
+                  <li className={`facility-chip feature-${row.highlight === "indoor" ? "yes" : "conditional"}`}>
+                    <FeatureIcon feature="pet" size={20} />
+                    <span>{ui[row.highlight]}</span>
+                  </li>
+                )}
+                {row.features.map((feature) => (
+                  <FacilityChip key={feature.key} feature={feature} locale={locale} />
+                ))}
+              </ul>
+            )}
           </div>
-        )}
-        {rankedAmenities.length > 0 && (
-          <div className="amenity-signals">
-            {rankedAmenities.map((feature) => (
-              <span
-                key={feature.key}
-                className={`amenity-signal feature-${feature.status}`}
-                title={feature.description[locale]}
-              >
-                <FeatureIcon feature={feature.key} size={17} />
-                <span>
-                  {feature.label[locale]}
-                  <small>{ui[feature.status]}</small>
-                </span>
-              </span>
+        ))}
+        {common.length > 0 && (
+          <ul className="facility-chips common-chips" aria-label={ui.commonFacilities}>
+            {common.map((feature) => (
+              <FacilityChip key={feature.key} feature={feature} locale={locale} />
             ))}
-          </div>
+          </ul>
         )}
+        <Restrictions locale={locale} restricted={restricted} />
+        {checked && <p className="facility-checked">{`${ui.facilitiesChecked} ${checked}`}</p>}
       </div>
     );
+  }
+
   return (
-    <section
-      className="feature-overview"
-      aria-labelledby="feature-overview-title"
-    >
+    <section className="feature-overview" aria-labelledby="feature-overview-title">
       <div className="feature-section-title">
         <div>
           <span className="eyebrow">MADE FOR YOUR PEOPLE</span>
           <h2 id="feature-overview-title">{ui.title}</h2>
         </div>
       </div>
-      <p className="feature-legend">
-        <span className="legend-dot yes" />
-        {ui.yes}
-        <span className="legend-dot conditional" />
-        {ui.conditional}
-      </p>
-      {[companionFeatures, amenities].map((group, groupIndex) => {
-        if (!group.length) return null;
-        return (
-          <div
-            key={groupIndex}
-            className={
-              groupIndex === 0 ? "companion-detail-grid" : "feature-detail-grid"
-            }
-          >
-            {group.map((feature) => (
-              <details
-                className={`feature-tile feature-${feature.status} ${groupIndex === 0 ? `companion-tile companion-${feature.key}` : ""}`}
-                key={feature.key}
-              >
+      {!rows.length && !restricted.length && !common.length ? (
+        <p className="feature-empty">{ui.noConfirmed}</p>
+      ) : (
+        <>
+          <p className="feature-legend">
+            <span className="legend-dot yes" />
+            {ui.yes}
+            <span className="legend-dot conditional" />
+            {ui.conditional}
+          </p>
+          <Restrictions locale={locale} restricted={restricted} />
+          {rows.map((row) => (
+            <div key={row.companion} className={`companion-section companion-${row.companion}`}>
+              <details className={`feature-tile companion-tile companion-${row.companion} feature-${row.status}`}>
                 <summary>
-                  <ChevronDown
-                    className="feature-expand"
-                    size={13}
-                    aria-hidden="true"
-                  />
-                  <span className="feature-tile-icon">
-                    <FeatureIcon
-                      feature={feature.key}
-                      size={groupIndex === 0 ? 96 : 36}
-                    />
-                  </span>
-                  <span className="feature-tile-label">
-                    {groupIndex === 0
-                      ? c[feature.key as Companion]
-                      : feature.label[locale]}
-                    {groupIndex === 0 && (
-                      <span className="companion-context">
-                        {feature.label[locale]}
-                      </span>
-                    )}
-                    <small
-                      className={
-                        groupIndex === 0 ? "companion-status" : undefined
-                      }
-                    >
-                      <FeatureState status={feature.status} />
-                      {ui[feature.status]}
-                    </small>
-                  </span>
+                  <ChevronDown className="feature-expand" size={13} aria-hidden="true" />
+                  <RowHead row={row} locale={locale} size={64} />
+                  {row.highlight && <span className="companion-context">{ui[row.highlight]}</span>}
                 </summary>
                 <div className="feature-evidence">
-                  <p>{feature.description[locale]}</p>
-                  {feature.evidence
-                    .filter(
-                      (evidence, index, items) =>
-                        items.findIndex(
-                          (item) =>
-                            item.sourceUrl === evidence.sourceUrl &&
-                            item.checkedAt === evidence.checkedAt,
-                        ) === index,
-                    )
-                    .map((evidence, index) => (
-                      <div key={index}>
-                        <small>
-                          {evidence.checkedAt
-                            ? `${ui.date} ${evidence.checkedAt}`
-                            : ui.noDate}
-                        </small>
-                        {evidence.sourceUrl &&
-                          /^https:\/\//.test(evidence.sourceUrl) && (
-                            <a
-                              className="text-link"
-                              href={evidence.sourceUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              {ui.evidence}
-                              <ExternalLink size={12} />
-                            </a>
-                          )}
-                      </div>
-                    ))}
+                  <p>{row.description[locale]}</p>
                 </div>
               </details>
-            ))}
-          </div>
-        );
-      })}
+              {row.features.length > 0 && (
+                <div className="feature-detail-grid">
+                  {row.features.map((feature) => (
+                    <FeatureTile key={feature.key} feature={feature} locale={locale} />
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+          {common.length > 0 && (
+            <div className="companion-section">
+              <h3 className="common-heading">{ui.commonFacilities}</h3>
+              <div className="feature-detail-grid">
+                {common.map((feature) => (
+                  <FeatureTile key={feature.key} feature={feature} locale={locale} />
+                ))}
+              </div>
+            </div>
+          )}
+        </>
+      )}
       <p className="feature-footnote">{ui.note}</p>
     </section>
   );

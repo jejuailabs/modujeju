@@ -1,4 +1,4 @@
-import type { FeatureKey } from "./place-features";
+import type { FacilityKey, FeatureKey } from "./place-features";
 
 export const locales = ["ko", "en", "zh", "ja"] as const;
 export type Locale = (typeof locales)[number];
@@ -36,6 +36,28 @@ export interface PlaceFacts {
   walkingMinutes: Fact<number | null>;
   parking: Fact<"onsite" | "nearby" | "none">;
   toilet: Fact<"inside" | "outside" | "none">;
+}
+
+/**
+ * Who established a facility. `search` means an operator approved a dated
+ * public source found by the search pipeline; it is never raw AI output.
+ */
+export type AmenitySource = "demo" | "official" | "phone" | "onsite" | "search";
+
+/** One reviewed facility (e.g. nursing room, large-dog area) with its evidence. */
+export interface AmenityEvidence {
+  value: Access | "unknown";
+  source: AmenitySource;
+  /** Date an operator verified or approved this item, never a crawl date. */
+  verifiedAt: string | null;
+  sourceUrl?: string;
+  /** Publication date of the source text. Required (2025+) for `search`. */
+  publishedAt?: string | null;
+  /** Short reviewed excerpt shown beside the source link. */
+  quote?: string;
+  /** Countable facilities such as high chairs. */
+  quantity?: number;
+  note?: LocalizedText;
 }
 
 export interface Place {
@@ -85,6 +107,8 @@ export interface Place {
   };
   durationMinutes: number | null;
   facts: PlaceFacts;
+  /** Companion-specific facilities. Curated facts outrank these entries. */
+  amenities?: Partial<Record<FacilityKey, AmenityEvidence>>;
   sourceUrl?: string;
   sourceId?: string;
   sourceName?: string;

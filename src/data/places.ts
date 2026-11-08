@@ -1,4 +1,5 @@
 import type {
+  Access,
   Fact,
   LocalizedText,
   Place,
@@ -6,6 +7,7 @@ import type {
   PlaceType,
   Region,
 } from "../lib/types";
+import type { FacilityKey } from "../lib/place-features";
 
 const label = (
   ko: string,
@@ -87,11 +89,14 @@ interface Seed {
   lng: number;
   values?: Partial<FactValues>;
   petExtra?: number | null;
+  /** Fictional facility examples, shown only in explicit demo mode. */
+  amenities?: Partial<Record<FacilityKey, { value: Access; quantity?: number }>>;
 }
 
 const seeds: Seed[] = [
   {
     id: "east-table",
+    amenities: { highChair: { value: "yes", quantity: 2 }, floorSeating: { value: "conditional" }, kidsTableware: { value: "yes" }, diaperTable: { value: "yes" } },
     region: "east",
     type: "restaurant",
     name: label(
@@ -115,6 +120,7 @@ const seeds: Seed[] = [
   },
   {
     id: "east-cafe",
+    amenities: { petAmenity: { value: "yes" }, petPlayground: { value: "yes" }, petLargeDog: { value: "conditional" } },
     region: "east",
     type: "cafe",
     name: label(
@@ -261,6 +267,7 @@ const seeds: Seed[] = [
   },
   {
     id: "west-stay",
+    amenities: { babyBed: { value: "yes" }, kidsPlay: { value: "yes" }, petRoom: { value: "conditional" }, elevator: { value: "yes" }, accessibleParking: { value: "yes" } },
     region: "west",
     type: "stay",
     name: label(
@@ -342,6 +349,7 @@ const seeds: Seed[] = [
   },
   {
     id: "south-table",
+    amenities: { floorSeating: { value: "yes" }, nursingRoom: { value: "yes" }, ramp: { value: "yes" }, accessibleToilet: { value: "conditional" } },
     region: "south",
     type: "restaurant",
     name: label(
@@ -563,6 +571,7 @@ const seeds: Seed[] = [
   },
   {
     id: "north-exhibit",
+    amenities: { nursingRoom: { value: "yes" }, wheelchairRental: { value: "yes", quantity: 4 }, elevator: { value: "yes" }, accessibleToilet: { value: "yes" } },
     region: "north",
     type: "attraction",
     name: label(
@@ -643,6 +652,16 @@ export const demoPlaces: Place[] = seeds.map((seed) => ({
   },
   durationMinutes: seed.duration,
   facts: facts(seed.values),
+  ...(seed.amenities
+    ? {
+        amenities: Object.fromEntries(
+          Object.entries(seed.amenities).map(([key, entry]) => [
+            key,
+            { ...entry, source: "demo", verifiedAt: null },
+          ]),
+        ),
+      }
+    : {}),
   verifiedAt: null,
   dataMode: "demo",
 }));

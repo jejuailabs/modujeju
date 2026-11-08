@@ -1,10 +1,21 @@
 import type { CSSProperties, ReactNode, SVGProps } from "react";
 import Image from "next/image";
 import {
+  Accessibility,
   Armchair,
+  Baby,
+  BedSingle,
+  Bone,
   CircleParking,
+  Dog,
+  Fence,
   Footprints,
+  Milk,
+  PawPrint,
+  SquareParking,
   Toilet,
+  ToyBrick,
+  Utensils,
   type LucideIcon,
 } from "lucide-react";
 import type { FeatureKey } from "@/lib/place-features";
@@ -73,6 +84,46 @@ const icons: Record<FeatureKey, IconDefinition> = {
       <>
         <path d="M3 20h18V9L3 20Z" />
         <path d="m5 12 10-6m-4-1 4 1-1 4" />
+      </>
+    ),
+  },
+  kidsTableware: { kind: "lucide", component: Utensils },
+  nursingRoom: { kind: "lucide", component: Milk },
+  diaperTable: { kind: "lucide", component: Baby },
+  kidsPlay: { kind: "lucide", component: ToyBrick },
+  babyBed: { kind: "lucide", component: BedSingle },
+  petLargeDog: { kind: "lucide", component: Dog },
+  petAmenity: { kind: "lucide", component: Bone },
+  petPlayground: { kind: "lucide", component: Fence },
+  petRoom: { kind: "lucide", component: PawPrint },
+  ramp: {
+    kind: "custom",
+    paths: (
+      <>
+        <path d="M2 20h20M4 20 20 11v9" />
+        <circle cx="9" cy="6" r="1.5" />
+        <path d="M9 8v4h3l1.5 3" />
+      </>
+    ),
+  },
+  elevator: {
+    kind: "custom",
+    paths: (
+      <>
+        <rect x="4" y="3" width="16" height="18" rx="2" />
+        <path d="M12 3v18M7.5 10 9 8l1.5 2m3 4 1.5 2 1.5-2" />
+      </>
+    ),
+  },
+  accessibleToilet: { kind: "lucide", component: Accessibility },
+  accessibleParking: { kind: "lucide", component: SquareParking },
+  wheelchairRental: {
+    kind: "custom",
+    paths: (
+      <>
+        <circle cx="10" cy="4" r="1.5" />
+        <path d="M10 7v6h5l2 5h2" />
+        <path d="M7 10.5a5.5 5.5 0 1 0 8 6.2" />
       </>
     ),
   },

@@ -19,6 +19,15 @@ const messages = {
     empty: "선택한 시설 조건으로 확인된 장소가 없어요.",
     emptyNote:
       "시설 조건을 줄여보세요. 미확인 정보는 이용 가능으로 표시하지 않습니다.",
+    admission: { yes: "입장 확인", conditional: "조건부 입장", unknown: "입장 조건 미확인", no: "입장 불가" },
+    indoor: "실내 동반",
+    outdoor: "야외만 가능",
+    restricted: { kids: "어린이 출입 불가", pet: "반려견 동반 불가", senior: "무단차 출입 불가" },
+    commonFacilities: "공통 편의",
+    facilitiesChecked: "시설 확인",
+    sourceKind: { demo: "예시", official: "공식 표기", phone: "전화 확인", onsite: "현장 확인", search: "검색 근거·운영진 승인" },
+    published: "게시일",
+    groupFilter: { kids: "아이를 위한 시설", pet: "반려견을 위한 시설", senior: "어르신·휠체어를 위한 시설", common: "공통 편의" },
   },
   en: {
     title: "Know before you go, at a glance",
@@ -40,6 +49,15 @@ const messages = {
     empty: "No confirmed places match these facilities.",
     emptyNote:
       "Try fewer facility filters. Unconfirmed information is not treated as available.",
+    admission: { yes: "Admission confirmed", conditional: "Conditional admission", unknown: "Admission unconfirmed", no: "Not admitted" },
+    indoor: "Indoors allowed",
+    outdoor: "Outdoors only",
+    restricted: { kids: "No children", pet: "No dogs", senior: "Not step-free" },
+    commonFacilities: "General facilities",
+    facilitiesChecked: "Facilities checked",
+    sourceKind: { demo: "Example", official: "Official listing", phone: "Phone check", onsite: "On-site check", search: "Web source, staff-approved" },
+    published: "Published",
+    groupFilter: { kids: "For children", pet: "For dogs", senior: "For seniors & wheelchairs", common: "General facilities" },
   },
   zh: {
     title: "出发前，一眼看清",
@@ -59,6 +77,15 @@ const messages = {
     noConfirmed: "尚无已确认的同行者或设施信息。",
     empty: "没有已确认符合设施条件的场所。",
     emptyNote: "请减少设施条件，未确认信息不会被视为可用。",
+    admission: { yes: "已确认可入内", conditional: "有条件入内", unknown: "入内条件未确认", no: "不可入内" },
+    indoor: "可室内同行",
+    outdoor: "仅限户外",
+    restricted: { kids: "儿童不可入内", pet: "不可携犬", senior: "非无台阶入口" },
+    commonFacilities: "通用设施",
+    facilitiesChecked: "设施确认",
+    sourceKind: { demo: "示例", official: "官方标注", phone: "电话确认", onsite: "现场确认", search: "网络来源·运营方审核" },
+    published: "发布日期",
+    groupFilter: { kids: "儿童设施", pet: "宠物犬设施", senior: "长者·轮椅设施", common: "通用设施" },
   },
   ja: {
     title: "出かける前に、ひと目で確認",
@@ -79,6 +106,15 @@ const messages = {
     empty: "条件を満たす確認済みスポットがありません。",
     emptyNote:
       "設備条件を減らしてお試しください。未確認の情報を利用可能とは扱いません。",
+    admission: { yes: "入場確認済み", conditional: "条件付き入場", unknown: "入場条件は未確認", no: "入場不可" },
+    indoor: "屋内同伴可",
+    outdoor: "屋外のみ",
+    restricted: { kids: "子ども入場不可", pet: "犬の同伴不可", senior: "段差なし入場不可" },
+    commonFacilities: "共通設備",
+    facilitiesChecked: "設備確認",
+    sourceKind: { demo: "例", official: "公式表記", phone: "電話確認", onsite: "現地確認", search: "Web出典・運営確認済み" },
+    published: "掲載日",
+    groupFilter: { kids: "子ども向け設備", pet: "犬向け設備", senior: "シニア・車椅子向け設備", common: "共通設備" },
   },
 };
 export const featureUi = (locale: Locale) => messages[locale];

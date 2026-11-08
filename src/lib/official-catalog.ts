@@ -1,6 +1,7 @@
 import { z } from "zod";
 import { createUnknownFacts, type LocalizedText, type Place, type PlaceType } from "./types";
 import { plainText } from "./visitjeju/normalize";
+import { amenitiesSchema } from "./server/place-schema";
 
 const localizedInput = z.union([
   z.string(),
@@ -35,6 +36,8 @@ export const officialRecordSchema = z.object({
   durationMinutes: z.number().int().min(0).max(1440).nullable().optional(),
   // These remain research notes. A tag/quote does not prove current entry rules.
   observations: z.array(z.unknown()).optional(),
+  // Operator-reviewed facilities (official listing, phone, onsite or approved search evidence).
+  amenities: amenitiesSchema.optional(),
 });
 export type RawOfficialRecord = z.input<typeof officialRecordSchema>;
 
@@ -115,6 +118,7 @@ export function mapOfficialRecord(raw: unknown): Place {
     price: { amount: null, unit: record.type === "stay" ? "night" : record.type === "cafe" ? "drink" : "person", petExtra: null },
     durationMinutes: record.durationMinutes ?? null,
     facts: createUnknownFacts(),
+    ...(record.amenities && Object.keys(record.amenities).length ? { amenities: record.amenities } : {}),
     sourceUrl: record.sourceUrl,
     ...(observedId ? { sourceId: observedId } : {}),
     sourceName: record.sourceName ?? (isVisitJeju ? "VisitJeju" : url.hostname),

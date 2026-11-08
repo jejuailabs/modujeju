@@ -1,14 +1,39 @@
-import type { Fact, Locale, LocalizedText, Place, PlaceFacts } from "./types";
+import type { AmenityEvidence, AmenitySource, Companion, Fact, Locale, LocalizedText, Place, PlaceFacts } from "./types";
 import { locales } from "./types";
 import { getFactFreshness } from "./verdict/evaluate";
 import { ageLimitMessage, weightLimitMessage } from "@/messages/conditions";
-import { featureDetailMessages, featureMessages, featureSearchAliases } from "@/messages/features";
+import { featureDetailMessages, featureMessages, featureSearchAliases, quantityMessage } from "@/messages/features";
 
-export const featureKeys = ["kids", "pet", "senior", "highChair", "stroller", "stepFree", "floorSeating", "tableSeating", "groundFloor", "parking", "toilet", "shortWalk"] as const;
+export const featureKeys = [
+  "kids", "pet", "senior",
+  "highChair", "floorSeating", "stroller", "kidsTableware", "nursingRoom", "diaperTable", "kidsPlay", "babyBed",
+  "petLargeDog", "petAmenity", "petPlayground", "petRoom",
+  "stepFree", "ramp", "elevator", "accessibleToilet", "tableSeating", "accessibleParking", "wheelchairRental", "shortWalk",
+  "groundFloor", "parking", "toilet",
+] as const;
 export type FeatureKey = typeof featureKeys[number];
+export type FacilityKey = Exclude<FeatureKey, Companion>;
+export const companionKeys = ["kids", "pet", "senior"] as const satisfies readonly Companion[];
+
+/**
+ * Which companion each facility is special for. A row lists facilities; it
+ * never changes the companion's own admission verdict. Floor seating (shoes
+ * off) is listed for kids because parents of crawling babies ask for it; it is
+ * not treated as senior-friendly.
+ */
+export const featureGroups: Record<Companion | "common", readonly FacilityKey[]> = {
+  kids: ["highChair", "floorSeating", "stroller", "kidsTableware", "nursingRoom", "diaperTable", "kidsPlay", "babyBed"],
+  pet: ["petLargeDog", "petAmenity", "petPlayground", "petRoom"],
+  senior: ["stepFree", "ramp", "elevator", "accessibleToilet", "tableSeating", "accessibleParking", "wheelchairRental", "shortWalk"],
+  common: ["groundFloor", "parking", "toilet"],
+};
 export type FeatureStatus = "yes" | "no" | "conditional" | "unknown";
 export interface FeatureEvidence {
-  source: "fact" | "observation" | "address";
+  source: "fact" | "observation" | "address" | "amenity";
+  /** For amenity evidence: who established it (official, phone, onsite, search). */
+  kind?: AmenitySource;
+  quote?: string;
+  publishedAt?: string | null;
   factKey?: keyof PlaceFacts;
   field?: string;
   sourceUrl?: string;
@@ -20,6 +45,7 @@ export interface PlaceFeature {
   label: LocalizedText;
   description: LocalizedText;
   evidence: FeatureEvidence[];
+  quantity?: number;
 }
 export interface FeatureOptions { now?: Date; includeConditional?: boolean }
 
@@ -78,6 +104,40 @@ function token(value: string, candidates: readonly string[]): boolean {
   return value.split(/[,，]/u).some(value => candidates.includes(value.trim()));
 }
 
+const amenitySources: readonly AmenitySource[] = ["official", "phone", "onsite", "search"];
+const searchEvidenceFloor = "2025-01-01";
+type AmenityReading = { status: FeatureStatus; evidence: FeatureEvidence; quantity?: number; note?: LocalizedText };
+
+/** Reviewed facility entry; stale, undated or unapproved search evidence is ignored. */
+function readAmenity(place: Place, key: FacilityKey, now: Date): AmenityReading | undefined {
+  const entry: AmenityEvidence | undefined = place.amenities?.[key];
+  if (!entry || entry.value === "unknown") return undefined;
+  const demo = place.dataMode === "demo" && entry.source === "demo";
+  if (!demo) {
+    if (!amenitySources.includes(entry.source)) return undefined;
+    const freshness = getFactFreshness({ value: true, source: "official", verifiedAt: entry.verifiedAt }, now, physicalCycle);
+    if (freshness !== "fresh" && freshness !== "dueSoon") return undefined;
+    if (entry.source === "search") {
+      if (!entry.sourceUrl || !/^https:\/\//.test(entry.sourceUrl)) return undefined;
+      if (!entry.publishedAt || !/^\d{4}-\d{2}-\d{2}$/.test(entry.publishedAt) || entry.publishedAt < searchEvidenceFloor) return undefined;
+    }
+  }
+  const quantity = typeof entry.quantity === "number" && Number.isInteger(entry.quantity) && entry.quantity > 0 ? entry.quantity : undefined;
+  return {
+    status: entry.value,
+    quantity: entry.value === "no" ? undefined : quantity,
+    note: entry.note,
+    evidence: {
+      source: "amenity",
+      kind: entry.source,
+      checkedAt: demo ? null : entry.verifiedAt,
+      ...(entry.sourceUrl ? { sourceUrl: entry.sourceUrl } : {}),
+      ...(entry.quote ? { quote: entry.quote.slice(0, 160) } : {}),
+      ...(entry.publishedAt ? { publishedAt: entry.publishedAt } : {}),
+    },
+  };
+}
+
 function observedFeature(place: Place, key: FeatureKey, now: Date): ObservationResult | undefined {
   if (key === "highChair") return observations(place, amenityFields, value => {
     if (["유아의자 없음", "유아 의자 없음", "아기 의자 없음"].includes(value)) return "no";
@@ -120,6 +180,10 @@ function observedFeature(place: Place, key: FeatureKey, now: Date): ObservationR
     return token(value, ["화장실", "실내 화장실"]) ? "yes" : null;
   }, now);
   return undefined;
+}
+
+function isCompanion(key: FeatureKey): key is Companion {
+  return (companionKeys as readonly string[]).includes(key);
 }
 
 /** Evidence-derived facilities, not a replacement for the whole-party verdict. */
@@ -194,12 +258,21 @@ export function getPlaceFeatures(place: Place, options: FeatureOptions = {}): Pl
       if (typeof reading?.value === "number" && Number.isFinite(reading.value) && reading.value >= 0) status = reading.value <= 30 ? "yes" : "no";
     }
     let evidence = reading ? [reading.evidence, ...additionalEvidence] : additionalEvidence;
-    // Curated facts outrank raw source observations; absence in a list is not no.
-    if (status === "unknown" && !reading) {
-      const observed = observedFeature(place, key, now);
-      if (observed) { status = observed.status; evidence = observed.evidence; if (status === "unknown") details.push(featureDetailMessages.conflict); }
+    let quantity: number | undefined;
+    let note = reading?.note;
+    // Curated facts outrank reviewed amenities, which outrank raw source
+    // observations. Absence in a list is never treated as no.
+    if (status === "unknown" && !reading && !isCompanion(key)) {
+      const amenity = readAmenity(place, key, now);
+      if (amenity) {
+        status = amenity.status; evidence = [amenity.evidence]; quantity = amenity.quantity; note = amenity.note;
+        if (quantity) details.push(quantityMessage(quantity));
+      } else {
+        const observed = observedFeature(place, key, now);
+        if (observed) { status = observed.status; evidence = observed.evidence; if (status === "unknown") details.push(featureDetailMessages.conflict); }
+      }
     }
-    return { key, status, label: featureMessages[key].label, description: joinText(featureMessages[key][status], ...details, reading?.note), evidence };
+    return { key, status, label: featureMessages[key].label, description: joinText(featureMessages[key][status], ...details, note), evidence, ...(quantity ? { quantity } : {}) };
   });
 }
 
@@ -231,4 +304,57 @@ export function getFeatureSearchKeys(query: string, locale: Locale = "ko"): Feat
 export function matchesFeatureSearch(place: Place, query: string, locale: Locale = "ko", options: FeatureOptions = {}): boolean {
   const keys = getFeatureSearchKeys(query, locale);
   return keys.length > 0 && matchesPlaceFeatures(place, keys, options);
+}
+
+export interface CompanionFeatureRow {
+  companion: Companion;
+  /** The companion's own admission status (kidsEntry, petEntry, stepFree). */
+  status: FeatureStatus;
+  /** Short admission detail for the card, e.g. outdoor-only dogs. */
+  highlight?: "indoor" | "outdoor";
+  description: LocalizedText;
+  features: PlaceFeature[];
+}
+
+export interface CompanionFeatureSummary {
+  rows: CompanionFeatureRow[];
+  /** Companions confirmed as not admitted (no-kids zone, no dogs, stairs only). */
+  restricted: Companion[];
+  common: PlaceFeature[];
+}
+
+const usable = (feature: PlaceFeature, includeConditional: boolean) =>
+  feature.status === "yes" || (includeConditional && feature.status === "conditional");
+
+/**
+ * Groups confirmed facilities under the companion they are special for. A row
+ * appears when the companion is admitted (yes/conditional) or at least one of
+ * its facilities is established; unknown items never appear.
+ */
+export function getCompanionFeatureRows(place: Place, options: FeatureOptions = {}): CompanionFeatureSummary {
+  const now = options.now ?? new Date();
+  const includeConditional = options.includeConditional ?? true;
+  const features = getPlaceFeatures(place, { ...options, now });
+  const byKey = new Map(features.map(feature => [feature.key, feature]));
+  const pet = readFact(place, "petEntry", now, 90)?.value;
+  const rows: CompanionFeatureRow[] = [];
+  const restricted: Companion[] = [];
+  for (const companion of companionKeys) {
+    const own = byKey.get(companion)!;
+    if (own.status === "no") { restricted.push(companion); continue; }
+    const groupFeatures = featureGroups[companion]
+      .map(key => byKey.get(key)!)
+      .filter(feature => usable(feature, includeConditional))
+      .sort((a, b) => Number(a.status !== "yes") - Number(b.status !== "yes"));
+    if (!usable(own, includeConditional) && !groupFeatures.length) continue;
+    rows.push({
+      companion,
+      status: own.status,
+      ...(companion === "pet" && (pet === "indoor" || pet === "outdoor") ? { highlight: pet } : {}),
+      description: own.description,
+      features: groupFeatures,
+    });
+  }
+  const common = featureGroups.common.map(key => byKey.get(key)!).filter(feature => usable(feature, includeConditional));
+  return { rows, restricted, common };
 }

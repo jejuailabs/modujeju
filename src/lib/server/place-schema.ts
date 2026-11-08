@@ -2,6 +2,11 @@ import { z } from "zod";
 import type { Place } from "@/lib/types";
 import { catalogPhotoSchema, photoMatchesPlace } from "@/lib/catalog-photos";
 import { ServiceError } from "./errors";
+import { featureKeys, type FacilityKey } from "@/lib/place-features";
+
+const facilityKeys = featureKeys.filter(
+  (key): key is FacilityKey => !["kids", "pet", "senior"].includes(key),
+) as [FacilityKey, ...FacilityKey[]];
 
 const text = (max = 500) => z.string().trim().max(max);
 const localized = (max: number) =>
@@ -40,6 +45,25 @@ const fact = <T extends z.ZodType>(value: T) =>
     })
     .strict();
 const access = z.enum(["yes", "conditional", "no"]);
+/** Reviewed companion facility. Search evidence must carry a dated HTTPS source. */
+export const amenityEvidenceSchema = z
+  .object({
+    value: z.union([access, z.literal("unknown")]),
+    source: z.enum(["demo", "official", "phone", "onsite", "search"]),
+    verifiedAt: factDate.nullable(),
+    sourceUrl: httpsUrl.optional(),
+    publishedAt: factDate.nullable().optional(),
+    quote: text(160).optional(),
+    quantity: z.number().int().min(1).max(999).optional(),
+    note: localized(500).optional(),
+  })
+  .strict()
+  .refine(
+    (entry) => entry.source !== "search" || (!!entry.sourceUrl && !!entry.publishedAt),
+    "Search evidence needs a source URL and publication date",
+  );
+export const amenitiesSchema = z
+  .partialRecord(z.enum(facilityKeys), amenityEvidenceSchema);
 const safeId = z.string().regex(/^[a-zA-Z0-9_-]{1,100}$/);
 const imagePath = z
   .string()
@@ -115,6 +139,7 @@ export const placeSchema = z
         toilet: fact(z.enum(["inside", "outside", "none"])),
       })
       .strict(),
+    amenities: amenitiesSchema.optional(),
     sourceUrl: httpsUrl.optional(),
     sourceId: text(100).optional(),
     sourceName: text(120).optional(),

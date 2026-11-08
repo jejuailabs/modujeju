@@ -21,6 +21,8 @@ import { JejuMap } from "./jeju-map";
 import { CatalogNotice } from "./catalog-notice";
 import { catalogCopy } from "@/messages/catalog";
 import {
+  companionKeys,
+  featureGroups,
   featureKeys,
   getPlaceFeatures,
   type FeatureKey,
@@ -132,32 +134,46 @@ export function ResultsView({
           />
           {f.includeConditional}
         </label>
-        {[featureKeys.slice(0, 3), featureKeys.slice(3)].map(
-          (group, groupIndex) => (
-            <div
-              key={groupIndex}
-              className={
-                groupIndex === 0 ? "companion-filters" : "feature-filters"
-              }
+        <div className="companion-filters">
+          {companionKeys.map((key) => (
+            <button
+              key={key}
+              type="button"
+              className={`feature-filter companion-filter companion-${key}`}
+              aria-pressed={features.includes(key)}
+              onClick={() => setFeatures((current) => toggle(current, key))}
             >
-              {group.map((key) => (
-                <button
-                  key={key}
-                  type="button"
-                  className={`feature-filter ${groupIndex === 0 ? `companion-filter companion-${key}` : ""}`}
-                  aria-pressed={features.includes(key)}
-                  onClick={() => setFeatures((current) => toggle(current, key))}
-                >
-                  <FeatureIcon
-                    feature={key}
-                    size={groupIndex === 0 ? 80 : 32}
-                  />
-                  <span>{featureLabels[key][locale]}</span>
-                  <small>
-                    {featureCounts[key]} {c.countSuffix}
-                  </small>
-                </button>
-              ))}
+              <FeatureIcon feature={key} size={80} />
+              <span>{featureLabels[key][locale]}</span>
+              <small>
+                {featureCounts[key]} {c.countSuffix}
+              </small>
+            </button>
+          ))}
+        </div>
+        {(Object.keys(featureGroups) as (keyof typeof featureGroups)[]).map(
+          (group) => (
+            <div key={group} className="facility-filter-group">
+              <h3>{f.groupFilter[group]}</h3>
+              <div className="feature-filters">
+                {featureGroups[group].map((key) => (
+                  <button
+                    key={key}
+                    type="button"
+                    className="feature-filter"
+                    aria-pressed={features.includes(key)}
+                    onClick={() =>
+                      setFeatures((current) => toggle(current, key))
+                    }
+                  >
+                    <FeatureIcon feature={key} size={32} />
+                    <span>{featureLabels[key][locale]}</span>
+                    <small>
+                      {featureCounts[key]} {c.countSuffix}
+                    </small>
+                  </button>
+                ))}
+              </div>
             </div>
           ),
         )}
