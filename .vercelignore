@@ -1,4 +1,11 @@
-research_notes/
+research_notes/*
+!research_notes/catalog/
+research_notes/catalog/*
+!research_notes/catalog/restaurants.json
+!research_notes/catalog/cafes.json
+!research_notes/catalog/stays.json
+!research_notes/catalog/attractions.json
+!research_notes/catalog/coordinates.json
 reports/
 reg/
 design/
