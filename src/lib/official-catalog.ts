@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { createUnknownFacts, type LocalizedText, type Place, type PlaceType } from "./types";
+import { createUnknownFacts, type Fact, type LocalizedText, type Place, type PlaceFacts, type PlaceType } from "./types";
 import { plainText } from "./visitjeju/normalize";
 import { amenitiesSchema } from "./server/place-schema";
 
@@ -15,6 +15,27 @@ const sourceUrl = z.string().url().refine((value) => {
   const parsed = new URL(value);
   return parsed.protocol === "https:" && !parsed.username && !parsed.password;
 });
+
+// Admission evidence found by research. It becomes a companion fact only after
+// an operator stamps verifiedAt; until then it stays out of every verdict.
+const admissionEvidence = {
+  sourceUrl,
+  verifiedAt: day.nullable(),
+  quote: z.string().max(160).optional(),
+  publishedAt: day.nullable().optional(),
+};
+const accessValue = z.enum(["yes", "conditional", "no"]);
+export const admissionsSchema = z.object({
+  kids: z.object({ value: accessValue, ...admissionEvidence }).strict().optional(),
+  pet: z.object({
+    value: z.enum(["indoor", "outdoor", "no"]),
+    maxWeightKg: z.number().positive().max(200).nullable().optional(),
+    weightInclusive: z.boolean().nullable().optional(),
+    carrierRequired: z.boolean().nullable().optional(),
+    ...admissionEvidence,
+  }).strict().optional(),
+  senior: z.object({ value: accessValue, ...admissionEvidence }).strict().optional(),
+}).strict();
 
 /** Input from manually observed official listings, not an API response. */
 export const officialRecordSchema = z.object({
@@ -38,6 +59,7 @@ export const officialRecordSchema = z.object({
   observations: z.array(z.unknown()).optional(),
   // Operator-reviewed facilities (official listing, phone, onsite or approved search evidence).
   amenities: amenitiesSchema.optional(),
+  admissions: admissionsSchema.optional(),
 });
 export type RawOfficialRecord = z.input<typeof officialRecordSchema>;
 
@@ -86,6 +108,24 @@ function sourceObservations(values: unknown[], fallbackUrl: string): NonNullable
   }).slice(0, 60);
 }
 
+/** Approved admission evidence only; pending (undated) evidence leaves facts unknown. */
+function admissionFacts(admissions: z.infer<typeof admissionsSchema> | undefined): PlaceFacts {
+  const facts = createUnknownFacts();
+  if (!admissions) return facts;
+  const official = <T>(value: T, evidence: { sourceUrl: string; verifiedAt: string | null }): Fact<T> =>
+    ({ value, source: "official", verifiedAt: evidence.verifiedAt, sourceUrl: evidence.sourceUrl });
+  const { kids, pet, senior } = admissions;
+  if (kids?.verifiedAt) facts.kidsEntry = official(kids.value, kids);
+  if (senior?.verifiedAt) facts.stepFree = official(senior.value, senior);
+  if (pet?.verifiedAt) {
+    facts.petEntry = official(pet.value, pet);
+    if (typeof pet.maxWeightKg === "number") facts.dogMaxWeight = official<number | null>(pet.maxWeightKg, pet);
+    if (typeof pet.weightInclusive === "boolean") facts.dogWeightInclusive = official(pet.weightInclusive, pet);
+    if (typeof pet.carrierRequired === "boolean") facts.carrierRequired = official(pet.carrierRequired, pet);
+  }
+  return facts;
+}
+
 export function mapOfficialRecord(raw: unknown): Place {
   const record = officialRecordSchema.parse(raw);
   const url = new URL(record.sourceUrl);
@@ -117,7 +157,7 @@ export function mapOfficialRecord(raw: unknown): Place {
     sourceObservations: sourceObservations(record.observations ?? [], record.sourceUrl),
     price: { amount: null, unit: record.type === "stay" ? "night" : record.type === "cafe" ? "drink" : "person", petExtra: null },
     durationMinutes: record.durationMinutes ?? null,
-    facts: createUnknownFacts(),
+    facts: admissionFacts(record.admissions),
     ...(record.amenities && Object.keys(record.amenities).length ? { amenities: record.amenities } : {}),
     sourceUrl: record.sourceUrl,
     ...(observedId ? { sourceId: observedId } : {}),

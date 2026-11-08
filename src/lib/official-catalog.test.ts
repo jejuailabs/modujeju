@@ -68,4 +68,25 @@ describe("official observed catalog", () => {
     const exported = JSON.parse(itineraryJsonExport(trip, [place]));
     expect(exported.days[0].places[0]).toMatchObject({ latitude: null, longitude: null, dataMode: "live" });
   });
+
+  it("turns only approved admission evidence into companion facts", () => {
+    const src = "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_TEST";
+    const pending = mapOfficialRecord({ ...observed, admissions: { pet: { value: "indoor", maxWeightKg: 10, weightInclusive: true, sourceUrl: src, verifiedAt: null } } });
+    expect(pending.facts.petEntry.value).toBe("unknown");
+    expect(pending.facts.dogMaxWeight.value).toBe("unknown");
+    const approved = mapOfficialRecord({ ...observed, admissions: {
+      pet: { value: "indoor", maxWeightKg: 10, weightInclusive: true, sourceUrl: src, verifiedAt: "2026-11-08" },
+      kids: { value: "no", sourceUrl: src, verifiedAt: "2026-11-08" },
+    } });
+    expect(approved.facts.petEntry).toEqual({ value: "indoor", source: "official", verifiedAt: "2026-11-08", sourceUrl: src });
+    expect(approved.facts.dogMaxWeight.value).toBe(10);
+    expect(approved.facts.dogWeightInclusive.value).toBe(true);
+    expect(approved.facts.carrierRequired.value).toBe("unknown");
+    expect(approved.facts.kidsEntry.value).toBe("no");
+    expect(approved.facts.stepFree.value).toBe("unknown");
+  });
+  it("rejects malformed admission evidence", () => {
+    expect(() => mapOfficialRecord({ ...observed, admissions: { pet: { value: "inside", sourceUrl: "https://example.com", verifiedAt: null } } })).toThrow();
+    expect(() => mapOfficialRecord({ ...observed, admissions: { kids: { value: "yes", sourceUrl: "http://example.com", verifiedAt: null } } })).toThrow();
+  });
 });

@@ -12,7 +12,7 @@ import { applyCatalogCoordinates } from "@/lib/catalog-coordinates";
 import { toPublicPlace } from "@/lib/server/place-schema";
 import { categoryPlaceholder } from "@/lib/official-catalog";
 import { locales, regions } from "@/lib/types";
-import { realPlaces } from "./catalog";
+import { basePlaces as realPlaces } from "./catalog";
 
 const researched = [...restaurants, ...cafes, ...stays, ...attractions];
 

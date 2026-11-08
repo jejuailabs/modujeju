@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { realPlaces } from "@/data/catalog";
+import { basePlaces as realPlaces } from "@/data/catalog";
 import { demoPlaces } from "@/data/places";
 import { createUnknownFacts, type Fact, type Place } from "./types";
 import { featureKeys, getFeatureSearchKeys, getPlaceFeatures, matchesFeatureSearch, matchesPlaceFeatures, type FeatureKey } from "./place-features";

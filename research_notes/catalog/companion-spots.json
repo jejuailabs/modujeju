@@ -1,0 +1,3508 @@
+[
+  {
+    "name": "흑돈가 제주본점",
+    "address": "제주특별자치도 제주시 노형동 3811",
+    "district": "제주시내",
+    "region": "north",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000001043",
+    "sourceId": "CNTS_000000000001043",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "흑돈가 제주본점",
+      "향토음식",
+      "제주흑돼지",
+      "제주여행",
+      "제주공항근처식당",
+      "노형동식당",
+      "흑돼지근고기",
+      "멜젓",
+      "숯불구이",
+      "비빔냉면",
+      "김치찌개",
+      "visitjeju",
+      "비짓제주"
+    ],
+    "summary": "출입통로에 경사로가 있고 내부 턱이 없으며 의자식 테이블이 있는 흑돼지 전문점.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "ramp": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=e1dfc83f-5617-4db9-85b3-7f3f623185b0",
+        "publishedAt": "2025-08-18",
+        "quote": "출입통로가 넓음. 휠체어, 전동 스쿠터 이용자 진입 쉬움. 경사로 있음"
+      },
+      "tableSeating": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=e1dfc83f-5617-4db9-85b3-7f3f623185b0",
+        "publishedAt": "2025-08-18",
+        "quote": "의자식 테이블 있음"
+      }
+    }
+  },
+  {
+    "name": "서귀포흑돈",
+    "address": "제주특별자치도 서귀포시 칠십리로 278",
+    "district": "서귀포시내",
+    "region": "south",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000001054",
+    "sourceId": "CNTS_000000000001054",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "서귀포흑돈",
+      "제주흑돼지",
+      "흑돼지구이",
+      "토평동맛집",
+      "서귀포고깃집",
+      "visitjeju",
+      "비짓제주"
+    ],
+    "summary": "흑돼지 생고기집으로 좌식·입식 자리가 나뉘어 있고 아기 의자가 있다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "highChair": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000001054",
+        "quote": "아이와 함께 방문하는 경우 아기 의자가 준비되어 있다."
+      },
+      "floorSeating": {
+        "value": "conditional",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000001054",
+        "quote": "좌식과 입식으로 자리가 나누어져 있으며"
+      }
+    }
+  },
+  {
+    "name": "오조해녀의 집",
+    "address": "제주특별자치도 서귀포시 성산읍 한도로 141-13",
+    "district": "성산",
+    "region": "east",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000001155",
+    "sourceId": "CNTS_000000000001155",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "오조해녀의집",
+      "전복죽",
+      "전복회",
+      "제주해산물",
+      "해녀음식",
+      "visitjeju",
+      "비짓제주",
+      "무장애관광"
+    ],
+    "summary": "경사로로 휠체어 출입이 가능하고 입식 테이블이 있는 해녀 공동운영 식당.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "ramp": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=3fa43649-a111-4308-939f-7ace3c8d504c",
+        "publishedAt": "2026-09-28",
+        "quote": "경사로를 이용하여 휠체어로 출입가능"
+      },
+      "tableSeating": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=3fa43649-a111-4308-939f-7ace3c8d504c",
+        "publishedAt": "2026-09-28",
+        "quote": "경사로를 이용하여 휠체어로 출입가능 (입식테이블)"
+      }
+    },
+    "admissions": {
+      "senior": {
+        "value": "conditional",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=3fa43649-a111-4308-939f-7ace3c8d504c",
+        "verifiedAt": "2026-11-08",
+        "quote": "경사로를 이용하여 휠체어로 출입가능 (입식테이블)",
+        "publishedAt": "2026-09-28"
+      }
+    }
+  },
+  {
+    "name": "원조교래손칼국수",
+    "address": "제주특별자치도 제주시 조천읍 비자림로 645",
+    "district": "조천",
+    "region": "east",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000001422",
+    "sourceId": "CNTS_000000000001422",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "메밀야채전",
+      "칼국수",
+      "토종닭칼국수",
+      "바지락칼국수",
+      "음식",
+      "보말칼국수",
+      "닭칼국수",
+      "닭개장칼국수",
+      "무장애관광",
+      "메밀전",
+      "visitjeju",
+      "비짓제주"
+    ],
+    "summary": "출입구까지 턱이 없고 의자식 테이블이 있는 닭칼국수 식당.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "stepFree": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=a24173ed-5569-49c8-8116-5bf1f03f3ee4",
+        "publishedAt": "2025-08-20",
+        "quote": "출입구까지 턱이 없어 휠체어 접근 가능함"
+      },
+      "tableSeating": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=a24173ed-5569-49c8-8116-5bf1f03f3ee4",
+        "publishedAt": "2025-08-20",
+        "quote": "의자식 테이블 있음"
+      }
+    },
+    "admissions": {
+      "senior": {
+        "value": "yes",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=a24173ed-5569-49c8-8116-5bf1f03f3ee4",
+        "verifiedAt": "2026-11-08",
+        "quote": "출입구까지 턱이 없어 휠체어 접근 가능함",
+        "publishedAt": "2025-08-20"
+      }
+    }
+  },
+  {
+    "name": "유니호텔제주",
+    "address": "제주특별자치도 제주시 애월읍 애월해안로 656",
+    "district": "애월",
+    "region": "west",
+    "type": "stay",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018161",
+    "sourceId": "CNTS_000000000018161",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "호텔",
+      "숙소",
+      "4성급호텔",
+      "수영장",
+      "공공와이파이존",
+      "주차장",
+      "엘리베이터",
+      "환전",
+      "양식레스토랑",
+      "관광호텔",
+      "무장애관광"
+    ],
+    "summary": "애월 해안도로 호텔로 유아베드를 여유가 있을 때 무료로 대여한다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "babyBed": {
+        "value": "conditional",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018161",
+        "quote": "입실일 기준 유아베드 여유시 무료대여 (추가침구류제외)"
+      }
+    }
+  },
+  {
+    "name": "바닷가하우스펜션",
+    "address": "제주특별자치도 서귀포시 대정읍 형제해안로 254",
+    "district": "대정",
+    "region": "west",
+    "type": "stay",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018700",
+    "sourceId": "CNTS_000000000018700",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "민박",
+      "숙소",
+      "휴양펜션",
+      "펜션",
+      "자연경관",
+      "해변",
+      "어린이",
+      "해수욕장",
+      "어린이놀이방",
+      "공공와이파이존",
+      "온돌방",
+      "가족"
+    ],
+    "summary": "대정 해안 펜션으로 VisitJeju 태그에 어린이놀이방, 온돌방이 표시되어 있다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "kidsPlay": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018700",
+        "quote": "어린이놀이방"
+      }
+    }
+  },
+  {
+    "name": "아일랜드펜션",
+    "address": "제주특별자치도 서귀포시 성산읍 금백조로131번길 176",
+    "district": "성산",
+    "region": "east",
+    "type": "stay",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019099",
+    "sourceId": "CNTS_000000000019099",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "휴식",
+      "숙소",
+      "펜션",
+      "휴양펜션",
+      "바비큐",
+      "단체여행객",
+      "힐링쉼터"
+    ],
+    "summary": "성산일출봉 인근 펜션으로, 애견 동반 입실이 가능하다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "petRoom": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019099",
+        "quote": "애견 동반 입실이 가능하며, 커플은 물론 가족단위로 머물기에도 적당하다."
+      }
+    },
+    "admissions": {
+      "pet": {
+        "value": "indoor",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019099",
+        "verifiedAt": "2026-11-08",
+        "quote": "애견 동반 입실이 가능하며, 커플은 물론 가족단위로 머물기에도 적당하다."
+      }
+    }
+  },
+  {
+    "name": "제주펜션향림원",
+    "address": "제주특별자치도 서귀포시 칠십리로394번길 8-3",
+    "district": "서귀포시내",
+    "region": "south",
+    "type": "stay",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019240",
+    "sourceId": "CNTS_000000000019240",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "휴식",
+      "숙소",
+      "휴양펜션",
+      "펜션",
+      "바비큐",
+      "해수욕장",
+      "공공와이파이존"
+    ],
+    "summary": "서귀포 시내 인근 펜션으로, 애견동반이 가능하다고 소개되어 있다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "petRoom": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019240",
+        "quote": "애견동반이 가능한 펜션이다."
+      }
+    }
+  },
+  {
+    "name": "젠하이드어웨이 제주점",
+    "address": "제주특별자치도 서귀포시 안덕면 사계남로 186-8",
+    "district": "안덕",
+    "region": "south",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019324",
+    "sourceId": "CNTS_000000000019324",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "젠하이드어웨이",
+      "사계맛집",
+      "안덕맛집",
+      "제주오션뷰레스토랑",
+      "제주브런치",
+      "visitjeju",
+      "비짓제주"
+    ],
+    "summary": "건물 내 장애인 전용 주차구역 1대와 의자식 테이블이 있고 출입통로가 넓은 레스토랑.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "accessibleParking": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=dd641c01-bb85-4bd2-8bba-b2b6cc4c0385",
+        "publishedAt": "2026-10-07",
+        "quote": "장애인 전용 주차구역 주차 대수 : 1대"
+      },
+      "tableSeating": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=dd641c01-bb85-4bd2-8bba-b2b6cc4c0385",
+        "publishedAt": "2026-10-07",
+        "quote": "의자식 테이블 있음"
+      }
+    }
+  },
+  {
+    "name": "제주도아이랑 파미유리조트 키즈가족펜션",
+    "address": "제주특별자치도 서귀포시 이어도로 826-6",
+    "district": "서귀포시내",
+    "region": "south",
+    "type": "stay",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019334",
+    "sourceId": "CNTS_000000000019334",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "숙소",
+      "스파",
+      "리조트",
+      "휴양콘도",
+      "서귀포",
+      "수영장",
+      "공공와이파이존",
+      "가족",
+      "정원",
+      "어린이",
+      "어린이놀이방",
+      "가족호텔",
+      "무장애관광"
+    ],
+    "summary": "서귀포 가족형 리조트로 VisitJeju 태그에 어린이놀이방이 표시되어 있다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "kidsPlay": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019334",
+        "quote": "어린이놀이방"
+      }
+    }
+  },
+  {
+    "name": "제주 키즈앤돌핀 펜션",
+    "address": "제주도 서귀포시 대정읍 노을해안로 638",
+    "district": "대정",
+    "region": "west",
+    "type": "stay",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019368",
+    "sourceId": "CNTS_000000000019368",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "휴식",
+      "숙소",
+      "펜션",
+      "휴양펜션",
+      "어린이",
+      "어린이놀이방",
+      "가족",
+      "해변",
+      "온돌방",
+      "바비큐",
+      "해수욕장",
+      "공공와이파이존"
+    ],
+    "summary": "신도리 해안 펜션으로 VisitJeju 태그에 어린이놀이방, 온돌방이 표시되어 있다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "kidsPlay": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019368",
+        "quote": "어린이놀이방"
+      }
+    }
+  },
+  {
+    "name": "옛날옛적 성산본점",
+    "address": "제주특별자치도 서귀포시 성산읍 일주동로 4660",
+    "district": "성산",
+    "region": "east",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020324",
+    "sourceId": "CNTS_000000000020324",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "돔베고기",
+      "해물뚝배기",
+      "해산물",
+      "음식",
+      "회",
+      "고등어조림",
+      "간장게장",
+      "뚝배기",
+      "생선구이",
+      "고등어구이",
+      "갈치구이",
+      "옥돔구이",
+      "갈치조림",
+      "묵은지고등어조림",
+      "성게미역국",
+      "김치찌개",
+      "흑돼지김치찌개"
+    ],
+    "summary": "정면 진입로에 계단이 있어 건물 뒤쪽으로 진입해야 하며, 장애인 전용 주차구역 1대와 의자식 테이블이 있는 식당.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "stepFree": {
+        "value": "conditional",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=f4769db3-c71e-429b-bc16-ebf161bc3a5b",
+        "publishedAt": "2026-09-10",
+        "quote": "진입로에 계단이 있어, 휠체어 사용자 건물 뒷쪽으로 주차해야 진입 편리."
+      },
+      "accessibleParking": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=f4769db3-c71e-429b-bc16-ebf161bc3a5b",
+        "publishedAt": "2026-09-10",
+        "quote": "장애인 전용 주차구역 주차대수 : 1대"
+      },
+      "tableSeating": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=f4769db3-c71e-429b-bc16-ebf161bc3a5b",
+        "publishedAt": "2026-09-10",
+        "quote": "의자식 테이블 있음"
+      }
+    },
+    "admissions": {
+      "senior": {
+        "value": "conditional",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=f4769db3-c71e-429b-bc16-ebf161bc3a5b",
+        "verifiedAt": "2026-11-08",
+        "quote": "진입로에 계단이 있어, 휠체어 사용자 건물 뒷쪽으로 주차해야 진입 편리.",
+        "publishedAt": "2026-09-10"
+      }
+    }
+  },
+  {
+    "name": "해녀촌",
+    "address": "제주특별자치도 제주시 구좌읍 동복로 33",
+    "district": "구좌",
+    "region": "east",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020456",
+    "sourceId": "CNTS_000000000020456",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "동복리해녀촌",
+      "회국수",
+      "제주해산물",
+      "구좌맛집",
+      "동복리맛집",
+      "visitjeju",
+      "비짓제주"
+    ],
+    "summary": "장애인 전용 주차구역 1대와 의자식 테이블이 있고 내부 턱이 없는 회국수 식당.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "accessibleParking": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=b5510e52-f221-4b9f-b050-081ee9748f6b",
+        "publishedAt": "2026-10-07",
+        "quote": "장애인 전용 주차구역 주차대수 : 1대"
+      },
+      "tableSeating": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=b5510e52-f221-4b9f-b050-081ee9748f6b",
+        "publishedAt": "2026-10-07",
+        "quote": "의자식 테이블 있음"
+      }
+    }
+  },
+  {
+    "name": "펜션머물다",
+    "address": "제주특별자치도 서귀포시 논짓물로48번길 16-6",
+    "district": "서귀포시내",
+    "region": "south",
+    "type": "stay",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020583",
+    "sourceId": "CNTS_000000000020583",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "휴식",
+      "숙소",
+      "휴양펜션",
+      "펜션",
+      "수영장",
+      "바비큐",
+      "조식 포함",
+      "교통",
+      "공공와이파이존",
+      "해수욕장",
+      "산책로",
+      "체험",
+      "농어촌민박"
+    ],
+    "summary": "펜션으로 유아용 침대, 식탁의자, 식기를 대여해 주며 트램펄린과 놀이터가 있다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "babyBed": {
+        "value": "conditional",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020583",
+        "quote": "가족 투숙객들을 위해 유아용 침대와 식탁의자, 식기도구 등 아이 용품을 대여해준다."
+      },
+      "highChair": {
+        "value": "conditional",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020583",
+        "quote": "가족 투숙객들을 위해 유아용 침대와 식탁의자, 식기도구 등 아이 용품을 대여해준다."
+      },
+      "kidsTableware": {
+        "value": "conditional",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020583",
+        "quote": "가족 투숙객들을 위해 유아용 침대와 식탁의자, 식기도구 등 아이 용품을 대여해준다."
+      }
+    }
+  },
+  {
+    "name": "돈이랑 제주흑돼지 본점",
+    "address": "제주특별자치도 서귀포시 일주서로 953",
+    "district": "중문",
+    "region": "south",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020670",
+    "sourceId": "CNTS_000000000020670",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "돈이랑",
+      "제주흑돼지",
+      "숙성흑돼지",
+      "흑돼지구이",
+      "중문맛집",
+      "visitjeju",
+      "비짓제주"
+    ],
+    "summary": "흑돼지 구이집으로 아기 의자가 있고 좌식 테이블과 깡통 테이블이 섞여 있다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "highChair": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020670",
+        "quote": "또한 등받이 의자와 어린 아기들을 위한 아기 의자도 구비되어 있다."
+      },
+      "floorSeating": {
+        "value": "conditional",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020670",
+        "quote": "실내에는 깡통 테이블 그리고 좌식 테이블이 있다."
+      }
+    }
+  },
+  {
+    "name": "아올키즈펜션",
+    "address": "제주특별자치도 서귀포시 안덕면 사계중앙로 13-15",
+    "district": "안덕",
+    "region": "south",
+    "type": "stay",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020797",
+    "sourceId": "CNTS_000000000020797",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "휴식",
+      "숙소",
+      "휴양펜션",
+      "펜션",
+      "독채",
+      "풀빌라",
+      "어린이놀이방",
+      "수영장",
+      "온돌방",
+      "바비큐",
+      "공공와이파이존",
+      "해수욕장"
+    ],
+    "summary": "사계리 키즈 독채 풀빌라 펜션으로 VisitJeju 태그에 어린이놀이방이 표시되어 있다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "kidsPlay": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020797",
+        "quote": "어린이놀이방"
+      }
+    }
+  },
+  {
+    "name": "은희네해장국",
+    "address": "제주특별자치도 제주시 고마로13길 8",
+    "district": "제주시내",
+    "region": "north",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020974",
+    "sourceId": "CNTS_000000000020974",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "은희네해장국",
+      "소고기해장국",
+      "제주해장국",
+      "제주아침식사",
+      "일도동맛집",
+      "visitjeju",
+      "비짓제주"
+    ],
+    "summary": "내부 턱이 없고 출입통로가 넓으며 의자식 좌석으로 된 해장국집.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "stepFree": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=aca6dfe3-33a0-4c33-b948-458516b504ec",
+        "publishedAt": "2026-10-07",
+        "quote": "내부 턱 없음. 출입통로 문의 형태 : 여닫이문 출입통로가 넓어 휠체어, 전동 스쿠터 이용자 진입 쉬움"
+      },
+      "tableSeating": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=aca6dfe3-33a0-4c33-b948-458516b504ec",
+        "publishedAt": "2026-10-07",
+        "quote": "입식(의자식)으로 되어 있음"
+      }
+    },
+    "admissions": {
+      "senior": {
+        "value": "yes",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=aca6dfe3-33a0-4c33-b948-458516b504ec",
+        "verifiedAt": "2026-11-08",
+        "quote": "출입통로가 넓어 휠체어, 전동 스쿠터 이용자 진입 쉬움",
+        "publishedAt": "2026-10-07"
+      }
+    }
+  },
+  {
+    "name": "흰수염고래리조트",
+    "address": "제주특별자치도 제주시 애월읍 일주서로 6818",
+    "district": "애월",
+    "region": "west",
+    "type": "stay",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000021170",
+    "sourceId": "CNTS_000000000021170",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "휴식",
+      "숙소",
+      "리조트",
+      "주차장",
+      "공공와이파이존",
+      "편의시설",
+      "휴양콘도",
+      "아동놀이방",
+      "무장애관광"
+    ],
+    "summary": "동물 테마 객실 리조트로 놀이방, 놀이터, 아이 전용 풀장이 있다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "kidsPlay": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000021170",
+        "quote": "미끄럼틀, 지네통, 놀이방, 아이 전용 풀장 등"
+      }
+    }
+  },
+  {
+    "name": "협재해녀의집",
+    "address": "제주특별자치도 제주시 한림읍 협재3길 19",
+    "district": "한림",
+    "region": "west",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000021190",
+    "sourceId": "CNTS_000000000021190",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "협재해녀의집",
+      "해물라면",
+      "해물뚝배기",
+      "음식",
+      "라면",
+      "전복죽",
+      "해산물",
+      "모둠해산물",
+      "멍게",
+      "문어숙회",
+      "돌문어숙회",
+      "전복해물뚝배기",
+      "뿔소라회",
+      "협재해산물",
+      "해녀음식",
+      "제주해산물",
+      "협재포구",
+      "해녀식당",
+      "visitjeju",
+      "비짓제주"
+    ],
+    "summary": "협재포구 해산물 식당으로 아기 의자를 갖추고 있다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "highChair": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000021190",
+        "quote": "가족 단위 방문객들을 위해 아기 의자도 준비되어 있다."
+      }
+    }
+  },
+  {
+    "name": "제주오성 순살갈치조림 제주도 중문 본점",
+    "address": "제주특별자치도 서귀포시 중문관광로 27 (색달동) 2층 제주오성",
+    "district": "중문",
+    "region": "south",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000021271",
+    "sourceId": "CNTS_000000000021271",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "통갈치정식",
+      "오분자기돌솥밥",
+      "통갈치",
+      "뚝배기",
+      "음식",
+      "회",
+      "물회",
+      "생선구이정식",
+      "매운탕",
+      "갈치",
+      "갈치구이",
+      "갈치조림",
+      "제주갈치조림",
+      "제주갈치구이",
+      "고등어구이",
+      "고등어조림",
+      "2022고메페스타",
+      "정식",
+      "묵은지고등어조림",
+      "성게미역국",
+      "옥돔구이",
+      "전복구이",
+      "감자튀김"
+    ],
+    "summary": "주출입구에 턱이 없는 자동문이고 엘리베이터와 장애인 주차장이 있는 갈치조림 식당.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "stepFree": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=6cd13e25-2019-4476-a137-5423a5406a94",
+        "publishedAt": "2026-10-02",
+        "quote": "주출입구는 턱이 없어 휠체어 접근 가능함(자동문)"
+      },
+      "elevator": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=6cd13e25-2019-4476-a137-5423a5406a94",
+        "publishedAt": "2026-10-02",
+        "quote": "엘리베이터 엘리베이터 있음"
+      },
+      "accessibleParking": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=6cd13e25-2019-4476-a137-5423a5406a94",
+        "publishedAt": "2026-10-02",
+        "quote": "장애인 주차장 있음"
+      }
+    },
+    "admissions": {
+      "senior": {
+        "value": "yes",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=6cd13e25-2019-4476-a137-5423a5406a94",
+        "verifiedAt": "2026-11-08",
+        "quote": "주출입구는 턱이 없어 휠체어 접근 가능함(자동문)",
+        "publishedAt": "2026-10-02"
+      }
+    }
+  },
+  {
+    "name": "배롱개",
+    "address": "제주특별자치도 제주시 구좌읍 해맞이해안로 434",
+    "district": "구좌",
+    "region": "east",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000021325",
+    "sourceId": "CNTS_000000000021325",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "국수",
+      "비빔국수",
+      "고기국수",
+      "성게국수",
+      "냉국수",
+      "음식",
+      "돔베고기",
+      "순대",
+      "국밥",
+      "회국수",
+      "검은콩국수",
+      "콩국수",
+      "돼지국밥",
+      "김치찌개",
+      "비빔밥",
+      "성게비빔밥",
+      "물만두"
+    ],
+    "summary": "월정리 국수전문점으로 좌식 테이블 룸과 아기 의자가 있다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "highChair": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000021325",
+        "quote": "좌식 테이블이 마련된 룸, 그리고 아기 의자가 마련되어 있다."
+      },
+      "floorSeating": {
+        "value": "conditional",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000021325",
+        "quote": "좌식 테이블이 마련된 룸, 그리고 아기 의자가 마련되어 있다."
+      }
+    }
+  },
+  {
+    "name": "킴스커틀렛",
+    "address": "제주특별자치도 제주시 구남로4길 11",
+    "district": "제주시내",
+    "region": "north",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000021422",
+    "sourceId": "CNTS_000000000021422",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "왕돈가스",
+      "양식",
+      "파스타",
+      "피자",
+      "음식",
+      "경양식돈가스",
+      "해물볶음우동",
+      "돈까스",
+      "돈가스",
+      "수제돈까스",
+      "왕돈까스",
+      "수제왕돈까스",
+      "어린이돈까스",
+      "치킨까스",
+      "리조또"
+    ],
+    "summary": "이도동 경양식집으로 어린이돈까스 키즈메뉴가 있다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "kidsTableware": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000021422",
+        "quote": "돈까스와 감자튀김이 나오는 키즈메뉴인 어린이돈까스도 있어"
+      }
+    }
+  },
+  {
+    "name": "아이랑 키즈풀빌라",
+    "address": "제주특별자치도 제주시 애월읍 고내로7길 34",
+    "district": "애월",
+    "region": "west",
+    "type": "stay",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000021508",
+    "sourceId": "CNTS_000000000021508",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "휴식",
+      "숙소",
+      "휴양펜션",
+      "펜션",
+      "가족",
+      "수영장",
+      "풀빌라",
+      "어린이"
+    ],
+    "summary": "독채 펜션으로, 작은 아이용 식기와 의자, 아이 전용 욕실 제품을 갖추고 있다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "kidsTableware": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000021508",
+        "quote": "작은 아이들을 위한 식기와 의자들도 구비되어 있다"
+      },
+      "highChair": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000021508",
+        "quote": "작은 아이들을 위한 식기와 의자들도 구비되어 있다"
+      }
+    }
+  },
+  {
+    "name": "오드랑베이커리 함덕점",
+    "address": "제주특별자치도 제주시 조천읍 조함해안로 552-3",
+    "district": "조천",
+    "region": "east",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000022180",
+    "sourceId": "CNTS_000000000022180",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "오드랑베이커리",
+      "천연효모빵",
+      "저온숙성빵",
+      "함덕베이커리",
+      "제주베이커리",
+      "visitjeju",
+      "비짓제주"
+    ],
+    "summary": "버튼식 자동문과 경사로, 의자식 테이블이 있는 천연효모 베이커리.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "ramp": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=f3f7b3e5-4f6c-4b17-be02-c4d301527313",
+        "publishedAt": "2025-12-03",
+        "quote": "출입통로가 넓어 휠체어, 전동 스쿠터 사용자 진입 쉬움. 경사로 있음"
+      },
+      "tableSeating": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=f3f7b3e5-4f6c-4b17-be02-c4d301527313",
+        "publishedAt": "2025-12-03",
+        "quote": "의자식 테이블 있음"
+      }
+    }
+  },
+  {
+    "name": "봉주르마담",
+    "address": "제주특별자치도 서귀포시 대청로 33",
+    "district": "서귀포시내",
+    "region": "south",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000022190",
+    "sourceId": "CNTS_000000000022190",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "봉주르마담",
+      "페이스트리",
+      "밀푀유앙버터",
+      "뺑스위스",
+      "베이커리",
+      "visitjeju",
+      "비짓제주"
+    ],
+    "summary": "아파트 상가 제과점으로 유아시설(놀이방)이 있다고 소개되어 있다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "kidsPlay": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000022190",
+        "quote": "포장판매, 무선 인터넷, 유아시설(놀이방), 남/녀 화장실 구분되어있으며"
+      },
+      "stepFree": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=1be9b9ea-7539-49d5-b7cd-da0289be41ba",
+        "publishedAt": "2025-08-20",
+        "quote": "출입구까지 턱이 없어 휠체어 접근 가능함"
+      },
+      "tableSeating": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=1be9b9ea-7539-49d5-b7cd-da0289be41ba",
+        "publishedAt": "2025-08-20",
+        "quote": "의자식 테이블 있음"
+      }
+    },
+    "admissions": {
+      "senior": {
+        "value": "yes",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=1be9b9ea-7539-49d5-b7cd-da0289be41ba",
+        "verifiedAt": "2026-11-08",
+        "quote": "출입구까지 턱이 없어 휠체어 접근 가능함",
+        "publishedAt": "2025-08-20"
+      }
+    }
+  },
+  {
+    "name": "자넷앤캐시",
+    "address": "제주시 구좌읍 평대9길 20-1",
+    "district": "구좌",
+    "region": "east",
+    "type": "stay",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000022605",
+    "sourceId": "CNTS_000000000022605",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "펜션",
+      "숙소",
+      "독채",
+      "단체여행객",
+      "바비큐",
+      "공공와이파이존",
+      "해수욕장"
+    ],
+    "summary": "한 팀 전용 독채로 1층에 안전매트를 깐 어린이 놀이 공간이 있고 하이체어를 갖추고 있다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "kidsPlay": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000022605",
+        "quote": "1층의 어린이 놀이 공간과, 2층의 휴식공간이 분리되어 있어"
+      },
+      "highChair": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000022605",
+        "quote": "전기포트,하이체어, 소독기, 냉장고등 편의 시설 완비"
+      }
+    }
+  },
+  {
+    "name": "제주 밀라네사 뷔페",
+    "address": "제주특별자치도 제주시 매촌2길 78 (도련1동) 어베인건물 1층",
+    "district": "제주시내",
+    "region": "north",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000007063",
+    "sourceId": "CNTS_200000000007063",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "밀라네사 돈까스 뷔페 삼화지구점",
+      "흑돼지돈까스",
+      "치즈돈까스",
+      "쫄면",
+      "뷔페",
+      "visitjeju",
+      "비짓제주",
+      "무장애관광"
+    ],
+    "summary": "돈까스 뷔페로 개인 수유실과 놀이방을 갖추고 있다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "nursingRoom": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000007063",
+        "quote": "깔끔한 개인 수유실과 안전하고 실속 있는 고급 놀이방 시설 (Imagination Playground 설치)을 갖춘"
+      },
+      "kidsPlay": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000007063",
+        "quote": "깔끔한 개인 수유실과 안전하고 실속 있는 고급 놀이방 시설 (Imagination Playground 설치)을 갖춘"
+      }
+    }
+  },
+  {
+    "name": "토토하우스",
+    "address": "제주특별자치도 제주시 애월읍 고성북길 112-1 토토하우스",
+    "district": "애월",
+    "region": "west",
+    "type": "stay",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000008006",
+    "sourceId": "CNTS_200000000008006",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "제주공항",
+      "독채",
+      "엠티",
+      "숙소",
+      "수영장",
+      "바비큐",
+      "체험",
+      "레저/체험",
+      "공공와이파이존"
+    ],
+    "summary": "애월 2층 독채 펜션으로 키즈룸이 있다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "kidsPlay": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000008006",
+        "quote": "키즈카페 같은 키즈룸"
+      }
+    }
+  },
+  {
+    "name": "사해방흑돼지",
+    "address": "제주특별자치도 서귀포시 천제연로 263",
+    "district": "중문",
+    "region": "south",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000008451",
+    "sourceId": "CNTS_200000000008451",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "사해방흑돼지",
+      "제주흑돼지",
+      "흑돼지근고기",
+      "참숯구이",
+      "가족식사",
+      "visitjeju",
+      "비짓제주"
+    ],
+    "summary": "1·2층 흑돼지 전문점으로 테이블석·좌식석과 아이 놀이방이 있다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "kidsPlay": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000008451",
+        "quote": "아이들의 놀이방, 넓은 주차장까지 보유하고 있어"
+      },
+      "floorSeating": {
+        "value": "conditional",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000008451",
+        "quote": "테이블석과 좌식석으로 나누어져 있으며"
+      },
+      "stepFree": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=f7287aff-9f5f-4b63-b2a1-ac91ad0049b1",
+        "publishedAt": "2026-10-07",
+        "quote": "출입통로가 넓음. 휠체어, 전동 스쿠터 진입 쉬움. 턱 없음."
+      },
+      "accessibleToilet": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=f7287aff-9f5f-4b63-b2a1-ac91ad0049b1",
+        "publishedAt": "2026-10-07",
+        "quote": "장애인 화장실(1층)"
+      },
+      "accessibleParking": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=f7287aff-9f5f-4b63-b2a1-ac91ad0049b1",
+        "publishedAt": "2026-10-07",
+        "quote": "장애인 전용 주차구역 주차대수 : 1대"
+      },
+      "tableSeating": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=f7287aff-9f5f-4b63-b2a1-ac91ad0049b1",
+        "publishedAt": "2026-10-07",
+        "quote": "의자식 테이블 있음"
+      }
+    },
+    "admissions": {
+      "senior": {
+        "value": "yes",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=f7287aff-9f5f-4b63-b2a1-ac91ad0049b1",
+        "verifiedAt": "2026-11-08",
+        "quote": "출입통로가 넓음. 휠체어, 전동 스쿠터 진입 쉬움. 턱 없음.",
+        "publishedAt": "2026-10-07"
+      }
+    }
+  },
+  {
+    "name": "우무",
+    "address": "제주특별자치도 제주시 한림읍 한림로 542-1",
+    "district": "한림",
+    "region": "west",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000008492",
+    "sourceId": "CNTS_200000000008492",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "제주맛집",
+      "제주도기념품",
+      "한림맛집",
+      "제주도선물",
+      "우무",
+      "푸딩",
+      "제주특산품",
+      "수제디저트"
+    ],
+    "summary": "출입구까지 턱이 없고 의자식 테이블이 있는 수제푸딩 전문점.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "stepFree": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=fd5349a5-9d86-4503-8709-ca136ff46006",
+        "publishedAt": "2025-10-29",
+        "quote": "출입구까지 턱이 없어 휠체어 접근 가능함"
+      },
+      "tableSeating": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=fd5349a5-9d86-4503-8709-ca136ff46006",
+        "publishedAt": "2025-10-29",
+        "quote": "의자식 테이블 있음"
+      }
+    },
+    "admissions": {
+      "senior": {
+        "value": "yes",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=fd5349a5-9d86-4503-8709-ca136ff46006",
+        "verifiedAt": "2026-11-08",
+        "quote": "출입구까지 턱이 없어 휠체어 접근 가능함",
+        "publishedAt": "2025-10-29"
+      }
+    }
+  },
+  {
+    "name": "원앤온리",
+    "address": "제주특별자치도 서귀포시 안덕면 산방로 141",
+    "district": "안덕",
+    "region": "south",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000008869",
+    "sourceId": "CNTS_200000000008869",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "서귀포카페",
+      "제주서쪽가볼만한곳",
+      "오션뷰카페",
+      "브런치맛집",
+      "산방산",
+      "제주핫플",
+      "제주도맛집",
+      "애견동반",
+      "visitjeju",
+      "비짓제주"
+    ],
+    "summary": "출입구까지 턱이 없고 의자식 테이블이 있는 바닷가 카페.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "stepFree": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=bf712de5-13a6-4e71-8425-7c31f0561d25",
+        "publishedAt": "2026-09-17",
+        "quote": "출입구까지 턱이 없어 휠체어 접근 가능함"
+      },
+      "tableSeating": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=bf712de5-13a6-4e71-8425-7c31f0561d25",
+        "publishedAt": "2026-09-17",
+        "quote": "의자식 테이블 있음"
+      }
+    },
+    "admissions": {
+      "senior": {
+        "value": "yes",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=bf712de5-13a6-4e71-8425-7c31f0561d25",
+        "verifiedAt": "2026-11-08",
+        "quote": "출입구까지 턱이 없어 휠체어 접근 가능함",
+        "publishedAt": "2026-09-17"
+      }
+    }
+  },
+  {
+    "name": "신화관 제주신화월드 호텔 앤 리조트",
+    "address": "제주특별자치도 서귀포시 안덕면 신화역사로304번길 38 신화관",
+    "district": "안덕",
+    "region": "south",
+    "type": "stay",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000008956",
+    "sourceId": "CNTS_200000000008956",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "5성급호텔",
+      "숙소",
+      "호텔",
+      "리조트",
+      "공공와이파이존",
+      "수영장",
+      "주차장",
+      "관광호텔",
+      "안전여행스탬프",
+      "제주신화월드",
+      "럭셔리트래블인제주",
+      "무장애관광",
+      "그린키",
+      "신화관 제주신화월드 호텔 앤 리조트",
+      "가족여행숙소",
+      "프리미엄리조트",
+      "스카이풀",
+      "리조트여행",
+      "visitjeju",
+      "비짓제주"
+    ],
+    "summary": "제주신화월드 내 리조트로 가족용 실내 놀이 공간과 야외 놀이터가 있다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "kidsPlay": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000008956",
+        "quote": "숙소 안에는 가족 여행객을 위한 놀이 공간과 야외 놀이터 등 다양한 편의시설을 갖추고 있다."
+      }
+    }
+  },
+  {
+    "name": "켄싱턴리조트 서귀포",
+    "address": "제주특별자치도 서귀포시 이어도로 684 (켄싱턴리조트)",
+    "district": "서귀포시내",
+    "region": "south",
+    "type": "stay",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000008958",
+    "sourceId": "CNTS_200000000008958",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "부모",
+      "친구",
+      "커플",
+      "아이",
+      "휴식",
+      "리조트",
+      "숙소",
+      "공공와이파이존",
+      "수영장",
+      "주차장",
+      "무장애관광"
+    ],
+    "summary": "223객실 리조트로 키즈룸과 키즈프로그램을 운영한다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "kidsPlay": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000008958",
+        "quote": "총 223객실을 운영 중에 있으며, 서귀포 지역에서는 유일하게 키즈룸을 운영하고 있다."
+      }
+    }
+  },
+  {
+    "name": "씨사이드아덴",
+    "address": "제주특별자치도 서귀포시 중문관광로 124",
+    "district": "중문",
+    "region": "south",
+    "type": "stay",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000009691",
+    "sourceId": "CNTS_200000000009691",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "호텔",
+      "중문",
+      "중문관광단지",
+      "숙소",
+      "힐링쉼터",
+      "어린이놀이방",
+      "공공와이파이존",
+      "무장애관광"
+    ],
+    "summary": "중문관광단지 리조트로 VisitJeju 태그에 어린이놀이방이 표시되어 있다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "kidsPlay": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000009691",
+        "quote": "어린이놀이방"
+      }
+    }
+  },
+  {
+    "name": "제주애견전문 엔젤하우스",
+    "address": "제주특별자치도 제주시 애월읍 신엄안3길 95",
+    "district": "애월",
+    "region": "west",
+    "type": "stay",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000010075",
+    "sourceId": "CNTS_200000000010075",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "휴식/치유",
+      "숙소",
+      "공항",
+      "조식",
+      "정원",
+      "반려동물보호소",
+      "해안도로",
+      "단체여행객",
+      "숙박",
+      "펜션",
+      "반려동물",
+      "반려동물동반입장",
+      "혼저옵서개",
+      "반려동물동반_숙소",
+      "2026혼저옵서개"
+    ],
+    "summary": "애월 신엄리 펜션으로, 8kg 미만 소형견 동반이 무료이며 반려견 물품을 갖추고 있다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "petAmenity": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000010075",
+        "quote": "애견동반가능한 펜션으로, 반려견을 위한 물품구비를 완벽하게 준비되어있다."
+      },
+      "petRoom": {
+        "value": "conditional",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000010075",
+        "quote": "소형견 입장가능 / 반려견 동반 무료(8kg미만 가능)"
+      }
+    },
+    "admissions": {
+      "pet": {
+        "value": "indoor",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000010075",
+        "verifiedAt": "2026-11-08",
+        "quote": "소형견 입장가능 / 반려견 동반 무료(8kg미만 가능)",
+        "maxWeightKg": 8,
+        "weightInclusive": false
+      }
+    }
+  },
+  {
+    "name": "베메로 bake make roast",
+    "address": "제주특별자치도 서귀포시 중문관광로72번길 29-9 신우성타운 내 라동",
+    "district": "중문",
+    "region": "south",
+    "type": "cafe",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000010959",
+    "sourceId": "CNTS_200000000010959",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "부모",
+      "커플",
+      "혼자",
+      "아이",
+      "친구",
+      "휴식/치유",
+      "카페",
+      "음식",
+      "베이글",
+      "아메리카노",
+      "아보카도샐러드",
+      "차",
+      "에이드",
+      "식당"
+    ],
+    "summary": "주 출입구에 완만한 경사로와 자동문이 있는 베이커리 카페.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "ramp": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=e4363166-0cfb-4777-98c8-ec6b9e071f9c",
+        "publishedAt": "2025-10-20",
+        "quote": "주 출입구 경사로 완만함"
+      }
+    }
+  },
+  {
+    "name": "외도339",
+    "address": "제주특별자치도 제주시 일주서로 7345",
+    "district": "제주시내",
+    "region": "north",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000012543",
+    "sourceId": "CNTS_200000000012543",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "외도339",
+      "브런치",
+      "카프레제",
+      "플래터",
+      "샌드위치",
+      "visitjeju",
+      "비짓제주"
+    ],
+    "summary": "베이커리 카페로 1층에 모래놀이 공간이 있고 2층은 노키즈존이다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "kidsPlay": {
+        "value": "conditional",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000012543",
+        "quote": "1층의 한켠에는 모래놀이 공간을 조성해 놓아 이용가능하다."
+      }
+    },
+    "admissions": {
+      "kids": {
+        "value": "conditional",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000012543",
+        "verifiedAt": "2026-11-08",
+        "quote": "2층은 노키즈존으로 운영하고 1층은 아이를 위한 모래놀이 공간과 넓은 정원이 마련되어 있다."
+      }
+    }
+  },
+  {
+    "name": "에오마르",
+    "address": "제주특별자치도 제주시 선사로8길 13-6",
+    "district": "제주시내",
+    "region": "north",
+    "type": "cafe",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000012674",
+    "sourceId": "CNTS_200000000012674",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "커피",
+      "음료",
+      "티",
+      "베이커리",
+      "카페",
+      "삼양해수욕장",
+      "오션뷰",
+      "음식",
+      "에스프레소",
+      "아메리카노",
+      "카페라떼",
+      "카푸치노",
+      "바닐라라떼",
+      "자스민티",
+      "카모마일",
+      "페퍼민트",
+      "차",
+      "라떼",
+      "패션후르츠에이드",
+      "그린티",
+      "에이드",
+      "레몬에이드",
+      "청포도에이드",
+      "청귤차",
+      "아이스크림"
+    ],
+    "summary": "삼양해수욕장 앞 카페로 전층 엘리베이터가 있어 유모차 출입이 가능하다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "stroller": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000012674",
+        "quote": "건물 전층은 엘리베이터가 운행 중이며 유모차, 휠체어, 여행 캐리어 등 출입이 자유롭도록 편의를 제공하고 있다."
+      }
+    }
+  },
+  {
+    "name": "더클리프",
+    "address": "제주특별자치도 서귀포시 중문관광로 154-17 더 클리프",
+    "district": "중문",
+    "region": "south",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000012710",
+    "sourceId": "CNTS_200000000012710",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "제주",
+      "제주도",
+      "중문",
+      "중문펍",
+      "제주펍",
+      "서귀포펍",
+      "중문술집",
+      "중문카페",
+      "서귀포카페",
+      "오션뷰",
+      "비짓제주",
+      "visitjeju",
+      "2026프리미엄인증"
+    ],
+    "summary": "주출입구에 턱이 없는 자동문이고 장애인 주차장과 의자식 테이블이 있는 중문해수욕장 카페·라운지.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "stepFree": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=3264ce18-667c-4e4d-9942-2e6bd76d86e8",
+        "publishedAt": "2026-09-25",
+        "quote": "주출입구는 턱이 없어 휠체어 접근 가능함(자동문)"
+      },
+      "accessibleParking": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=3264ce18-667c-4e4d-9942-2e6bd76d86e8",
+        "publishedAt": "2026-09-25",
+        "quote": "장애인 주차장 있음"
+      },
+      "tableSeating": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=3264ce18-667c-4e4d-9942-2e6bd76d86e8",
+        "publishedAt": "2026-09-25",
+        "quote": "의자식 테이블 있음"
+      }
+    },
+    "admissions": {
+      "senior": {
+        "value": "yes",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=3264ce18-667c-4e4d-9942-2e6bd76d86e8",
+        "verifiedAt": "2026-11-08",
+        "quote": "주출입구는 턱이 없어 휠체어 접근 가능함(자동문)",
+        "publishedAt": "2026-09-25"
+      }
+    }
+  },
+  {
+    "name": "24시뼈다귀탕동홍점",
+    "address": "제주특별자치도 서귀포시 동홍남로 43",
+    "district": "서귀포시내",
+    "region": "south",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000012719",
+    "sourceId": "CNTS_200000000012719",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "뼈다귀탕",
+      "24시",
+      "돈까스",
+      "음식",
+      "식당",
+      "감자탕"
+    ],
+    "summary": "동홍동 24시간 뼈다귀탕집으로 어린이 놀이방과 어린이돈까스 메뉴가 있다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "kidsPlay": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000012719",
+        "quote": "여기에 더해 어린이 놀이방도 갖추어져 있어"
+      },
+      "kidsTableware": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000012719",
+        "quote": "또한 어린이 손님을 위한 어린이돈까스 메뉴도 준비해놓고 있다."
+      }
+    }
+  },
+  {
+    "name": "진주식당",
+    "address": "제주특별자치도 서귀포시 태평로 353",
+    "district": "서귀포시내",
+    "region": "south",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000012724",
+    "sourceId": "CNTS_200000000012724",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "향토음식인증",
+      "향토음식",
+      "서귀포",
+      "한정식",
+      "음식",
+      "식당",
+      "전복뚝배기",
+      "전복죽",
+      "전복볶음",
+      "오분작뚝배기",
+      "성게미역국",
+      "미역국",
+      "뚝배기",
+      "갈치조림",
+      "갈치구이",
+      "갈치국",
+      "고등어조림",
+      "고등어구이",
+      "옥돔구이",
+      "삼치구이",
+      "순두부",
+      "된장찌개",
+      "김치찌개"
+    ],
+    "summary": "경사로, 엘리베이터, 장애인 전용 화장실, 장애인 전용 주차구역 1대가 있는 제주 향토음식점.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "ramp": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=d3f9ec67-de55-48b5-a27b-bd912bfe585c",
+        "publishedAt": "2026-10-07",
+        "quote": "휠체어, 전동 스쿠터 이용자 진입 쉬움. 경사로 있음"
+      },
+      "elevator": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=d3f9ec67-de55-48b5-a27b-bd912bfe585c",
+        "publishedAt": "2026-10-07",
+        "quote": "엘리베이터 있음"
+      },
+      "accessibleToilet": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=d3f9ec67-de55-48b5-a27b-bd912bfe585c",
+        "publishedAt": "2026-10-07",
+        "quote": "장애인 전용 화장실 있음"
+      },
+      "accessibleParking": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=d3f9ec67-de55-48b5-a27b-bd912bfe585c",
+        "publishedAt": "2026-10-07",
+        "quote": "장애인 전용 주차구역 주차대수 : 1대"
+      }
+    }
+  },
+  {
+    "name": "함덕회춘",
+    "address": "제주특별자치도 제주시 조천읍 신북로 489",
+    "district": "조천",
+    "region": "east",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000012997",
+    "sourceId": "CNTS_200000000012997",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "함덕",
+      "함덕해수욕장",
+      "정식",
+      "음식",
+      "식당",
+      "돈까스",
+      "돔베고기",
+      "옥돔구이",
+      "고등어구이",
+      "된장찌개",
+      "김치전",
+      "양푼비빔밥",
+      "한정식"
+    ],
+    "summary": "함덕 한식당으로 아이메뉴인 키즈돈까스가 있다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "kidsTableware": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000012997",
+        "quote": "아이메뉴인 키즈돈까스도 주문할 수 있어"
+      }
+    }
+  },
+  {
+    "name": "협재신국수",
+    "address": "제주특별자치도 제주시 한림읍 명재로 17",
+    "district": "한림",
+    "region": "west",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000013016",
+    "sourceId": "CNTS_200000000013016",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "협재신국수",
+      "고기국수",
+      "제주향토음식",
+      "협재맛집",
+      "협재해수욕장",
+      "visitjeju",
+      "비짓제주"
+    ],
+    "summary": "협재 고기국수집으로 어린이 불고기덮밥 등 어린이메뉴가 있다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "kidsTableware": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000013016",
+        "quote": "어린이 불고기덮밥과 같은 어린이메뉴도 준비되어 있어"
+      }
+    }
+  },
+  {
+    "name": "도남오거리 도남점",
+    "address": "제주특별자치도 제주시 도남로6길 16",
+    "district": "제주시내",
+    "region": "north",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000013085",
+    "sourceId": "CNTS_200000000013085",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "도남",
+      "제주시청",
+      "고깃집",
+      "소고기",
+      "돼지고기",
+      "육사시미",
+      "천협",
+      "간",
+      "음식",
+      "식당",
+      "육회",
+      "생갈비",
+      "양념갈비",
+      "소양념갈비",
+      "차돌박이",
+      "꽃등심",
+      "김치찌개",
+      "냉면",
+      "물냉면",
+      "비빔냉면",
+      "착한가격업소"
+    ],
+    "summary": "테이블 간격이 넓고 내부 턱이 없으며 의자식 좌석으로 된 한식당.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "tableSeating": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=7a489f83-b284-476b-a924-f2a22842ca78",
+        "publishedAt": "2025-08-14",
+        "quote": "입식(의자식)으로 되어 있음"
+      }
+    }
+  },
+  {
+    "name": "크래커스 한경점",
+    "address": "제주특별자치도 제주시 한경면 낙수로 1",
+    "district": "한경",
+    "region": "west",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000013122",
+    "sourceId": "CNTS_200000000013122",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "크래커스 한경점",
+      "제주로스터리카페",
+      "한경면카페",
+      "조수리카페",
+      "제주스페셜티커피",
+      "visitjeju",
+      "비짓제주"
+    ],
+    "summary": "한경면 로스터리 카페로 아이용 키즈메뉴가 있다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "kidsTableware": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000013122",
+        "quote": "아이들을 위한 키즈메뉴도 마련되어 있어"
+      }
+    }
+  },
+  {
+    "name": "야크마을",
+    "address": "제주특별자치도 서귀포시 색달중앙로 162",
+    "district": "서귀포시내",
+    "region": "south",
+    "type": "stay",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000014080",
+    "sourceId": "CNTS_200000000014080",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "숙소",
+      "럭셔리트래블인제주",
+      "리조트",
+      "수영장",
+      "체험",
+      "레저/체험",
+      "음식",
+      "식당",
+      "한식",
+      "카페",
+      "가족호텔",
+      "반려동물",
+      "반려동물동반입장",
+      "혼저옵서개",
+      "반려동물동반_숙소"
+    ],
+    "summary": "중문 색달동 휴양단지로, 5kg 소형견 최대 2마리까지 입실 가능하고 펫 계단·식기·쿠션·간식을 제공한다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "petRoom": {
+        "value": "conditional",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000014080",
+        "quote": "소형견 입장가능 / 5kg 소형견만 가능 / 최대 2마리 입장가능"
+      },
+      "petAmenity": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000014080",
+        "quote": "펫 계단, 펫 식기, 배변 봉투, 배변 패드, 펫 쿠션, 펫 간식, 리드줄 제공"
+      }
+    }
+  },
+  {
+    "name": "블리스풀",
+    "address": "제주특별자치도 제주시 애월읍 산록서로 383",
+    "district": "애월",
+    "region": "west",
+    "type": "cafe",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000014199",
+    "sourceId": "CNTS_200000000014199",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "아메리카노",
+      "카페모카",
+      "카페라떼",
+      "바닐라라떼",
+      "말차라떼",
+      "딸기우유",
+      "얼그레이밀크티",
+      "자몽차",
+      "고구마라떼",
+      "자몽에이드",
+      "블루베리레몬에이드",
+      "음식",
+      "카페",
+      "반려동물",
+      "반려동물동반입장",
+      "혼저옵서개",
+      "반려동물동반_식당카페",
+      "2026혼저옵서개"
+    ],
+    "summary": "소형견은 안거나 전용 의자에 앉혀 실내 이용, 대형견은 밖에서 대기하며, 크기별로 나뉜 야외 운동장과 반려견 간식이 있다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "petLargeDog": {
+        "value": "conditional",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000014199",
+        "quote": "가게 내부를 이용할 땐 소형견은 안고 있거나 반려견 전용 의자를 사용하고, 대형견은 밖에 Dog Parking 존에서 대기"
+      },
+      "petPlayground": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000014199",
+        "quote": "야외 운동장은 소형견과 중형견 전용, 그리고 대형견만 이용할 수 있도록 분리되어 있어"
+      },
+      "petAmenity": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000014199",
+        "quote": "반려견 치킨과 양사골, 토마토미트몰, 사골닭죽 등 반려견이 먹을 수 있는 다양한 수제 간식이 있다."
+      }
+    },
+    "admissions": {
+      "pet": {
+        "value": "indoor",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000014199",
+        "verifiedAt": "2026-11-08",
+        "quote": "가게 내부를 이용할 땐 소형견은 안고 있거나 반려견 전용 의자를 사용하고, 대형견은 밖에 Dog Parking 존에서 대기"
+      }
+    }
+  },
+  {
+    "name": "캠파제주",
+    "address": "제주특별자치도 서귀포시 516로 574-23",
+    "district": "서귀포시내",
+    "region": "south",
+    "type": "stay",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000014240",
+    "sourceId": "CNTS_200000000014240",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "숙박",
+      "캠핑장",
+      "카라",
+      "숙소",
+      "반려동물",
+      "반려동물동반입장",
+      "혼저옵서개",
+      "반려동물동반_숙소"
+    ],
+    "summary": "카라반·글램핑 캠핑장으로, 5kg 미만 소형견 1마리까지 입실 가능하고 반려견 놀이터가 있다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "petPlayground": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000014240",
+        "quote": "반려견 용품 개인 지참 필수 / 반려견 놀이터 구비"
+      },
+      "petRoom": {
+        "value": "conditional",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000014240",
+        "quote": "5kg 미만 소형견에 한해서 1마리까지 동반 가능하며, 대형견은 입실 불가하다."
+      }
+    },
+    "admissions": {
+      "pet": {
+        "value": "indoor",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000014240",
+        "verifiedAt": "2026-11-08",
+        "quote": "5kg 미만 소형견에 한해서 1마리까지 동반 가능하며, 대형견은 입실 불가하다.",
+        "maxWeightKg": 5,
+        "weightInclusive": false
+      }
+    }
+  },
+  {
+    "name": "제주애견펜션 쉼멍스테이",
+    "address": "제주특별자치도 서귀포시 대정읍 신영로 16-14",
+    "district": "대정",
+    "region": "west",
+    "type": "stay",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000014287",
+    "sourceId": "CNTS_200000000014287",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "숙박",
+      "펜션",
+      "숙소",
+      "반려동물",
+      "반려동물동반입장",
+      "혼저옵서개",
+      "반려동물동반_숙소",
+      "2026혼저옵서개"
+    ],
+    "summary": "대정의 반려견 동반 펜션으로, 7kg 이하 반려견을 인원에 따라 1~2마리까지 받는다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "petRoom": {
+        "value": "conditional",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000014287",
+        "quote": "소형견, 중형견 입장 가능 / 기준 2인은 1견(한 마리 가능) 기준 최대 3인은 2견(두 마리 가능) / 7kg 이하만 가능"
+      }
+    },
+    "admissions": {
+      "pet": {
+        "value": "indoor",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000014287",
+        "verifiedAt": "2026-11-08",
+        "quote": "최대 3인은 2견(두 마리 가능) / 7kg 이하만 가능",
+        "maxWeightKg": 7,
+        "weightInclusive": true
+      }
+    }
+  },
+  {
+    "name": "아트인명도암",
+    "address": "제주특별자치도 제주시 명림로 209",
+    "district": "제주시내",
+    "region": "north",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000014686",
+    "sourceId": "CNTS_200000000014686",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "아트인명도암",
+      "갤러리카페",
+      "브런치카페",
+      "야외정원",
+      "제주중산간카페",
+      "visitjeju",
+      "비짓제주"
+    ],
+    "summary": "출입구까지 턱이 없고 의자식 테이블이 있는 갤러리 카페.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "stepFree": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=67c169d6-d45b-4398-bd2f-52a073a36ec8",
+        "publishedAt": "2025-11-04",
+        "quote": "출입구까지 턱이 없어 휠체어 접근 가능함"
+      },
+      "tableSeating": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=67c169d6-d45b-4398-bd2f-52a073a36ec8",
+        "publishedAt": "2025-11-04",
+        "quote": "의자식 테이블 있음"
+      }
+    },
+    "admissions": {
+      "senior": {
+        "value": "yes",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=67c169d6-d45b-4398-bd2f-52a073a36ec8",
+        "verifiedAt": "2026-11-08",
+        "quote": "출입구까지 턱이 없어 휠체어 접근 가능함",
+        "publishedAt": "2025-11-04"
+      }
+    }
+  },
+  {
+    "name": "도라지식당",
+    "address": "제주특별자치도 제주시 연삼로 128",
+    "district": "제주시내",
+    "region": "north",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000014728",
+    "sourceId": "CNTS_200000000014728",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "향토음식인증",
+      "향토음식",
+      "제주시내",
+      "향토음식전문점",
+      "갈치조림",
+      "한치구이",
+      "한치물회",
+      "성게미역국",
+      "돔베고기",
+      "백년가게인증"
+    ],
+    "summary": "출입구에 단차가 없고 엘리베이터, 장애인 전용 화장실, 장애인 전용 주차구역이 있는 제주 향토음식점.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "stepFree": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=2b417155-a1a8-4754-af5b-6e57cb8d0da6",
+        "publishedAt": "2026-10-21",
+        "quote": "출입구에 단차 없음"
+      },
+      "elevator": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=2b417155-a1a8-4754-af5b-6e57cb8d0da6",
+        "publishedAt": "2026-10-21",
+        "quote": "엘리베이터 있음"
+      },
+      "accessibleToilet": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=2b417155-a1a8-4754-af5b-6e57cb8d0da6",
+        "publishedAt": "2026-10-21",
+        "quote": "장애인 전용 화장실 있음"
+      },
+      "accessibleParking": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=2b417155-a1a8-4754-af5b-6e57cb8d0da6",
+        "publishedAt": "2026-10-21",
+        "quote": "장애인 전용 주차구역 있음"
+      }
+    },
+    "admissions": {
+      "senior": {
+        "value": "yes",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=2b417155-a1a8-4754-af5b-6e57cb8d0da6",
+        "verifiedAt": "2026-11-08",
+        "quote": "출입구에 단차 없음",
+        "publishedAt": "2026-10-21"
+      }
+    }
+  },
+  {
+    "name": "금돈가 제주 애월해안도로 본점",
+    "address": "제주특별자치도 제주시 애월읍 가문동남길 63",
+    "district": "애월",
+    "region": "west",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000014899",
+    "sourceId": "CNTS_200000000014899",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "금돈가",
+      "제주흑돼지",
+      "숯불구이",
+      "참나무훈연",
+      "돼지고기구이",
+      "visitjeju",
+      "비짓제주"
+    ],
+    "summary": "출입구까지 턱이 없고 의자식 테이블이 있는 흑돼지 식당.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "stepFree": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=0de11e84-db05-4366-b08b-bd2f697437d7",
+        "publishedAt": "2026-09-16",
+        "quote": "출입구까지 턱이 없어 휠체어 접근 가능함"
+      },
+      "tableSeating": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=0de11e84-db05-4366-b08b-bd2f697437d7",
+        "publishedAt": "2026-09-16",
+        "quote": "의자식 테이블 있음"
+      }
+    },
+    "admissions": {
+      "senior": {
+        "value": "yes",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=0de11e84-db05-4366-b08b-bd2f697437d7",
+        "verifiedAt": "2026-11-08",
+        "quote": "출입구까지 턱이 없어 휠체어 접근 가능함",
+        "publishedAt": "2026-09-16"
+      }
+    }
+  },
+  {
+    "name": "디어마이프렌즈 제주",
+    "address": "제주특별자치도 제주시 한경면 청수로 14",
+    "district": "한경",
+    "region": "west",
+    "type": "stay",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000012646",
+    "sourceId": "CNTS_300000000012646",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "반려동물",
+      "반려동물동반입장",
+      "혼저옵서개",
+      "반려동물동반_숙소",
+      "2026혼저옵서개"
+    ],
+    "summary": "한경면 청수리 펜션으로, 10kg 이하 소형견 최대 2마리까지 추가요금 2만 원에 동반할 수 있다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "petRoom": {
+        "value": "conditional",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000012646",
+        "quote": "소형견 입장가능 / 10kg 이하 소형견만 가능 / 반려견 추가요금 20,000원 / 최대 2마리까지 가능"
+      }
+    },
+    "admissions": {
+      "pet": {
+        "value": "indoor",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000012646",
+        "verifiedAt": "2026-11-08",
+        "quote": "소형견 입장가능 / 10kg 이하 소형견만 가능 / 반려견 추가요금 20,000원 / 최대 2마리까지 가능",
+        "maxWeightKg": 10,
+        "weightInclusive": true
+      }
+    }
+  },
+  {
+    "name": "아우아우",
+    "address": "제주특별자치도 제주시 조천읍 와산3길 13-105",
+    "district": "조천",
+    "region": "east",
+    "type": "cafe",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000012656",
+    "sourceId": "CNTS_300000000012656",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "와플",
+      "아이스크림",
+      "커피",
+      "카페",
+      "반려동물",
+      "반려동물동반입장",
+      "혼저옵서개",
+      "반려동물동반_식당카페",
+      "2026혼저옵서개"
+    ],
+    "summary": "15kg 미만 반려견 동반 카페로, 잔디밭과 발 씻는 곳, 반려견 간식이 있으며 대형견은 대관 예약만 받는다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "petLargeDog": {
+        "value": "conditional",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000012656",
+        "quote": "방문 2일전 연락 필수, 15kg 미만, 대형견은 대관예약만 가능"
+      },
+      "petPlayground": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000012656",
+        "quote": "반려동물을 위해 넓은 잔디밭, 소형견 전용 화산송이 쉼터, 발 씻는 곳이 있고"
+      },
+      "petAmenity": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000012656",
+        "quote": "안거리에서는 커피와 디저트, 반려견을 위한 간식까지 구매 가능하다."
+      }
+    }
+  },
+  {
+    "name": "엠버퓨어힐 호텔&리조트 제주",
+    "address": "제주특별자치도 제주시 1100로 2671-30",
+    "district": "제주시내",
+    "region": "north",
+    "type": "stay",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000012682",
+    "sourceId": "CNTS_300000000012682",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "반려동물",
+      "반려동물동반입장",
+      "혼저옵서개",
+      "반려동물동반_숙소"
+    ],
+    "summary": "한라산 중턱 호텔로, 10kg 이하 반려견 최대 2마리까지 입실 가능하고 객실에 반려동물 용품을 둔다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "petRoom": {
+        "value": "conditional",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000012682",
+        "quote": "소형견, 중형견 입장가능 / 10kg 이하 입장 가능 / 최대 2마리까지 입실 가능"
+      },
+      "petAmenity": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000012682",
+        "quote": "반려동물과 즐거운 하루를 즐길 수 있도록 다양한 용품을 비치해 편안한 쉼터를 제공한다."
+      }
+    }
+  },
+  {
+    "name": "오롯 바이 에퀴녹스",
+    "address": "제주특별자치도 제주시 한림읍 금능길 75",
+    "district": "한림",
+    "region": "west",
+    "type": "stay",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000012685",
+    "sourceId": "CNTS_300000000012685",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "반려동물",
+      "반려동물동반입장",
+      "혼저옵서개",
+      "반려동물동반_숙소",
+      "2026혼저옵서개"
+    ],
+    "summary": "금능리 숙소로, 10kg 미만 소형견 동반(2만 원)이 가능하고 배변판·식기·쿠션 등과 잔디시설이 있다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "petAmenity": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000012685",
+        "quote": "애견패드, 배변판, 웰컴간식, 식기, 해견 쿠션, 애견 타올 구비"
+      },
+      "petPlayground": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000012685",
+        "quote": "애견패드, 배변판, 웰컴간식, 식기, 해견 쿠션, 애견 타올 구비 / 반려동물 잔디시설"
+      },
+      "petRoom": {
+        "value": "conditional",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000012685",
+        "quote": "10kg 미만 소형견 입장가능 / 애견 동반 비용 2만원"
+      }
+    },
+    "admissions": {
+      "pet": {
+        "value": "indoor",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000012685",
+        "verifiedAt": "2026-11-08",
+        "quote": "10kg 미만 소형견 입장가능 / 애견 동반 비용 2만원",
+        "maxWeightKg": 10,
+        "weightInclusive": false
+      }
+    }
+  },
+  {
+    "name": "하늘오름펜션",
+    "address": "제주특별자치도 제주시 구좌읍 중산간동로 1909",
+    "district": "구좌",
+    "region": "east",
+    "type": "stay",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000012691",
+    "sourceId": "CNTS_300000000012691",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "반려동물",
+      "반려동물동반입장",
+      "혼저옵서개",
+      "반려동물동반_숙소",
+      "2026혼저옵서개"
+    ],
+    "summary": "구좌 중산간 펜션으로, 6kg 이하 소형견 최대 2마리까지 1마리당 1만 원에 동반할 수 있다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "petRoom": {
+        "value": "conditional",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000012691",
+        "quote": "소형견 입장가능 / 6kg이하 소형견만 가능 / 최대 2마리 가능 / 1마리당 10,000원"
+      }
+    },
+    "admissions": {
+      "pet": {
+        "value": "indoor",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000012691",
+        "verifiedAt": "2026-11-08",
+        "quote": "소형견 입장가능 / 6kg이하 소형견만 가능 / 최대 2마리 가능 / 1마리당 10,000원",
+        "maxWeightKg": 6,
+        "weightInclusive": true
+      }
+    }
+  },
+  {
+    "name": "고성2119 애견펜션",
+    "address": "제주특별자치도 서귀포시 성산읍 서성일로1136번길 10-1",
+    "district": "성산",
+    "region": "east",
+    "type": "stay",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000012692",
+    "sourceId": "CNTS_300000000012692",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "반려동물놀이터",
+      "독채펜션",
+      "반려동물",
+      "반려동물동반입장",
+      "혼저옵서개",
+      "반려동물동반_숙소"
+    ],
+    "summary": "성산의 애견펜션으로, 10kg 미만 소형견 최대 2마리까지 받고 반려견 놀이터와 펫 욕조·샴푸가 있다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "petAmenity": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000012692",
+        "quote": "식기세트, 펫전용 욕조, 펫샴푸, 배변패드 구비"
+      },
+      "petPlayground": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000012692",
+        "quote": "펜션 이용 시 반려견 놀이터 위플레이독 놀이터를 무료로 이용할 수 있어"
+      },
+      "petRoom": {
+        "value": "conditional",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000012692",
+        "quote": "반려견 최대 2마리 / 1박 2만원"
+      }
+    },
+    "admissions": {
+      "pet": {
+        "value": "indoor",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000012692",
+        "verifiedAt": "2026-11-08",
+        "quote": "소형견 입장가능 / 10kg미만 소형견만 가능",
+        "maxWeightKg": 10,
+        "weightInclusive": false
+      }
+    }
+  },
+  {
+    "name": "혼저 흑돼지 협재금능판포점",
+    "address": "제주특별자치도 제주시 한림읍 한림로 158 (금능리, 금능리 재즈클럽) 1F 혼저 제주협재점",
+    "district": "한림",
+    "region": "west",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000012868",
+    "sourceId": "CNTS_300000000012868",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "혼저 흑돼지 협재금능판포점",
+      "제주흑돼지",
+      "흑돼지구이",
+      "한림맛집",
+      "협재맛집",
+      "visitjeju",
+      "비짓제주"
+    ],
+    "summary": "출입 접근로가 문턱 없이 평지로 연결되고 자동문인 흑돼지 식당.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "stepFree": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=878b2bd6-5241-4b12-afd9-79b1574de1ea",
+        "publishedAt": "2026-11-04",
+        "quote": "문턱없이 평지로 연결되어 휠체어 통과 가능 출입통로 주 출입구 휠체어 통과 가능(자동문)"
+      }
+    },
+    "admissions": {
+      "senior": {
+        "value": "yes",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=878b2bd6-5241-4b12-afd9-79b1574de1ea",
+        "verifiedAt": "2026-11-08",
+        "quote": "문턱없이 평지로 연결되어 휠체어 통과 가능",
+        "publishedAt": "2026-11-04"
+      }
+    }
+  },
+  {
+    "name": "코리코카페 제주점",
+    "address": "제주특별자치도 제주시 구좌읍 비자림로 1199",
+    "district": "구좌",
+    "region": "east",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000012986",
+    "sourceId": "CNTS_300000000012986",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "코리코카페 제주점",
+      "테마카페",
+      "제주디저트",
+      "송당카페",
+      "제주동부카페",
+      "visitjeju",
+      "비짓제주"
+    ],
+    "summary": "출입구에 경사로 없이 접근 가능한 카페.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "stepFree": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=5c23cfe8-14c7-4801-b4b2-2602d452544e",
+        "publishedAt": "2025-08-20",
+        "quote": "출입구 경사로 없이 접근 가능"
+      }
+    },
+    "admissions": {
+      "senior": {
+        "value": "yes",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=5c23cfe8-14c7-4801-b4b2-2602d452544e",
+        "verifiedAt": "2026-11-08",
+        "quote": "출입구 경사로 없이 접근 가능",
+        "publishedAt": "2025-08-20"
+      }
+    }
+  },
+  {
+    "name": "Osds 협재",
+    "address": "제주특별자치도 제주시 한림읍 협재8길 22",
+    "district": "한림",
+    "region": "west",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000013144",
+    "sourceId": "CNTS_300000000013144",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "제주카페",
+      "애견동반",
+      "제주서쪽",
+      "협재해수욕장",
+      "제주브런치",
+      "제주서쪽가볼만한곳",
+      "멍푸치노",
+      "협재카페"
+    ],
+    "summary": "협재의 브런치 카페로, 반려견 동반 브런치를 내세우고 반려견 음료(멍푸치노) 태그가 있다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "petAmenity": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000013144",
+        "quote": "제주카페, 애견동반, 제주서쪽, 협재해수욕장, 제주브런치, 제주서쪽가볼만한곳, 멍푸치노"
+      }
+    }
+  },
+  {
+    "name": "컴포트브라운",
+    "address": "제주특별자치도 제주시 구좌읍 충렬로 141-1",
+    "district": "구좌",
+    "region": "east",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000013217",
+    "sourceId": "CNTS_300000000013217",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "제주여행",
+      "숲속뷰",
+      "제주숲속뷰",
+      "제주카페",
+      "컴포트브라운",
+      "비자림카페",
+      "구좌읍카페",
+      "제주숲속카페",
+      "세화리카페",
+      "visitjeju",
+      "비짓제주",
+      "제주동쪽가볼만한곳",
+      "제주오름",
+      "반려견",
+      "당근커피"
+    ],
+    "summary": "비자림 인근 숲속 카페로, 야외 정원에 한해 13kg 이하 반려견 동반이 가능하다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "admissions": {
+      "pet": {
+        "value": "outdoor",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000013217",
+        "verifiedAt": "2026-11-08",
+        "quote": "야외 정원 13kg 이하 반려견 동반 가능",
+        "maxWeightKg": 13,
+        "weightInclusive": true
+      }
+    }
+  },
+  {
+    "name": "코너스톤 스테이",
+    "address": "제주특별자치도 제주시 조천읍 조와로 27 (조천리) 코너스톤 스테이",
+    "district": "조천",
+    "region": "east",
+    "type": "stay",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000013422",
+    "sourceId": "CNTS_300000000013422",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "커플",
+      "부모",
+      "제주여행",
+      "프라이빗공간",
+      "양옥개조",
+      "휴식",
+      "안전인증민박",
+      "우수관광사업체인증"
+    ],
+    "summary": "한 팀 전용 민박으로, 미리 요청하면 아기침대, 아기 식탁의자, 유아 욕조 등을 준비해 준다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "babyBed": {
+        "value": "conditional",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000013422",
+        "quote": "아기침대(24개월 미만 유아동 사용가능) 또는 바닥요세트"
+      },
+      "highChair": {
+        "value": "conditional",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000013422",
+        "quote": "아기 식탁의자(26개월 미만 유아동 사용가능)"
+      }
+    }
+  },
+  {
+    "name": "향원복집",
+    "address": "제주특별자치도 서귀포시 부두로 43",
+    "district": "서귀포시내",
+    "region": "south",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000013550",
+    "sourceId": "CNTS_300000000013550",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "향원복집",
+      "복어요리",
+      "복어전문점",
+      "서귀포맛집",
+      "서귀포복어",
+      "visitjeju",
+      "비짓제주"
+    ],
+    "summary": "버튼식 자동문에 출입통로가 넓고 내부 턱이 없으며 의자식 테이블이 있는 복어 요리 전문점.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "tableSeating": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=be2202ca-3b67-4595-ac31-af7a0c6045ee",
+        "publishedAt": "2026-10-21",
+        "quote": "의자식 테이블 있음"
+      }
+    }
+  },
+  {
+    "name": "제주공항흑돼지 바다풍경정육식당",
+    "address": "제주특별자치도 제주시 서해안로 654 (용담삼동) 바다풍경 정육식당",
+    "district": "제주시내",
+    "region": "north",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000013927",
+    "sourceId": "CNTS_300000000013927",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "바다풍경 정육식당",
+      "제주정육식당",
+      "용담맛집",
+      "용담해안도로맛집",
+      "제주흑돼지",
+      "visitjeju",
+      "비짓제주"
+    ],
+    "summary": "흑돼지 정육식당으로 유아의자, 유아 전용 식기, 아기 메뉴를 갖추고 있다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "highChair": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000013927",
+        "quote": "유아의자와 전용 식기, 아기 메뉴가 준비된 웰컴 키즈존을 운영해"
+      },
+      "kidsTableware": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000013927",
+        "quote": "유아의자와 전용 식기, 아기 메뉴가 준비된 웰컴 키즈존을 운영해"
+      }
+    },
+    "admissions": {
+      "kids": {
+        "value": "yes",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000013927",
+        "verifiedAt": "2026-11-08",
+        "quote": "웰컴 키즈존을 운영해 아이 동반 가족도 편안하게 식사할 수 있으며"
+      }
+    }
+  },
+  {
+    "name": "서귀포시축협 축산물플라자",
+    "address": "제주특별자치도 서귀포시 일주동로 8421",
+    "district": "서귀포시내",
+    "region": "south",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000014032",
+    "sourceId": "CNTS_300000000014032",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "서귀포시축협 축산물플라자",
+      "제주흑우",
+      "제주한우",
+      "제주흑돼지",
+      "정육식당",
+      "visitjeju",
+      "비짓제주"
+    ],
+    "summary": "센서식 자동문, 경사로, 엘리베이터, 장애인 화장실, 장애인 전용 주차구역 3대가 있는 한우·흑우 식당.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "ramp": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=809a90d4-9844-436c-ae0e-2534bb1bf86d",
+        "publishedAt": "2026-09-28",
+        "quote": "출입통로가 넓어, 휠체어, 전동 스쿠터 진입 쉬움. 경사로 있음"
+      },
+      "elevator": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=809a90d4-9844-436c-ae0e-2534bb1bf86d",
+        "publishedAt": "2026-09-28",
+        "quote": "엘리베이터 엘리베이터 있음"
+      },
+      "accessibleToilet": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=809a90d4-9844-436c-ae0e-2534bb1bf86d",
+        "publishedAt": "2026-09-28",
+        "quote": "장애인 화장실 있음"
+      },
+      "accessibleParking": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=809a90d4-9844-436c-ae0e-2534bb1bf86d",
+        "publishedAt": "2026-09-28",
+        "quote": "장애인 전용 주차구역 주차대수 : 3대"
+      },
+      "tableSeating": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=809a90d4-9844-436c-ae0e-2534bb1bf86d",
+        "publishedAt": "2026-09-28",
+        "quote": "의자식 테이블 있음"
+      }
+    }
+  },
+  {
+    "name": "금배네민박",
+    "address": "제주특별자치도 제주시 구좌읍 월정5길 18-11 (월정리) ",
+    "district": "구좌",
+    "region": "east",
+    "type": "stay",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000014073",
+    "sourceId": "CNTS_300000000014073",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "숙박",
+      "애견동반",
+      "제주여행",
+      "귤엔터",
+      "월정리"
+    ],
+    "summary": "최대 6인 단층 독채로 유아의자, 유아식기, 유아변기, 침대가드를 갖추고 있다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "highChair": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000014073",
+        "quote": "유아의자, 유아식기, 유아변기, 스탭스툴, 침대가드, 그림책이 준비되어 있습니다."
+      },
+      "kidsTableware": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000014073",
+        "quote": "유아의자, 유아식기, 유아변기, 스탭스툴, 침대가드, 그림책이 준비되어 있습니다."
+      },
+      "petAmenity": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000014073",
+        "quote": "펫방석, 펫스텝, 펫식기, 빨아쓰는 배변패드, 발수건, 장난감이 준비되어 있습니다."
+      },
+      "petPlayground": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000014073",
+        "quote": "울타리와 돌담으로 둘러쌓인 잔디마당이 있어 마당에서도 편하고 안전하게 놀 수 있어요."
+      },
+      "petRoom": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000014073",
+        "quote": "반려동물을 환영하는 마음으로 추가 요금을 받지 않아요."
+      }
+    },
+    "admissions": {
+      "kids": {
+        "value": "yes",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000014073",
+        "verifiedAt": "2026-11-08",
+        "quote": "어린이와 청소년을 환영하는 마음으로 19세 미만 동반객 추가요금을 받지 않아요."
+      },
+      "pet": {
+        "value": "indoor",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000014073",
+        "verifiedAt": "2026-11-08",
+        "quote": "반려동물을 환영하는 마음으로 추가 요금을 받지 않아요."
+      }
+    }
+  },
+  {
+    "name": "부부요리단",
+    "address": "제주특별자치도 서귀포시 월드컵로 63 (법환동) 1층 부부요리단",
+    "district": "서귀포시내",
+    "region": "south",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000014137",
+    "sourceId": "CNTS_300000000014137",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "부부요리단",
+      "법환동맛집",
+      "서귀포장어덮밥",
+      "제주일식",
+      "제주한식",
+      "visitjeju",
+      "비짓제주"
+    ],
+    "summary": "건물 내 장애인 화장실 1개소와 지상 장애인 주차 1면이 있는 식당.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "accessibleToilet": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=d7ab8b3b-5053-4d15-844d-55d493e112b8",
+        "publishedAt": "2025-08-20",
+        "quote": "장애인 화장실 있음 (건물 내 1개 소, 미닫이 문, 점형블록, 손잡이)"
+      },
+      "accessibleParking": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=d7ab8b3b-5053-4d15-844d-55d493e112b8",
+        "publishedAt": "2025-08-20",
+        "quote": "장애인 주차 가능 (지상 1면)"
+      }
+    }
+  },
+  {
+    "name": "어라운드폴리",
+    "address": "제주특별자치도 서귀포시 성산읍 서성일로 433",
+    "district": "성산",
+    "region": "east",
+    "type": "stay",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000014153",
+    "sourceId": "CNTS_300000000014153",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "어라운드폴리",
+      "제주캠핑",
+      "제주아웃도어",
+      "애견동반"
+    ],
+    "summary": "난산리 마을형 스테이로, 에어스트림 31ft+와 캐빈A 객실에 한해 반려견 동반이 가능하다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "petRoom": {
+        "value": "conditional",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000014153",
+        "quote": "[반려견 동반] 에어스트림 31ft+, 캐빈A 객실에 한해 반려견 동반 가능"
+      }
+    }
+  },
+  {
+    "name": "부젤라또",
+    "address": "제주특별자치도 서귀포시 안덕면 형제해안로 32 부젤라또",
+    "district": "안덕",
+    "region": "south",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000014538",
+    "sourceId": "CNTS_300000000014538",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "부젤라또",
+      "사계해변카페",
+      "산방산카페",
+      "제주젤라또",
+      "애견동반카페",
+      "visitjeju",
+      "비짓제주"
+    ],
+    "summary": "사계해변 앞 젤라또 카페로, 야외에 반려견 오프리쉬 운동장이 있다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "petPlayground": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000014538",
+        "quote": "야외에는 애견동반이 가능한 오프리쉬 운동장도 있으며"
+      }
+    }
+  },
+  {
+    "name": "베테랑회센터",
+    "address": "제주특별자치도 제주시 월랑로12길 11 (노형동) 베테랑회센터",
+    "district": "제주시내",
+    "region": "north",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000014742",
+    "sourceId": "CNTS_300000000014742",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "공항근처",
+      "노형",
+      "룸식당",
+      "아기랑함께",
+      "주차",
+      "한상",
+      "가성비",
+      "고등어회",
+      "딱새우"
+    ],
+    "summary": "노형동 횟집으로 아기의자와 아기식기를 갖추고 있다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "highChair": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000014742",
+        "quote": "아이와 함께 방문하는 가족 고객을 위해 아기의자와 아기식기도 준비되어 있으며"
+      },
+      "kidsTableware": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000014742",
+        "quote": "아이와 함께 방문하는 가족 고객을 위해 아기의자와 아기식기도 준비되어 있으며"
+      }
+    }
+  },
+  {
+    "name": "이녁이랑",
+    "address": "제주특별자치도 제주시 조천읍 조함해안로 59-2",
+    "district": "조천",
+    "region": "east",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000014962",
+    "sourceId": "CNTS_300000000014962",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "조천디저트카페",
+      "제주애견동반카페",
+      "조천애견동반카페",
+      "동쪽애견동반카페",
+      "2026혼저옵서개"
+    ],
+    "summary": "조천의 구옥 카페로, 내부와 마당에서 반려동물과 함께 있을 수 있다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "admissions": {
+      "pet": {
+        "value": "indoor",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000014962",
+        "verifiedAt": "2026-11-08",
+        "quote": "내부와 함께 외부에는 마당도 있어서 반려동물이랑 함께 시간을 보낼수있는 반려동물 동반 카페입니다."
+      }
+    }
+  },
+  {
+    "name": "개덩이네 하우스",
+    "address": "제주특별자치도 서귀포시 안덕면 평화로 486, A·B동",
+    "district": "대정",
+    "region": "west",
+    "type": "stay",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000014976",
+    "sourceId": "CNTS_300000000014976",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "제주애견동반숙소",
+      "제주반려견동반숙소",
+      "제주애견펜션",
+      "반려견운동장",
+      "개덩이네하우스",
+      "2026혼저옵서개"
+    ],
+    "summary": "안덕의 반려견 동반 숙소로, 천연잔디 운동장과 반려견 셀프 목욕시설이 있다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "petPlayground": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000014976",
+        "quote": "넓게 펼쳐진 천연잔디 운동장이 마련되어 있어"
+      },
+      "petAmenity": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000014976",
+        "quote": "야외 활동 후 이용할 수 있는 셀프 목욕시설 등 반려견을 위한 편의시설도 갖추고 있습니다."
+      },
+      "petRoom": {
+        "value": "conditional",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000014976",
+        "quote": "반려견의 크기와 마릿수 등에 따라 이용 기준이 달라질 수 있으니"
+      }
+    },
+    "admissions": {
+      "pet": {
+        "value": "indoor",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000014976",
+        "verifiedAt": "2026-11-08",
+        "quote": "반려견과 함께 머물며 넓은 잔디 운동장에서 마음껏 뛰어놀 수 있는 제주 반려견 동반 숙소"
+      }
+    }
+  },
+  {
+    "name": "라 플라주",
+    "address": "제주특별자치도 제주시 조천읍 조함해안로 525",
+    "district": "조천",
+    "region": "east",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000015675",
+    "sourceId": "CNTS_300000000015675",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "함덕",
+      "베이커리",
+      "크루아상",
+      "머핀",
+      "스콘",
+      "소금빵",
+      "퀸아망"
+    ],
+    "summary": "진입로에 턱이 있으나 경사로가 있고 버튼식 자동문과 의자식 테이블이 있는 베이커리 카페.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "ramp": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=c79c3e67-04fc-4741-8924-9e5efc5245e0",
+        "publishedAt": "2026-10-07",
+        "quote": "진입로에 턱이 있어 휠체어, 전동 스쿠터 진입 어려움. 경사로 있음"
+      },
+      "tableSeating": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=c79c3e67-04fc-4741-8924-9e5efc5245e0",
+        "publishedAt": "2026-10-07",
+        "quote": "의자식 테이블 있음"
+      }
+    },
+    "admissions": {
+      "senior": {
+        "value": "conditional",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=c79c3e67-04fc-4741-8924-9e5efc5245e0",
+        "verifiedAt": "2026-11-08",
+        "quote": "진입로에 턱이 있어 휠체어, 전동 스쿠터 진입 어려움. 경사로 있음",
+        "publishedAt": "2026-10-07"
+      }
+    }
+  },
+  {
+    "name": "피커스",
+    "address": "제주특별자치도 제주시 아연로 444-1 2층",
+    "district": "제주시내",
+    "region": "north",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000015755",
+    "sourceId": "CNTS_300000000015755",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "피커스",
+      "제주대형카페",
+      "제주베이커리카페",
+      "롤러스케이트",
+      "가족카페",
+      "visitjeju",
+      "비짓제주"
+    ],
+    "summary": "장애인 주차장 2대, 출입구 경사로, 엘리베이터가 있는 숲정원 카페.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "stepFree": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=dcc7e90f-bdcd-4838-80b9-6487851ad7c6",
+        "publishedAt": "2025-08-20",
+        "quote": "주출입구는 턱이 없어 휠체어 접근 가능함(수동문)"
+      },
+      "ramp": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=dcc7e90f-bdcd-4838-80b9-6487851ad7c6",
+        "publishedAt": "2025-08-20",
+        "quote": "출입구까지 경사로가 설치되어 있음"
+      },
+      "elevator": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=dcc7e90f-bdcd-4838-80b9-6487851ad7c6",
+        "publishedAt": "2025-08-20",
+        "quote": "엘리베이터 엘리베이터 있음"
+      },
+      "accessibleParking": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=dcc7e90f-bdcd-4838-80b9-6487851ad7c6",
+        "publishedAt": "2025-08-20",
+        "quote": "장애인 주차장 있음(2대)"
+      },
+      "tableSeating": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=dcc7e90f-bdcd-4838-80b9-6487851ad7c6",
+        "publishedAt": "2025-08-20",
+        "quote": "의자식 테이블 있음"
+      }
+    },
+    "admissions": {
+      "senior": {
+        "value": "yes",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=dcc7e90f-bdcd-4838-80b9-6487851ad7c6",
+        "verifiedAt": "2026-11-08",
+        "quote": "주출입구는 턱이 없어 휠체어 접근 가능함(수동문)",
+        "publishedAt": "2025-08-20"
+      }
+    }
+  },
+  {
+    "name": "오름나그네",
+    "address": "제주특별자치도 제주시 조천읍 선교로 525",
+    "district": "조천",
+    "region": "east",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000015778",
+    "sourceId": "CNTS_300000000015778",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "조천",
+      "선흘리",
+      "보말칼국수",
+      "들깨칼국수",
+      "한치비빔국수"
+    ],
+    "summary": "주출입구 턱이 거의 없고 의자식 테이블이 있는 칼국수 식당.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "stepFree": {
+        "value": "conditional",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=d1c2cbda-81f4-4273-a706-504963e88ceb",
+        "publishedAt": "2026-10-07",
+        "quote": "주출입구는 턱이 거의 없어 휠체어 출입 가능(미닫이문,여닫이문)"
+      },
+      "tableSeating": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=d1c2cbda-81f4-4273-a706-504963e88ceb",
+        "publishedAt": "2026-10-07",
+        "quote": "의자식 테이블 있음"
+      }
+    },
+    "admissions": {
+      "senior": {
+        "value": "conditional",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=d1c2cbda-81f4-4273-a706-504963e88ceb",
+        "verifiedAt": "2026-11-08",
+        "quote": "주출입구는 턱이 거의 없어 휠체어 출입 가능(미닫이문,여닫이문)",
+        "publishedAt": "2026-10-07"
+      }
+    }
+  },
+  {
+    "name": "오른",
+    "address": "제주특별자치도 서귀포시 성산읍 해맞이해안로 2714",
+    "district": "성산",
+    "region": "east",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000015936",
+    "sourceId": "CNTS_300000000015936",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "서귀포",
+      "오조리",
+      "곰돌이우유",
+      "키즈메뉴",
+      "아이스크림크러핀",
+      "비건메뉴"
+    ],
+    "summary": "오조리 오션뷰 디저트 카페로 어린이용 음료 메뉴가 있다.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "kidsTableware": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000015936",
+        "quote": "어린이용 음료 메뉴와 채식주의자를 위한 디저트 등"
+      }
+    }
+  },
+  {
+    "name": "제주미담",
+    "address": "제주특별자치도 제주시 가령로 19",
+    "district": "제주시내",
+    "region": "north",
+    "type": "restaurant",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000015973",
+    "sourceId": "CNTS_300000000015973",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "제주시내",
+      "고기국수",
+      "비빔국수",
+      "국밥",
+      "찹쌀순대",
+      "몸국",
+      "돔베고기",
+      "아강발",
+      "전복구이"
+    ],
+    "summary": "출입구까지 경사로가 설치되어 있고 의자식 테이블이 있는 고기국수 식당.",
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "ramp": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=b91b59c8-57e0-4e89-8318-c742d6afee55",
+        "publishedAt": "2025-08-20",
+        "quote": "출입구까지 경사로가 설치되어 있음"
+      },
+      "tableSeating": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=b91b59c8-57e0-4e89-8318-c742d6afee55",
+        "publishedAt": "2025-08-20",
+        "quote": "의자식 테이블 있음"
+      }
+    },
+    "admissions": {
+      "senior": {
+        "value": "yes",
+        "sourceUrl": "https://access.visitkorea.or.kr/common/goDetail.do?cotId=b91b59c8-57e0-4e89-8318-c742d6afee55",
+        "verifiedAt": "2026-11-08",
+        "quote": "주출입구는 경사로가 있어 휠체어 접근 가능함(수동문)",
+        "publishedAt": "2025-08-20"
+      }
+    }
+  }
+]

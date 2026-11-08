@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { realPlaces } from "@/data/catalog";
+import { basePlaces as realPlaces } from "@/data/catalog";
 import { filterAndSortPlaces } from "./catalog";
 import { createDefaultProfile, createUnknownFacts } from "./types";
 import { getPlaceFeatures } from "./place-features";
