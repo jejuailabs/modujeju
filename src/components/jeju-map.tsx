@@ -6,6 +6,7 @@ import type { Locale, Place } from "@/lib/types";
 import { copy, priceLabel } from "@/messages/ui";
 import { catalogCopy } from "@/messages/catalog";
 import { OsmMap, hasPlaceCoordinates } from "./osm-map";
+import { visibleSourceLink } from "@/lib/external-link";
 export function JejuMap({
   locale,
   places,
@@ -34,7 +35,7 @@ export function JejuMap({
             </small>
             <h3>{place.name[locale]}</h3>
             <p>{priceLabel(place, locale)}</p>
-            {place.coordinateSource && <a className="text-link" href={place.coordinateSource.sourceUrl} target="_blank" rel="noopener noreferrer">{t.coordinateSource} · {place.coordinateSource.sourceName}<ArrowUpRight size={13} /></a>}
+            {place.coordinateSource && visibleSourceLink(place.coordinateSource.sourceUrl) && <a className="text-link" href={visibleSourceLink(place.coordinateSource.sourceUrl)!} target="_blank" rel="noopener noreferrer">{t.coordinateSource} · {place.coordinateSource.sourceName}<ArrowUpRight size={13} /></a>}
           </div>
           <Link
             href={`/${locale}/places/${place.slug}`}

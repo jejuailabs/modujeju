@@ -12,7 +12,7 @@ import companionSpots from "../../research_notes/catalog/companion-spots.json";
 import companionPhotos from "../../research_notes/catalog/companion-photos.json";
 import researchedOutings from "../../research_notes/catalog/researched-outings.json";
 import companionEnrichment from "../../research_notes/catalog/companion-enrichment.json";
-import { applyCompanionEnrichment } from "@/lib/companion-enrichment";
+import { applyCompanionEnrichment, fillMissingEnrichment } from "@/lib/companion-enrichment";
 import { applyListingAmenities } from "@/lib/listing-amenities";
 import type { Place } from "@/lib/types";
 import apiDetails from "../../research_notes/catalog/visitjeju-api-details.json";
@@ -23,6 +23,13 @@ import publicSourceSpots from "../../research_notes/catalog/public-source-spots.
 import publicSourcePhotos from "../../research_notes/catalog/public-source-photos.json";
 import publicSourceEnrichment from "../../research_notes/catalog/public-source-enrichment.json";
 import visitJejuFacilities from "../../research_notes/catalog/visitjeju-facilities.json";
+import attractionSpots from "../../research_notes/catalog/visitjeju-attraction-spots.json";
+import attractionPhotos from "../../research_notes/catalog/visitjeju-attraction-photos.json";
+import attractionEnrichment from "../../research_notes/catalog/visitjeju-attraction-enrichment.json";
+import photoBackfill from "../../research_notes/catalog/visitjeju-photo-backfill.json";
+import existingPatches from "../../research_notes/catalog/visitjeju-existing-patches.json";
+import apiCoordinates from "../../research_notes/catalog/visitjeju-coordinates.json";
+import photoThumbs from "../../research_notes/catalog/visitjeju-thumbs.json";
 
 // Public official pages observed on 2026-11-08. This is a sourced snapshot,
 // not a live API sync. Unknown admission rules and prices remain unknown.
@@ -55,7 +62,11 @@ export const listingPlaces = applyCatalogPhotos(mapOfficialCatalog(mommomSpots),
 // patches (public-source-enrichment.json) stay hidden until approved
 // (scripts/approve-public-sources.mjs).
 export const publicSourcePlaces = applyCatalogPhotos(mapOfficialCatalog(publicSourceSpots), publicSourcePhotos);
-const allPlaces = [...basePlaces, ...companionPlaces, ...outingPlaces, ...listingPlaces, ...publicSourcePlaces];
+// Every VisitJeju attraction (관광지) in the API snapshot that the researched
+// lists above do not cover, with its official photo and tag-derived facilities
+// (scripts/build-visitjeju-attractions.mjs).
+export const attractionCatalogPlaces = applyCatalogPhotos(mapOfficialCatalog(attractionSpots), attractionPhotos);
+const allPlaces = [...basePlaces, ...companionPlaces, ...outingPlaces, ...listingPlaces, ...publicSourcePlaces, ...attractionCatalogPlaces];
 if (new Set(allPlaces.map(place => place.id)).size !== allPlaces.length) throw new Error("DUPLICATE_RESEARCHED_LISTING");
 
 // Supplemental official sources override only explicitly reviewed fields.
@@ -68,11 +79,17 @@ if (apiById.size !== apiDetails.records.length) throw new Error("DUPLICATE_VISIT
 // then app listings fill what is left.
 // VisitJeju official API text (intro, phone, addresses, facility tags) and
 // its facility icons apply to every catalog place that the API lists.
-const enriched = [visitJejuFacilities, publicSourceEnrichment].reduce(
+const enriched = [visitJejuFacilities, publicSourceEnrichment, attractionEnrichment].reduce(
   (current: Place[], patches: readonly unknown[]) => applyCompanionEnrichment(current, patches),
   applyCompanionEnrichment(allPlaces, companionEnrichment),
 );
-export const realPlaces: Place[] = applyListingAmenities(enriched, mommomAmenities).map(place => {
+const thumbnails = photoThumbs as Record<string, string>;
+// Official photos for listings that were researched without one, plus card thumbnails.
+const photographed = applyCatalogPhotos(fillMissingEnrichment(applyListingAmenities(enriched, mommomAmenities), existingPatches), photoBackfill).map(place =>
+  place.photoSource && !place.photoSource.thumbUrl && thumbnails[place.sourceId ?? ""]
+    ? { ...place, photoSource: { ...place.photoSource, thumbUrl: thumbnails[place.sourceId!] } }
+    : place);
+const apiDetailed: Place[] = photographed.map(place => {
   const record = apiById.get(place.sourceId ?? "");
   if (!record) return place;
   if (record.title !== place.name.ko || !place.sourceUrl) throw new Error("VISITJEJU_API_IDENTITY_MISMATCH");
@@ -89,7 +106,7 @@ export const realPlaces: Place[] = applyListingAmenities(enriched, mommomAmeniti
     };
   }
   // Personal mobile numbers (010) are not published without the owner's consent.
-  if (record.phone && !/^010/.test(record.phone.replace(/\s/g, ""))) {
+  if (record.phone && !place.sourceObservations?.some(observation => observation.field === "visitJejuPhone") && !/^010/.test(record.phone.replace(/\s/g, ""))) {
     result.sourceObservations = [...(place.sourceObservations ?? []), {
       field: "visitJejuPhone",
       value: record.phone,
@@ -98,4 +115,15 @@ export const realPlaces: Place[] = applyListingAmenities(enriched, mommomAmeniti
     }];
   }
   return result;
+});
+
+// Place-center coordinates from the full API snapshot for listings that still have none.
+const snapshotCoordinates = apiCoordinates as unknown as Record<string, [number, number]>;
+export const realPlaces: Place[] = apiDetailed.map(place => {
+  const point = place.lat === null || place.lng === null ? snapshotCoordinates[place.sourceId ?? ""] : undefined;
+  if (!point || !place.sourceUrl) return place;
+  return {
+    ...place, lat: point[0], lng: point[1],
+    coordinateSource: { sourceName: "비짓제주 관광정보 API", sourceUrl: place.sourceUrl, checkedAt: "2026-11-11", kind: "place-center" as const },
+  };
 });

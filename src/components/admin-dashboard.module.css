@@ -1,0 +1,16 @@
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
+.tile { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 16px; display: grid; gap: 4px; }
+.tile span { font-size: 16px; color: var(--muted); }
+.tile strong { font-size: 32px; line-height: 1.1; color: var(--ink); }
+.tile small { font-size: 14px; color: var(--muted); }
+.chart { display: grid; grid-template-columns: repeat(14, minmax(0, 1fr)); gap: 6px; align-items: end; height: 180px; padding-top: 8px; }
+.bar { display: grid; grid-template-rows: 1fr auto; gap: 4px; height: 100%; text-align: center; }
+.barTrack { display: flex; align-items: end; }
+.fill { width: 100%; min-height: 2px; background: var(--green); border-radius: 6px 6px 0 0; }
+.today .fill { background: var(--accent); }
+.bar small { font-size: 14px; color: var(--muted); }
+.lists { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.rank { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.rank li { display: flex; justify-content: space-between; gap: 12px; min-height: 48px; align-items: center; border-bottom: 1px solid var(--line); overflow-wrap: anywhere; }
+.rank b { white-space: nowrap; color: var(--accent-dark); }
+.head { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }

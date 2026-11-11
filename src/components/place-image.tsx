@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { ExternalLink } from "lucide-react";
 import type { Locale, Place } from "@/lib/types";
 import { copy } from "@/messages/ui";
 import { designCopy } from "@/messages/design";
@@ -25,7 +24,9 @@ export function PlaceImage({
   thumbnailHeight?: number;
 }) {
   const [failedSource, setFailedSource] = useState<string | null>(null);
-  const failed = failedSource === place.image;
+  // Cards load the smaller official rendition; the detail page keeps the full photo.
+  const source = variant === "card" && place.photoSource?.thumbUrl ? place.photoSource.thumbUrl : place.image;
+  const failed = failedSource === source;
   const hasImage = Boolean(place.image) && place.imageKind !== "placeholder" && !failed;
   const c = copy(locale);
   const t = photoCopy(locale);
@@ -39,15 +40,15 @@ export function PlaceImage({
     <>
       {hasImage ? (
         <Image
-          key={place.image}
-          src={place.image}
+          key={source}
+          src={source}
           alt={thumbnail ? "" : place.photoSource?.alt ?? place.name[locale]}
           {...(thumbnail ? { width: thumbnailWidth, height: thumbnailHeight } : { fill: true })}
           sizes={thumbnail ? `${thumbnailWidth}px` : variant === "detail" ? "(max-width:900px) 92vw,760px" : "(max-width:640px) 92vw,(max-width:1000px) 45vw,380px"}
           loading={variant === "detail" ? "eager" : "lazy"}
           className={className}
           unoptimized
-          onError={() => setFailedSource(place.image)}
+          onError={() => setFailedSource(source)}
         />
       ) : (
         <span
@@ -71,10 +72,7 @@ export function PhotoAttribution({ place, locale }: { place: Place; locale: Loca
   const t = photoCopy(locale);
   return (
     <p className="place-photo-credit">
-      <a href={place.photoSource.sourceUrl} target="_blank" rel="noopener noreferrer">
-        {t.source} · {place.photoSource.sourceName}
-        <ExternalLink size={11} aria-hidden="true" />
-      </a>
+      <span>{t.source} · {place.photoSource.sourceName}</span>
       <span>{t.observed} <time dateTime={place.photoSource.observedAt}>{place.photoSource.observedAt}</time></span>
     </p>
   );

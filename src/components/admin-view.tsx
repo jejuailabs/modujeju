@@ -22,6 +22,7 @@ import { accountError, accountMessages } from "@/messages/account";
 import { copy } from "@/messages/ui";
 import { errorCode, requestJson } from "@/lib/firebase/requests";
 import { PageIntro } from "./common";
+import { AdminDashboard } from "./admin-dashboard";
 
 type Status = "draft" | "published" | "hidden" | "suspended" | "closed";
 type Rights = {
@@ -271,6 +272,7 @@ export function AdminView({ locale }: { locale: Locale }) {
         </section>
       ) : (
         <div className="stack">
+          <AdminDashboard locale={locale} />
           <div className="field-row">
             <ShieldCheck size={24} aria-hidden="true" />
             <button

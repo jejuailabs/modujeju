@@ -31,6 +31,15 @@ const words = {
   dayTrip: ["당일", "Day trip", "一日游", "日帰り"],
   nights: ["박", " nights", "晚", "泊"],
   days: ["일", " days", "天", "日"],
+  autoTitle: ["찜한 곳으로 자동 일정 만들기", "Build an itinerary from your saved spots", "用收藏自动生成行程", "保存したスポットから自動で日程を作成"],
+  autoIntro: ["로그인하면 내 계정에 찜한 장소까지 모아서, 지역·동행 조건에 맞는 일수와 일정을 한 번에 짜 드려요.", "Sign in and we gather the spots saved to your account, then plan the days and route for your region and companion needs in one go.", "登录后将汇总账号中收藏的地点，按区域和同行条件一次性规划天数与行程。", "ログインするとアカウントに保存したスポットも集め、エリアと同行条件に合う日数と日程をまとめて作成します。"],
+  autoLogin: ["로그인하고 자동 일정 받기", "Sign in for an automatic itinerary", "登录获取自动行程", "ログインして自動日程を作成"],
+  autoButton: ["찜한 곳으로 일정 짜기", "Plan from my saved spots", "用收藏规划行程", "保存したスポットで日程を作る"],
+  autoBusy: ["일정을 짜는 중", "Planning", "正在规划", "作成中"],
+  autoDone: ["찜한 {count}곳으로 {days}일 일정을 저장했어요. 아래에서 순서를 바꿀 수 있어요.", "Saved a {days}-day itinerary from {count} spots. You can reorder it below.", "已用 {count} 处收藏保存 {days} 天行程，可在下方调整顺序。", "{count}件の保存スポットで{days}日間の日程を保存しました。下で順序を変えられます。"],
+  autoEmpty: ["아직 찜한 장소가 없어요. 마음에 드는 곳에 북마크를 눌러 주세요.", "No saved spots yet. Bookmark places you like first.", "还没有收藏的地点，请先点击书签收藏。", "保存したスポットがまだありません。気になる場所をブックマークしてください。"],
+  autoFailed: ["일정을 만들지 못했어요. 잠시 후 다시 시도해 주세요.", "The itinerary could not be built. Please try again shortly.", "未能生成行程，请稍后再试。", "日程を作成できませんでした。しばらくしてからお試しください。"],
+  autoCloudOff: ["이 환경에서는 로그인을 사용할 수 없어요. 이 기기에 찜한 장소로 아래에서 일정을 짤 수 있어요.", "Sign-in is not available here. You can still plan below from spots saved on this device.", "当前环境无法登录，可使用本机收藏在下方规划行程。", "この環境ではログインできません。この端末の保存スポットで下から日程を作成できます。"],
 } as const;
 
 export function recommendationCopy(locale: Locale) {

@@ -88,6 +88,7 @@ export interface Place {
     sourceId: string;
     sourceUrl: string;
     photoUrl: string;
+    thumbUrl?: string;
     alt: string;
     observedAt: string;
     sourceName: "비짓제주";

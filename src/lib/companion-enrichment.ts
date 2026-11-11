@@ -61,3 +61,34 @@ export function applyCompanionEnrichment(places: readonly Place[], input: readon
     return result;
   });
 }
+
+/**
+ * Adds official API data only where the reviewed record has nothing yet: absent
+ * observation fields and absent facilities. Reviewed values (including explicit
+ * "no", counts and deliberately unknown admissions) are never overwritten.
+ */
+export function fillMissingEnrichment(places: readonly Place[], input: readonly unknown[]): Place[] {
+  const byId = new Map(input.map(value => {
+    const patch = companionEnrichmentSchema.parse(value);
+    return [patch.sourceId, patch] as const;
+  }));
+  if (byId.size !== input.length) throw new Error("DUPLICATE_COMPANION_ENRICHMENT");
+  return places.map(place => {
+    const patch = place.sourceId ? byId.get(place.sourceId) : undefined;
+    if (!patch) return place;
+    const present = new Set((place.sourceObservations ?? []).map(observation => observation.field));
+    const observations = patch.observations.filter(observation => !present.has(observation.field));
+    const amenities = { ...place.amenities };
+    for (const [key, evidence] of Object.entries(patch.amenities ?? {})) {
+      if (!(key in amenities)) Object.assign(amenities, { [key]: evidence });
+    }
+    // Admissions are never inferred here: research may have kept them unknown on purpose.
+    const result: Place = {
+      ...place,
+      sourceObservations: [...(place.sourceObservations ?? []), ...observations],
+      ...(Object.keys(amenities).length ? { amenities } : {}),
+    };
+    placeSchema.parse(result);
+    return result;
+  });
+}

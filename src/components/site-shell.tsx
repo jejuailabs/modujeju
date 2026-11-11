@@ -12,6 +12,7 @@ import {
   Globe2,
   ArrowUpRight,
   NotebookPen,
+  Map as MapIcon,
 } from "lucide-react";
 import { copy } from "@/messages/ui";
 import type { Locale } from "@/lib/types";
@@ -19,6 +20,7 @@ import { useTravelStore } from "@/hooks/use-travel-store";
 import { tripMessages } from "@/messages/trip";
 import { designCopy } from "@/messages/design";
 import { storyCopy } from "@/messages/stories";
+import { spotMapCopy } from "@/messages/spot-map";
 let memoryTheme: string | null = null;
 function readTheme() {
   let saved = memoryTheme;
@@ -69,6 +71,7 @@ export function SiteShell({
   }
   const links = [
     { href: "results", label: c.navExplore, Icon: Compass },
+    { href: "map", label: spotMapCopy(locale).nav, Icon: MapIcon },
     { href: "my", label: { ko: "마이페이지", en: "My places", zh: "我的主页", ja: "マイページ" }[locale], Icon: Bookmark },
     { href: "stories", label: storyCopy(locale).nav, Icon: NotebookPen },
     { href: "itinerary", label: c.navTrip, Icon: CalendarDays },

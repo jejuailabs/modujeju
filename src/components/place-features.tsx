@@ -9,6 +9,7 @@ import {
   ChevronDown,
 } from "lucide-react";
 import type { Locale, Place } from "@/lib/types";
+import { visibleSourceLink } from "@/lib/external-link";
 import {
   getCompanionFeatureRows,
   type CompanionFeatureRow,
@@ -103,8 +104,8 @@ function Evidence({ feature, locale }: { feature: PlaceFeature; locale: Locale }
           <small>{evidence.checkedAt ? `${ui.date} ${evidence.checkedAt}` : ui.noDate}</small>
           {evidence.publishedAt && <small>{`${ui.published} ${evidence.publishedAt}`}</small>}
           {evidence.quote && <q className="evidence-quote">{evidence.quote}</q>}
-          {evidence.sourceUrl && /^https:\/\//.test(evidence.sourceUrl) && (
-            <a className="text-link" href={evidence.sourceUrl} target="_blank" rel="noopener noreferrer">
+          {visibleSourceLink(evidence.sourceUrl) && (
+            <a className="text-link" href={visibleSourceLink(evidence.sourceUrl)!} target="_blank" rel="noopener noreferrer">
               {ui.evidence}
               <ExternalLink size={12} />
             </a>

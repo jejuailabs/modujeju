@@ -10,6 +10,7 @@ import { copy } from "@/messages/ui";
 import { recommendationCopy, tripLengthLabel } from "@/messages/recommendation";
 import { browseCategory } from "@/lib/place-categories";
 import { typeIcons } from "./common";
+import { AutoTripPlanner } from "./auto-trip-planner";
 import styles from "./trip-recommendation.module.css";
 
 export function TripRecommendation({ places, locale }: { places: Place[]; locale: Locale }) {
@@ -77,6 +78,7 @@ export function TripRecommendation({ places, locale }: { places: Place[]; locale
       <div><span className="eyebrow">YOUR PLACES, YOUR JOURNEY</span><h2 id="trip-recommendation-title">{t.title}</h2><p>{t.intro}</p></div>
       <span className={styles.length}>{tripLengthLabel(locale, store.tripDays)}</span>
     </div>
+    <AutoTripPlanner places={places} locale={locale} />
     {!store.savedIds.length ? <p>{t.noPlaces} <Link href={`/${locale}/results`} className="text-link">{t.browse}<ArrowRight size={16} /></Link></p>
       : store.tripDays < 2 ? <p>{t.nightsOnly}</p> : <>
         <div className={styles.aiControls}>

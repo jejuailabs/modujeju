@@ -28,9 +28,10 @@ import { DemoNotice, PageIntro } from "./common";
 import { PlaceCard } from "./place-card";
 import { PlaceFeatures } from "./place-features";
 import { PlaceImage, PhotoAttribution } from "./place-image";
+import { isVisitJejuUrl } from "@/lib/external-link";
 
 function safeExternalUrl(value: string | undefined): string | null {
-  if (!value) return null;
+  if (!value || isVisitJejuUrl(value)) return null;
   try {
     const url = new URL(value);
     return ["https:", "http:"].includes(url.protocol) &&
@@ -300,6 +301,7 @@ export function DetailView({
               {sourceReadDate && (
                 <p className="muted">
                   {catalog.sourceRead} {sourceReadDate}
+                  {place.sourceName === "VisitJeju" ? " · 비짓제주" : ""}
                 </p>
               )}
               {sourceUrl && (

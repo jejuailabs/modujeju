@@ -4,6 +4,7 @@ const l = (ko: string, en: string, zh: string, ja: string): LocalizedText => ({ 
 const messages = {
   source: l("등록된 장소", "Listed places", "已收录场所", "掲載スポット"),
   count: l("곳", "places", "处", "件"),
+  showMore: l("더 보기", "Show more", "查看更多", "もっと見る"),
   notice: l("비짓제주, 관광약자접근성안내센터, 식품안전나라 같은 공식 정보와 육아 앱 표기를 모았어요. 항목마다 출처와 확인일을 함께 보여드려요.", "Gathered from official sources such as VisitJeju, the Jeju accessibility center and the Food Safety Korea pet-entry list, plus family travel app listings. Each item shows its source and check date.", "汇集VisitJeju、济州旅游弱势群体无障碍中心、食品安全韩国等官方信息及亲子应用标注。每项均附来源和确认日期。", "VisitJeju、済州観光弱者アクセシビリティ案内センター、食品安全ナラなどの公式情報と子育てアプリの表記をまとめました。項目ごとに出典と確認日を表示します。"),
   placeholder: l("유형 안내 이미지 · 실제 장소 사진 아님", "Category illustration · not a place photo", "分类示意图 · 非实景照片", "種類のイメージ・実際の写真ではありません"),
   sourceTags: l("비짓제주 태그", "VisitJeju tags", "VisitJeju标签", "VisitJejuのタグ"),

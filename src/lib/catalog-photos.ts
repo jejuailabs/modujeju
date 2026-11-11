@@ -32,6 +32,8 @@ export const catalogPhotoSchema = z.object({
   sourceId: z.string().regex(/^[a-zA-Z0-9_-]{1,100}$/),
   sourceUrl: z.string().max(2048),
   photoUrl: z.string().max(2048).refine(isVisitJejuPhotoUrl, "INVALID_VISITJEJU_PHOTO_URL"),
+  /** Smaller rendition of the same listing photo for cards and map previews. */
+  thumbUrl: z.string().max(2048).refine(isVisitJejuPhotoUrl, "INVALID_VISITJEJU_PHOTO_URL").optional(),
   alt: z.string().trim().min(1).max(300),
   observedAt: z.iso.date().refine((value) => value >= "2025-01-01", "PHOTO_OBSERVATION_TOO_OLD"),
   sourceName: z.literal("비짓제주"),

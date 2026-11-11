@@ -17,7 +17,7 @@ import { useTravelStore } from "@/hooks/use-travel-store";
 import { PlaceCard } from "./place-card";
 import { DemoNotice, PageIntro, TypePicker, toggle } from "./common";
 import { BudgetFields, NeedFields } from "./plan-view";
-import { JejuMap } from "./jeju-map";
+import { SpotMap } from "./spot-map";
 import { CatalogNotice } from "./catalog-notice";
 import { catalogCopy } from "@/messages/catalog";
 import {
@@ -30,6 +30,8 @@ import {
 import { featureLabels } from "@/messages/features";
 import { featureUi } from "@/messages/feature-ui";
 import { FeatureIcon } from "./feature-icon";
+const PAGE_SIZE = 48;
+
 export function ResultsView({
   locale,
   places,
@@ -41,6 +43,7 @@ export function ResultsView({
     { profile, setProfile } = useTravelStore();
   const f = featureUi(locale);
   const [features, setFeatures] = useState<FeatureKey[]>([]);
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [includeConditionalFeatures, setConditionalFeatures] = useState(true);
   const [query, setQuery] = useState(""),
     [sort, setSort] = useState<CatalogOptions["sort"]>("recommended"),
@@ -303,7 +306,9 @@ export function ResultsView({
           </div>
         </div>
       </div>
-      {!matches.length ? (
+      {view === "map" ? (
+        <SpotMap locale={locale} places={places} />
+      ) : !matches.length ? (
         <div className="empty-state">
           <Search size={38} />
           <h2>{features.length ? f.empty : c.noResults}</h2>
@@ -320,14 +325,25 @@ export function ResultsView({
             {features.length ? f.all : c.resetArea}
           </button>
         </div>
-      ) : view === "map" ? (
-        <JejuMap locale={locale} places={matches.map((m) => m.place)} />
       ) : (
-        <div className="place-grid">
-          {matches.map(({ place }) => (
-            <PlaceCard key={place.id} place={place} locale={locale} />
-          ))}
-        </div>
+        <>
+          <div className="place-grid">
+            {matches.slice(0, visibleCount).map(({ place }) => (
+              <PlaceCard key={place.id} place={place} locale={locale} />
+            ))}
+          </div>
+          {matches.length > visibleCount && (
+            <div className="results-end">
+              <button
+                type="button"
+                className="btn secondary"
+                onClick={() => setVisibleCount((count) => count + PAGE_SIZE)}
+              >
+                {catalogCopy(locale).showMore} ({visibleCount}/{matches.length})
+              </button>
+            </div>
+          )}
+        </>
       )}
       <div className="results-end">
         <Link href={`/${locale}/saved`} className="text-link">

@@ -1,0 +1,8 @@
+.box { display: grid; gap: 14px; margin: 22px 0; padding: 20px; border: 1px solid var(--line); border-radius: 20px; background: var(--surface2); }
+.copy { display: flex; gap: 14px; align-items: flex-start; color: var(--green); }
+.copy h3 { margin: 0 0 6px; font-size: 20px; color: var(--ink); }
+.copy p { margin: 0; font-size: 16px; line-height: 1.55; color: var(--ink); }
+.box :global(.btn) { justify-self: start; min-height: 48px; }
+.result { margin: 0; font-size: 16px; color: var(--green); }
+.result:empty { display: none; }
+@media (max-width: 560px) { .box :global(.btn) { justify-self: stretch; } }

@@ -12,6 +12,7 @@ import { PlaceFeatures } from "./place-features";
 import { PlaceImage, PhotoAttribution } from "./place-image";
 import { OsmMap, hasPlaceCoordinates } from "./osm-map";
 import styles from "./saved-view.module.css";
+import { visibleSourceLink } from "@/lib/external-link";
 
 export function SavedPlaceMap({ locale, places }: { locale: Locale; places: Place[] }) {
   const [selectedId, setSelectedId] = useState<string | null>(null);
@@ -42,7 +43,7 @@ export function SavedPlaceMap({ locale, places }: { locale: Locale; places: Plac
           </div>
           <PhotoAttribution place={selected} locale={locale} />
           <p className={styles.selectedAddress}><MapPin size={15} aria-hidden="true" />{selected.address[locale]}</p>
-          {selected.coordinateSource && <a className={styles.externalMap} href={selected.coordinateSource.sourceUrl} target="_blank" rel="noopener noreferrer">{catalogCopy(locale).coordinateSource} · {selected.coordinateSource.sourceName}<ArrowUpRight size={13} aria-hidden="true" /></a>}
+          {selected.coordinateSource && visibleSourceLink(selected.coordinateSource.sourceUrl) && <a className={styles.externalMap} href={visibleSourceLink(selected.coordinateSource.sourceUrl)!} target="_blank" rel="noopener noreferrer">{catalogCopy(locale).coordinateSource} · {selected.coordinateSource.sourceName}<ArrowUpRight size={13} aria-hidden="true" /></a>}
           <PlaceFeatures place={selected} locale={locale} compact />
           <Link className={`btn primary ${styles.detailLink}`} href={`/${locale}/places/${selected.slug}`}>{c.openPlace}<ArrowUpRight size={17} aria-hidden="true" /></Link>
           <a className={styles.externalMap} href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${selected.name.ko} ${selected.address.ko}`)}`} target="_blank" rel="noopener noreferrer">{t.addressMap}<ArrowUpRight size={15} aria-hidden="true" /></a>

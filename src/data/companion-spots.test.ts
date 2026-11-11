@@ -5,7 +5,7 @@ import { mapOfficialCatalog } from "@/lib/official-catalog";
 import { applyCatalogPhotos } from "@/lib/catalog-photos";
 import { getCompanionFeatureRows, getPlaceFeatures } from "@/lib/place-features";
 import { toPublicPlace } from "@/lib/server/place-schema";
-import { basePlaces, companionPlaces, listingPlaces, outingPlaces, publicSourcePlaces, realPlaces } from "./catalog";
+import { basePlaces, companionPlaces, attractionCatalogPlaces, listingPlaces, outingPlaces, publicSourcePlaces, realPlaces } from "./catalog";
 
 const now = new Date("2026-11-08T03:00:00Z");
 const banned = /(naver\.com|naver\.me|kakao\.com|tistory\.com|daum\.net|google\.)/i;
@@ -19,7 +19,7 @@ describe("companion research spots", () => {
   it("adds VisitJeju-identified dining and lodging spots without duplicating the base catalog", () => {
     expect(companionPlaces.length).toBe(companionSpots.length);
     expect(companionPlaces.length).toBeGreaterThan(0);
-    expect(realPlaces).toHaveLength(basePlaces.length + companionPlaces.length + outingPlaces.length + listingPlaces.length + publicSourcePlaces.length);
+    expect(realPlaces).toHaveLength(basePlaces.length + companionPlaces.length + outingPlaces.length + listingPlaces.length + publicSourcePlaces.length + attractionCatalogPlaces.length);
     expect(new Set(realPlaces.map(place => place.id)).size).toBe(realPlaces.length);
     for (const place of companionPlaces) {
       expect(["restaurant", "cafe", "stay"]).toContain(place.type);
