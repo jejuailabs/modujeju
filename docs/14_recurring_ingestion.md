@@ -1,12 +1,12 @@
 # 비짓제주 지속 수집 운영
 
-작성일: 2026-11-08. 이 문서는 구현된 연결과 아직 실행하지 않은 운영 작업을 구분한다.
+작성일 2026-11-08 · 일회성 API 수집일 2026-11-11
 
 ## 현재 상태
 
-수집 엔진, Firestore 저장 어댑터, 공개 카탈로그 연결, 인증된 예약 실행 경로와 로컬 모의 테스트를 준비했다. **실제 VisitJeju API 키는 없으며 무료 여부·정량 호출 한도·초과 과금 조건·장기 저장 조건도 확정하지 못했다. 실제 API 호출, Firestore 읽기·쓰기, 배포 또는 예약 등록을 수행하지 않았다.** 기본 화면은 공개 UI 관측 자료 66곳(식당·카페·숙소 각 20곳, 관광지 6곳)을 사용한다.
+2026-11-08 웹 방화벽의 HTML 응답으로 중단했던 API 수집을 11월 11일에 완료했다. 승인된 일회성 로컬 수집으로 한국어 59페이지에서 고유 콘텐츠 ID 5,889개를 확보했고 앱의 검토 장소 157곳을 연결했다. 클라우드와 예약 수집은 비활성 상태다. [수집 절차와 호출 기록](13_data_collection.md)
 
-VisitJeju 공식 안내는 인증키 필수, 담당자 승인 후 이메일 발급, 과도한 트래픽의 이용 제한을 설명한다. 이를 무료·무제한 사용 허가로 해석하지 않는다. [공식 API 안내](https://www.visitjeju.net/kr/visitjejuapi), [공식 가이드 PDF](https://api.visitjeju.net/file/bbsattachment/filepath/202606/15/2f62f5a7-9d71-4d0c-a43c-54321cd4b06b.pdf)
+공공데이터포털은 API 비용을 무료로 안내한다. 비짓제주는 담당자가 키 신청을 승인해 메일로 발급하며 과도한 트래픽이 발생하면 이용을 제한할 수 있다고 안내한다. 계정별 호출 한도와 초과 처리 조건은 별도 확인이 필요하다. [공공데이터포털](https://www.data.go.kr/data/15076361/openapi.do) · [비짓제주 공식 API 안내](https://www.visitjeju.net/kr/visitjejuapi)
 
 TourAPI는 대체 자동 수집기로 연결하지 않았다. 무료라는 사실과 별개로 공식 정책에 로컬 캐싱 금지가 표시되어 저장 방식의 허용 범위 확인이 필요하다. [공식 저작권 정책](https://api.visitkorea.or.kr/#/useServiceGuide/2), [제공기관 조사 기록](../research_notes/sources/provider-access-2026-11-08.md)
 
@@ -25,9 +25,9 @@ TourAPI는 대체 자동 수집기로 연결하지 않았다. 무료라는 사�
 | `VISITJEJU_SYNC_COST_APPROVED` | 지속 수집의 모든 비용 범위 승인, `false` |
 | `VISITJEJU_STORAGE_APPROVED` | 응답 정규화·저장·재공개 권리 확인, `false` |
 | `VISITJEJU_SYNC_APPROVAL_EXPIRES_AT` | 승인 종료시각, 빈 값; 미래 UTC ISO 시각이 필수 |
-| `VISITJEJU_API_KEY` | 발급된 서버 전용 키, 현재 없음 |
+| `VISITJEJU_API_KEY` | 발급된 서버 전용 키. 예시 환경 파일에는 빈 값 |
 | `VISITJEJU_API_URL` | 승인된 HTTPS endpoint만 허용 |
-| `VISITJEJU_API_KEY_PARAM` | 공식 계약에서 확인한 `apiKey` 또는 `apikey` |
+| `VISITJEJU_API_KEY_PARAM` | 실제 JSON 응답을 확인한 쿼리 이름 `apiKey` (대문자 K) |
 | `FIREBASE_ADMIN_*` | 서버 전용 자격 증명; 존재 자체는 실행 허가가 아님 |
 | `CRON_SECRET` | 32–256자 URL-safe 비밀값, `.env.local`에만 로컬 생성 |
 | `VISITJEJU_SYNC_MAX_PAGES` | 실행당 최대 페이지, 기본 2, 1–2만 허용 |

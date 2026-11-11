@@ -49,7 +49,7 @@ const access = z.enum(["yes", "conditional", "no"]);
 export const amenityEvidenceSchema = z
   .object({
     value: z.union([access, z.literal("unknown")]),
-    source: z.enum(["demo", "official", "phone", "onsite", "search"]),
+    source: z.enum(["demo", "official", "phone", "onsite", "search", "listing"]),
     verifiedAt: factDate.nullable(),
     sourceUrl: httpsUrl.optional(),
     publishedAt: factDate.nullable().optional(),
@@ -59,8 +59,8 @@ export const amenityEvidenceSchema = z
   })
   .strict()
   .refine(
-    (entry) => entry.source !== "search" || (!!entry.sourceUrl && !!entry.publishedAt),
-    "Search evidence needs a source URL and publication date",
+    (entry) => (entry.source !== "search" && entry.source !== "listing") || (!!entry.sourceUrl && !!entry.publishedAt),
+    "Search and listing evidence need a source URL and publication date",
   );
 export const amenitiesSchema = z
   .partialRecord(z.enum(facilityKeys), amenityEvidenceSchema);

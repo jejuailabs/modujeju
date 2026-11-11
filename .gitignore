@@ -20,4 +20,6 @@ tmp/
 .DS_Store
 Thumbs.db
 *.tsbuildinfo
+# Raw API snapshots remain local until their contents and reuse terms are reviewed.
+research_notes/ingestion/
 

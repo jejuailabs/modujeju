@@ -277,6 +277,22 @@ export function DetailView({
                     <dt>{observationLabel(observation.field, locale)}</dt>
                     <dd>
                       <p>{observation.value}</p>
+                      <small className="muted">
+                        {displayDate(observation.verifiedAt, locale)
+                          ? `${c.verified} ${displayDate(observation.verifiedAt, locale)}`
+                          : t.noVerification}
+                      </small>
+                      {safeExternalUrl(observation.sourceUrl) && (
+                        <a
+                          href={safeExternalUrl(observation.sourceUrl)!}
+                          className="text-link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {c.sourceLink} · {new URL(observation.sourceUrl).hostname}
+                          <ExternalLink size={12} aria-hidden="true" />
+                        </a>
+                      )}
                     </dd>
                   </div>
                 ))}

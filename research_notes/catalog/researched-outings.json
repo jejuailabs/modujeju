@@ -1,0 +1,1112 @@
+[
+  {
+    "name": "에코랜드 테마파크",
+    "address": "제주특별자치도 제주시 조천읍 번영로 1278-169",
+    "district": "조천",
+    "region": "east",
+    "type": "attraction",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500438",
+    "sourceId": "CONT_000000000500438",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "곶자왈",
+      "테마공원",
+      "어린이",
+      "기차"
+    ],
+    "summary": "기차로 곶자왈을 둘러보고 역마다 정원과 어린이 체험 공간을 만나는 테마파크.",
+    "observations": [
+      {
+        "field": "아이 동반",
+        "value": "포레스트파크역에 어린이 놀이·체험 공간이 있습니다. 유모차를 이용할 때는 수상 데크의 일부 계단과 기차 승하차 방법을 먼저 확인하세요.",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500438",
+        "verifiedAt": "2026-11-08"
+      },
+      {
+        "field": "반려동물 동반",
+        "value": "현재 동반 정책의 공식 원문을 충분히 확인하지 못했습니다. 이동장 사용만으로 입장이 허용된다고 판단하지 않습니다.",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500438",
+        "verifiedAt": null
+      },
+      {
+        "field": "어르신·이동 편의",
+        "value": "장애인 주차구역과 전용 화장실이 안내됩니다. 일부 코스에 계단이 있고 화산송이 노면은 휠체어 이동이 어려울 수 있어 역별 하차 동선을 확인해야 합니다.",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500438",
+        "verifiedAt": "2026-11-08"
+      },
+      {
+        "field": "기차 이용",
+        "value": "기차 좌석 사이 폭과 승하차 조건이 제한적일 수 있습니다. 보장구를 사용한다면 064-802-8020으로 탑승 가능 여부를 문의하세요.",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500438",
+        "verifiedAt": "2026-11-08"
+      }
+    ],
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "kidsPlay": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500438",
+        "quote": "어린이 체험·놀이시설"
+      },
+      "stroller": {
+        "value": "conditional",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500438",
+        "note": {
+          "ko": "일부 데크 계단과 기차 승하차가 있어 전체 코스의 유모차 이동을 보장하지 않습니다.",
+          "en": "일부 데크 계단과 기차 승하차가 있어 전체 코스의 유모차 이동을 보장하지 않습니다.",
+          "zh": "일부 데크 계단과 기차 승하차가 있어 전체 코스의 유모차 이동을 보장하지 않습니다.",
+          "ja": "일부 데크 계단과 기차 승하차가 있어 전체 코스의 유모차 이동을 보장하지 않습니다."
+        }
+      },
+      "accessibleParking": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500438",
+        "quote": "장애인 전용 주차구역 있음"
+      },
+      "accessibleToilet": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500438",
+        "quote": "장애인 전용 화장실 있음"
+      }
+    },
+    "admissions": {
+      "kids": {
+        "value": "yes",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500438",
+        "verifiedAt": "2026-11-08",
+        "quote": "어린이 11,000원 (36개월 이상)"
+      }
+    }
+  },
+  {
+    "name": "제주돌문화공원",
+    "address": "제주특별자치도 제주시 조천읍 남조로 2023",
+    "district": "조천",
+    "region": "east",
+    "type": "attraction",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500547",
+    "sourceId": "CONT_000000000500547",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "공영관광지",
+      "제주신화",
+      "박물관",
+      "생태공원"
+    ],
+    "summary": "돌박물관과 야외 석상, 전통 초가를 함께 둘러보며 제주의 돌 문화를 배우는 공원.",
+    "observations": [
+      {
+        "field": "아이 동반",
+        "value": "유모차 대여가 안내됩니다. 어린이관이 있으며 단체 이용은 별도 신청 메뉴를 확인하세요. 어린이관 운영과 공원 전체 산책 코스는 구분해 계획하는 것이 좋습니다.",
+        "sourceUrl": "https://access.visitkorea.or.kr/ms/detail.do?cotId=5a9c91a7-9e1e-4a25-b7b1-94c369df6bcd",
+        "verifiedAt": "2026-11-08"
+      },
+      {
+        "field": "반려동물 동반",
+        "value": "확인한 공식 자료에서 반려동물 동반의 허용 구역·체급 조건을 확인하지 못했습니다. 입장 전 관리소 확인이 필요합니다.",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500547",
+        "verifiedAt": null
+      },
+      {
+        "field": "어르신·이동 편의",
+        "value": "입구 접근로와 주출입구는 턱이 없는 것으로 안내되며 휠체어 대여, 승강기, 장애인 화장실이 있습니다. 이 정보는 야외 전 구간이 평탄하다는 뜻은 아닙니다.",
+        "sourceUrl": "https://access.visitkorea.or.kr/ms/detail.do?cotId=5a9c91a7-9e1e-4a25-b7b1-94c369df6bcd",
+        "verifiedAt": "2026-11-08"
+      },
+      {
+        "field": "휴식·관람 계획",
+        "value": "식당휴게소에 의자식 테이블이 안내됩니다. 넓은 야외 공원을 모두 걷기보다 관람 범위를 정하고 쉬어 갈 지점을 함께 확인하세요.",
+        "sourceUrl": "https://access.visitkorea.or.kr/ms/detail.do?cotId=5a9c91a7-9e1e-4a25-b7b1-94c369df6bcd",
+        "verifiedAt": "2026-11-08"
+      },
+      {
+        "field": "어린이·경로 관람료",
+        "value": "공식 안내는 만 12세 이하와 만 65세 이상 등의 무료관람 대상을 구분합니다. 경로 감면에는 외국인 제외 조건이 있으므로 현행 증빙 조건을 확인하세요.",
+        "sourceUrl": "https://www.jeju.go.kr/jejustonepark/intro/guide.htm",
+        "verifiedAt": "2026-11-08"
+      }
+    ],
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "wheelchairRental": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/ms/detail.do?cotId=5a9c91a7-9e1e-4a25-b7b1-94c369df6bcd",
+        "quote": "휠체어대여 대여가능"
+      },
+      "elevator": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/ms/detail.do?cotId=5a9c91a7-9e1e-4a25-b7b1-94c369df6bcd",
+        "quote": "엘리베이터 있음"
+      },
+      "accessibleToilet": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/ms/detail.do?cotId=5a9c91a7-9e1e-4a25-b7b1-94c369df6bcd",
+        "quote": "장애인 화장실 있음"
+      },
+      "accessibleParking": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/ms/detail.do?cotId=5a9c91a7-9e1e-4a25-b7b1-94c369df6bcd",
+        "note": {
+          "ko": "소형 주차장 사이와 휴게소 뒤의 전용 구역을 안내합니다.",
+          "en": "소형 주차장 사이와 휴게소 뒤의 전용 구역을 안내합니다.",
+          "zh": "소형 주차장 사이와 휴게소 뒤의 전용 구역을 안내합니다.",
+          "ja": "소형 주차장 사이와 휴게소 뒤의 전용 구역을 안내합니다."
+        }
+      },
+      "tableSeating": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/ms/detail.do?cotId=5a9c91a7-9e1e-4a25-b7b1-94c369df6bcd",
+        "note": {
+          "ko": "식당휴게소의 좌석에 한정한 정보입니다.",
+          "en": "식당휴게소의 좌석에 한정한 정보입니다.",
+          "zh": "식당휴게소의 좌석에 한정한 정보입니다.",
+          "ja": "식당휴게소의 좌석에 한정한 정보입니다."
+        }
+      }
+    },
+    "admissions": {
+      "kids": {
+        "value": "yes",
+        "sourceUrl": "https://www.jeju.go.kr/jejustonepark/intro/guide.htm",
+        "verifiedAt": "2026-11-08",
+        "quote": "만 12세 이하 어린이"
+      }
+    }
+  },
+  {
+    "name": "국립제주박물관",
+    "address": "제주특별자치도 제주시 일주동로 17",
+    "district": "제주시내",
+    "region": "north",
+    "type": "attraction",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500067",
+    "sourceId": "CONT_000000000500067",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "박물관",
+      "실내관광지",
+      "문화관광"
+    ],
+    "summary": "탐라와 제주의 역사·문화유산을 실내 전시로 살펴보는 박물관.",
+    "observations": [
+      {
+        "field": "아이 동반",
+        "value": "1층 안내소의 유모차 대여, 1층 수유실과 화장실 내 기저귀교환대가 안내됩니다. 대여 가능 수량과 어린이 공간 이용 방식은 방문 전에 문의하세요.",
+        "sourceUrl": "https://access.visitkorea.or.kr/ms/detail.do?cotId=ebfee039-8a41-465b-a807-67336db2a259",
+        "verifiedAt": "2026-11-08"
+      },
+      {
+        "field": "반려동물 동반",
+        "value": "일반 반려동물의 실내 동반 규정은 확인하지 못했습니다. 안내견과 일반 반려동물의 조건을 동일하게 적용하지 않습니다.",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500067",
+        "verifiedAt": null
+      },
+      {
+        "field": "어르신·이동 편의",
+        "value": "주출입구 경사로와 엘리베이터가 있고 1층 안내실에서 휠체어 대여를 안내합니다. 장애인 화장실은 외부 화장실로 표시되어 있습니다.",
+        "sourceUrl": "https://access.visitkorea.or.kr/ms/detail.do?cotId=ebfee039-8a41-465b-a807-67336db2a259",
+        "verifiedAt": "2026-11-08"
+      },
+      {
+        "field": "홈페이지·예약 확인",
+        "value": "공식 누리집은 2026-10-26부터 점검 중이라는 안내가 표시됩니다. 이는 박물관 휴관을 뜻하지 않습니다. 관람·교육 예약은 대표번호 064-720-8000 또는 공식 안내의 담당 번호로 확인하세요.",
+        "sourceUrl": "https://jeju.museum.go.kr/",
+        "verifiedAt": "2026-11-08"
+      },
+      {
+        "field": "관람료",
+        "value": "한국관광공사는 일반 관람 무료, 유료 특별전시 별도라고 안내합니다. 특별전이나 교육 프로그램까지 모두 무료로 간주하지 않습니다.",
+        "sourceUrl": "https://access.visitkorea.or.kr/ms/detail.do?cotId=ebfee039-8a41-465b-a807-67336db2a259",
+        "verifiedAt": "2026-11-08"
+      }
+    ],
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "nursingRoom": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/ms/detail.do?cotId=ebfee039-8a41-465b-a807-67336db2a259",
+        "quote": "수유실 있음 (1층)"
+      },
+      "diaperTable": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/ms/detail.do?cotId=ebfee039-8a41-465b-a807-67336db2a259",
+        "quote": "기저귀교환대 있음"
+      },
+      "wheelchairRental": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/ms/detail.do?cotId=ebfee039-8a41-465b-a807-67336db2a259",
+        "note": {
+          "ko": "1층 안내실에서 전동·일반 휠체어 대여를 안내합니다.",
+          "en": "1층 안내실에서 전동·일반 휠체어 대여를 안내합니다.",
+          "zh": "1층 안내실에서 전동·일반 휠체어 대여를 안내합니다.",
+          "ja": "1층 안내실에서 전동·일반 휠체어 대여를 안내합니다."
+        }
+      },
+      "ramp": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/ms/detail.do?cotId=ebfee039-8a41-465b-a807-67336db2a259",
+        "note": {
+          "ko": "주출입구 접근 경사로입니다.",
+          "en": "주출입구 접근 경사로입니다.",
+          "zh": "주출입구 접근 경사로입니다.",
+          "ja": "주출입구 접근 경사로입니다."
+        }
+      },
+      "elevator": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/ms/detail.do?cotId=ebfee039-8a41-465b-a807-67336db2a259",
+        "quote": "엘리베이터 있음"
+      },
+      "accessibleToilet": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/ms/detail.do?cotId=ebfee039-8a41-465b-a807-67336db2a259",
+        "note": {
+          "ko": "외부 장애인 화장실로 안내됩니다.",
+          "en": "외부 장애인 화장실로 안내됩니다.",
+          "zh": "외부 장애인 화장실로 안내됩니다.",
+          "ja": "외부 장애인 화장실로 안내됩니다."
+        }
+      },
+      "accessibleParking": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/ms/detail.do?cotId=ebfee039-8a41-465b-a807-67336db2a259",
+        "note": {
+          "ko": "정문과 후문에 장애인 주차구역을 안내합니다.",
+          "en": "정문과 후문에 장애인 주차구역을 안내합니다.",
+          "zh": "정문과 후문에 장애인 주차구역을 안내합니다.",
+          "ja": "정문과 후문에 장애인 주차구역을 안내합니다."
+        }
+      }
+    }
+  },
+  {
+    "name": "제주항공우주박물관",
+    "address": "제주특별자치도 서귀포시 안덕면 항공우주로 83",
+    "district": "안덕",
+    "region": "south",
+    "type": "experience",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500578",
+    "sourceId": "CONT_000000000500578",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "실내",
+      "미술/박물관",
+      "아이",
+      "어트랙션"
+    ],
+    "summary": "항공기 전시와 우주 체험, 미취학 아동용 공간을 함께 갖춘 실내 박물관.",
+    "observations": [
+      {
+        "field": "아이 동반",
+        "value": "아이 잼 스페이스는 만 7세 이하 미취학 아동용이며 성인 보호자가 함께 이용해야 합니다. 전시 관람권 구매 고객을 위한 공간으로 음식 반입은 제한됩니다.",
+        "sourceUrl": "https://www.jdc-jam.com/exhibit/child.do",
+        "verifiedAt": "2026-11-08"
+      },
+      {
+        "field": "영유아 편의",
+        "value": "1층 항공역사관 입구 옆에 수유실이 있습니다. 1층 매표소 옆 안내데스크에서는 24개월 미만 유아차와 휠체어 대여를 안내합니다.",
+        "sourceUrl": "https://www.jdc-jam.com/visit/assistance.do",
+        "verifiedAt": "2026-11-08"
+      },
+      {
+        "field": "반려동물 동반",
+        "value": "확인한 운영사 안내에서 일반 반려동물의 입장 조건을 확인하지 못했습니다. 방문 전 064-800-2114로 문의하세요.",
+        "sourceUrl": "https://www.jdc-jam.com/visit/assistance.do",
+        "verifiedAt": null
+      },
+      {
+        "field": "어르신·이동 편의",
+        "value": "안내데스크의 휠체어 대여를 이용할 수 있습니다. 대여 가능 여부와 체험기구의 신체·연령 제한은 별도로 확인해야 하며 모든 체험의 이용 가능을 뜻하지 않습니다.",
+        "sourceUrl": "https://www.jdc-jam.com/visit/assistance.do",
+        "verifiedAt": "2026-11-08"
+      },
+      {
+        "field": "주소 교차확인",
+        "value": "비짓제주에는 녹차분재로 218이 표시되지만 운영사 공식 누리집은 항공우주로 83을 안내합니다. 장소 주소는 운영사 표기로 기록했습니다.",
+        "sourceUrl": "https://www.jdc-jam.com/visit/assistance.do",
+        "verifiedAt": "2026-11-08"
+      }
+    ],
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "nursingRoom": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.jdc-jam.com/visit/assistance.do",
+        "quote": "1층 항공역사관 입구 옆"
+      },
+      "wheelchairRental": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.jdc-jam.com/visit/assistance.do",
+        "quote": "휠체어 대여"
+      },
+      "kidsPlay": {
+        "value": "conditional",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.jdc-jam.com/exhibit/child.do",
+        "quote": "미취학 아동(만 7세 이하)",
+        "note": {
+          "ko": "성인 보호자 동반 및 전시 관람권 필요. 공간별 이용 연령을 확인하세요.",
+          "en": "성인 보호자 동반 및 전시 관람권 필요. 공간별 이용 연령을 확인하세요.",
+          "zh": "성인 보호자 동반 및 전시 관람권 필요. 공간별 이용 연령을 확인하세요.",
+          "ja": "성인 보호자 동반 및 전시 관람권 필요. 공간별 이용 연령을 확인하세요."
+        }
+      }
+    },
+    "admissions": {
+      "kids": {
+        "value": "yes",
+        "sourceUrl": "https://www.jdc-jam.com/exhibit/child.do",
+        "verifiedAt": "2026-11-08",
+        "quote": "어린이를 위한 서비스 시설"
+      }
+    }
+  },
+  {
+    "name": "아쿠아플라넷 제주",
+    "address": "제주특별자치도 서귀포시 성산읍 섭지코지로 95",
+    "district": "성산",
+    "region": "east",
+    "type": "attraction",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500565",
+    "sourceId": "CONT_000000000500565",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "실내",
+      "공연/전시"
+    ],
+    "summary": "해양생물 전시와 공연을 실내에서 관람하는 성산의 해양 테마파크.",
+    "observations": [
+      {
+        "field": "아이 동반",
+        "value": "운영사 2층 전시 안내에 수유실과 화장실이 표시되어 있습니다. 관람 도중 필요한 수유 시간을 고려해 층별 지도를 미리 확인하세요.",
+        "sourceUrl": "https://m.aquaplanet.co.kr/contents/jeju/introduce/gallery/second-floor/aquarium.do",
+        "verifiedAt": "2026-11-08"
+      },
+      {
+        "field": "반려동물 동반",
+        "value": "비짓제주 이용안내는 반려동물 입장 불가로 표시합니다. 안내견 등 별도 예외는 운영사에 확인해야 합니다.",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500565",
+        "verifiedAt": "2026-11-08"
+      },
+      {
+        "field": "어르신·이동 편의",
+        "value": "공식 편의시설에 엘리베이터가 표시되어 있습니다. 공연 좌석과 층별 이동 경로까지 모두 무단차임을 확인한 정보는 아닙니다.",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500565",
+        "verifiedAt": "2026-11-08"
+      },
+      {
+        "field": "관람 계획",
+        "value": "수조 전시와 공연을 함께 보면 이동량이 늘어납니다. 공연 시각과 휴식 시간을 나누어 계획하고, 방문일의 운영 일정은 운영사 안내를 확인하세요.",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500565",
+        "verifiedAt": "2026-11-08"
+      }
+    ],
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "nursingRoom": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://m.aquaplanet.co.kr/contents/jeju/introduce/gallery/second-floor/aquarium.do",
+        "quote": "수유실"
+      },
+      "toilet": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://m.aquaplanet.co.kr/contents/jeju/introduce/gallery/second-floor/aquarium.do",
+        "quote": "화장실"
+      },
+      "elevator": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500565",
+        "quote": "엘리베이터"
+      }
+    },
+    "admissions": {
+      "pet": {
+        "value": "no",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500565",
+        "verifiedAt": "2026-11-08",
+        "quote": "반려동물 입장 불가"
+      }
+    }
+  },
+  {
+    "name": "휴애리자연생활공원",
+    "address": "제주특별자치도 서귀포시 남원읍 신례동로 256",
+    "district": "남원",
+    "region": "south",
+    "type": "experience",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500707",
+    "sourceId": "CONT_000000000500707",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "계절꽃축제",
+      "동물농장",
+      "먹이주기",
+      "감귤체험"
+    ],
+    "summary": "계절 꽃 정원과 동물 먹이주기, 감귤 체험을 함께 살펴보는 자연 공원.",
+    "observations": [
+      {
+        "field": "아이 동반",
+        "value": "수유실과 매표소 옆 유모차 대여가 안내되며 대여 대상은 18개월 미만입니다. 감귤·동물 체험은 계절과 현장 운영을 확인해야 합니다.",
+        "sourceUrl": "https://access.visitkorea.or.kr/ms/detail.do?cotId=ac6afb20-d724-4d04-b9da-0be4b7ca695d",
+        "verifiedAt": "2026-11-08"
+      },
+      {
+        "field": "반려동물 동반",
+        "value": "7kg 미만 소형견의 일부 구역 동반을 안내합니다. 2m 이하 목줄·가슴줄과 배변봉투가 필요하며 혼잡 구역에서는 안거나 이동장·반려동물 유모차를 이용해야 합니다. 카페 내부는 출입할 수 없습니다.",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500707",
+        "verifiedAt": "2026-11-08"
+      },
+      {
+        "field": "어르신·이동 편의",
+        "value": "매표소 옆 휠체어 대여와 지팡이 대여, 장애인 화장실이 안내됩니다. 출입구는 평지이지만 흙 구간이 있어 비 온 뒤 노면과 이동 보조 필요 여부를 확인하세요.",
+        "sourceUrl": "https://access.visitkorea.or.kr/ms/detail.do?cotId=ac6afb20-d724-4d04-b9da-0be4b7ca695d",
+        "verifiedAt": "2026-11-08"
+      },
+      {
+        "field": "동절기 방문",
+        "value": "10~2월은 18시 종료, 16시 30분 입장 마감으로 안내됩니다. 방문일 운영 변경과 체험 종료 시각은 별도로 확인하세요.",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500707",
+        "verifiedAt": "2026-11-08"
+      }
+    ],
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "nursingRoom": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/ms/detail.do?cotId=ac6afb20-d724-4d04-b9da-0be4b7ca695d",
+        "quote": "수유실 있음"
+      },
+      "wheelchairRental": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/ms/detail.do?cotId=ac6afb20-d724-4d04-b9da-0be4b7ca695d",
+        "note": {
+          "ko": "매표소 옆 대여를 안내합니다. 수량은 현장 확인이 필요합니다.",
+          "en": "매표소 옆 대여를 안내합니다. 수량은 현장 확인이 필요합니다.",
+          "zh": "매표소 옆 대여를 안내합니다. 수량은 현장 확인이 필요합니다.",
+          "ja": "매표소 옆 대여를 안내합니다. 수량은 현장 확인이 필요합니다."
+        }
+      },
+      "accessibleToilet": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/ms/detail.do?cotId=ac6afb20-d724-4d04-b9da-0be4b7ca695d",
+        "quote": "장애인 화장실 있음"
+      },
+      "accessibleParking": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/ms/detail.do?cotId=ac6afb20-d724-4d04-b9da-0be4b7ca695d",
+        "quote": "장애인 주차장 있음"
+      }
+    },
+    "admissions": {
+      "pet": {
+        "value": "outdoor",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500707",
+        "verifiedAt": "2026-11-08",
+        "quote": "7kg 미만 소형견 일부 구역 동반 가능",
+        "maxWeightKg": 7,
+        "weightInclusive": false,
+        "note": {
+          "ko": "7kg 미만, 일부 야외 구역만 허용. 짧은 리드줄·배변봉투 필요. 혼잡 구역은 안거나 이동장 이용. 카페 실내 불가.",
+          "en": "Under 7 kg, designated outdoor areas only. Short leash and waste bags required; carry or use a carrier in crowded areas. No indoor café access.",
+          "zh": "仅限7公斤以下及指定户外区域。须短牵引绳和拾便袋；拥挤处抱起或用携带箱。咖啡馆室内不可入内。",
+          "ja": "7kg未満・指定屋外区域のみ。短いリードと排泄物袋が必要。混雑時は抱くかキャリー利用。カフェ屋内不可。"
+        }
+      }
+    }
+  },
+  {
+    "name": "제주민속촌",
+    "address": "제주특별자치도 서귀포시 표선면 민속해안로 631-34",
+    "district": "표선",
+    "region": "east",
+    "type": "attraction",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500553",
+    "sourceId": "CONT_000000000500553",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "민속촌",
+      "가족여행",
+      "반려동물"
+    ],
+    "summary": "제주의 전통 가옥과 생활 도구를 야외 동선에서 만나는 민속 전시 공간.",
+    "observations": [
+      {
+        "field": "아이 동반",
+        "value": "수유실과 유모차 대여가 안내됩니다. 옛집 전시는 문턱이나 개별 실내 공간의 이용 조건을 별도로 확인하고 아이와 함께 관람하세요.",
+        "sourceUrl": "https://access.visitkorea.or.kr/ms/detail.do?cotId=d89dfd34-c4dc-48dc-9041-b2e0f0517d71",
+        "verifiedAt": "2026-11-08"
+      },
+      {
+        "field": "반려동물 동반",
+        "value": "7kg 미만 소형견 동반을 안내합니다. 리드줄 또는 케이지와 배변봉투가 필요합니다. 전통 가옥 내부·식당 등 세부 출입 범위는 현장 확인이 필요합니다.",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500553",
+        "verifiedAt": "2026-11-08"
+      },
+      {
+        "field": "어르신·이동 편의",
+        "value": "주출입구 경사로, 장애인 화장실과 정문 왼쪽 휠체어 대여를 안내합니다. 관람열차도 안내되지만 운행 여부와 보장구 탑승 조건은 별도로 확인하세요.",
+        "sourceUrl": "https://access.visitkorea.or.kr/ms/detail.do?cotId=d89dfd34-c4dc-48dc-9041-b2e0f0517d71",
+        "verifiedAt": "2026-11-08"
+      },
+      {
+        "field": "동절기 방문",
+        "value": "11~2월 관람은 9시부터 18시, 입장 마감은 17시로 안내됩니다. 행사와 현장 운영에 따른 변경은 확인이 필요합니다.",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500553",
+        "verifiedAt": "2026-11-08"
+      }
+    ],
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "nursingRoom": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/ms/detail.do?cotId=d89dfd34-c4dc-48dc-9041-b2e0f0517d71",
+        "quote": "수유실 있음"
+      },
+      "wheelchairRental": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/ms/detail.do?cotId=d89dfd34-c4dc-48dc-9041-b2e0f0517d71",
+        "note": {
+          "ko": "정문 왼쪽에서 대여를 안내합니다.",
+          "en": "정문 왼쪽에서 대여를 안내합니다.",
+          "zh": "정문 왼쪽에서 대여를 안내합니다.",
+          "ja": "정문 왼쪽에서 대여를 안내합니다."
+        }
+      },
+      "ramp": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/ms/detail.do?cotId=d89dfd34-c4dc-48dc-9041-b2e0f0517d71",
+        "quote": "주출입구는 경사로가 있어 휠체어 접근 가능함"
+      },
+      "accessibleToilet": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/ms/detail.do?cotId=d89dfd34-c4dc-48dc-9041-b2e0f0517d71",
+        "quote": "장애인 화장실 있음"
+      },
+      "accessibleParking": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/ms/detail.do?cotId=d89dfd34-c4dc-48dc-9041-b2e0f0517d71",
+        "note": {
+          "ko": "장애인 전용 주차구역을 안내합니다.",
+          "en": "장애인 전용 주차구역을 안내합니다.",
+          "zh": "장애인 전용 주차구역을 안내합니다.",
+          "ja": "장애인 전용 주차구역을 안내합니다."
+        }
+      }
+    },
+    "admissions": {
+      "pet": {
+        "value": "outdoor",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500553",
+        "verifiedAt": "2026-11-08",
+        "quote": "7kg 미만 소형견 입장 가능",
+        "maxWeightKg": 7,
+        "weightInclusive": false,
+        "note": {
+          "ko": "7kg 미만. 리드줄 또는 케이지와 배변봉투 필요. 가옥 내부·식당 출입은 현장 확인.",
+          "en": "Under 7 kg. Leash or cage and waste bags required. Confirm access to houses and restaurants separately.",
+          "zh": "须低于7公斤，使用牵引绳或携带箱并带拾便袋。建筑内和餐厅需另行确认。",
+          "ja": "7kg未満。リードまたはケージと排泄物袋が必要。家屋内・飲食店は別途確認。"
+        }
+      }
+    }
+  },
+  {
+    "name": "한림공원",
+    "address": "제주특별자치도 제주시 한림읍 한림로 300",
+    "district": "한림",
+    "region": "west",
+    "type": "attraction",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500690",
+    "sourceId": "CONT_000000000500690",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "테마공원"
+    ],
+    "summary": "야자수길, 식물원, 동굴과 민속 공간을 여러 테마로 둘러보는 공원.",
+    "observations": [
+      {
+        "field": "아이 동반",
+        "value": "한국관광공사는 수유실과 24개월 이하 유모차 대여를 안내합니다. 오래된 여행기사에는 수유 공간 안내가 다르므로 실제 이용 위치를 매표소에 확인하세요.",
+        "sourceUrl": "https://access.visitkorea.or.kr/ms/detail.do?cotId=163866e0-1384-4f90-a3af-731479d9f76e",
+        "verifiedAt": "2026-11-08"
+      },
+      {
+        "field": "반려동물 동반",
+        "value": "비짓제주 장소 상세에는 5kg 미만, 별도 반려견 여행 기사에는 7kg 미만으로 체중 기준이 서로 다릅니다. 현재 허용 체중을 확정하지 않았으며 방문 전 064-796-0001로 확인해야 합니다.",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500690",
+        "verifiedAt": null
+      },
+      {
+        "field": "반려동물 출처 비교",
+        "value": "비짓제주의 반려견 여행 기사는 7kg 미만, 보호자 1명당 1마리와 리드줄·배변봉투를 안내합니다. 장소 상세의 5kg 미만과 충돌하므로 동반 가능 판정에 사용하지 않습니다.",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000013876",
+        "verifiedAt": null
+      },
+      {
+        "field": "어르신·이동 편의",
+        "value": "한국관광공사는 주출입 접근로에 턱이 없고 매표소 건물에서 휠체어 대여가 가능하다고 안내합니다. 동굴과 정원 전체의 이동 조건은 구역마다 확인해야 합니다.",
+        "sourceUrl": "https://access.visitkorea.or.kr/ms/detail.do?cotId=163866e0-1384-4f90-a3af-731479d9f76e",
+        "verifiedAt": "2026-11-08"
+      }
+    ],
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "nursingRoom": {
+        "value": "conditional",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/ms/detail.do?cotId=163866e0-1384-4f90-a3af-731479d9f76e",
+        "note": {
+          "ko": "최근 한국관광공사 목록에는 수유실이 있으나 과거 기사와 달라 위치·운영을 현장 확인하세요.",
+          "en": "최근 한국관광공사 목록에는 수유실이 있으나 과거 기사와 달라 위치·운영을 현장 확인하세요.",
+          "zh": "최근 한국관광공사 목록에는 수유실이 있으나 과거 기사와 달라 위치·운영을 현장 확인하세요.",
+          "ja": "최근 한국관광공사 목록에는 수유실이 있으나 과거 기사와 달라 위치·운영을 현장 확인하세요."
+        }
+      },
+      "wheelchairRental": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/ms/detail.do?cotId=163866e0-1384-4f90-a3af-731479d9f76e",
+        "quote": "매표소 건물에서 휠체어 6대 대여가능"
+      },
+      "accessibleToilet": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/ms/detail.do?cotId=163866e0-1384-4f90-a3af-731479d9f76e",
+        "quote": "장애인 화장실 있음"
+      },
+      "accessibleParking": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://access.visitkorea.or.kr/ms/detail.do?cotId=163866e0-1384-4f90-a3af-731479d9f76e",
+        "quote": "장애인 주차장 있음"
+      }
+    }
+  },
+  {
+    "name": "생각하는정원",
+    "address": "제주특별자치도 제주시 한경면 녹차분재로 675",
+    "district": "한경",
+    "region": "west",
+    "type": "walk",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000001191",
+    "sourceId": "CNTS_000000000001191",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "휴식/힐링",
+      "테마공원",
+      "아이",
+      "무장애관광"
+    ],
+    "summary": "분재와 연못, 돌다리 사이를 천천히 돌아보는 한경의 정원.",
+    "observations": [
+      {
+        "field": "아이 동반",
+        "value": "연못과 돌다리, 분재를 관찰할 수 있습니다. 물가에서는 보호자가 함께 이동하고, 수유실·유모차 대여의 현재 운영은 별도로 확인하세요.",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000001191",
+        "verifiedAt": "2026-11-08"
+      },
+      {
+        "field": "반려동물 동반",
+        "value": "비짓제주에는 반려동물 동반 태그가 있지만 체급과 실내·야외 구역의 현재 조건은 확인되지 않았습니다. 태그만으로 입장 가능을 확정하지 않습니다.",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000001191",
+        "verifiedAt": null
+      },
+      {
+        "field": "어르신·이동 편의",
+        "value": "한국관광공사의 과거 여행기사에는 입구 경사와 휠체어 대여, 2층을 제외한 접근 동선이 소개되어 있습니다. 2016년 취재 자료이므로 현재 시설 판정에는 사용하지 않았습니다.",
+        "sourceUrl": "https://access.visitkorea.or.kr/cos/detail.do?cotId=17b57d94-9ca0-4d76-9995-42fba2238b80",
+        "verifiedAt": null
+      },
+      {
+        "field": "관람 동선",
+        "value": "연못과 돌다리가 이어지는 정원이므로 방문 전 필요한 구간의 경사·단차와 휴식 장소를 064-772-3701로 확인하세요.",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000001191",
+        "verifiedAt": "2026-11-08"
+      }
+    ],
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08"
+  },
+  {
+    "name": "제주허브동산",
+    "address": "제주특별자치도 서귀포시 표선면 돈오름로 170",
+    "district": "표선",
+    "region": "east",
+    "type": "walk",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500582",
+    "sourceId": "CONT_000000000500582",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "허브",
+      "야경",
+      "테마공원"
+    ],
+    "summary": "허브와 꽃 정원, 야간 조명을 산책하며 감상하는 표선의 정원.",
+    "observations": [
+      {
+        "field": "아이 동반",
+        "value": "유모차 대여와 수유실이 안내되지만 수유실 잠금과 입구 단차에 관한 주의사항도 있습니다. 사용 가능 여부를 매표소에 확인하세요.",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500582",
+        "verifiedAt": "2026-11-08"
+      },
+      {
+        "field": "반려동물 동반",
+        "value": "소형·중형·대형견 입장을 안내합니다. 2m 이내 목줄·가슴줄과 배변봉투가 필요하고 족욕장에는 반려동물이 들어갈 수 없습니다. 다른 실내 공간의 허용 범위는 별도 확인하세요.",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500582",
+        "verifiedAt": "2026-11-08"
+      },
+      {
+        "field": "어르신·이동 편의",
+        "value": "관람로에 연속적인 경사와 더 가파른 카페 앞 구간이 안내됩니다. 장애인 화장실도 입구 경사와 내부 공간 제한이 있어 도움 없이 전 구간을 이동할 수 있다고 보장하지 않습니다.",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500582",
+        "verifiedAt": "2026-11-08"
+      },
+      {
+        "field": "휠체어 대여 확인",
+        "value": "비짓제주는 휠체어 대여를 안내하지만 한국관광공사의 다른 목록은 대여 없음으로 표시합니다. 실제 보유·대여 여부를 방문 전 064-787-7362로 확인하세요.",
+        "sourceUrl": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=4cefafc0-d9ff-4d8b-a90c-de80289a95b6",
+        "verifiedAt": null
+      }
+    ],
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "petLargeDog": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500582",
+        "quote": "소형견, 중형견, 대형견 입장 가능"
+      },
+      "nursingRoom": {
+        "value": "conditional",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500582",
+        "note": {
+          "ko": "잠금·단차: 사용 가능 여부 확인 필요.",
+          "en": "Confirm access: locked room and doorway step reported.",
+          "zh": "报告有门锁和门槛，须确认能否使用。",
+          "ja": "施錠・段差の記載あり。利用可否を要確認。"
+        }
+      },
+      "accessibleToilet": {
+        "value": "conditional",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500582",
+        "note": {
+          "ko": "입구 경사·좁은 내부 공간 확인 필요.",
+          "en": "Check entrance slope and limited interior space.",
+          "zh": "须确认入口坡道及狭小的内部空间。",
+          "ja": "入口の傾斜と狭い室内空間を要確認。"
+        }
+      },
+      "ramp": {
+        "value": "conditional",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500582",
+        "note": {
+          "ko": "가파른 구간은 동행 보조 필요.",
+          "en": "Steep sections may require assistance.",
+          "zh": "较陡路段可能需要协助。",
+          "ja": "急な区間では介助が必要な場合があります。"
+        }
+      }
+    },
+    "admissions": {
+      "pet": {
+        "value": "outdoor",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500582",
+        "verifiedAt": "2026-11-08",
+        "quote": "족욕장 내 반려동물 동반 입장 불가",
+        "note": {
+          "ko": "야외 동반 기준. 짧은 리드줄·배변봉투 필요. 족욕장 불가; 다른 실내 구역 별도 확인.",
+          "en": "Outdoor access. Short leash and waste bags required. No footbath access; confirm other indoor areas.",
+          "zh": "户外同行，须短牵引绳和拾便袋。足浴场不可入内，其他室内需确认。",
+          "ja": "屋外同伴。短いリードと排泄物袋が必要。足湯不可、他の屋内は要確認。"
+        }
+      }
+    }
+  },
+  {
+    "name": "한담해안산책로",
+    "address": "제주특별자치도 제주시 애월읍 곽지리 1359",
+    "district": "애월",
+    "region": "west",
+    "type": "walk",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020159",
+    "sourceId": "CNTS_000000000020159",
+    "sourceName": "VisitJeju",
+    "sourceTags": [],
+    "summary": "애월에서 곽지 방향으로 해안을 따라 이어지는 약 1.2km의 산책길.",
+    "observations": [
+      {
+        "field": "아이 동반",
+        "value": "해안 바로 옆을 걷는 길입니다. 바람·파도와 현장 통제를 확인하고 어린이는 보호자와 함께 이동하세요. 전체 1.2km를 짧은 보행 코스로 자동 판단하지 않습니다.",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020159",
+        "verifiedAt": "2026-11-08"
+      },
+      {
+        "field": "반려동물 동반",
+        "value": "반려견 동반이 안내되며 목줄·가슴줄 길이 2m 이하 유지와 배설물 수거가 필요합니다. 현장 통제가 있으면 그 안내를 우선해야 합니다.",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020159",
+        "verifiedAt": "2026-11-08"
+      },
+      {
+        "field": "어르신·유모차 동선",
+        "value": "한국관광공사의 과거 취재에는 산책로 유모차 이동이 가능하지만 한담공원 주차장 쪽 접근은 계단으로 어렵다고 설명합니다. 오래된 자료이므로 현재 무단차 진입로는 별도 확인이 필요합니다.",
+        "sourceUrl": "https://access.visitkorea.or.kr/cos/detail.do?cotId=da5a2297-3088-49fb-a4cf-f0a20965cdc2",
+        "verifiedAt": null
+      },
+      {
+        "field": "화장실·주차",
+        "value": "과거 기사에 주차장과 화장실이 소개되어 있으나 현재 운영과 공용 여부는 재확인되지 않았습니다. 산책 전 이용 가능한 시설과 되돌아올 지점을 확인하세요.",
+        "sourceUrl": "https://access.visitkorea.or.kr/cos/detail.do?cotId=da5a2297-3088-49fb-a4cf-f0a20965cdc2",
+        "verifiedAt": null
+      }
+    ],
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "admissions": {
+      "pet": {
+        "value": "outdoor",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020159",
+        "verifiedAt": "2026-11-08",
+        "quote": "반려견 동반 가능",
+        "note": {
+          "ko": "목줄·가슴줄 2m 이하, 배설물 수거 필요. 현장 통제 우선.",
+          "en": "Leash or harness lead within 2 m; collect waste. Follow on-site restrictions.",
+          "zh": "牵引绳须不超过2米并清理排泄物，以现场管制为准。",
+          "ja": "リードは2m以内、排泄物を回収。現地規制に従ってください。"
+        }
+      }
+    }
+  },
+  {
+    "name": "사려니숲길",
+    "address": "제주특별자치도 제주시 조천읍 교래리 산 137-1",
+    "district": "조천",
+    "region": "east",
+    "type": "walk",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500281",
+    "sourceId": "CONT_000000000500281",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "삼나무",
+      "힐링제주",
+      "한라산둘레길"
+    ],
+    "summary": "삼나무 숲을 걷는 탐방로로, 일행의 이동 여건에 맞게 입구와 반환 지점을 골라야 하는 곳.",
+    "observations": [
+      {
+        "field": "아이·유모차 동선",
+        "value": "공식 안내는 노약자나 유모차 이용객에게 남조로 쪽 붉은오름 입구를 권장합니다. 절물조릿대길은 노면이 고르지 않고 높낮이 차이가 있어 진입로를 구분해야 합니다.",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500281",
+        "verifiedAt": "2026-11-08"
+      },
+      {
+        "field": "반려동물 동반",
+        "value": "확인한 공식 안내에서는 일반 반려동물의 동반 조건이 명시되지 않았습니다. 숲길 전체의 동반 가능 여부는 확인 전까지 미확인입니다.",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500281",
+        "verifiedAt": null
+      },
+      {
+        "field": "어르신·이동 편의",
+        "value": "전체 숲길은 약 10km이며 짧은 산책과 장거리 탐방을 구분해야 합니다. 붉은오름 입구 권장만으로 전 구간 무단차나 30분 이내 보행을 확정하지 않습니다.",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500281",
+        "verifiedAt": "2026-11-08"
+      },
+      {
+        "field": "주차·통제",
+        "value": "비자림로 입구 주변에는 별도 주차공간이 없다고 안내합니다. 붉은오름 입구 주차장을 이용하되 기상 악화 시 통제 여부와 반환 지점을 확인하세요.",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500281",
+        "verifiedAt": "2026-11-08"
+      },
+      {
+        "field": "탐방 유의사항",
+        "value": "17시까지 퇴장하는 일정이 안내됩니다. 물을 제외한 음식물은 반입하지 않고, 물찻오름의 평상시 출입 제한을 지켜야 합니다.",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500281",
+        "verifiedAt": "2026-11-08"
+      }
+    ],
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "stroller": {
+        "value": "conditional",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500281",
+        "note": {
+          "ko": "유모차는 붉은오름 입구 쪽 권장. 절물조릿대길과 숲길 전 구간의 이용 가능을 뜻하지 않습니다.",
+          "en": "유모차는 붉은오름 입구 쪽 권장. 절물조릿대길과 숲길 전 구간의 이용 가능을 뜻하지 않습니다.",
+          "zh": "유모차는 붉은오름 입구 쪽 권장. 절물조릿대길과 숲길 전 구간의 이용 가능을 뜻하지 않습니다.",
+          "ja": "유모차는 붉은오름 입구 쪽 권장. 절물조릿대길과 숲길 전 구간의 이용 가능을 뜻하지 않습니다."
+        }
+      },
+      "toilet": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500281",
+        "quote": "편의시설 화장실"
+      }
+    }
+  },
+  {
+    "name": "절물자연휴양림",
+    "address": "제주특별자치도 제주시 명림로 584",
+    "district": "제주시내",
+    "region": "north",
+    "type": "walk",
+    "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500570",
+    "sourceId": "CONT_000000000500570",
+    "sourceName": "VisitJeju",
+    "sourceTags": [
+      "자연휴양림추천",
+      "삼나무",
+      "숲길",
+      "가족여행"
+    ],
+    "summary": "삼나무 숲과 무장애 산책 구간, 어린이 놀이 공간을 갖춘 휴양림.",
+    "observations": [
+      {
+        "field": "아이 동반",
+        "value": "공식 소개에 어린이 놀이시설과 자연관찰 공간이 있습니다. 오름 등반이나 장거리 숲길과 구분하여 아이가 걸을 수 있는 산책 구간을 선택하세요.",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500570",
+        "verifiedAt": "2026-11-08"
+      },
+      {
+        "field": "반려동물 동반",
+        "value": "웹 검색에서는 반려동물 입장 제한 안내가 발견되었지만 운영사 준수사항 원문까지 확인하지 못했습니다. 입장 가능으로 표시하지 않으며 064-728-1510에 확인이 필요합니다.",
+        "sourceUrl": "https://www.foresttrip.go.kr/indvz/main.do?hmpgId=ID02030053",
+        "verifiedAt": null
+      },
+      {
+        "field": "어르신·이동 편의",
+        "value": "공식 소개는 완만한 산책로와 무장애 구간을 안내합니다. 절물오름·장생의 숲길 등 전체 휴양림을 무단차 또는 짧은 코스로 간주하지 않습니다.",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500570",
+        "verifiedAt": "2026-11-08"
+      },
+      {
+        "field": "숲해설 확인",
+        "value": "운영사 숲나들e에 2026년 11월 숲해설 모집 공지가 있습니다. 희망 날짜의 참여 조건과 관람 동선을 운영사에서 확인하세요.",
+        "sourceUrl": "https://www.foresttrip.go.kr/indvz/main.do?hmpgId=ID02030053",
+        "verifiedAt": "2026-11-08"
+      }
+    ],
+    "retrievedAt": "2026-11-08",
+    "basicSourceCheckedAt": "2026-11-08",
+    "amenities": {
+      "kidsPlay": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500570",
+        "quote": "어린이 놀이시설"
+      },
+      "stepFree": {
+        "value": "conditional",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500570",
+        "note": {
+          "ko": "일부 무장애 산책 구간에 한정합니다. 전체 휴양림·오름 코스를 뜻하지 않습니다.",
+          "en": "일부 무장애 산책 구간에 한정합니다. 전체 휴양림·오름 코스를 뜻하지 않습니다.",
+          "zh": "일부 무장애 산책 구간에 한정합니다. 전체 휴양림·오름 코스를 뜻하지 않습니다.",
+          "ja": "일부 무장애 산책 구간에 한정합니다. 전체 휴양림·오름 코스를 뜻하지 않습니다."
+        }
+      },
+      "parking": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500570",
+        "quote": "공용주차장"
+      },
+      "toilet": {
+        "value": "yes",
+        "source": "official",
+        "verifiedAt": "2026-11-08",
+        "sourceUrl": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500570",
+        "quote": "화장실"
+      }
+    }
+  }
+]

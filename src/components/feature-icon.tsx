@@ -10,6 +10,7 @@ import {
   Dog,
   Fence,
   Footprints,
+  HeartHandshake,
   Milk,
   PawPrint,
   SquareParking,
@@ -78,6 +79,18 @@ const icons: Record<FeatureKey, IconDefinition> = {
       </>
     ),
   },
+  strollerRental: {
+    kind: "custom",
+    paths: (
+      <>
+        <path d="M10 4a6 6 0 0 1 6 6h-6V4Z" />
+        <path d="M4 10h13a6 6 0 0 1-6 6h-1a6 6 0 0 1-6-6Zm0 0L3 7H1" />
+        <circle cx="6" cy="19" r="1.5" />
+        <circle cx="15" cy="19" r="1.5" />
+        <path d="M19 3v6m0 0 2-2m-2 2-2-2" />
+      </>
+    ),
+  },
   stepFree: {
     kind: "custom",
     paths: (
@@ -92,6 +105,7 @@ const icons: Record<FeatureKey, IconDefinition> = {
   diaperTable: { kind: "lucide", component: Baby },
   kidsPlay: { kind: "lucide", component: ToyBrick },
   babyBed: { kind: "lucide", component: BedSingle },
+  petWelcome: { kind: "lucide", component: HeartHandshake },
   petLargeDog: { kind: "lucide", component: Dog },
   petAmenity: { kind: "lucide", component: Bone },
   petPlayground: { kind: "lucide", component: Fence },

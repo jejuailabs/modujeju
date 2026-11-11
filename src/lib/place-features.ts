@@ -6,8 +6,8 @@ import { featureDetailMessages, featureMessages, featureSearchAliases, quantityM
 
 export const featureKeys = [
   "kids", "pet", "senior",
-  "highChair", "floorSeating", "stroller", "kidsTableware", "nursingRoom", "diaperTable", "kidsPlay", "babyBed",
-  "petLargeDog", "petAmenity", "petPlayground", "petRoom",
+  "highChair", "floorSeating", "stroller", "strollerRental", "kidsTableware", "nursingRoom", "diaperTable", "kidsPlay", "babyBed",
+  "petWelcome", "petLargeDog", "petAmenity", "petPlayground", "petRoom",
   "stepFree", "ramp", "elevator", "accessibleToilet", "tableSeating", "accessibleParking", "wheelchairRental", "shortWalk",
   "groundFloor", "parking", "toilet",
 ] as const;
@@ -22,8 +22,8 @@ export const companionKeys = ["kids", "pet", "senior"] as const satisfies readon
  * not treated as senior-friendly.
  */
 export const featureGroups: Record<Companion | "common", readonly FacilityKey[]> = {
-  kids: ["highChair", "floorSeating", "stroller", "kidsTableware", "nursingRoom", "diaperTable", "kidsPlay", "babyBed"],
-  pet: ["petLargeDog", "petAmenity", "petPlayground", "petRoom"],
+  kids: ["highChair", "floorSeating", "stroller", "strollerRental", "kidsTableware", "nursingRoom", "diaperTable", "kidsPlay", "babyBed"],
+  pet: ["petWelcome", "petLargeDog", "petAmenity", "petPlayground", "petRoom"],
   senior: ["stepFree", "ramp", "elevator", "accessibleToilet", "tableSeating", "accessibleParking", "wheelchairRental", "shortWalk"],
   common: ["groundFloor", "parking", "toilet"],
 };
@@ -104,7 +104,7 @@ function token(value: string, candidates: readonly string[]): boolean {
   return value.split(/[,，]/u).some(value => candidates.includes(value.trim()));
 }
 
-const amenitySources: readonly AmenitySource[] = ["official", "phone", "onsite", "search"];
+const amenitySources: readonly AmenitySource[] = ["official", "phone", "onsite", "search", "listing"];
 const searchEvidenceFloor = "2025-01-01";
 type AmenityReading = { status: FeatureStatus; evidence: FeatureEvidence; quantity?: number; note?: LocalizedText };
 
@@ -117,7 +117,7 @@ function readAmenity(place: Place, key: FacilityKey, now: Date): AmenityReading 
     if (!amenitySources.includes(entry.source)) return undefined;
     const freshness = getFactFreshness({ value: true, source: "official", verifiedAt: entry.verifiedAt }, now, physicalCycle);
     if (freshness !== "fresh" && freshness !== "dueSoon") return undefined;
-    if (entry.source === "search") {
+    if (entry.source === "search" || entry.source === "listing") {
       if (!entry.sourceUrl || !/^https:\/\//.test(entry.sourceUrl)) return undefined;
       if (!entry.publishedAt || !/^\d{4}-\d{2}-\d{2}$/.test(entry.publishedAt) || entry.publishedAt < searchEvidenceFloor) return undefined;
     }

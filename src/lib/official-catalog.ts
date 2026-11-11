@@ -23,6 +23,7 @@ const admissionEvidence = {
   verifiedAt: day.nullable(),
   quote: z.string().max(160).optional(),
   publishedAt: day.nullable().optional(),
+  note: z.object({ ko: z.string().max(500), en: z.string().max(500), zh: z.string().max(500), ja: z.string().max(500) }).strict().optional(),
 };
 const accessValue = z.enum(["yes", "conditional", "no"]);
 export const admissionsSchema = z.object({
@@ -109,11 +110,11 @@ function sourceObservations(values: unknown[], fallbackUrl: string): NonNullable
 }
 
 /** Approved admission evidence only; pending (undated) evidence leaves facts unknown. */
-function admissionFacts(admissions: z.infer<typeof admissionsSchema> | undefined): PlaceFacts {
+export function admissionFacts(admissions: z.infer<typeof admissionsSchema> | undefined): PlaceFacts {
   const facts = createUnknownFacts();
   if (!admissions) return facts;
-  const official = <T>(value: T, evidence: { sourceUrl: string; verifiedAt: string | null }): Fact<T> =>
-    ({ value, source: "official", verifiedAt: evidence.verifiedAt, sourceUrl: evidence.sourceUrl });
+  const official = <T>(value: T, evidence: { sourceUrl: string; verifiedAt: string | null; note?: LocalizedText }): Fact<T> =>
+    ({ value, source: "official", verifiedAt: evidence.verifiedAt, sourceUrl: evidence.sourceUrl, ...(evidence.note ? { note: evidence.note } : {}) });
   const { kids, pet, senior } = admissions;
   if (kids?.verifiedAt) facts.kidsEntry = official(kids.value, kids);
   if (senior?.verifiedAt) facts.stepFree = official(senior.value, senior);

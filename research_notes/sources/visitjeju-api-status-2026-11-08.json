@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-11-08",
+  "provider": "제주관광공사 VisitJeju",
+  "pricingSource": "https://www.data.go.kr/data/15076361/openapi.do",
+  "pricingVerificationMethod": "Official public page inspected in browser UI",
+  "listedCost": "무료",
+  "listedReuseScope": "이용허락범위 제한 없음",
+  "quota": "Exact account quota and overage handling were not established; official page says traffic depends on provider policy.",
+  "approval": "User approved the VisitJeju API calls needed for this spot-enrichment task after the free listing and quota uncertainty were explained. This does not authorize recurring jobs, other paid services, database, storage or deployment charges.",
+  "keyStorage": "Server-only local environment file; excluded from Git. Secret values omitted from this record.",
+  "apiRequestAttempts": 4,
+  "retrievedRecords": 0,
+  "httpStatusObserved": 200,
+  "contentTypeObserved": "text/html",
+  "result": "Provider web application firewall blocked requests; no JSON data snapshot was created.",
+  "handling": "Stopped calls. No firewall bypass, automated retry, cloud service activation or deployment.",
+  "followUp": "Provider-side access restriction must be resolved before another collection attempt. No claim of successful authentication or data ingestion is made.",
+  "catalogSource": "Public VisitJeju listings, operator pages and Korea Tourism Organization sources, with separate Google discovery evidence."
+}

@@ -41,8 +41,10 @@ export interface PlaceFacts {
 /**
  * Who established a facility. `search` means an operator approved a dated
  * public source found by the search pipeline; it is never raw AI output.
+ * `listing` means a dated facility entry on another family/pet travel app
+ * (e.g. 맘맘), shown with its link and only after operator approval.
  */
-export type AmenitySource = "demo" | "official" | "phone" | "onsite" | "search";
+export type AmenitySource = "demo" | "official" | "phone" | "onsite" | "search" | "listing";
 
 /** One reviewed facility (e.g. nursing room, large-dog area) with its evidence. */
 export interface AmenityEvidence {

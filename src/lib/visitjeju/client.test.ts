@@ -84,8 +84,9 @@ describe("VisitJeju paid/network boundary", () => {
       expect(String(error)).not.toContain("test-key-not-real");
     }
   });
-  it("maps approved request locales and validates a response without real networking", async () => {
+  it.each(["apiKey", "apikey"])("sends the canonical apiKey parameter with %s configured", async (keyName) => {
     approvedConfiguration();
+    vi.stubEnv("VISITJEJU_API_KEY_PARAM", keyName);
     request.mockResolvedValue(
       new Response(
         JSON.stringify({
@@ -107,8 +108,22 @@ describe("VisitJeju paid/network boundary", () => {
       items: [],
     });
     const url = request.mock.calls[0][0] as URL;
+    expect(url.searchParams.get("apiKey")).toBe("test-key-not-real");
+    expect(url.searchParams.has("apikey")).toBe(false);
     expect(url.searchParams.get("locale")).toBe("jp");
     expect(request.mock.calls[0][1].redirect).toBe("error");
+  });
+  it("reports an HTML block page without exposing its body", async () => {
+    approvedConfiguration();
+    request.mockResolvedValue(new Response("<html>test-key-not-real</html>", {
+      status: 200,
+      headers: { "content-type": "text/html; charset=UTF-8" },
+    }));
+    await expect(fetchVisitJejuPage({})).rejects.toMatchObject({
+      code: "VISITJEJU_HTML_RESPONSE",
+      message: expect.not.stringContaining("test-key-not-real"),
+    });
+    expect(request).toHaveBeenCalledTimes(1);
   });
   it("accepts documented numeric-string pagination without coercing null or booleans", async () => {
     approvedConfiguration();

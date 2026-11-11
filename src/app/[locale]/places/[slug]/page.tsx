@@ -11,5 +11,8 @@ export default async function Page({
   const places = await getPublicPlaces();
   const place = places.find((p) => p.slug === slug);
   if (!place) notFound();
-  return <DetailView locale={locale} place={place} places={places} />;
+  // Alternatives are drawn from the same region only, so send just those
+  // instead of the whole catalog with every page.
+  const sameRegion = places.filter((p) => p.region === place.region);
+  return <DetailView locale={locale} place={place} places={sameRegion} />;
 }

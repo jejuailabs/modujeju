@@ -63,7 +63,8 @@ export async function fetchVisitJejuPage(input: {
   )
     throw new ServiceError("INVALID_INPUT", 400);
   url.search = "";
-  url.searchParams.set(keyName!, apiKey);
+  // Older installations configured "apikey". The provider accepts "apiKey" on the wire.
+  url.searchParams.set("apiKey", apiKey);
   url.searchParams.set("locale", visitJejuLocale[input.locale ?? "ko"]);
   url.searchParams.set("page", String(page));
   if (input.contentId) url.searchParams.set("cid", input.contentId);
@@ -94,6 +95,9 @@ export async function fetchVisitJejuPage(input: {
     } finally {
       reader.releaseLock();
     }
+    const mediaType = response.headers.get("content-type")?.split(";", 1)[0].trim().toLowerCase();
+    if ((mediaType === "text/html" || mediaType === "application/xhtml+xml") && body.trimStart().startsWith("<"))
+      throw new ServiceError("VISITJEJU_HTML_RESPONSE", 502);
     const decoded: unknown = JSON.parse(body);
     if (!decoded || typeof decoded !== "object" || Array.isArray(decoded)) throw new ServiceError("VISITJEJU_INVALID_RESPONSE", 502);
     const payload = decoded as Record<string, unknown>;

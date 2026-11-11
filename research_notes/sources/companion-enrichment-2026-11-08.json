@@ -1,0 +1,298 @@
+{
+  "reviewedAt": "2026-11-08",
+  "reviewMethod": "Public web search for companion-specific terms, followed by official operator/VisitJeju/Korea Tourism Organization page inspection. No authenticated API, paid search API, cloud database or hosting calls.",
+  "scope": {
+    "existingPlaces": 13,
+    "observations": 46,
+    "facilityEntries": 42,
+    "activeFacilityEntries": 41,
+    "pendingFacilityEntries": 1,
+    "admissionEntries": 1
+  },
+  "dateSemantics": "verifiedAt means evidence reviewed on 2026-11-08, not an onsite visit, provider policy effective date, or source download. KTO page modification dates are recorded as sourceUpdatedAt here; they are not falsely labeled publication dates. Null verification means current text could not be confirmed.",
+  "searchQueries": [
+    "카멜리아힐 반려동물 유모차 휠체어 8kg 공식",
+    "비자림 유모차 휠체어 반려동물 A코스 공식",
+    "천지연폭포 유모차 휠체어 반려동물 공식",
+    "오설록 티뮤지엄 반려동물 유모차 휠체어 공식",
+    "협재해수욕장 site:access.visitkorea.or.kr",
+    "성산일출봉 site:access.visitkorea.or.kr",
+    "제주신라호텔 유모차 아기 침대 site:shilla.net",
+    "롯데호텔 제주 키즈 어린이 수영장 유모차 site:lottehotel.com",
+    "서머셋 제주신화월드 펫프렌들리 10kg site:shinhwaworld.com",
+    "소노벨 제주 펫프렌들리 객실 15kg site:sonohotelsresorts.com",
+    "소노캄 제주 펫 12kg site:sonohotelsresorts.com",
+    "해비치 제주 모루 키즈 유아 site:haevichi.com",
+    "허니문하우스 site:access.visitkorea.or.kr"
+  ],
+  "directSearchAttempts": [
+    {
+      "provider": "Google",
+      "url": "https://www.google.com/search?q=%EC%B9%B4%EB%A9%9C%EB%A6%AC%EC%95%84%ED%9E%90+%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC+8kg",
+      "result": "Not accessible through this worker's web-open tool. Do not describe this attempt as reviewed Google results."
+    },
+    {
+      "provider": "Naver",
+      "url": "https://search.naver.com/search.naver?query=%EC%B2%9C%EC%A7%80%EC%97%B0%ED%8F%AD%ED%8F%AC+%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC+%EC%B2%B4%EA%B3%A0",
+      "result": "Not accessible through web-open; no Naver result or blog treated as verified evidence."
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://access.visitkorea.or.kr/ms/detail.do?cotId=173bc002-7eb9-4c60-bea4-cc89e7a96c86",
+      "reviewedAt": "2026-11-08",
+      "sourceUpdatedAt": "2026-09-10",
+      "method": "Official page or full official search extract",
+      "contentUse": "Short paraphrases; no full text copied",
+      "sourceIds": [
+        "CNTS_000000000001195"
+      ]
+    },
+    {
+      "url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000001195",
+      "reviewedAt": "2026-11-08",
+      "sourceUpdatedAt": null,
+      "method": "Official page or full official search extract",
+      "contentUse": "Short paraphrases; no full text copied",
+      "sourceIds": [
+        "CNTS_000000000001195"
+      ]
+    },
+    {
+      "url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500270",
+      "reviewedAt": "2026-11-08",
+      "sourceUpdatedAt": null,
+      "method": "Official page or full official search extract",
+      "contentUse": "Short paraphrases; no full text copied",
+      "sourceIds": [
+        "CONT_000000000500270"
+      ]
+    },
+    {
+      "url": "https://access.visitkorea.or.kr/ms/detail.do?cotId=33c37895-6fb2-498a-96e0-2204fab24533",
+      "reviewedAt": "2026-11-08",
+      "sourceUpdatedAt": "2026-09-14",
+      "method": "Official page or full official search extract",
+      "contentUse": "Short paraphrases; no full text copied",
+      "sourceIds": [
+        "CONT_000000000500270"
+      ]
+    },
+    {
+      "url": "https://access.visitkorea.or.kr/ms/detail.do?cotId=361b7bd2-feee-4102-959e-497fa0347388",
+      "reviewedAt": "2026-11-08",
+      "sourceUpdatedAt": "2026-09-10",
+      "method": "Official page or full official search extract",
+      "contentUse": "Short paraphrases; no full text copied",
+      "sourceIds": [
+        "CONT_000000000500618"
+      ]
+    },
+    {
+      "url": "https://access.visitkorea.or.kr/ms/detail.do?cotId=52e504c8-1706-46ca-bd4b-04eb9120e91a",
+      "reviewedAt": "2026-11-08",
+      "sourceUpdatedAt": "2026-09-15",
+      "method": "Official page or full official search extract",
+      "contentUse": "Short paraphrases; no full text copied",
+      "sourceIds": [
+        "CONT_000000000500697"
+      ]
+    },
+    {
+      "url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500697",
+      "reviewedAt": "2026-11-08",
+      "sourceUpdatedAt": null,
+      "method": "Official page or full official search extract",
+      "contentUse": "Short paraphrases; no full text copied",
+      "sourceIds": [
+        "CONT_000000000500697"
+      ]
+    },
+    {
+      "url": "https://access.visitkorea.or.kr/ms/detail.do?cotId=3e07cb00-c88a-4df0-bfa7-42beb1421807",
+      "reviewedAt": "2026-11-08",
+      "sourceUpdatedAt": "2026-10-22",
+      "method": "Official page or full official search extract",
+      "contentUse": "Short paraphrases; no full text copied",
+      "sourceIds": [
+        "CONT_000000000500457"
+      ]
+    },
+    {
+      "url": "https://www.osulloc.com/kr/ko/store-introduction/jeju-map",
+      "reviewedAt": "2026-11-08",
+      "sourceUpdatedAt": null,
+      "method": "Direct current page opened; old pet restriction only visible in indexed version; pet observation pending",
+      "contentUse": "Short paraphrases; no full text copied",
+      "sourceIds": [
+        "CONT_000000000500457"
+      ]
+    },
+    {
+      "url": "https://access.visitkorea.or.kr/ms/detail.do?cotId=2c7347c4-c36e-4575-8096-04a4df7c0953",
+      "reviewedAt": "2026-11-08",
+      "sourceUpdatedAt": "2026-10-06",
+      "method": "Official page or full official search extract",
+      "contentUse": "Short paraphrases; no full text copied",
+      "sourceIds": [
+        "CONT_000000000500349"
+      ]
+    },
+    {
+      "url": "https://www.shinhwaworld.com/waterparktip/39964.jhtml",
+      "reviewedAt": "2026-11-08",
+      "sourceUpdatedAt": null,
+      "method": "Official indexed text; direct open failed",
+      "contentUse": "Short paraphrases; no full text copied",
+      "sourceIds": [
+        "CNTS_000000000022768"
+      ]
+    },
+    {
+      "url": "https://shinhwaworld.com/m/cms/kr/download/418/petroom_instruction.pdf",
+      "reviewedAt": "2026-11-08",
+      "sourceUpdatedAt": null,
+      "method": "Official indexed text; direct open failed",
+      "contentUse": "Short paraphrases; no full text copied",
+      "sourceIds": [
+        "CNTS_000000000022768"
+      ]
+    },
+    {
+      "url": "https://www.sonohotelsresorts.com/belle_jj/resort/detail/RM00000352",
+      "reviewedAt": "2026-11-08",
+      "sourceUpdatedAt": null,
+      "method": "Official page or full official search extract",
+      "contentUse": "Short paraphrases; no full text copied",
+      "sourceIds": [
+        "CNTS_000000000000592"
+      ]
+    },
+    {
+      "url": "https://www.sonohotelsresorts.com/calm_jj/pet/detail/RM00072665",
+      "reviewedAt": "2026-11-08",
+      "sourceUpdatedAt": null,
+      "method": "Official page or full official search extract",
+      "contentUse": "Short paraphrases; no full text copied",
+      "sourceIds": [
+        "CNTS_000000000020789"
+      ]
+    },
+    {
+      "url": "https://app.lottehotel.com/jeju-hotel/ko/offers/events/IF251201/service",
+      "reviewedAt": "2026-11-08",
+      "sourceUpdatedAt": null,
+      "method": "Official page or full official search extract",
+      "contentUse": "Short paraphrases; no full text copied",
+      "sourceIds": [
+        "CONT_000000000500859"
+      ]
+    },
+    {
+      "url": "https://app.lottehotel.com/jeju-hotel/ko/facilities/in-door-swimming-pool",
+      "reviewedAt": "2026-11-08",
+      "sourceUpdatedAt": null,
+      "method": "Official page or full official search extract",
+      "contentUse": "Short paraphrases; no full text copied",
+      "sourceIds": [
+        "CONT_000000000500859"
+      ]
+    },
+    {
+      "url": "https://www.shilla.net/jeju/offers/pack/viewPack.do?URL_PREFIX=%2Fjeju&curPageNo=1&hotlId=C&hotlIdArr=C&lang=ko&orderBy=NEW&priceOrdr=NEW&propertyId=C&resvTypCd=P&searchOptIdStr=0&spofrId=39442",
+      "reviewedAt": "2026-11-08",
+      "sourceUpdatedAt": null,
+      "method": "Official page or full official search extract",
+      "contentUse": "Short paraphrases; no full text copied",
+      "sourceIds": [
+        "CNTS_000000000018141"
+      ]
+    },
+    {
+      "url": "https://www.haevichi.com/jeju/ko/concierge/concierge-infomation",
+      "reviewedAt": "2026-11-08",
+      "sourceUpdatedAt": null,
+      "method": "Official indexed text; direct page lacks body; kidsPlay pending",
+      "contentUse": "Short paraphrases; no full text copied",
+      "sourceIds": [
+        "CONT_000000000501122"
+      ]
+    },
+    {
+      "url": "https://access.visitkorea.or.kr/acm/detail.do?cotId=ce1c0670-34af-41a0-8325-7b9c0df77a45",
+      "reviewedAt": "2026-11-08",
+      "sourceUpdatedAt": "2026-03-12",
+      "method": "Official page or full official search extract",
+      "contentUse": "Short paraphrases; no full text copied",
+      "sourceIds": [
+        "CONT_000000000501122"
+      ]
+    },
+    {
+      "url": "https://access.visitkorea.or.kr/food/detail.do?cotId=9880b450-7901-4764-80f0-e580357d102d",
+      "reviewedAt": "2026-11-08",
+      "sourceUpdatedAt": "2026-09-16",
+      "method": "Official page or full official search extract",
+      "contentUse": "Short paraphrases; no full text copied",
+      "sourceIds": [
+        "CNTS_200000000009011"
+      ]
+    },
+    {
+      "url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500349",
+      "reviewedAt": "2026-11-08",
+      "sourceUpdatedAt": null,
+      "method": "Direct official page opened",
+      "contentUse": "Short paraphrase; no full text copied",
+      "sourceIds": [
+        "CONT_000000000500349"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "sourceId": "CNTS_000000000022768",
+      "issue": "Somerset FAQ under 10kg vs operator PDF 10kg or less. Neither supports a single verified inclusive boundary.",
+      "action": "Clear existing petEntry/dogMaxWeight/dogWeightInclusive; preserve designated-room observation and conditional petRoom only."
+    },
+    {
+      "sourceId": "CNTS_000000000020789",
+      "issue": "Existing VisitJeju-derived 12kg general bound differs from operator room-specific size categories.",
+      "action": "Clear old broad pet facts; preserve named room type, vaccine and equipment requirements. Never generalize a room policy to the entire resort."
+    },
+    {
+      "sourceId": "CONT_000000000500457",
+      "issue": "Old indexed operator pet prohibition not found in directly opened current map page.",
+      "action": "Keep pet observation undated/unknown. Do not infer outdoor permission."
+    },
+    {
+      "sourceId": "CONT_000000000500618",
+      "issue": "Search found 2025 one-month pet pilot reports and unconfirmed 2026 blog rules.",
+      "action": "Do not promote expired pilot or blog details to current pet admission."
+    }
+  ],
+  "excludedEvidence": [
+    {
+      "url": "https://www.news1.kr/local/jeju/5809191",
+      "reason": "2025 limited pet pilot, not current unrestricted admission."
+    },
+    {
+      "url": "https://www.cashcow27.com/2026/09/9.html",
+      "reason": "Personal current-looking pet report; not confirmed by operator, no admission facts created."
+    },
+    {
+      "url": "https://www.osulloc.com/kr/ko/museum",
+      "reason": "404; used official current map and KTO page instead."
+    },
+    {
+      "url": "https://www.haevichi.com/jeju/ko/facilities/kids",
+      "reason": "Direct page omitted facility body; no current unconditional kidsPlay assertion."
+    }
+  ],
+  "limits": [
+    "No phone/on-site verification performed.",
+    "Rental quantities are published capacity, never live availability.",
+    "Entrance or accessible-room evidence does not certify all routes/rooms.",
+    "No prices populated from package minimums, no automatically refreshed services enabled."
+  ]
+}

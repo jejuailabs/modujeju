@@ -1,0 +1,2505 @@
+{
+  "sourceName": "맘맘",
+  "checkedAt": "2026-11-11",
+  "note": "Facility facts only; operator approval stamps verifiedAt.",
+  "records": [
+    {
+      "sourceId": "CONT_000000000501364",
+      "listingName": "제주해물밥",
+      "amenities": {
+        "highChair": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/660223016af0c1300504b757",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 주차"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/660223016af0c1300504b757",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 주차"
+        },
+        "nursingRoom": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/660223016af0c1300504b757",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 아니요, 제공된 정보 기준으로 수유실과 기저귀교환대는 없어요."
+        },
+        "diaperTable": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/660223016af0c1300504b757",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 아니요, 제공된 정보 기준으로 수유실과 기저귀교환대는 없어요."
+        },
+        "strollerRental": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/660223016af0c1300504b757",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 유모차 대여 서비스는 제공되지 않는 것으로 안내돼 있어요."
+        },
+        "kidsTableware": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/660223016af0c1300504b757",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 안내: 네, 아기의자와 유아 식기가 준비되어 있어 아이와 함께 식사하기 편한 편이에요."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_200000000014922",
+      "listingName": "중문고등어쌈밥",
+      "amenities": {
+        "highChair": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/69520285669da585e5e73022",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 시설 항목: 아기의자, 주차, 예약"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/69520285669da585e5e73022",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 시설 항목: 아기의자, 주차, 예약"
+        },
+        "nursingRoom": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/69520285669da585e5e73022",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 FAQ: 확인된 편의시설 기준으로 수유실과 기저귀교환대는 없어요."
+        },
+        "diaperTable": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/69520285669da585e5e73022",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 FAQ: 확인된 편의시설 기준으로 수유실과 기저귀교환대는 없어요."
+        },
+        "strollerRental": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/69520285669da585e5e73022",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 FAQ: 유모차 대여 서비스도 제공되지 않아요."
+        },
+        "kidsTableware": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/69520285669da585e5e73022",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 안내: 아기의자와 유아식기가 구비되어 있어 어린 아이와 방문할 때 비교적 수월하게 식사할 수 있어요."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_300000000014902",
+      "listingName": "광육",
+      "amenities": {
+        "highChair": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/6a22630eee9cbcb3925d1ce3",
+          "publishedAt": "2026-06-05",
+          "quote": "맘맘 시설 항목: 아기의자, 주차"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/6a22630eee9cbcb3925d1ce3",
+          "publishedAt": "2026-06-05",
+          "quote": "맘맘 시설 항목: 아기의자, 주차"
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_200000000014941",
+      "listingName": "둘레길 서귀포중문본점",
+      "amenities": {
+        "highChair": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/670df7b9820b1c3517d720c3",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 주차, 예약"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/670df7b9820b1c3517d720c3",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 주차, 예약"
+        },
+        "nursingRoom": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/670df7b9820b1c3517d720c3",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 아니요, 확인된 편의시설 기준으로 수유실과 기저귀교환대는 없어요."
+        },
+        "diaperTable": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/670df7b9820b1c3517d720c3",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 아니요, 확인된 편의시설 기준으로 수유실과 기저귀교환대는 없어요."
+        },
+        "kidsTableware": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/670df7b9820b1c3517d720c3",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 안내: 네, 둘레길 서귀포중문본점에는 아기의자와 유아 식기류가 준비되어 있어 아이와 함께 비교적 편하게 식사할 수 있어요."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_300000000014466",
+      "listingName": "고집돌우럭 제주함덕점",
+      "amenities": {
+        "highChair": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/6670e3a19081a5f147ae468b",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 주차, 예약"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/6670e3a19081a5f147ae468b",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 주차, 예약"
+        },
+        "nursingRoom": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/6670e3a19081a5f147ae468b",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 고집돌우럭 제주함덕점에는 수유실과 기저귀교환대가 없습니다."
+        },
+        "diaperTable": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/6670e3a19081a5f147ae468b",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 고집돌우럭 제주함덕점에는 수유실과 기저귀교환대가 없습니다."
+        },
+        "kidsTableware": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/6670e3a19081a5f147ae468b",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 안내: 네, 아기의자와 유아 식기가 구비되어 있습니다."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_200000000014632",
+      "listingName": "면주막 제주본점",
+      "amenities": {
+        "highChair": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/65fbf89116e6494c21e65b98",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 주차, 예약"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/65fbf89116e6494c21e65b98",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 주차, 예약"
+        },
+        "nursingRoom": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/65fbf89116e6494c21e65b98",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 수유실과 기저귀교환대는 확인되지 않았어요."
+        },
+        "diaperTable": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/65fbf89116e6494c21e65b98",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 수유실과 기저귀교환대는 확인되지 않았어요."
+        },
+        "kidsTableware": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/65fbf89116e6494c21e65b98",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 안내: 아기의자와 유아용 식기가 준비되어 있고, 매장이 넓어 가족 단위로 식사하기 편한 편이에요."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_000000000020047",
+      "listingName": "명진전복",
+      "amenities": {
+        "highChair": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/65dbf1568e3cc9b2d878e7a4",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 주차, 예약"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/65dbf1568e3cc9b2d878e7a4",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 주차, 예약"
+        },
+        "kidsTableware": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/65dbf1568e3cc9b2d878e7a4",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 안내: 네, 명진전복에는 아이와 동행하는 가족을 위해 아기의자와 유아 식기가 준비되어 있습니다."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_000000000021950",
+      "listingName": "고집돌우럭 중문점",
+      "amenities": {
+        "highChair": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/65cd63f5492c156da9e4a18a",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 기저귀교환대, 주차, 예약"
+        },
+        "diaperTable": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/65cd63f5492c156da9e4a18a",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 기저귀교환대, 주차, 예약"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/65cd63f5492c156da9e4a18a",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 기저귀교환대, 주차, 예약"
+        },
+        "nursingRoom": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/65cd63f5492c156da9e4a18a",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 전용 수유실과 유모차 대여 서비스는 확인되지 않았어요."
+        },
+        "strollerRental": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/65cd63f5492c156da9e4a18a",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 전용 수유실과 유모차 대여 서비스는 확인되지 않았어요."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_300000000013225",
+      "listingName": "단소",
+      "amenities": {
+        "highChair": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/63d3718a6e2efc966cf688d3",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 주차"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/63d3718a6e2efc966cf688d3",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 주차"
+        }
+      }
+    },
+    {
+      "sourceId": "CONT_000000000500858",
+      "listingName": "롯데시티호텔 제주 뷔페 씨카페",
+      "amenities": {
+        "highChair": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/6ab9daa7e6cc5db90675860e",
+          "publishedAt": "2026-09-28",
+          "quote": "맘맘 시설 항목: 아기의자, 주차, 예약"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/6ab9daa7e6cc5db90675860e",
+          "publishedAt": "2026-09-28",
+          "quote": "맘맘 시설 항목: 아기의자, 주차, 예약"
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_300000000014903",
+      "listingName": "제주 도도리고기국수",
+      "amenities": {
+        "highChair": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/694500f64109ca8f1af1c761",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 시설 항목: 아기의자, 주차"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/694500f64109ca8f1af1c761",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 시설 항목: 아기의자, 주차"
+        },
+        "nursingRoom": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/694500f64109ca8f1af1c761",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 FAQ: 아니요, 제주 도도리고기국수에는 수유실과 기저귀교환대가 없어요."
+        },
+        "diaperTable": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/694500f64109ca8f1af1c761",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 FAQ: 아니요, 제주 도도리고기국수에는 수유실과 기저귀교환대가 없어요."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_200000000014073",
+      "listingName": "해녀의부엌 북촌점",
+      "amenities": {
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/690464f46143ad70b234980d",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 시설 항목: 주차, 예약"
+        },
+        "highChair": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/690464f46143ad70b234980d",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 FAQ: 해녀의부엌 북촌점은 아기의자, 수유실, 기저귀교환대, 유모차 대여 서비스가 제공되지 않아요."
+        },
+        "nursingRoom": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/690464f46143ad70b234980d",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 FAQ: 해녀의부엌 북촌점은 아기의자, 수유실, 기저귀교환대, 유모차 대여 서비스가 제공되지 않아요."
+        },
+        "diaperTable": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/690464f46143ad70b234980d",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 FAQ: 해녀의부엌 북촌점은 아기의자, 수유실, 기저귀교환대, 유모차 대여 서비스가 제공되지 않아요."
+        },
+        "strollerRental": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/690464f46143ad70b234980d",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 FAQ: 해녀의부엌 북촌점은 아기의자, 수유실, 기저귀교환대, 유모차 대여 서비스가 제공되지 않아요."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_200000000013090",
+      "listingName": "비자림국수집",
+      "amenities": {
+        "highChair": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/67ea3b9082b5458a8438e2c7",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 주차"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/67ea3b9082b5458a8438e2c7",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 주차"
+        },
+        "nursingRoom": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/67ea3b9082b5458a8438e2c7",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 수유실이나 기저귀교환대, 유모차 대여는 지원되지 않습니다."
+        },
+        "diaperTable": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/67ea3b9082b5458a8438e2c7",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 수유실이나 기저귀교환대, 유모차 대여는 지원되지 않습니다."
+        },
+        "strollerRental": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/67ea3b9082b5458a8438e2c7",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 수유실이나 기저귀교환대, 유모차 대여는 지원되지 않습니다."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_000000000022838",
+      "listingName": "도토리키친 본점",
+      "amenities": {
+        "highChair": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/66a6ef5ca5b565b9ce179847",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 주차, 예약"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/66a6ef5ca5b565b9ce179847",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 주차, 예약"
+        },
+        "nursingRoom": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/66a6ef5ca5b565b9ce179847",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 수유실과 기저귀교환대는 없는 것으로 안내되어 있어요."
+        },
+        "diaperTable": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/66a6ef5ca5b565b9ce179847",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 수유실과 기저귀교환대는 없는 것으로 안내되어 있어요."
+        },
+        "kidsTableware": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/66a6ef5ca5b565b9ce179847",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 안내: 청귤이 들어가지 않은 어린이 메뉴 를 별도로 판매하고 있어요."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_300000000013885",
+      "listingName": "수니테이블",
+      "amenities": {
+        "highChair": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/660a3ec7738cc897ddeddf23",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 주차, 예약"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/660a3ec7738cc897ddeddf23",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 주차, 예약"
+        },
+        "nursingRoom": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/660a3ec7738cc897ddeddf23",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 수유실, 기저귀 교환대, 유모차 대여는 지원하지 않으니 참고해 주세요."
+        },
+        "diaperTable": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/660a3ec7738cc897ddeddf23",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 수유실, 기저귀 교환대, 유모차 대여는 지원하지 않으니 참고해 주세요."
+        },
+        "strollerRental": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/660a3ec7738cc897ddeddf23",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 수유실, 기저귀 교환대, 유모차 대여는 지원하지 않으니 참고해 주세요."
+        },
+        "kidsTableware": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/660a3ec7738cc897ddeddf23",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 안내: 수니테이블은 아기 의자와 유아 식기가 구비되어 있고, 아기 음식을 잘라주기 좋은 식가위를 제공해 아이와 함께 방문하기에 좋습니다."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_000000000022908",
+      "listingName": "제주한면가",
+      "amenities": {
+        "highChair": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/65d84e2146c0add936f9573a",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 주차, 예약"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/65d84e2146c0add936f9573a",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 주차, 예약"
+        },
+        "nursingRoom": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/65d84e2146c0add936f9573a",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 유모차 대여, 기저귀 교환대, 수유실은 제공되지 않습니다."
+        },
+        "diaperTable": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/65d84e2146c0add936f9573a",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 유모차 대여, 기저귀 교환대, 수유실은 제공되지 않습니다."
+        },
+        "strollerRental": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/65d84e2146c0add936f9573a",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 유모차 대여, 기저귀 교환대, 수유실은 제공되지 않습니다."
+        },
+        "kidsTableware": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/65d84e2146c0add936f9573a",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 안내: 네, 제주한면가에는 아기의자와 유아 식기가 준비되어 있어 아이를 동반한 가족도 불편함 없이 식사할 수 있습니다."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_300000000013220",
+      "listingName": "대담 애월본점",
+      "amenities": {
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/64f179dbd391719a54365d9a",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 주차, 예약"
+        },
+        "highChair": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/64f179dbd391719a54365d9a",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 대담 애월본점에는 어린이용 식탁의자, 수유실, 기저귀교환대, 유모차대여 등의 아동·유아 관련 편의시설이 제공되지 않습니다."
+        },
+        "nursingRoom": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/64f179dbd391719a54365d9a",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 대담 애월본점에는 어린이용 식탁의자, 수유실, 기저귀교환대, 유모차대여 등의 아동·유아 관련 편의시설이 제공되지 않습니다."
+        },
+        "diaperTable": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/64f179dbd391719a54365d9a",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 대담 애월본점에는 어린이용 식탁의자, 수유실, 기저귀교환대, 유모차대여 등의 아동·유아 관련 편의시설이 제공되지 않습니다."
+        },
+        "strollerRental": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/64f179dbd391719a54365d9a",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 대담 애월본점에는 어린이용 식탁의자, 수유실, 기저귀교환대, 유모차대여 등의 아동·유아 관련 편의시설이 제공되지 않습니다."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_300000000013066",
+      "listingName": "제주당",
+      "amenities": {
+        "nursingRoom": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/66ce89d4218b3b70c8bc8c53",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 수유실, 기저귀교환대, 주차"
+        },
+        "diaperTable": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/66ce89d4218b3b70c8bc8c53",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 수유실, 기저귀교환대, 주차"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/66ce89d4218b3b70c8bc8c53",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 수유실, 기저귀교환대, 주차"
+        },
+        "highChair": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/66ce89d4218b3b70c8bc8c53",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 아니요, 제주당은 아기의자와 유모차 대여 서비스를 제공하지 않아요."
+        },
+        "strollerRental": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/66ce89d4218b3b70c8bc8c53",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 아니요, 제주당은 아기의자와 유모차 대여 서비스를 제공하지 않아요."
+        },
+        "floorSeating": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/66ce89d4218b3b70c8bc8c53",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 안내: 어린아이와 방문한다면 2층 안쪽 좌식 테이블을 이용하는 것이 도움이 될 수 있어요."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_200000000012562",
+      "listingName": "카페 글렌코",
+      "amenities": {
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/62cd18e42718fee95297dfec",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 주차"
+        },
+        "nursingRoom": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/62cd18e42718fee95297dfec",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 아니요, 카페 글렌코에는 수유실과 기저귀교환대가 마련되어 있지 않아요."
+        },
+        "diaperTable": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/62cd18e42718fee95297dfec",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 아니요, 카페 글렌코에는 수유실과 기저귀교환대가 마련되어 있지 않아요."
+        },
+        "strollerRental": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/62cd18e42718fee95297dfec",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 유모차 대여 서비스는 제공되지 않습니다."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_300000000012676",
+      "listingName": "제주에인감귤밭",
+      "amenities": {
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/67316cf2fec06e3e6d52f91c",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 주차, 예약"
+        },
+        "highChair": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/67316cf2fec06e3e6d52f91c",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 제주에인감귤밭에는 아기의자, 수유실, 기저귀교환대, 유모차 대여가 없어요."
+        },
+        "nursingRoom": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/67316cf2fec06e3e6d52f91c",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 제주에인감귤밭에는 아기의자, 수유실, 기저귀교환대, 유모차 대여가 없어요."
+        },
+        "diaperTable": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/67316cf2fec06e3e6d52f91c",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 제주에인감귤밭에는 아기의자, 수유실, 기저귀교환대, 유모차 대여가 없어요."
+        },
+        "strollerRental": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/67316cf2fec06e3e6d52f91c",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 제주에인감귤밭에는 아기의자, 수유실, 기저귀교환대, 유모차 대여가 없어요."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_200000000014848",
+      "listingName": "감따남",
+      "amenities": {
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/6952025537c398078ec533da",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 시설 항목: 주차, 예약"
+        },
+        "highChair": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/6952025537c398078ec533da",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 FAQ: 아기의자·수유실·기저귀교환대·유모차 대여는 제공되지 않아요."
+        },
+        "nursingRoom": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/6952025537c398078ec533da",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 FAQ: 아기의자·수유실·기저귀교환대·유모차 대여는 제공되지 않아요."
+        },
+        "diaperTable": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/6952025537c398078ec533da",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 FAQ: 아기의자·수유실·기저귀교환대·유모차 대여는 제공되지 않아요."
+        },
+        "strollerRental": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/6952025537c398078ec533da",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 FAQ: 아기의자·수유실·기저귀교환대·유모차 대여는 제공되지 않아요."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_300000000013969",
+      "listingName": "알프스제주",
+      "amenities": {
+        "highChair": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/694b8e1ed496386e27e98786",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 시설 항목: 아기의자, 주차"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/694b8e1ed496386e27e98786",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 시설 항목: 아기의자, 주차"
+        },
+        "nursingRoom": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/694b8e1ed496386e27e98786",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 FAQ: 아니요, 알프스제주에는 수유실과 기저귀교환대가 없어요."
+        },
+        "diaperTable": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/694b8e1ed496386e27e98786",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 FAQ: 아니요, 알프스제주에는 수유실과 기저귀교환대가 없어요."
+        },
+        "strollerRental": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/694b8e1ed496386e27e98786",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 FAQ: 알프스제주에는 유모차 대여 서비스와 예약 서비스가 없어요."
+        },
+        "kidsPlay": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/694b8e1ed496386e27e98786",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 안내: 야외에는 아이들이 놀기 좋은 생태놀이터 도 마련되어 있으며, 모래가 깔려 있어요."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_200000000012710",
+      "listingName": "더클리프",
+      "amenities": {
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/6715bee0c723b7a12f3c9199",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 주차"
+        },
+        "highChair": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/6715bee0c723b7a12f3c9199",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 더클리프에는 아기의자, 수유실, 기저귀교환대가 제공되지 않아요."
+        },
+        "nursingRoom": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/6715bee0c723b7a12f3c9199",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 더클리프에는 아기의자, 수유실, 기저귀교환대가 제공되지 않아요."
+        },
+        "diaperTable": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/6715bee0c723b7a12f3c9199",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 더클리프에는 아기의자, 수유실, 기저귀교환대가 제공되지 않아요."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_200000000014915",
+      "listingName": "그라나다",
+      "amenities": {
+        "highChair": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/65d84f4897f91c8372da0639",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 아기의자와 유모차 대여, 수유실, 기저귀교환대는 제공되지 않아 이 점 참고해 주세요."
+        },
+        "nursingRoom": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/65d84f4897f91c8372da0639",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 아기의자와 유모차 대여, 수유실, 기저귀교환대는 제공되지 않아 이 점 참고해 주세요."
+        },
+        "diaperTable": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/65d84f4897f91c8372da0639",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 아기의자와 유모차 대여, 수유실, 기저귀교환대는 제공되지 않아 이 점 참고해 주세요."
+        },
+        "strollerRental": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/65d84f4897f91c8372da0639",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 아기의자와 유모차 대여, 수유실, 기저귀교환대는 제공되지 않아 이 점 참고해 주세요."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_300000000015755",
+      "listingName": "피커스 제주",
+      "amenities": {
+        "highChair": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/65bc5595cdb0749af68de32d",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 주차, 예약"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/65bc5595cdb0749af68de32d",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 주차, 예약"
+        },
+        "nursingRoom": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/65bc5595cdb0749af68de32d",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 피커스 제주에는 수유실과 기저귀교환대가 없는 것으로 안내되어 있어요."
+        },
+        "diaperTable": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/65bc5595cdb0749af68de32d",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 피커스 제주에는 수유실과 기저귀교환대가 없는 것으로 안내되어 있어요."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_200000000012559",
+      "listingName": "보롬왓",
+      "amenities": {
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/63f72d2a631c778269726bf9",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 주차"
+        },
+        "nursingRoom": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/63f72d2a631c778269726bf9",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 보롬왓은 수유실과 기저귀교환대가 없어요."
+        },
+        "diaperTable": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/63f72d2a631c778269726bf9",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 보롬왓은 수유실과 기저귀교환대가 없어요."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_000000000022562",
+      "listingName": "마노르블랑",
+      "amenities": {
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/63aa94ec576d3cf16f4978dd",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 주차"
+        },
+        "highChair": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/63aa94ec576d3cf16f4978dd",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 마노르블랑에는 아기의자, 수유실, 기저귀교환대가 모두 없어요."
+        },
+        "nursingRoom": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/63aa94ec576d3cf16f4978dd",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 마노르블랑에는 아기의자, 수유실, 기저귀교환대가 모두 없어요."
+        },
+        "diaperTable": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/63aa94ec576d3cf16f4978dd",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 마노르블랑에는 아기의자, 수유실, 기저귀교환대가 모두 없어요."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_300000000014396",
+      "listingName": "자연in PLANT827",
+      "amenities": {
+        "highChair": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/6acc40529676c5df7bbbf86d",
+          "publishedAt": "2026-10-12",
+          "quote": "맘맘 시설 항목: 아기의자, 기저귀교환대, 주차"
+        },
+        "diaperTable": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/6acc40529676c5df7bbbf86d",
+          "publishedAt": "2026-10-12",
+          "quote": "맘맘 시설 항목: 아기의자, 기저귀교환대, 주차"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/6acc40529676c5df7bbbf86d",
+          "publishedAt": "2026-10-12",
+          "quote": "맘맘 시설 항목: 아기의자, 기저귀교환대, 주차"
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_300000000012986",
+      "listingName": "코리코카페 제주점",
+      "amenities": {
+        "highChair": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/6aa35052671ed03c069d2cb4",
+          "publishedAt": "2026-09-11",
+          "quote": "맘맘 시설 항목: 아기의자, 기저귀교환대, 주차"
+        },
+        "diaperTable": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/6aa35052671ed03c069d2cb4",
+          "publishedAt": "2026-09-11",
+          "quote": "맘맘 시설 항목: 아기의자, 기저귀교환대, 주차"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/6aa35052671ed03c069d2cb4",
+          "publishedAt": "2026-09-11",
+          "quote": "맘맘 시설 항목: 아기의자, 기저귀교환대, 주차"
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_200000000012674",
+      "listingName": "에오마르",
+      "amenities": {
+        "highChair": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/690877c4538f6ff43f3536dd",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 시설 항목: 아기의자, 주차"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/690877c4538f6ff43f3536dd",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 시설 항목: 아기의자, 주차"
+        },
+        "nursingRoom": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/690877c4538f6ff43f3536dd",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 FAQ: 아니요, 에오마르에는 수유실과 기저귀교환대가 없어요."
+        },
+        "diaperTable": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/690877c4538f6ff43f3536dd",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 FAQ: 아니요, 에오마르에는 수유실과 기저귀교환대가 없어요."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_300000000015642",
+      "listingName": "레이오버",
+      "amenities": {
+        "highChair": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/675827268dfb0d482796f493",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 주차"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/675827268dfb0d482796f493",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 주차"
+        },
+        "strollerRental": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/675827268dfb0d482796f493",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 유모차 대여는 제공되지 않"
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_300000000013070",
+      "listingName": "해일리카페",
+      "amenities": {
+        "highChair": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/6679193034fe7cc0a87d8925",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 주차"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/6679193034fe7cc0a87d8925",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 주차"
+        },
+        "nursingRoom": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/6679193034fe7cc0a87d8925",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 확인된 정보로는 해일리카페에 수유실과 기저귀교환대는 없어요."
+        },
+        "diaperTable": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/6679193034fe7cc0a87d8925",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 확인된 정보로는 해일리카페에 수유실과 기저귀교환대는 없어요."
+        },
+        "kidsPlay": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/6679193034fe7cc0a87d8925",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 안내: 해일리카페에는 야외 모래놀이 공간이 있고 장난감도 구비되어 있어 아이와 함께 들르기 좋아요."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_300000000015831",
+      "listingName": "어니스트밀크 본점",
+      "amenities": {
+        "highChair": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/6600f0a48652ef4b524666cc",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 주차"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/6600f0a48652ef4b524666cc",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 주차"
+        },
+        "nursingRoom": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/6600f0a48652ef4b524666cc",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 수유실, 기저귀교환대, 유모차 대여, 예약 서비스는 지원하지 않습니다."
+        },
+        "diaperTable": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/6600f0a48652ef4b524666cc",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 수유실, 기저귀교환대, 유모차 대여, 예약 서비스는 지원하지 않습니다."
+        },
+        "strollerRental": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/6600f0a48652ef4b524666cc",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 수유실, 기저귀교환대, 유모차 대여, 예약 서비스는 지원하지 않습니다."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_300000000015741",
+      "listingName": "카페 귤꽃다락",
+      "amenities": {
+        "highChair": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/64e59f51ed38876c477604b8",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 주차"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/64e59f51ed38876c477604b8",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 주차"
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_200000000012788",
+      "listingName": "서귀피안 베이커리",
+      "amenities": {
+        "highChair": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/699c0b8864348012490bc93a",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 시설 항목: 아기의자, 기저귀교환대, 주차"
+        },
+        "diaperTable": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/699c0b8864348012490bc93a",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 시설 항목: 아기의자, 기저귀교환대, 주차"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/699c0b8864348012490bc93a",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 시설 항목: 아기의자, 기저귀교환대, 주차"
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_000000000019397",
+      "listingName": "담앤루 카페",
+      "amenities": {
+        "highChair": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/699ebd7ff1e314dca0aa4640",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 시설 항목: 아기의자, 주차"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/699ebd7ff1e314dca0aa4640",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 시설 항목: 아기의자, 주차"
+        },
+        "nursingRoom": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/699ebd7ff1e314dca0aa4640",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 FAQ: 아니요, 담앤루 카페에는 수유실과 기저귀교환대가 없어요."
+        },
+        "diaperTable": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/699ebd7ff1e314dca0aa4640",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 FAQ: 아니요, 담앤루 카페에는 수유실과 기저귀교환대가 없어요."
+        },
+        "strollerRental": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/699ebd7ff1e314dca0aa4640",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 FAQ: 유모차 대여 서비스는 제공되지 않아요."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_300000000013367",
+      "listingName": "포레스텔라 인 제주",
+      "amenities": {
+        "highChair": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/699c0b3d9758c6fa88984b86",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 시설 항목: 아기의자, 주차, 예약"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/699c0b3d9758c6fa88984b86",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 시설 항목: 아기의자, 주차, 예약"
+        },
+        "nursingRoom": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/699c0b3d9758c6fa88984b86",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 FAQ: 아니요, 포레스텔라 인 제주에는 수유실과 기저귀교환대가 제공되지 않아요."
+        },
+        "diaperTable": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/699c0b3d9758c6fa88984b86",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 FAQ: 아니요, 포레스텔라 인 제주에는 수유실과 기저귀교환대가 제공되지 않아요."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_300000000013878",
+      "listingName": "대한목장",
+      "amenities": {
+        "highChair": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/695202b1669da585e5e73024",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 시설 항목: 아기의자, 주차, 예약"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/695202b1669da585e5e73024",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 시설 항목: 아기의자, 주차, 예약"
+        },
+        "nursingRoom": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/695202b1669da585e5e73024",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 FAQ: 수유실과 기저귀교환대는 없어요."
+        },
+        "diaperTable": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/695202b1669da585e5e73024",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 FAQ: 수유실과 기저귀교환대는 없어요."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_200000000014246",
+      "listingName": "풍차로 가는 길",
+      "amenities": {
+        "highChair": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/696f332571ce8303b0a21919",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 시설 항목: 아기의자, 주차"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/696f332571ce8303b0a21919",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 시설 항목: 아기의자, 주차"
+        },
+        "nursingRoom": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/696f332571ce8303b0a21919",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 FAQ: 풍차로 가는 길은 수유실과 기저귀교환대가 없는 것으로 안내되어 있어요."
+        },
+        "diaperTable": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/696f332571ce8303b0a21919",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 FAQ: 풍차로 가는 길은 수유실과 기저귀교환대가 없는 것으로 안내되어 있어요."
+        },
+        "strollerRental": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/696f332571ce8303b0a21919",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 FAQ: 유모차 대여 서비스는 없어요."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_000000000020017",
+      "listingName": "마마롱",
+      "amenities": {
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/694a5c63d803861d61ad75da",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 시설 항목: 주차, 예약"
+        },
+        "highChair": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/694a5c63d803861d61ad75da",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 FAQ: 마마롱은 아기의자, 수유실, 기저귀교환대가 제공되지 않아요."
+        },
+        "nursingRoom": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/694a5c63d803861d61ad75da",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 FAQ: 마마롱은 아기의자, 수유실, 기저귀교환대가 제공되지 않아요."
+        },
+        "diaperTable": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/694a5c63d803861d61ad75da",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 FAQ: 마마롱은 아기의자, 수유실, 기저귀교환대가 제공되지 않아요."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_300000000013158",
+      "listingName": "비밀역",
+      "amenities": {
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/66989c35b1f6949f1ad06f6c",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 주차, 예약"
+        },
+        "highChair": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/66989c35b1f6949f1ad06f6c",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 비밀역에는 아기의자, 수유실, 기저귀교환대가 없어요."
+        },
+        "nursingRoom": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/66989c35b1f6949f1ad06f6c",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 비밀역에는 아기의자, 수유실, 기저귀교환대가 없어요."
+        },
+        "diaperTable": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/66989c35b1f6949f1ad06f6c",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 비밀역에는 아기의자, 수유실, 기저귀교환대가 없어요."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_200000000014704",
+      "listingName": "새물",
+      "amenities": {
+        "highChair": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/673e8ab68028d8318213e87d",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 주차, 예약"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/673e8ab68028d8318213e87d",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 주차, 예약"
+        },
+        "nursingRoom": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/673e8ab68028d8318213e87d",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 새물에는 수유실과 기저귀교환대가 없어요."
+        },
+        "diaperTable": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/673e8ab68028d8318213e87d",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 새물에는 수유실과 기저귀교환대가 없어요."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_000000000019337",
+      "listingName": "더 시에나 프리모",
+      "amenities": {
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/69520279669da585e5e73021",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 시설 항목: 주차, 예약"
+        },
+        "nursingRoom": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/69520279669da585e5e73021",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 FAQ: 제공된 정보 기준으로 더 시에나 프리모의 수유실과 기저귀교환대는 확인되지 않았어요."
+        },
+        "diaperTable": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/69520279669da585e5e73021",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 FAQ: 제공된 정보 기준으로 더 시에나 프리모의 수유실과 기저귀교환대는 확인되지 않았어요."
+        },
+        "kidsPlay": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/69520279669da585e5e73021",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 안내: 본관 옆 별도 키즈동이 있고, 1층에는 실내 키즈카페, 야외 광장에는 놀이터가 마련되어 있어요."
+        }
+      }
+    },
+    {
+      "sourceId": "CONT_000000000501122",
+      "listingName": "해비치호텔앤드리조트",
+      "amenities": {
+        "highChair": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/64a671b812830d7123be1007",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 수유실, 기저귀교환대, 주차, 예약"
+        },
+        "nursingRoom": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/64a671b812830d7123be1007",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 수유실, 기저귀교환대, 주차, 예약"
+        },
+        "diaperTable": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/64a671b812830d7123be1007",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 수유실, 기저귀교환대, 주차, 예약"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/64a671b812830d7123be1007",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 수유실, 기저귀교환대, 주차, 예약"
+        },
+        "strollerRental": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/64a671b812830d7123be1007",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 유모차 대여는 제공되지 않으니 필요하면 미리 준비해 가는 것이 좋아요."
+        },
+        "kidsPlay": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/64a671b812830d7123be1007",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 안내: 리조트 지하 1층에는 미취학 아동이 이용할 수 있는 실내 놀이터 ‘놀멍’이 있고, 리조트 1층에는 약 3천 권의 도서와 교구로 꾸며진 100평 규모의 키즈 놀이공간 ‘모루’가 있어요."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_000000000019127",
+      "listingName": "사랑터울펜션",
+      "amenities": {
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/64dc2318067b0031e512c4b2",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 주차, 예약"
+        },
+        "nursingRoom": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/64dc2318067b0031e512c4b2",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 사랑터울펜션에는 수유실과 기저귀교환대가 제공되지 않아요."
+        },
+        "diaperTable": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/64dc2318067b0031e512c4b2",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 사랑터울펜션에는 수유실과 기저귀교환대가 제공되지 않아요."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_000000000018142",
+      "listingName": "스위트 호텔 제주",
+      "amenities": {
+        "nursingRoom": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/64ab599eb8c7c66ecc412719",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 수유실, 기저귀교환대, 주차, 예약"
+        },
+        "diaperTable": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/64ab599eb8c7c66ecc412719",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 수유실, 기저귀교환대, 주차, 예약"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/64ab599eb8c7c66ecc412719",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 수유실, 기저귀교환대, 주차, 예약"
+        },
+        "highChair": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/64ab599eb8c7c66ecc412719",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 아기의자와 유모차 대여는 지원되지 않으니 이용에 참고해 주세요."
+        },
+        "strollerRental": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/64ab599eb8c7c66ecc412719",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 아기의자와 유모차 대여는 지원되지 않으니 이용에 참고해 주세요."
+        },
+        "kidsPlay": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/64ab599eb8c7c66ecc412719",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 안내: 호텔 1층 로비 안쪽에는 책과 놀잇감이 있는 '키즈클럽'(키즈카페)와 '수유실'이 마련되어 있습니다."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_000000000019611",
+      "listingName": "로그밸리펜션",
+      "amenities": {
+        "highChair": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/697c6944bfcec59fe36c26f2",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 FAQ: 로그밸리펜션은 수유실, 기저귀교환대, 아기의자, 유모차 대여 서비스를 제공하지 않습니다."
+        },
+        "nursingRoom": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/697c6944bfcec59fe36c26f2",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 FAQ: 로그밸리펜션은 수유실, 기저귀교환대, 아기의자, 유모차 대여 서비스를 제공하지 않습니다."
+        },
+        "diaperTable": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/697c6944bfcec59fe36c26f2",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 FAQ: 로그밸리펜션은 수유실, 기저귀교환대, 아기의자, 유모차 대여 서비스를 제공하지 않습니다."
+        },
+        "strollerRental": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/697c6944bfcec59fe36c26f2",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 FAQ: 로그밸리펜션은 수유실, 기저귀교환대, 아기의자, 유모차 대여 서비스를 제공하지 않습니다."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_200000000014079",
+      "listingName": "곁겹 풀빌라",
+      "amenities": {
+        "highChair": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/68a2e0d111622812313c00cc",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 시설 항목: 아기의자, 주차, 예약"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/68a2e0d111622812313c00cc",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 시설 항목: 아기의자, 주차, 예약"
+        },
+        "nursingRoom": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/68a2e0d111622812313c00cc",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 FAQ: 수유실, 기저귀교환대, 유모차 대여는 제공되지 않아요."
+        },
+        "diaperTable": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/68a2e0d111622812313c00cc",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 FAQ: 수유실, 기저귀교환대, 유모차 대여는 제공되지 않아요."
+        },
+        "strollerRental": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/68a2e0d111622812313c00cc",
+          "publishedAt": "2026-04-09",
+          "quote": "맘맘 FAQ: 수유실, 기저귀교환대, 유모차 대여는 제공되지 않아요."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_000000000018141",
+      "listingName": "제주신라호텔",
+      "amenities": {
+        "highChair": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/6780f750b72d4a6af93a50f8",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 유모차대여, 주차, 예약"
+        },
+        "strollerRental": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/6780f750b72d4a6af93a50f8",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 유모차대여, 주차, 예약"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/6780f750b72d4a6af93a50f8",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 유모차대여, 주차, 예약"
+        },
+        "kidsPlay": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/6780f750b72d4a6af93a50f8",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 안내: 실내외 수영장, 키즈존, 짐보리, 플레이존 등 다양한 놀이시설이 준비되어 있으며, 키즈존과 플레이존은 실내에 위치해 있어 안전하게 즐길 수 있습니다."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_200000000008006",
+      "listingName": "토토하우스",
+      "amenities": {
+        "highChair": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/66d97dc351b153a599d9bcaf",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 주차, 예약"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/66d97dc351b153a599d9bcaf",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 주차, 예약"
+        },
+        "nursingRoom": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/66d97dc351b153a599d9bcaf",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 토토하우스는 수유실과 기저귀교환대가 제공되지 않아요."
+        },
+        "diaperTable": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/66d97dc351b153a599d9bcaf",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 토토하우스는 수유실과 기저귀교환대가 제공되지 않아요."
+        },
+        "kidsTableware": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/66d97dc351b153a599d9bcaf",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 안내: 토토하우스에는 아기의자, 유아 식기류, 젖병소독기, 분유 포트가 구비되어 있어요."
+        },
+        "kidsPlay": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/66d97dc351b153a599d9bcaf",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 안내: 토토하우스는 2층 전체가 키즈룸으로 구성되어 있고, 볼풀장·미끄럼틀·그네·트램폴린이 마련되어 있어 실내에서도 아이가 신나게 놀 수 있어요."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_200000000011053",
+      "listingName": "그랜드하얏트 제주",
+      "amenities": {
+        "highChair": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/666a5514e97f00f60181bd59",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 수유실, 기저귀교환대, 유모차대여, 주차, 예약"
+        },
+        "nursingRoom": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/666a5514e97f00f60181bd59",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 수유실, 기저귀교환대, 유모차대여, 주차, 예약"
+        },
+        "diaperTable": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/666a5514e97f00f60181bd59",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 수유실, 기저귀교환대, 유모차대여, 주차, 예약"
+        },
+        "strollerRental": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/666a5514e97f00f60181bd59",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 수유실, 기저귀교환대, 유모차대여, 주차, 예약"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/666a5514e97f00f60181bd59",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 수유실, 기저귀교환대, 유모차대여, 주차, 예약"
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_300000000014212",
+      "listingName": "휘닉스 아일랜드 제주",
+      "amenities": {
+        "highChair": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/65b6fbb4b3baa6ca16eae596",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 유모차대여, 주차, 예약"
+        },
+        "strollerRental": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/65b6fbb4b3baa6ca16eae596",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 유모차대여, 주차, 예약"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/65b6fbb4b3baa6ca16eae596",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 유모차대여, 주차, 예약"
+        },
+        "nursingRoom": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/65b6fbb4b3baa6ca16eae596",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 수유실, 기저귀교환대는 지원되지 않습니다."
+        },
+        "diaperTable": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/65b6fbb4b3baa6ca16eae596",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 수유실, 기저귀교환대는 지원되지 않습니다."
+        },
+        "babyBed": {
+          "value": "conditional",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/65b6fbb4b3baa6ca16eae596",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 안내: 침대가드, 아기의자, 아기욕조, 발판, 젖병소독기 등의 아기용품은 사전 요청 시 대여하실 수 있습니다."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_300000000013016",
+      "listingName": "신라스테이 플러스 이호테우",
+      "amenities": {
+        "nursingRoom": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/667922b876c760fd471af09b",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 수유실, 기저귀교환대, 주차, 예약"
+        },
+        "diaperTable": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/667922b876c760fd471af09b",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 수유실, 기저귀교환대, 주차, 예약"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/667922b876c760fd471af09b",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 수유실, 기저귀교환대, 주차, 예약"
+        },
+        "strollerRental": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/667922b876c760fd471af09b",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 유모차 대여 서비스는 제공되지 않습니다."
+        },
+        "floorSeating": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/667922b876c760fd471af09b",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 안내: 1층에 신라베어 포토존 이 있고 뒤에는 간단한 좌식 공간이 있어서 아이와 대기하기 좋아요."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_300000000012925",
+      "listingName": "훈데르트힐즈",
+      "amenities": {
+        "nursingRoom": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/645b6aa955753627b1eeb851",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 수유실, 기저귀교환대, 주차, 예약"
+        },
+        "diaperTable": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/645b6aa955753627b1eeb851",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 수유실, 기저귀교환대, 주차, 예약"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/645b6aa955753627b1eeb851",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 수유실, 기저귀교환대, 주차, 예약"
+        },
+        "highChair": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/645b6aa955753627b1eeb851",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 아기의자 및 유모차 대여는 지원되지 않습니다."
+        },
+        "strollerRental": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/645b6aa955753627b1eeb851",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 아기의자 및 유모차 대여는 지원되지 않습니다."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_200000000007432",
+      "listingName": "제주신화월드",
+      "amenities": {
+        "highChair": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/645b0fe3806baefe6047f85f",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 수유실, 기저귀교환대, 유모차대여, 주차, 예약"
+        },
+        "nursingRoom": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/645b0fe3806baefe6047f85f",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 수유실, 기저귀교환대, 유모차대여, 주차, 예약"
+        },
+        "diaperTable": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/645b0fe3806baefe6047f85f",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 수유실, 기저귀교환대, 유모차대여, 주차, 예약"
+        },
+        "strollerRental": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/645b0fe3806baefe6047f85f",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 수유실, 기저귀교환대, 유모차대여, 주차, 예약"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/645b0fe3806baefe6047f85f",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 수유실, 기저귀교환대, 유모차대여, 주차, 예약"
+        },
+        "babyBed": {
+          "value": "conditional",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/645b0fe3806baefe6047f85f",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 안내: 호텔 3곳에서는 아기 침대, 침대 안전가드, 아기 욕조, 유아 안전 디딤대, 유아 변기 커버, 가습기, 제습기 등을, 서머셋에서는 아기 침대, 싱글 침구 세트, 가습기 등을 대여할 수 있어요."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_200000000011719",
+      "listingName": "그랜드 조선 제주",
+      "amenities": {
+        "highChair": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/64644bcc4f0e6b7ebb7d670e",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 유모차대여, 주차, 예약"
+        },
+        "strollerRental": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/64644bcc4f0e6b7ebb7d670e",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 유모차대여, 주차, 예약"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/64644bcc4f0e6b7ebb7d670e",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 유모차대여, 주차, 예약"
+        },
+        "nursingRoom": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/64644bcc4f0e6b7ebb7d670e",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 제공된 정보 기준으로 그랜드 조선 제주에는 수유실과 기저귀교환대가 없는 것으로 안내되어 있어요."
+        },
+        "diaperTable": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/64644bcc4f0e6b7ebb7d670e",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 제공된 정보 기준으로 그랜드 조선 제주에는 수유실과 기저귀교환대가 없는 것으로 안내되어 있어요."
+        },
+        "kidsPlay": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/64644bcc4f0e6b7ebb7d670e",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 안내: 그랜드 조선 제주에는 키즈클럽이 있고, 장난감과 책이 잘 갖춰져 있어 유아부터 초등학생까지 이용하기 좋아요."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_200000000008958",
+      "listingName": "켄싱턴리조트 서귀포점",
+      "amenities": {
+        "highChair": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/664b15e813f2be67bf31f7b6",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 유모차대여, 주차, 예약"
+        },
+        "strollerRental": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/664b15e813f2be67bf31f7b6",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 유모차대여, 주차, 예약"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/664b15e813f2be67bf31f7b6",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 유모차대여, 주차, 예약"
+        },
+        "nursingRoom": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/664b15e813f2be67bf31f7b6",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 수유실과 기저귀교환대는 없는 것으로 확인돼 영유아와 방문한다면 수유용품과 기저귀 교체 매트를 미리 준비해 가는 것이 좋아요."
+        },
+        "diaperTable": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/664b15e813f2be67bf31f7b6",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 수유실과 기저귀교환대는 없는 것으로 확인돼 영유아와 방문한다면 수유용품과 기저귀 교체 매트를 미리 준비해 가는 것이 좋아요."
+        },
+        "kidsPlay": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/664b15e813f2be67bf31f7b6",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 안내: 리조트 내에 야외 수영장이 있으며, 아이들을 위한 키즈풀을 보유하고 있어 안전하게 물놀이 하기 좋아요."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_000000000018215",
+      "listingName": "금호제주리조트",
+      "amenities": {
+        "highChair": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/663dc61f0949c0cb3a556248",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 유모차대여, 주차, 예약"
+        },
+        "strollerRental": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/663dc61f0949c0cb3a556248",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 유모차대여, 주차, 예약"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/663dc61f0949c0cb3a556248",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 아기의자, 유모차대여, 주차, 예약"
+        },
+        "nursingRoom": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/663dc61f0949c0cb3a556248",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 수유실과 기저귀교환대는 없는 점을 참고해 주세요."
+        },
+        "diaperTable": {
+          "value": "no",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/663dc61f0949c0cb3a556248",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 FAQ: 수유실과 기저귀교환대는 없는 점을 참고해 주세요."
+        },
+        "kidsTableware": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/663dc61f0949c0cb3a556248",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 안내: 금호제주리조트 조식뷔페에는 뽀로로식판과 유아식기가 준비되어 있어 아이와 식사하기 좋아요."
+        },
+        "kidsPlay": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/663dc61f0949c0cb3a556248",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 안내: 키즈룸에는 인디언텐트, 주방놀이 등 여러 놀거리가 있고 어린이용 침구와 세면 발판도 준비돼 있어요."
+        }
+      }
+    },
+    {
+      "sourceId": "CNTS_200000000013610",
+      "listingName": "파르나스 호텔 제주",
+      "amenities": {
+        "strollerRental": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/64deca37ed38876c4775c424",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 유모차대여, 주차, 예약"
+        },
+        "parking": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/64deca37ed38876c4775c424",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 시설 항목: 유모차대여, 주차, 예약"
+        },
+        "kidsPlay": {
+          "value": "yes",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/64deca37ed38876c4775c424",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 안내: 네, 1층에 '키즈놀이터'와 '키즈도서관'이 있으며, 어린이 전용 '유아풀(수심 60cm, 온수)'이 있어 어린 아이들도 안전하게 물놀이를 즐길 수 있습니다."
+        },
+        "babyBed": {
+          "value": "conditional",
+          "source": "listing",
+          "verifiedAt": "2026-11-11",
+          "sourceUrl": "https://mom-mom.net/travel/places/64deca37ed38876c4775c424",
+          "publishedAt": "2025-04-18",
+          "quote": "맘맘 안내: 호텔에 미리 연락하시면 아기 침대, 아기 욕조, 유모차, 유아 어메니티, 유아 발판, 침대 가드, 젖병 소독기 등 다양한 아기용품을 예약을 통해 대여하실 수 있습니다."
+        }
+      }
+    }
+  ]
+}
